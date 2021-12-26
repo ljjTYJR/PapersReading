@@ -18,6 +18,8 @@
 
   > [[wiki]](https://en.wikipedia.org/wiki/Branch_and_bound)
 
+  An algorithm for solving discrete and combinational optimization problem base on search and trimming.
+
 ## Methods
 
 1. Applying fuzzy clustering to the two point set. 

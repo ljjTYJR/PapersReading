@@ -2,6 +2,8 @@
 
 # PSR(Point Set Registration)
 
+## ICP & Variants
+
 - **A Method for Registration of 3-D Shapes**
 
   > <TPAMI>
@@ -9,6 +11,26 @@
   > [[url]](https://www.cvl.iis.u-tokyo.ac.jp/class2004/wedenesday/report/besl.pdf) [[pdf]](./papers/A Method for Registration of 3-D Shapes.pdf)
 
   The classical approach for PSR: ICP.
+
+- **Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration**
+
+  > <TPAMI-2016>
+  > [[pdf]](./papers/Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration.pdf) [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7368945) 
+
+## NDT & Variants
+
+- **The Normal Distributions Transform: A New Approach to Laser Scan Matching**
+
+  > <RSJ2003>
+  >
+  > [[pdf]](./papers/The_normal_distributions_transform_a_new_approach_to_laser_scan_matching.pdf) [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1249285)
+
+- **Scan Registration for Autonomous Mining Vehicles Using 3D-NDT**
+
+  > <JFR2007>
+  > [[pdf]](Journal of Field Robotics - 2007 - Magnusson - Scan registration for autonomous mining vehicles using 3D‐NDT.pdf) [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1002/rob.20204)
+
+## Fuzzy
 
 - **Point Set Registration for 3D Range Scans Using Fuzzy Cluster-based Metric and Efficient Global Optimization**
 
@@ -18,14 +40,12 @@
   >
   > [[notes]](./notes/Point Set Registration for 3D Range Scans Using Fuzzy Cluster-based Metric and Efficient Global Optimization.md)
 
-  Fuzzy-clustering for point set registration
+  Fuzzy-clustering for point set registration.
 
-- **TEASER: Fast and Certifiable Point Cloud Registration**
+  The approach can be divided into two steps: 1. coarse registration: fuzzy clustering and use BnB to search globally. 2. fine registration: use an algorithm based on the gradient to get a local convergence. 
 
-  > <T-RO>
-  >
-  > [[url]](https://sci-hub.ru/https://ieeexplore.ieee.org/abstract/document/9286491/)
-  
+## Semantic
+
 - **SegMap Segment-based mapping and localization using data-driven descriptors**
 
   > <IJRR>
@@ -68,7 +88,7 @@
   - Do not need a good initialization.
 
   - > NDT, PointNet
-  
+
 - **PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation**
 
   > <CVPR2017>
@@ -78,16 +98,15 @@
 
   PointNet, DL for 3D segmentation.
 
-- **The Normal Distributions Transform: A New Approach to Laser Scan Matching**
+## TEASER
 
-  > <RSJ2003>
-  >
-  > [[pdf]](./papers/The_normal_distributions_transform_a_new_approach_to_laser_scan_matching.pdf) [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1249285)
+**TEASER: Fast and Certifiable Point Cloud Registration**
 
-- **Scan Registration for Autonomous Mining Vehicles Using 3D-NDT**
+> <T-RO>
+>
+> [[pdf]](./papers/TEASER-Fast and Certifiable Point Cloud.pdf) [[url]](https://sci-hub.ru/https://ieeexplore.ieee.org/abstract/document/9286491/)
 
-  > <JFR2007>
-  > [[pdf]](Journal of Field Robotics - 2007 - Magnusson - Scan registration for autonomous mining vehicles using 3D‐NDT.pdf) [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1002/rob.20204)
+Teaser: Truncated least squares Estimation And semidefinite Relaxation
 
 # Survey
 
