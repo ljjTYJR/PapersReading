@@ -54,11 +54,11 @@
 
 但是在实际的工程应用中，Lidar采集到的数据有很大的噪声。这个时候就很难知道 *ground truth* ，想要进行配准需要使用的算法：
 
-- **A method for registration of 3-D shapes**
+- **A method for registration of 3-D shapes** (ICP)
 
   > key idea  If the correct correspondences are known, the correct relative rotation/translation can be calculated in closed form.
   >
-  > [[Wolfram Burgard, et al. Introduction to Mobile Robotics: Iterative Closest Point Algorithm]](https://link.zhihu.com/?target=http%3A//ais.informatik.uni-freiburg.de/teaching/ss11/robotics/slides/17-icp.pdf)
+  > [[Wolfram Burgard, et al. Introduction to Mobile Robotics: Iterative Closest Point Algorithm]](https://link.zhihu.com/?target=http%3A//ais.informatik.uni-freiburg.de/teaching/ss11/robotics/slides/17-icp.pdf) :flags:
 
   ICP算法的 *motivation* 其实也来自于上面的 *Least-Squares Fitting of Two 3-D Point Sets*， 对于correspondence已知的情况下，是可以求出解析解的，但是对于correspodence未知的情况下呢（这种情况下是无法求出解析解的）
 
@@ -75,3 +75,22 @@
      - effiency比较低，需要的计算量很大；
      - Roubtness比较低，对noise抵抗性较弱；
      - Accuracy需要比较好的initialization;
+
+- **A Globally Optimal Solution to 3D ICP Point-Set Registration**（GO-ICP)
+
+  
+
+- **Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography ** (RANSAC)
+
+  > [[URL]](http://www.cs.ait.ac.th/~mdailey/cvreadings/Fischler-RANSAC.pdf)
+  > [[Wiki]](https://zh.wikipedia.org/wiki/%E9%9A%A8%E6%A9%9F%E6%8A%BD%E6%A8%A3%E4%B8%80%E8%87%B4)
+
+  简而言之，RANSAC算法是这样的算法：其作用是为了从带有噪声(outliers)的数据中，估算出一个比较好的模型。基本的想法是，会搜索符合输入数据的一系列模型，如果某一个模型含有的点最多，则将其认为是描述数据的模型。
+
+  该方法如果用在点云配准上面，主要的应用是这个样子：首先估计一系列的correspodence，这些correspodence有inliers，也有outliers，但是会寻求找到一个 exact correspodence来描述两个点云的配准关系，只要找了了这两个点云的correspodence（精确）那么就仍然可以采用SVD的方法来求解两个点云配准的解析解。
+
+  
+
+- https://zhuanlan.zhihu.com/p/431903717
+
+  可能有用，有空看看

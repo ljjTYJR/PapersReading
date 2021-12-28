@@ -127,4 +127,9 @@ Teaser: Truncated least squares Estimation And semidefinite Relaxation
   
   
   
-  
+
+# Math Basis
+
+- **Global optimization through rotation space search**
+
+  > [[URL]](https://link.springer.com/content/pdf/10.1007/s11263-008-0186-9.pdf)
