@@ -105,6 +105,8 @@
 > <T-RO>
 >
 > [[pdf]](./papers/TEASER-Fast and Certifiable Point Cloud.pdf) [[url]](https://sci-hub.ru/https://ieeexplore.ieee.org/abstract/document/9286491/)
+>
+> [[notes]](./notes/TEASER-Fast and Certifiable Point Cloud.md)
 
 Teaser: Truncated least squares Estimation And semidefinite Relaxation
 
