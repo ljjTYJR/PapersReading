@@ -26,7 +26,7 @@
 
   - Robust Registration
 
-    - RANSAC: efficiency without noise but sensitive to noise.
+    - RANSAC: efficiency without noise but sensitivity to noise.
 
 - **Simultaneous Pose and Correspondence Methods**
 
@@ -78,7 +78,9 @@
 
 - **A Globally Optimal Solution to 3D ICP Point-Set Registration**（GO-ICP)
 
-  
+  在ICP的 **目标函数** 的基础上，使用了 *nested BnBs*(嵌套BnB) 的方法，将求取旋转矩阵R和T解耦，获得一个全局最优的解。
+
+  优点是得到的解全局最优，缺点是计算量很大，需要对outlier进行一定的处理。
 
 - **Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography ** (RANSAC)
 
@@ -89,8 +91,18 @@
 
   该方法如果用在点云配准上面，主要的应用是这个样子：首先估计一系列的correspodence，这些correspodence有inliers，也有outliers，但是会寻求找到一个 exact correspodence来描述两个点云的配准关系，只要找了了这两个点云的correspodence（精确）那么就仍然可以采用SVD的方法来求解两个点云配准的解析解。
 
-  
-
 - https://zhuanlan.zhihu.com/p/431903717
 
   可能有用，有空看看
+
+- **Motivation**
+
+  > 将配准问题进行解耦，分为 *scale*, *rotation*, *translation*. 
+  >
+  > From:[[Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search]](https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Yinlong_Liu_Efficient_Global_Point_ECCV_2018_paper.pdf)
+
+# 临时的想法
+
+- We reformulate the registration problem using a truncated least squares (TLS) cost.
+
+  不同的算法其最核心的不同之处我认为是 formulate 的形式不同，也就会得到不同的 *Loss function*；

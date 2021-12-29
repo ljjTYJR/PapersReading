@@ -111,6 +111,11 @@
   > <CVPR2020>
   > [[url]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Iglesias_Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf) [[pdf]](./papers/Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf)
 
+- **Deep Global Registration**
+
+  > <CVPR2020>
+  > [[url]](https://arxiv.org/pdf/2004.11540.pdf) 
+
 ## TEASER
 
 - **TEASER: Fast and Certifiable Point Cloud Registration**
@@ -122,6 +127,14 @@
 > [[notes]](./notes/TEASER-Fast and Certifiable Point Cloud.md)
 
 Teaser: Truncated least-squares Estimation And semidefinite Relaxation
+
+## Different kinds of Improvements
+
+- **Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search**
+
+  > [[URL]](https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Yinlong_Liu_Efficient_Global_Point_ECCV_2018_paper.pdf) [[pdf]](./papers/Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search)
+  >
+  > [[notes]](./notes/Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search.md)
 
 # Survey
 
@@ -137,8 +150,6 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
   > [[url]](https://reader.elsevier.com/reader/sd/pii/S0924271620300836?token=601731D7F5A970C99DA0F576524F984B32A54C306453727528A63B21BE9B8B9B81E18ED8BE62C0ECA2F16B6CDC4CE878&originRegion=eu-west-1&originCreation=20211224092123)
   > [[pdf]](./papers/Registration of large-scale terrestrial laser scanner point clouds A reviewand benchmark.pdf)
   > [[detailed notes]](./notes/Registration of large-scale terrestrial laser scanner point clouds A reviewand benchmark.pdf.md)
-  
-  
   
 
 # Math Basis
