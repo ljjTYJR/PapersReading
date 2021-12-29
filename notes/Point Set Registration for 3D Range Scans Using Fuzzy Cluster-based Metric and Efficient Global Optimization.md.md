@@ -24,3 +24,9 @@
 
 1. Applying fuzzy clustering to the two point set. 
 2. Minimizing the corresponding fuzzy c-means objective function.
+
+- **Optimization Methodology**
+  - Combination of BnBs and gradient-based.
+  - **For BnBs**:
+    - The search space is just the initial rotation cube $C_r$ and the initial translation cube $C_t$ ; —— The optimal solution is included in the initial search space.
+    - Though the initial space for $C_r$ is a ball, to facilitate the BnBs process. Assuming that the ball is enclosed by a cube. —— [:question:] how if the variable is out of the bound of the ball? 

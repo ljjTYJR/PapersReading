@@ -16,3 +16,16 @@
 
   > [[url]](https://cs.nyu.edu/~mohri/mlbook/)
   > [[slides & courses]](https://cs.nyu.edu/~mohri/ml18/)
+
+
+
+# Courses
+
+- **Convex Optimization**
+
+  > [[ee364a-stanford]](https://web.stanford.edu/class/ee364a/lectures.html)
+  > [[ee364b-stanford]](https://web.stanford.edu/class/ee364b/lectures.html)
+
+  - **Branch and Bound Methods**
+
+    > [[slides]](https://web.stanford.edu/class/ee364b/lectures/bb_slides.pdf)

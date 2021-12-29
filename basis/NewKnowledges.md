@@ -58,8 +58,26 @@ $$
 
   > [[wiki]](https://en.wikipedia.org/wiki/Octree)  [[chinese]](https://zh.wikipedia.org/wiki/%E5%85%AB%E5%8F%89%E6%A0%91)
 
+  八叉树作为一种数据结构，主要用于分割三维立体空间。其中每个分割的节点表示一个子空间。每个子空间可以采用递归的方法，再按照root space的方式来对leaf space进行同样的操作，直到达到要求。
+
 - **Angular Distance**
 
   > [[wiki]](https://en.wikipedia.org/wiki/Angular_distance)
 
-  
+- **Errors and residuals** (误差和残差)
+
+  误差是观测值与实际值之间的偏差；
+
+  残差是观测值与模型估计值之间的偏差；
+
+- **Best-first search**
+
+  > [[wiki]](https://en.wikipedia.org/wiki/Best-first_search)
+
+- **Branch and Bound** (BnB)
+
+  > 对于非凸函数的全局优化方法
+
+- **Heuristic**(启发式算法)
+
+  > A **heuristic function**, also simply called a **heuristic**, is a [function](https://en.wikipedia.org/wiki/Function_(mathematics)) that ranks alternatives in [search algorithms](https://en.wikipedia.org/wiki/Search_algorithm) at each branching step based on available information to decide which branch to follow. For example, it may approximate the exact solution

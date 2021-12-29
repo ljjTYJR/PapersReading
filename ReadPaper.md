@@ -16,6 +16,14 @@
 
   > <TPAMI-2016>
   > [[pdf]](./papers/Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration.pdf) [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7368945) 
+  
+  Use BnBs approach to get the global optimization(Deal with the R and T separately).
+  
+  - *global optimal*
+  
+  - <u>slow & large memory consuming</u>
+  
+  :question: The details of BnB searching process.
 
 ## NDT & Variants
 
@@ -97,10 +105,15 @@
   > [[notes]]()
 
   PointNet, DL for 3D segmentation.
+  
+- **Global Optimality for Point Set Registration Using Semidefinite Programming**
+
+  > <CVPR2020>
+  > [[url]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Iglesias_Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf) [[pdf]](./papers/Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf)
 
 ## TEASER
 
-**TEASER: Fast and Certifiable Point Cloud Registration**
+- **TEASER: Fast and Certifiable Point Cloud Registration**
 
 > <T-RO>
 >
@@ -108,7 +121,7 @@
 >
 > [[notes]](./notes/TEASER-Fast and Certifiable Point Cloud.md)
 
-Teaser: Truncated least squares Estimation And semidefinite Relaxation
+Teaser: Truncated least-squares Estimation And semidefinite Relaxation
 
 # Survey
 
