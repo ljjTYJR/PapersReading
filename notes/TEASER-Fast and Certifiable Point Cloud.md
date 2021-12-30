@@ -12,7 +12,7 @@
 
 ## Related work
 
-- **Correspondence functions**
+- **Correspondence Based**
 
   - detect and match key points using feature descriptors.
 
@@ -22,18 +22,96 @@
 
     - Closed-form solutions for single transformation, rotation and scale registration without noise.
 
-      > read related papers :flags:
+    - Briales and Gonzalez-Jimenez [43] proposed a tight semidefinite relaxation to solve the same registration problem as in [42].(将配准问题设置为一个半定规划的松弛问题)
+
+    - Closed-form solutions to the Wahba problem are known using both quaternion [14], [44] and rotation matrix [15], [45] representations. (对于单纯的旋转配准问题，在没有noise的情况下，是知道其解析解的)。
+
+      在现有方法下，有针对isotropic Gaussian noise的解，以及anisotropic Gaussian noise的局部最优解。此外，Ahmed etal. [50] developed an SDP relaxation for the case with bounded noise and no outliers
 
   - Robust Registration
 
     - RANSAC: efficiency without noise but sensitivity to noise.
 
-- **Simultaneous Pose and Correspondence Methods**
+    - Other approaches resort to M-estimation, which replaces the least squares objective function with robust costs that are less sensitive to outliers [53]–[55]
 
-  - Local Methods
-    - ICP
-  - Global Methods
-  - Deep Learning Methods
+    - Zhou et al. [56] proposed fast global registration (FGR) that uses the GemanMcClure cost function and leverages GNC to solve the resulting nonconvex optimization. 
+
+    - Parra and Chin [19] proposed a Guaranteed Outlier REmoval (GORE) technique, that uses geometric operations to significantly reduce the amount of outlier correspondences before passing them to the optimization backend.
+
+    - Parra et al. [58] found pairwise-consistent correspondences in 3-D registration using a practical maximum clique (PMC) algorithm.
+
+      > Both GORE and PMC use the BnBs to search.
+
+    - Yang and Carlone [39] proposed the first certifiable algorithm for robust registration, which however requires solving a large scale SDP hence being limited to small problems.
+
+- **Simultaneous Pose and Correspondence Methods** (SPC)
+
+  > 上面的方法表示的是已知correspodence，或者说是去求一个correspodence；而在此列中表示的是，可能并不会给一个准确的correspodence的匹配，可能是给一个correspodence的估计。
+
+  - SPC methods alternate between finding the correspondences and computing the best transformation given the correspondences.
+
+    - 一个典型的例子就是ICP，在估计correspodence和寻找transformation之间反复迭代；
+
+  - **Local Methods**
+
+    - ICP is prone to converge to local minima and only performs well given a good initial guess.
+    - Multiple variants of ICP [73]–[76] have been proposed to use robust cost functions to improve convergence.
+    - Probabilistic interpretations have also been proposed to improve ICP as **minimization of the Kullback–Leibler divergence between two mixture models** [77], [78].
+    - Clark et al. [79] align point clouds as continuous functions using Riemannian optimization.
+    - Le et al. [80] used semidefinite relaxation to generate hypotheses for randomized methods.
+
+  - **Global Methods**
+
+    - Global SPC approaches compute a globally optimal solution without initial guesses, **and are usually based**
+      **on BnB.**
+    - However, the runtime of **BnB increases exponentially with the size of the point cloud** and is made worse by the explosion of the number of local minimal resulting from high outlier ratios.
+
+    > 反复提及的SDP(半定规划，是什么含义？) :question:
+
+  - **Deep Learning Methods**
+
+    - The success of **deep learning on 3-D point clouds (e.g., PointNet [86] and DGCNN [87])** opens new opportunities for learning point cloud registration from data. 
+
+    - Deep learning methods first learn to embed points clouds in a high-dimensional feature space, then learn to match key points to **generate correspondences**, after which optimization over the space of rigid transformations is performed for the best alignment.
+
+      > 深度学习的方法主要是去学习correspodence. 
+
+    - PointNetLK [88] uses PointNet to learn feature representations and then iteratively align the features represen-
+      tations, instead of the 3-D coordinates.
+
+      > 不像ICP那种对于objective function进行优化，而是对模型学到的特征匹配进行优化；
+
+    - current deep learning approaches still **struggle to produce acceptable inlier rates in real problems.**
+
+      > :question: 还是难以生成足够好的features？
+
+- One can always reformulate an SPC problem as a correspondence-based problem by hypothesizing all-to-all correspondences, i.e., **associating each point in the first point cloud to all the points in the second.**
+
+## NOTATIONS AND PRELIMINARIES
+
+
+
+## NOTES
+
+- 本论文将问题分解为scalar, rotation, translation， 那么 scalar的含义是什么？
+
+- adaptive voting 的方法是什么含义？
+
+- 对于scalar和rotation使用的是TLS估计，而对于rotation，则使用的semidefine programming(SDP, 半定规划)的方法来求旋转的最优解。
+
+- We remark that the rotation subproblem addressed in this article is in itself a foundational problem in vision (where it is known as rotation search [32]) and aerospace (where it is known as the Wahba problem [33]).
+
+  本文对于旋转问题的解决，使用的是SDP Relaxation(半定规划松弛) 是其他问题的基础。
+
+- :question:noise 和 outlier的区别是什么？
+
+- TEASER++对比TEASER的改进：
+
+  - Our fourth contribution (see Section X) is to implement a fast version of TEASER, named TEASER++, that uses **graduated nonconvexity (GNC)** [35] to estimate the rotation without solving a large SDP.
+
+- In our previous works, we introduced TEASER [39] and the **quaternion-based relaxation** of the **rotation subproblem** [40] (named QUASAR).
+
+- :question: paper中表示的 certifiable 是什么含义？用来评价算法是否算法的结果？
 
 ## Reference
 
@@ -80,7 +158,7 @@
 
   在ICP的 **目标函数** 的基础上，使用了 *nested BnBs*(嵌套BnB) 的方法，将求取旋转矩阵R和T解耦，获得一个全局最优的解。
 
-  优点是得到的解全局最优，缺点是计算量很大，需要对outlier进行一定的处理。
+  优点是得到的解全局最优，缺点是计算量很大(随输入数据尺寸，计算量呈指数增加），需要对outlier进行一定的处理。
 
 - **Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography ** (RANSAC)
 

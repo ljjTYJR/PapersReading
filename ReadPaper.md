@@ -128,6 +128,12 @@
 
 Teaser: Truncated least-squares Estimation And semidefinite Relaxation
 
+## Learning-based Approach
+
+- **PRNet: Self-Supervised Learning for Partial-to-Partial Registration**
+
+  > [[URL]](https://arxiv.org/pdf/1910.12240.pdf) [[pdf]](./papers/PRNet Self-Supervised Learning for Partial-to-Partial Registration.pdf)
+
 ## Different kinds of Improvements
 
 - **Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search**
