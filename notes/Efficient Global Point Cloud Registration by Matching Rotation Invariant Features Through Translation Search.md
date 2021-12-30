@@ -1,9 +1,10 @@
-# Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search
+# Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search——GoTS
 
 ## Intro
 
 - Decoupling the point set registration of 6D space to translation and rotation.
 - Compared to Go-ICP, the speed and accuracy improved.
+- By decoupling the transformation to translation and rotation, by BnBs approach to find the global optimal of translation. Afterwards, use RANSAC to estimate the Rotation( Or use local optimal(GoTS+));
 
 ## Notes
 
@@ -19,4 +20,12 @@
 ## Motivation
 
 - **Efficient Global Point Cloud Alignment using Bayesian Nonparametric Mixtures**
-  - Decoupling;
+  - Decoupling
+
+## Preknowledge
+
+- $\infty norm$ 无穷范数
+  $$
+  ||x||_{\infty} = max({|x_1|, |x_2|, |x_3|,...|x_n|})
+  $$
+  
