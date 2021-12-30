@@ -113,6 +113,44 @@
 
 - :question: paper中表示的 certifiable 是什么含义？用来评价算法是否算法的结果？
 
+## VIDEO
+
+> [[video]](https://www.youtube.com/watch?v=uwNdLdRozeA&t=202s) —— The author explains the motivation of the paper.
+
+![TEASER++](./TEASER++pipeline.png)
+
+- 在scale前端，首先会对输入的数据进行一次 *filter out* 的过程，对输入的数据进行一次清洗，去除掉 *outliers*；
+
+- Pipeline中TEASER主要做了一些什么？
+
+  - 为什么可以Decoupling?
+
+    - 主要是根据旋转不变性；基于此其实是找到了correspodence；
+
+  - TLS(Truncated Least Square)的含义？
+
+    ![](./truncated-least-square.png)
+
+    上式即为 TLS的含义，定义的问题首先需要需要知道correspodence，然后在此基础上进行优化；
+
+  - 其余部分就是解耦部分的优化了；
+
+  - outliers是如何处理的？
+
+  - **certificate是如何保证的？**
+
+    - **暂时没看懂，似乎与解SDP问题有关** :question:
+    - SDP 半定问题。
+
+  - correspodence是如何获取的？
+
+    - 预先给出/deep-learning的方法给出；
+    - all-to-all correspodence的方式给出；（强行假定存在一个correpsondence)
+
+## Questions
+
+- 如何判定一个问题是 *convex* 还是 *non-convex* 的？
+
 ## Reference
 
 - **Closed-form solution of absolute orientation using unit quaternions** [[URL]](http://people.csail.mit.edu/bkph/papers/Absolute_Orthonormal.pdf)

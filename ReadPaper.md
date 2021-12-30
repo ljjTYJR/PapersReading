@@ -51,6 +51,8 @@
   Fuzzy-clustering for point set registration.
 
   The approach can be divided into two steps: 1. coarse registration: fuzzy clustering and use BnB to search globally. 2. fine registration: use an algorithm based on the gradient to get a local convergence. 
+  
+- 
 
 ## Semantic
 
