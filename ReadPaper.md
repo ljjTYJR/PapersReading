@@ -172,6 +172,8 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
   >
   > [[NOTES]](./notes/Registration Loss Learning for Deep Probabilistic Point Set Registration.md)
 
+  ![](./notes/DEEP-GMM.png)
+
 ## Cross-source Combination
 
 ## Different kinds of Improvements
