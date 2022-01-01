@@ -88,4 +88,5 @@ $$
   $$
   p = tp_2 + (1-t)p_1, t \sub [0,1]
   $$
-  
+
+- **Semidefinite programming(SDP) 半正定规划**

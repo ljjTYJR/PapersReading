@@ -25,18 +25,38 @@
   
   :question: The details of BnB searching process.
 
-## NDT & Variants
+## Probabilistic Based
 
-- **The Normal Distributions Transform: A New Approach to Laser Scan Matching**
+- **GMM**
 
-  > <RSJ2003>
-  >
-  > [[pdf]](./papers/The_normal_distributions_transform_a_new_approach_to_laser_scan_matching.pdf) [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1249285)
+  - **Robust Point Set Registration Using Gaussian Mixture Models**
 
-- **Scan Registration for Autonomous Mining Vehicles Using 3D-NDT**
+    > <TPAMI2011>
+    >
+    > [[URL]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5674050)
 
-  > <JFR2007>
-  > [[pdf]](Journal of Field Robotics - 2007 - Magnusson - Scan registration for autonomous mining vehicles using 3D‐NDT.pdf) [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1002/rob.20204)
+  - **Point Set Registration: Coherent Point Drift** (CPD)
+
+    > <TPAMI2010>
+    >
+    > [[URL]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5432191) [[PDF]](./papers/Point_Set_Registration_Coherent_Point_Drift.pdf)
+    >
+    > [[notes]](./notes/Point Set Registration - Coherent Point Drift.md)
+
+- **NDT & Variants**
+
+  - **The Normal Distributions Transform: A New Approach to Laser Scan Matching**
+
+    > <RSJ2003>
+    >
+    > [[pdf]](./papers/The_normal_distributions_transform_a_new_approach_to_laser_scan_matching.pdf) [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1249285)
+
+
+  - **Scan Registration for Autonomous Mining Vehicles Using 3D-NDT**
+
+    > <JFR2007>
+    > [[pdf]](./papers/Scan registration for autonomous mining vehicles using 3D‐NDT.pdf) [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1002/rob.20204)
+
 
 ## Fuzzy
 
@@ -52,7 +72,13 @@
 
   The approach can be divided into two steps: 1. coarse registration: fuzzy clustering and use BnB to search globally. 2. fine registration: use an algorithm based on the gradient to get a local convergence. 
   
-- 
+- **FuzzyPSReg_Strategies_of_Fuzzy_Cluster-Based_Point_Set_Registration**
+
+  > <TRO>
+  >
+  > [[URL]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9623345) [[PDF]](./papers/FuzzyPSReg_Strategies_of_Fuzzy_Cluster-Based_Point_Set_Registration.pdf)
+  >
+  > [[notes]](./notes/FuzzyPSReg_Strategies_of_Fuzzy_Cluster-Based_Point_Set_Registration.md)
 
 ## Semantic
 
@@ -60,10 +86,6 @@
 
   > <IJRR>
   > [[pdf]](./papers/SegMap Segment-based mapping and localization using data-driven descriptors.pdf)[[url]](https://journals.sagepub.com/doi/pdf/10.1177/0278364919863090)
-
-- **Registration Loss Learning for Deep Probabilistic Point Set Registration**
-
-  > <International Conference on 3D Vision>
 
 - **Recurrent-OctoMap: Learning State-Based Map Refinement for Long-Term Semantic Mapping With 3-D-Lidar Data**
 
@@ -135,6 +157,22 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
 - **PRNet: Self-Supervised Learning for Partial-to-Partial Registration**
 
   > [[URL]](https://arxiv.org/pdf/1910.12240.pdf) [[pdf]](./papers/PRNet Self-Supervised Learning for Partial-to-Partial Registration.pdf)
+  
+- **The Perfect Match: 3D Point Cloud Matching with Smoothed Densities**
+
+  > <CVPR2019>
+  >
+  > [[URL]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Gojcic_The_Perfect_Match_3D_Point_Cloud_Matching_With_Smoothed_Densities_CVPR_2019_paper.pdf)
+
+- **Registration Loss Learning for Deep Probabilistic Point Set Registration**
+
+  > <International Conference on 3D Vision>
+  >
+  > [[pdf]](./papers/Registration Loss Learning for Deep Probabilistic Point Set Registration.pdf)
+  >
+  > [[NOTES]](./notes/Registration Loss Learning for Deep Probabilistic Point Set Registration.md)
+
+## Cross-source Combination
 
 ## Different kinds of Improvements
 
@@ -143,13 +181,20 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
   > [[URL]](https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Yinlong_Liu_Efficient_Global_Point_ECCV_2018_paper.pdf) [[pdf]](./papers/Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search)
   >
   > [[notes]](./notes/Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search.md)
+  
+- **SDRSAC: Semidefinite-Based Randomized Approach for Robust Point Cloud Registration without Correspondences**
+
+  > <CVPR2019>
+  >
+  > [[URL]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Le_SDRSAC_Semidefinite-Based_Randomized_Approach_for_Robust_Point_Cloud_Registration_Without_CVPR_2019_paper.pdf) [[PDF]](./papers/SDRSAC_Semidefinite-Based_Randomized_Approach_for_Robust_Point_Cloud_Registration_Without_CVPR_2019_paper.pdf)
 
 # Survey
 
 - **A comprehensive survey on point cloud registration**
 
   > <arXiv>
-  > [[pdf]](https://arxiv.org/pdf/2103.02690.pdf)
+  > [[url]](https://arxiv.org/pdf/2103.02690.pdf) [[pdf]](./papers/A comprehensive survey on point cloud registration.pdf)
+  >
   > [[detailed notes]](./notes/A comprehensive survey on point cloud registration.md)
 
 - **Registration of large-scale terrestrial laser scanner point clouds A review and benchmark**
