@@ -86,6 +86,8 @@
 
   > <IJRR>
   > [[pdf]](./papers/SegMap Segment-based mapping and localization using data-driven descriptors.pdf)[[url]](https://journals.sagepub.com/doi/pdf/10.1177/0278364919863090)
+  >
+  > [[notes]](./notes/SegMap Segment-based mapping and localization using data-driven descriptors.md)
 
 - **Recurrent-OctoMap: Learning State-Based Map Refinement for Long-Term Semantic Mapping With 3-D-Lidar Data**
 
