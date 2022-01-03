@@ -80,72 +80,6 @@
   >
   > [[notes]](./notes/FuzzyPSReg_Strategies_of_Fuzzy_Cluster-Based_Point_Set_Registration.md)
 
-## Semantic
-
-- **SegMap Segment-based mapping and localization using data-driven descriptors**
-
-  > <IJRR>
-  > [[pdf]](./papers/SegMap Segment-based mapping and localization using data-driven descriptors.pdf)[[url]](https://journals.sagepub.com/doi/pdf/10.1177/0278364919863090)
-  >
-  > [[notes]](./notes/SegMap Segment-based mapping and localization using data-driven descriptors.md)
-
-- **Recurrent-OctoMap: Learning State-Based Map Refinement for Long-Term Semantic Mapping With 3-D-Lidar Data**
-
-  > <RA-L2018>
-
-- **Sattler_Understanding_the_Limitations_of_CNN-Based_Absolute_Camera_Pose_Regression_CVPR_2019_paper**
-
-  > <CVPR>
-
-  为端到端的localization的效果不如基于3D精确地图的位姿估计提供了理论依据.
-
-  A key result is that current approaches do not consistently outperform a hand- crafted image retrieval baseline
-
-- **Self-Supervised_Learning_of_Lidar_Segmentation_for_Autonomous_Indoor_Navigation**
-
-  > <ICRA>
-
-- **Semantic Fusion_Dense_3D_semantic_mapping_with_convolutional_neural_networks**
-
-  > <ICRA 2017>
-
-- **SuMa++: Efficient LiDAR-based Semantic SLAM**
-
-  > <IROS 2019>
-
-- **Integrating Deep Semantic Segmentation into 3D point cloud registration**
-
-  > <RA-L 2018>
-  >
-  > [[pdf]](./papers/Integrating Deep Semantic Segmentation into 3D point cloud registration.pdf)
-  >
-  > [[notes]](./notes/Integrating Deep Semantic Segmentation into 3D point cloud registration.md)
-
-  - Use the *PointNet* to learn and pre-predict per-point semantic labels, and then use the output of the Net as the input for the NDT algorithm.
-
-  - Do not need a good initialization.
-
-  - > NDT, PointNet
-
-- **PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation**
-
-  > <CVPR2017>
-  > [[pdf]](PointNet_Deep_Learning_CVPR_2017_paper.pdf) [[url]](https://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf)
-  >
-  > [[notes]]()
-
-  PointNet, DL for 3D segmentation.
-  
-- **Global Optimality for Point Set Registration Using Semidefinite Programming**
-
-  > <CVPR2020>
-  > [[url]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Iglesias_Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf) [[pdf]](./papers/Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf)
-
-- **Deep Global Registration**
-
-  > <CVPR2020>
-  > [[url]](https://arxiv.org/pdf/2004.11540.pdf) 
-
 ## TEASER
 
 - **TEASER: Fast and Certifiable Point Cloud Registration**
@@ -180,8 +114,6 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
 
   ![](./notes/DEEP-GMM.png)
 
-## Cross-source Combination
-
 ## Different kinds of Improvements
 
 - **Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search**
@@ -196,7 +128,7 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
   >
   > [[URL]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Le_SDRSAC_Semidefinite-Based_Randomized_Approach_for_Robust_Point_Cloud_Registration_Without_CVPR_2019_paper.pdf) [[PDF]](./papers/SDRSAC_Semidefinite-Based_Randomized_Approach_for_Robust_Point_Cloud_Registration_Without_CVPR_2019_paper.pdf)
 
-# Survey
+## Survey
 
 - **A comprehensive survey on point cloud registration**
 
@@ -212,6 +144,82 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
   > [[pdf]](./papers/Registration of large-scale terrestrial laser scanner point clouds A reviewand benchmark.pdf)
   > [[detailed notes]](./notes/Registration of large-scale terrestrial laser scanner point clouds A reviewand benchmark.pdf.md)
   
+
+# Mapping & Fusion
+
+## Semantic
+
+- **SegMap Segment-based mapping and localization using data-driven descriptors**
+
+  > <IJRR>
+  > [[pdf]](./papers/SegMap Segment-based mapping and localization using data-driven descriptors.pdf)[[url]](https://journals.sagepub.com/doi/pdf/10.1177/0278364919863090)
+  >
+  > [[notes]](./notes/SegMap Segment-based mapping and localization using data-driven descriptors.md)
+
+- **Recurrent-OctoMap: Learning State-Based Map Refinement for Long-Term Semantic Mapping With 3-D-Lidar Data**
+
+  > <RA-L2018>
+
+- **Sattler_Understanding_the_Limitations_of_CNN-Based_Absolute_Camera_Pose_Regression_CVPR_2019_paper**
+
+  > <CVPR>
+
+  为端到端的localization的效果不如基于3D精确地图的位姿估计提供了理论依据.
+
+  A key result is that current approaches do not consistently outperform a handcrafted image retrieval baseline
+
+- **Self-Supervised_Learning_of_Lidar_Segmentation_for_Autonomous_Indoor_Navigation**
+
+  > <ICRA>
+
+- **Semantic Fusion_Dense_3D_semantic_mapping_with_convolutional_neural_networks**
+
+  > <ICRA 2017>
+  >
+  > [[pdf]](./papers/SemanticFusion_Dense_3D_semantic_mapping_with_convolutional_neural_networks.pdf)
+  >
+  > [[notes]](./notes/SemanticFusion_Dense_3D_semantic_mapping_with_convolutional_neural_networks.md)
+
+  Combine the CNNs with the SLAM system ElasticFusion.
+
+- **SuMa++: Efficient LiDAR-based Semantic SLAM**
+
+  > <IROS 2019>
+
+- **Integrating Deep Semantic Segmentation into 3D point cloud registration**
+
+  > <RA-L 2018>
+  >
+  > [[pdf]](./papers/Integrating Deep Semantic Segmentation into 3D point cloud registration.pdf)
+  >
+  > [[notes]](./notes/Integrating Deep Semantic Segmentation into 3D point cloud registration.md)
+
+  - Use the *PointNet* to learn and pre-predict per-point semantic labels, and then use the output of the Net as the input for the NDT algorithm.
+
+  - Do not need a good initialization.
+
+  - > NDT, PointNet
+
+- **PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation**
+
+  > <CVPR2017>
+  > [[pdf]](PointNet_Deep_Learning_CVPR_2017_paper.pdf) [[url]](https://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf)
+  >
+  > [[notes]]()
+
+  PointNet, DL for 3D segmentation.
+
+- **Global Optimality for Point Set Registration Using Semidefinite Programming**
+
+  > <CVPR2020>
+  > [[url]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Iglesias_Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf) [[pdf]](./papers/Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf)
+
+- **Deep Global Registration**
+
+  > <CVPR2020>
+  > [[url]](https://arxiv.org/pdf/2004.11540.pdf) 
+
+## Cross-source Combination
 
 # Math Basis
 
