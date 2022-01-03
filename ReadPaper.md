@@ -91,11 +91,15 @@
 
 - **Recurrent-OctoMap: Learning State-Based Map Refinement for Long-Term Semantic Mapping With 3-D-Lidar Data**
 
-  > <RA-L>
+  > <RA-L2018>
 
 - **Sattler_Understanding_the_Limitations_of_CNN-Based_Absolute_Camera_Pose_Regression_CVPR_2019_paper**
 
   > <CVPR>
+
+  为端到端的localization的效果不如基于3D精确地图的位姿估计提供了理论依据.
+
+  A key result is that current approaches do not consistently outperform a hand- crafted image retrieval baseline
 
 - **Self-Supervised_Learning_of_Lidar_Segmentation_for_Autonomous_Indoor_Navigation**
 
