@@ -204,11 +204,10 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
   >
   > [[notes]](./notes/Integrating Deep Semantic Segmentation into 3D point cloud registration.md)
 
-  - Use the *PointNet* to learn and pre-predict per-point semantic labels, and then use the output of the Net as the input for the NDT algorithm.
+  - 使用PointNet作为语义分割的前端，对三维点云进行像素级别的语义分割；
 
-  - Do not need a good initialization.
-
-  - > NDT, PointNet
+  - 将分割后的点云按照class进行集合分类，使用NDT算法，对两个点云中同类的点云进行配准；objective function优化各个class的损失的和
+  - **future work**: end-to-end, get the transformation directly;
 
 - **PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation** :flags:
 
