@@ -128,6 +128,16 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
   >
   > [[URL]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Le_SDRSAC_Semidefinite-Based_Randomized_Approach_for_Robust_Point_Cloud_Registration_Without_CVPR_2019_paper.pdf) [[PDF]](./papers/SDRSAC_Semidefinite-Based_Randomized_Approach_for_Robust_Point_Cloud_Registration_Without_CVPR_2019_paper.pdf)
 
+- **Global Optimality for Point Set Registration Using Semidefinite Programming**
+
+  > <CVPR2020>
+  > [[url]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Iglesias_Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf) [[pdf]](./papers/Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf)
+
+- **Deep Global Registration**
+
+  > <CVPR2020>
+  > [[url]](https://arxiv.org/pdf/2004.11540.pdf) 
+
 ## Survey
 
 - **A comprehensive survey on point cloud registration**
@@ -148,21 +158,6 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
 # Mapping & Fusion
 
 ## Semantic
-
-> 语义在地图中的作用：
->
-> 1. 用于点云配准， NDT/ICP都需要一个比较好的初始条件，通过语义进行配准，可以获得一个较好的初值条件；
-> 2. 对于SLAM中的回环检测更好(loop closure)，与传统的通过特征进行检测不同，通过语义可以检测得更加精准，获得更好的准确性(没有语义它是怎么做的？)
-> 3. For higher-level task，例如路径规划，更高级的任务；
-> 4. Dynamics 对于动态环境，能够进行物体识别，将点云中动态物体识别出来，不进行地图的构建；
->
-> 有什么可以创新的地方：
->
-> 1. 和点云配准算法进行结合（点云配准是一个非常基础的工作，也是一个 narrow direction，这一部分可以顺着FUZZY的工作看一下能够继续挖）
->    1. 能否添加semantic的相关信息？
->    2. 稀疏/稠密的点云地图，Lidar和RGB-D？能否进行加速等？
-> 2. 语义的提取也可以，是从RGB CNN 网络中进行提取，还是直接从三维点云中进行label?
-> 3. 融入动态的进去?
 
 - **SegMap Segment-based mapping and localization using data-driven descriptors**
 
@@ -195,7 +190,7 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
   >
   > [[notes]](./notes/SemanticFusion_Dense_3D_semantic_mapping_with_convolutional_neural_networks.md)
 
-  Combine the CNNs with the SLAM system ElasticFusion.
+  Combine the CNNs with the SLAM system ElasticFusion. The camera is RGB-D, use the RGB image as the input;
 
 - **SuMa++: Efficient LiDAR-based Semantic SLAM**
 
@@ -215,24 +210,14 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
 
   - > NDT, PointNet
 
-- **PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation**
+- **PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation** :flags:
 
   > <CVPR2017>
-  > [[pdf]](PointNet_Deep_Learning_CVPR_2017_paper.pdf) [[url]](https://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf)
+  > [[pdf]](./papers/PointNet_Deep_Learning_CVPR_2017_paper.pdf) [[url]](https://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf)
   >
-  > [[notes]]()
+  > [[notes]](./notes/PointNet Deep Learning on Point Sets for 3D Classification and Segmentation.md)
 
   PointNet, DL for 3D segmentation.
-
-- **Global Optimality for Point Set Registration Using Semidefinite Programming**
-
-  > <CVPR2020>
-  > [[url]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Iglesias_Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf) [[pdf]](./papers/Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf)
-
-- **Deep Global Registration**
-
-  > <CVPR2020>
-  > [[url]](https://arxiv.org/pdf/2004.11540.pdf) 
 
 ## Cross-source Combination
 
