@@ -27,5 +27,8 @@
 
 ---
 
-无语义的时候，SLAM进行 loop closure的方式：
+点云配准的时候会提高两个点云之间的correspondence，整个correspondence是如何获得的？
 
+FPFH —— 获取三维点之间的特征匹配；
+
+ORB/SIFT —— 获取二维图像之间的特征匹配；
