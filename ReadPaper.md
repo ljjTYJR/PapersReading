@@ -10,20 +10,76 @@
   >
   > [[url]](https://www.cvl.iis.u-tokyo.ac.jp/class2004/wedenesday/report/besl.pdf) [[pdf]](./papers/A Method for Registration of 3-D Shapes.pdf)
 
-  The classical approach for PSR: ICP.
+  The original paper of ICP.
+
+- **Generalized-ICP**
+
+  > [[url]](https://www.robots.ox.ac.uk/~avsegal/resources/papers/Generalized_ICP.pdf) [[pdf]](./papers/Generalized_ICP.pdf)
+
+- **Sparse Iterative Closest Point.pdf**
+
+  > <Sofien BouazizAndrea TagliasacchiMark Pauly>
+  >
+  > <ETH>
+  >
+  > [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1111/cgf.12178)[[pdf]](./papers/Sparse Iterative Closest Point.pdf)
+
+- **Fast and Robust Iterative Closest Point**
+
+  > <TPAMI2021>
+  >
+  > <Juyong Zhang Yuxin Yao Bailin Deng>
+  >
+  > <University of Science and Technology of China>
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9336308) [[pdf]](./papers/Fast_and_Robust_Iterative_Closest_Point.pdf)
+
+- **Precision Range Image Registration Using a Robust Surface Interpenetration Measure and Enhanced Genetic Algorithms**
+
+  > <TPAMI2005>
+  >
+  > <Luciano Silva Olga R.P. Bellon Kim L. Boyer>
+  >
+  > <Departamento de Informa´tica, Universidade Federal do Parana>
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1407879)[[pdf]](./papers/Precision_range_image_registration_using_a_robust_surface_interpenetration_measure_and_enhanced_genetic_algorithms.pdf)
+
+- **Robust registration of 2D and 3D point sets**
+
+  > <Image Vision Computing>
+  >
+  > <Andrew W. Fitzgibbon>
+  >
+  > <Department of Engineering Science, University of Oxford>
+  >
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885603001835?token=76780F4CE6E03D857BA3240F3179D4A3ADDC641974808A73B35251E1D27D83CA1AC4345D6345686D2744544E4C647749&originRegion=eu-west-1&originCreation=20220105133411)[[pdf]](./papers/Robust registration of 2D and 3D point sets.pdf)
+
+- **Multi-scale EM-ICP: A Fast and Robust Approach for Surface Registration**
+
+  > <ECCV2020>
+  >
+  > <S´ebastien Granger>
+  >
+  > <INRIA, Epidaure Project, Sophia Antipolis, France>
+  >
+  > [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.5106&rep=rep1&type=pdf)[[pdf]](./papers/Multi-scale EM-ICP  A Fast and Robust.pdf)
+
+- **AA-ICP Iterative Closest Point with Anderson Acceleration**
+
+  > <ICRA2018>
+  >
+  > <Artem L. Pavlov>
+  >
+  > <Space Center, Skolkovo Innovation Center, Moscow, Russia>
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461063)[[pdf]](./papers/AA-ICP Iterative Closest Point with Anderson Acceleration.pdf)
 
 - **Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration**
 
   > <TPAMI-2016>
   > [[pdf]](./papers/Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration.pdf) [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7368945) 
   
-  Use BnBs approach to get the global optimization(Deal with the R and T separately).
-  
-  - *global optimal*
-  
-  - <u>slow & large memory consuming</u>
-  
-  :question: The details of BnB searching process.
+  Get the global optimal for ICP algorithm.
 
 ## Probabilistic Based
 
