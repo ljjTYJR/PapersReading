@@ -9,8 +9,36 @@
   > <TPAMI>
   >
   > [[url]](https://www.cvl.iis.u-tokyo.ac.jp/class2004/wedenesday/report/besl.pdf) [[pdf]](./papers/A Method for Registration of 3-D Shapes.pdf)
+  >
+  > [[tutorial]](http://www.sci.utah.edu/~shireen/pdfs/tutorials/Elhabian_ICP09.pdf) [[ICP Related Material]](http://ais.informatik.uni-freiburg.de/teaching/ss12/robotics/slides/17-icp.pdf)
+  >
+  > [[notes]](./notes/A Method for Registration of 3-D Shapes.md)
 
   The original paper of ICP.
+
+- **Object modelling by registration of multiple range images**
+
+  > <ICRA1991>
+  >
+  > [[pdf]](./papers/Object modeling by registration of multiple range images.pdf)[[url]](http://graphics.stanford.edu/courses/cs348a-17-winter/Handouts/chen-medioni-align-rob91.pdf)
+  >
+  > [[notes]](./notes/Object modelling by registration of multiple range images.md)
+
+  Point-to-Plane ICP.
+
+  <img src="./notes/point-to-plane.png" style="zoom: 67%;" />
+
+- **Iterative Point Matching for Registration of Free-Form Curves and Surfaces**
+
+  > <IJCV1994>
+  >
+  > <ZHENYOU ZHANG>
+  >
+  > [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.175.770&rep=rep1&type=pdf) [[pdf]](./papers/Iterative Point Matching for Registration of Free-Form Curves and Surfaces.pdf)
+  >
+  > [[notes]](./notes/Iterative Point Matching for Registration of Free-Form Curves and Surfaces.md)
+
+  rather robust to relatively big motion and to gross outliers.
 
 - **Generalized-ICP**
 
