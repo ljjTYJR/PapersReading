@@ -32,3 +32,13 @@
 FPFH —— 获取三维点之间的特征匹配；
 
 ORB/SIFT —— 获取二维图像之间的特征匹配；
+
+---
+
+
+
+# TODO
+
+1. ICP 中处理outlier有什么方法？
+2. ICP 中加速计算有什么方法？
+3. ICP中提高correspondence的方法？

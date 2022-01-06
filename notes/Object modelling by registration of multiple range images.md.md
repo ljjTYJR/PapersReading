@@ -16,3 +16,10 @@
   - Using point-to-plane distance instead of point-to-point lets flat regions slide along each other.
 
   > [[1](http://ais.informatik.uni-freiburg.de/teaching/ss12/robotics/slides/17-icp.pdf)]
+
+---
+
+## Citations
+
+> Their approach takes advantage of the tendency of most range data to be locally planar and introduces the ”point-to-plane” variant of ICP.
+

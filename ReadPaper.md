@@ -40,9 +40,39 @@
 
   rather robust to relatively big motion and to gross outliers.
 
+- **Multi-scale EM-ICP: A Fast and Robust Approach for Surface Registration**
+
+  > <ECCV2020>
+  >
+  > <S´ebastien Granger>
+  >
+  > <INRIA, Epidaure Project, Sophia Antipolis, France>
+  >
+  > [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.5106&rep=rep1&type=pdf)[[pdf]](./papers/Multi-scale EM-ICP  A Fast and Robust.pdf)
+  >
+  > [[notes]](./notes/EM-ICP.md)
+
+  EM-ICP: ML + EM --> robust and speed
+
+- **Robust registration of 2D and 3D point sets**
+
+  > <Image Vision Computing>
+  >
+  > <Andrew W. Fitzgibbon>
+  >
+  > <Department of Engineering Science, University of Oxford>
+  >
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885603001835?token=76780F4CE6E03D857BA3240F3179D4A3ADDC641974808A73B35251E1D27D83CA1AC4345D6345686D2744544E4C647749&originRegion=eu-west-1&originCreation=20220105133411)[[pdf]](./papers/Robust registration of 2D and 3D point sets.pdf)
+  >
+  > [[notes]](./notes/Robust registration of 2D and 3D point sets.md)
+
+  LM-ICP: generalize the ICP to a non-convex optimization problem.
+
 - **Generalized-ICP**
 
   > [[url]](https://www.robots.ox.ac.uk/~avsegal/resources/papers/Generalized_ICP.pdf) [[pdf]](./papers/Generalized_ICP.pdf)
+
+  GICP:
 
 - **Sparse Iterative Closest Point.pdf**
 
@@ -71,26 +101,6 @@
   > <Departamento de Informa´tica, Universidade Federal do Parana>
   >
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1407879)[[pdf]](./papers/Precision_range_image_registration_using_a_robust_surface_interpenetration_measure_and_enhanced_genetic_algorithms.pdf)
-
-- **Robust registration of 2D and 3D point sets**
-
-  > <Image Vision Computing>
-  >
-  > <Andrew W. Fitzgibbon>
-  >
-  > <Department of Engineering Science, University of Oxford>
-  >
-  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885603001835?token=76780F4CE6E03D857BA3240F3179D4A3ADDC641974808A73B35251E1D27D83CA1AC4345D6345686D2744544E4C647749&originRegion=eu-west-1&originCreation=20220105133411)[[pdf]](./papers/Robust registration of 2D and 3D point sets.pdf)
-
-- **Multi-scale EM-ICP: A Fast and Robust Approach for Surface Registration**
-
-  > <ECCV2020>
-  >
-  > <S´ebastien Granger>
-  >
-  > <INRIA, Epidaure Project, Sophia Antipolis, France>
-  >
-  > [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.5106&rep=rep1&type=pdf)[[pdf]](./papers/Multi-scale EM-ICP  A Fast and Robust.pdf)
 
 - **AA-ICP Iterative Closest Point with Anderson Acceleration**
 
