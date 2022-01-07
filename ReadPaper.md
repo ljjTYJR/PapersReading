@@ -71,6 +71,8 @@
 - **Generalized-ICP**
 
   > [[url]](https://www.robots.ox.ac.uk/~avsegal/resources/papers/Generalized_ICP.pdf) [[pdf]](./papers/Generalized_ICP.pdf)
+  >
+  > [[notes]](/notes/Generalized-ICP.md)
 
   GICP:
 
