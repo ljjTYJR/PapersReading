@@ -27,4 +27,3 @@ GICP 将上述的方法进行泛化，得到：
 GICP的主要优点在于：**提升accuracy**
 
 提升 accuracy的原因在于：可以减少 wrong correspondence 的影响。
-

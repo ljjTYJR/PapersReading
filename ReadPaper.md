@@ -40,9 +40,9 @@
 
   rather robust to relatively big motion and to gross outliers.
 
-- **Multi-scale EM-ICP: A Fast and Robust Approach for Surface Registration**
+- **Multi-scale EM-ICP: A Fast and Robust Approach for Surface Registration** :question:
 
-  > <ECCV2020>
+  > <ECCV2002>
   >
   > <S´ebastien Granger>
   >
@@ -66,23 +66,35 @@
   >
   > [[notes]](./notes/Robust registration of 2D and 3D point sets.md)
 
-  LM-ICP: generalize the ICP to a non-convex optimization problem.
+  LM-ICP: generalize the ICP to a non-convex optimization problem. :question:
+
+- **Robust Euclidean alignment of 3D point sets the trimmed iterative closest point algorithm**
+
+  > Chetverikov D, Stepanov D, Krsek P. Robust Euclidean alignment of 3D point sets: the trimmed iterative closest point algorithm[J]. Image and vision computing, 2005, 23(3): 299-309.
+  >
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885604001179?token=B6A29AD77A8BDB565DE4A2ACBB8EFE4B12056ED98E9FFC14E5AD96E10C8F7E04DB2E587E5F8487939EEAC731DC1B24E1&originRegion=eu-west-1&originCreation=20220107203632) [[pdf]](./papers/Robust Euclidean alignment of 3D point sets the trimmediterative closest point algorithm.pdf)
 
 - **Generalized-ICP**
 
   > [[url]](https://www.robots.ox.ac.uk/~avsegal/resources/papers/Generalized_ICP.pdf) [[pdf]](./papers/Generalized_ICP.pdf)
   >
-  > [[notes]](/notes/Generalized-ICP.md)
+  > [[notes]](./notes/Generalized-ICP.md)
 
-  GICP:
+  GICP: Generalize The ICP approach to probabilistic distribution, extend it to plane-to-plane format.
 
-- **Sparse Iterative Closest Point.pdf**
+  将ICP的方法从点对点，点对面进行一般化，引入了两个点云的协方差矩阵描述各自的特征，降低了不匹配的特征的影响。:question:
+
+- **Sparse Iterative Closest Point**
 
   > <Sofien BouazizAndrea TagliasacchiMark Pauly>
   >
   > <ETH>
   >
   > [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1111/cgf.12178)[[pdf]](./papers/Sparse Iterative Closest Point.pdf)
+  >
+  > [[notes]](./notes/Sparse Iterative Closest Point.md)
+
+  Sparse ICP: 仍然使用欧式距离寻找ICP中的correspondence，但是在优化阶段，使用了$d_2^p$ 代替 $d_2$， 提高了稀疏性，对Outlier和noise有一定的鲁棒性。
 
 - **Fast and Robust Iterative Closest Point**
 
