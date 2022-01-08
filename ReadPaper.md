@@ -39,6 +39,8 @@
     > **Citations:**4711
     >
     > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=924423) [[pdf]](./papers/Efficient Variants of the ICP Algorithm.pdf)
+    >
+    > [[notes]](./notes/Efficient variants of the ICP algorithm.md)
 
   - **Iterative Point Matching for Registration of Free-Form Curves and Surfaces**
 

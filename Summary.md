@@ -49,3 +49,12 @@ ORB/SIFT —— 获取二维图像之间的特征匹配；
 5. PCA(主成分分析)如何进行？
 6. EM-ICP 是什么含义？
 6. CPD和GMM也是基于ICP么？
+
+
+
+---
+
+1. 什么是启发式算法？
+2. 什么是基于距离/角度提高robutness？
+
+Efficient variants 这篇文章要好好总结一下。
