@@ -6,7 +6,9 @@
 
 - **A Method for Registration of 3-D Shapes**
 
-  > <TPAMI>
+  > Besl, P. J., & McKay, N. D. (1992, April). Method for registration of 3-D shapes. In *Sensor fusion IV: control paradigms and data structures* (Vol. 1611, pp. 586-606). International Society for Optics and Photonics.
+  >
+  > **Citations:**22173
   >
   > [[url]](https://www.cvl.iis.u-tokyo.ac.jp/class2004/wedenesday/report/besl.pdf) [[pdf]](./papers/A Method for Registration of 3-D Shapes.pdf)
   >
@@ -32,7 +34,7 @@
 
 - **Robust Metric**
 
-  - **Efficient variants of the ICP algorithm**
+  - **Efficient variants of the ICP algorithm** :heavy_check_mark:
 
     > Rusinkiewicz, S., & Levoy, M. (2001, May). Efficient Variants of the ICP algorithm. In *Proceedings third international conference on 3-D digital imaging and modelling (pp. 145-152). IEEE.
     >
@@ -42,7 +44,9 @@
     >
     > [[notes]](./notes/Efficient variants of the ICP algorithm.md)
 
-  - **Iterative Point Matching for Registration of Free-Form Curves and Surfaces**
+    Compare some variants of ICP-based algorithms, the effect of variants on steps of ICP. The paper proposes a sampling method by sampling points according to the normals to increase robustness.
+
+  - **Iterative Point Matching for Registration of Free-Form Curves and Surfaces** :heavy_check_mark:
 
     > Zhang, Z. (1994). Iterative point matching for registration of free-form curves and surfaces. *International journal of computer vision*, *13*(2), 119-152.
     >
@@ -88,7 +92,7 @@
     >
     > [[url]](https://link.springer.com/content/pdf/10.1007/s11263-006-5167-2.pdf) [[pdf]](./papers/Geometry and Convergence Analysis of Algorithms for Registration of 3D Shapes.pdf)
 
-- **Robust for objective function**
+- **Robust for the objective function**
 
   - **Sparse Iterative Closest Point**
 
@@ -114,7 +118,7 @@
 
     Point-to-Plane ICP.
 
-    <img src="./notes/point-to-plane.png" style="zoom: 67%;" />
+    <img src="D:\papers\notes\point-to-plane.png" style="zoom:67%;" />
 
   - **A robust method for registration and segmentation of multiple range images**
 
@@ -204,17 +208,29 @@
     >
     > [[url]](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Deep_Closest_Point_Learning_Representations_for_Point_Cloud_Registration_ICCV_2019_paper.pdf) [[pdf]](./papers/Deep Closest Point Learning Representations for Point Cloud Registration.pdf)
 
-- **Fast and Robust Iterative Closest Point**
+- **Acceleration**
 
-> <TPAMI2021>
->
-> <Juyong Zhang Yuxin Yao Bailin Deng>
->
-> <University of Science and Technology of China>
->
-> [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9336308) [[pdf]](./papers/Fast_and_Robust_Iterative_Closest_Point.pdf)
+  - **AA-ICP Iterative Closest Point with Anderson Acceleration** :heavy_check_mark:
 
-:question: ICP 这个东西还怎么做出TPAMI的成果？
+    > Pavlov, A. L., Ovchinnikov, G. W., Derbyshev, D. Y., Tsetserukou, D., & Oseledets, I. V. (2018, May). AA-ICP: Iterative closest point with Anderson acceleration. In *2018 IEEE International Conference on Robotics and Automation (ICRA)* (pp. 3407-3412). IEEE.
+    >
+    > **Citations:**29
+    >
+    > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461063)[[pdf]](./papers/AA-ICP Iterative Closest Point with Anderson Acceleration.pdf)
+
+    AA-ICP: (Anderson Acceleration ICP), use Anderson acceleration to accelerate the process of the algorithm(About 30% compared to standard ICP).
+
+  - **Fast and Robust Iterative Closest Point** :heavy_check_mark:
+
+    > Zhang, J., Yao, Y., & Deng, B. (2021). Fast and Robust Iterative Closest Point. *IEEE Transactions on Pattern Analysis and Machine Intelligence*.
+    >
+    > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9336308) [[pdf]](./papers/Fast_and_Robust_Iterative_Closest_Point.pdf)
+
+    1. Fast: Use Anderson acceleration to make the iteration process quickly;
+
+    2. Robust: Use Welsch’s function to formulate an objective function.
+
+       Extend them to the p2p and p2plane algos, but not globally and need a good initialization.
 
 - **Precision Range Image Registration Using a Robust Surface Interpenetration Measure and Enhanced Genetic Algorithms**
 
@@ -224,13 +240,13 @@
 >
 > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1407879)[[pdf]](./papers/Precision_range_image_registration_using_a_robust_surface_interpenetration_measure_and_enhanced_genetic_algorithms.pdf)
 
-- **AA-ICP Iterative Closest Point with Anderson Acceleration**
+- **The Trimmed Iterative Closest Point Algorithm**
 
-> Pavlov, A. L., Ovchinnikov, G. W., Derbyshev, D. Y., Tsetserukou, D., & Oseledets, I. V. (2018, May). AA-ICP: Iterative closest point with Anderson acceleration. In *2018 IEEE International Conference on Robotics and Automation (ICRA)* (pp. 3407-3412). IEEE.
->
-> **Citations:**29
->
-> [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461063)[[pdf]](./papers/AA-ICP Iterative Closest Point with Anderson Acceleration.pdf)
+  > Chetverikov, D., Svirko, D., Stepanov, D., & Krsek, P. (2002, August). The trimmed iterative closest point algorithm. In *Object recognition supported by user interaction for service robots* (Vol. 3, pp. 545-548). IEEE.
+  >
+  > **Citations:**598
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1047997&tag=1) [[pdf]](./papers/The Trimmed Iterative Closest Point Algorithm.pdf)
 
 - **A symmetric objective function for ICP**
 
@@ -265,12 +281,16 @@
     > <RSJ2003>
     >
     > [[pdf]](./papers/The_normal_distributions_transform_a_new_approach_to_laser_scan_matching.pdf) [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1249285)
-
-
-  - **Scan Registration for Autonomous Mining Vehicles Using 3D-NDT**
-
-    > <JFR2007>
-    > [[pdf]](./papers/Scan registration for autonomous mining vehicles using 3D‐NDT.pdf) [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1002/rob.20204)
+  
+  
+    - **Scan Registration for Autonomous Mining Vehicles Using 3D-NDT**
+  
+      > Magnusson, M., Lilienthal, A., & Duckett, T. (2007). Scan registration for autonomous mining vehicles using 3D‐NDT. *Journal of Field Robotics*, *24*(10), 803-827.
+      >
+      > **Citations:**558
+      >
+      > [[pdf]](./papers/Scan registration for autonomous mining vehicles using 3D‐NDT.pdf) [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1002/rob.20204)
+  
 
 
 ## Fuzzy
@@ -327,7 +347,6 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
   >
   > [[NOTES]](./notes/Registration Loss Learning for Deep Probabilistic Point Set Registration.md)
 
-  ![](./notes/DEEP-GMM.png)
 
 ## Different kinds of Improvements
 
@@ -428,12 +447,21 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
 
 - **PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation** :flags:
 
-  > <CVPR2017>
+  > Qi, C. R., Su, H., Mo, K., & Guibas, L. J. (2017). Pointnet: Deep learning on point sets for 3d classification and segmentation. In *Proceedings of the IEEE conference on computer vision and pattern recognition* (pp. 652-660).
+  >
+  > **Citations:**6347
+  >
   > [[pdf]](./papers/PointNet_Deep_Learning_CVPR_2017_paper.pdf) [[url]](https://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf)
   >
   > [[notes]](./notes/PointNet Deep Learning on Point Sets for 3D Classification and Segmentation.md)
-
+  
   PointNet, DL for 3D segmentation.
+  
+- **PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space**
+
+  > Qi, C. R., Yi, L., Su, H., & Guibas, L. J. (2017). Pointnet++: Deep hierarchical feature learning on point sets in a metric space. *arXiv preprint arXiv:1706.02413*.
+  >
+  > **Citations:**4083
 
 ## Cross-source Combination
 

@@ -11,7 +11,8 @@
 - standard ICP的方法主要有两个缺点：
   1. 对初值敏感；
   2. 对noise/outliers的鲁棒性差；
-
+  2. 收敛到局部最优
+  
 - 对于ICP算法的两个步骤可以进行改进的地方有：
 
   - 如何寻找correspondence:
