@@ -4,21 +4,21 @@
 
 ## ICP & Variants
 
-- **A Method for Registration of 3-D Shapes**
+### Standard  ICP
 
-  > Besl, P. J., & McKay, N. D. (1992, April). Method for registration of 3-D shapes. In *Sensor fusion IV: control paradigms and data structures* (Vol. 1611, pp. 586-606). International Society for Optics and Photonics.
-  >
-  > **Citations:**22173
-  >
-  > [[url]](https://www.cvl.iis.u-tokyo.ac.jp/class2004/wedenesday/report/besl.pdf) [[pdf]](./papers/A Method for Registration of 3-D Shapes.pdf)
-  >
-  > [[tutorial]](http://www.sci.utah.edu/~shireen/pdfs/tutorials/Elhabian_ICP09.pdf) [[ICP Related Material]](http://ais.informatik.uni-freiburg.de/teaching/ss12/robotics/slides/17-icp.pdf)
-  >
-  > [[notes]](./notes/A Method for Registration of 3-D Shapes.md)
+> Besl, P. J., & McKay, N. D. (1992, April). Method for registration of 3-D shapes. In *Sensor fusion IV: control paradigms and data structures* (Vol. 1611, pp. 586-606). International Society for Optics and Photonics.
+>
+> **Citations:**22173
+>
+> [[url]](https://www.cvl.iis.u-tokyo.ac.jp/class2004/wedenesday/report/besl.pdf) [[pdf]](./papers/A Method for Registration of 3-D Shapes.pdf)
+>
+> [[tutorial]](http://www.sci.utah.edu/~shireen/pdfs/tutorials/Elhabian_ICP09.pdf) [[ICP Related Material]](http://ais.informatik.uni-freiburg.de/teaching/ss12/robotics/slides/17-icp.pdf)
+>
+> [[notes]](./notes/A Method for Registration of 3-D Shapes.md)
 
-  The original paper of ICP.
+The original paper of ICP.
 
-  > It alternates between the closest point query in the target set and minimization of the distance between corresponding points and is guaranteed to converge to a locally optimal alignment
+> It alternates between the closest point query in the target set and minimization of the distance between corresponding points and is guaranteed to converge to a locally optimal alignment
 
 - **Multi-scale EM-ICP: A Fast and Robust Approach for Surface Registration** :question:
 
@@ -32,205 +32,217 @@
 
   EM-ICP: ML + EM --> robust and speed
 
-- **Robust Metric**
+### Robust Metric
 
-  - **Efficient variants of the ICP algorithm** :heavy_check_mark:
+- **Efficient variants of the ICP algorithm** :heavy_check_mark:
 
-    > Rusinkiewicz, S., & Levoy, M. (2001, May). Efficient Variants of the ICP algorithm. In *Proceedings third international conference on 3-D digital imaging and modelling (pp. 145-152). IEEE.
-    >
-    > **Citations:**4711
-    >
-    > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=924423) [[pdf]](./papers/Efficient Variants of the ICP Algorithm.pdf)
-    >
-    > [[notes]](./notes/Efficient variants of the ICP algorithm.md)
+  > Rusinkiewicz, S., & Levoy, M. (2001, May). Efficient Variants of the ICP algorithm. In *Proceedings third international conference on 3-D digital imaging and modelling (pp. 145-152). IEEE.
+  >
+  > **Citations:**4711
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=924423) [[pdf]](./papers/Efficient Variants of the ICP Algorithm.pdf)
+  >
+  > [[notes]](./notes/Efficient variants of the ICP algorithm.md)
 
-    Compare some variants of ICP-based algorithms, the effect of variants on steps of ICP. The paper proposes a sampling method by sampling points according to the normals to increase robustness.
+  Compare some variants of ICP-based algorithms, the effect of variants on steps of ICP. The paper proposes a sampling method by sampling points according to the normals to increase robustness.
 
-  - **Iterative Point Matching for Registration of Free-Form Curves and Surfaces** :heavy_check_mark:
+- **Iterative Point Matching for Registration of Free-Form Curves and Surfaces** :heavy_check_mark:
 
-    > Zhang, Z. (1994). Iterative point matching for registration of free-form curves and surfaces. *International journal of computer vision*, *13*(2), 119-152.
-    >
-    > **Citations:**3098
-    >
-    > [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.175.770&rep=rep1&type=pdf) [[pdf]](./papers/Iterative Point Matching for Registration of Free-Form Curves and Surfaces.pdf)
-    >
-    > [[notes]](./notes/Iterative Point Matching for Registration of Free-Form Curves and Surfaces.md)
+  > Zhang, Z. (1994). Iterative point matching for registration of free-form curves and surfaces. *International journal of computer vision*, *13*(2), 119-152.
+  >
+  > **Citations:**3098
+  >
+  > [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.175.770&rep=rep1&type=pdf) [[pdf]](./papers/Iterative Point Matching for Registration of Free-Form Curves and Surfaces.pdf)
+  >
+  > [[notes]](./notes/Iterative Point Matching for Registration of Free-Form Curves and Surfaces.md)
 
-    rather robust to relatively big motion and to gross outliers.
+  rather robust to relatively big motion and to gross outliers.
 
-  - **Robust Euclidean alignment of 3D point sets the trimmed iterative closest point algorithm**
+- **Robust Euclidean alignment of 3D point sets the trimmed iterative closest point algorithm**
 
-    > Chetverikov, D., Stepanov, D., & Krsek, P. (2005). Robust Euclidean alignment of 3D point sets: the trimmed iterative closest point algorithm. *Image and vision computing*, *23*(3), 299-309.
-    >
-    > **Citations:**461
-    >
-    > [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885604001179?token=B6A29AD77A8BDB565DE4A2ACBB8EFE4B12056ED98E9FFC14E5AD96E10C8F7E04DB2E587E5F8487939EEAC731DC1B24E1&originRegion=eu-west-1&originCreation=20220107203632) [[pdf]](./papers/Robust Euclidean alignment of 3D point sets the trimmediterative closest point algorithm.pdf)
+  > Chetverikov, D., Stepanov, D., & Krsek, P. (2005). Robust Euclidean alignment of 3D point sets: the trimmed iterative closest point algorithm. *Image and vision computing*, *23*(3), 299-309.
+  >
+  > **Citations:**461
+  >
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885604001179?token=B6A29AD77A8BDB565DE4A2ACBB8EFE4B12056ED98E9FFC14E5AD96E10C8F7E04DB2E587E5F8487939EEAC731DC1B24E1&originRegion=eu-west-1&originCreation=20220107203632) [[pdf]](./papers/Robust Euclidean alignment of 3D point sets the trimmediterative closest point algorithm.pdf)
+  
+- **The Trimmed Iterative Closest Point Algorithm** **(Tr-ICP)** :heavy_check_mark:
 
-- **A similar framework**
+  > Chetverikov, D., Svirko, D., Stepanov, D., & Krsek, P. (2002, August). The trimmed iterative closest point algorithm. In *Object recognition supported by user interaction for service robots* (Vol. 3, pp. 545-548). IEEE.
+  >
+  > **Citations:**598
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1047997&tag=1) [[pdf]](./papers/The Trimmed Iterative Closest Point Algorithm.pdf)
 
-  - **Registration of Point Cloud Data from a Geometric Optimization Perspective**
+  Tr-ICP: '*Tr*' means the '*Trimmed*', use the '*[Least Trimmed Square](https://en.wikipedia.org/wiki/Least_trimmed_squares)*' method in the process to improve robustness.
+  Pros: can converge when the overlapping rate is under 50%;
+  cons: still need a good initial pose;
 
-    > Mitra, N. J., Gelfand, N., Pottmann, H., & Guibas, L. (2004, July). Registration of point cloud data from a geometric optimization perspective. In *Proceedings of the 2004 Eurographics/ACM SIGGRAPH Symposium on Geometry processing* (pp. 22-31).
-    >
-    > **citations**:346
-    >
-    > [[url]](https://graphics.stanford.edu/courses/cs348a-17-winter/Handouts/mgpg-rpcdgop-04.pdf) [[pdf]](./papers/Registration of Point Cloud Data from a Geometric Optimization Perspective.pdf)
+### A similar framework
 
-  - **Registration without ICP**
+- **Registration of Point Cloud Data from a Geometric Optimization Perspective**
 
-    > Pottmann, H., Leopoldseder, S., & Hofer, M. (2004). Registration without ICP. *Computer Vision and Image Understanding*, *95*(1), 54-71.
-    >
-    > **citations:** 193
-    >
-    > [[url]](https://reader.elsevier.com/reader/sd/pii/S1077314204000475?token=8DB8C5E4B144F2E8B057D208B85ACA76BB37E85C6014F18D2EF6C6B9F068840DC740ED9D345A8EC880FDA7ADABF1DF16&originRegion=eu-west-1&originCreation=20220108112859) [[pdf]](./papers/Registration without ICP.pdf)
+  > Mitra, N. J., Gelfand, N., Pottmann, H., & Guibas, L. (2004, July). Registration of point cloud data from a geometric optimization perspective. In *Proceedings of the 2004 Eurographics/ACM SIGGRAPH Symposium on Geometry processing* (pp. 22-31).
+  >
+  > **citations**:346
+  >
+  > [[url]](https://graphics.stanford.edu/courses/cs348a-17-winter/Handouts/mgpg-rpcdgop-04.pdf) [[pdf]](./papers/Registration of Point Cloud Data from a Geometric Optimization Perspective.pdf)
 
-  - **Geometry and convergence analysis of algorithms for registration of 3D shapes**
+- **Registration without ICP**
 
-    > Pottmann, H., Huang, Q. X., Yang, Y. L., & Hu, S. M. (2006). Geometry and convergence analysis of algorithms for registration of 3D shapes. *International Journal of Computer Vision*, *67*(3), 277-296.
-    >
-    > **citations:** 225
-    >
-    > [[url]](https://link.springer.com/content/pdf/10.1007/s11263-006-5167-2.pdf) [[pdf]](./papers/Geometry and Convergence Analysis of Algorithms for Registration of 3D Shapes.pdf)
+  > Pottmann, H., Leopoldseder, S., & Hofer, M. (2004). Registration without ICP. *Computer Vision and Image Understanding*, *95*(1), 54-71.
+  >
+  > **citations:** 193
+  >
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S1077314204000475?token=8DB8C5E4B144F2E8B057D208B85ACA76BB37E85C6014F18D2EF6C6B9F068840DC740ED9D345A8EC880FDA7ADABF1DF16&originRegion=eu-west-1&originCreation=20220108112859) [[pdf]](./papers/Registration without ICP.pdf)
 
-- **Robust for the objective function**
+- **Geometry and convergence analysis of algorithms for registration of 3D shapes**
 
-  - **Sparse Iterative Closest Point**
+  > Pottmann, H., Huang, Q. X., Yang, Y. L., & Hu, S. M. (2006). Geometry and convergence analysis of algorithms for registration of 3D shapes. *International Journal of Computer Vision*, *67*(3), 277-296.
+  >
+  > **citations:** 225
+  >
+  > [[url]](https://link.springer.com/content/pdf/10.1007/s11263-006-5167-2.pdf) [[pdf]](./papers/Geometry and Convergence Analysis of Algorithms for Registration of 3D Shapes.pdf)
 
-    > Bouaziz, S., Tagliasacchi, A., & Pauly, M. (2013, August). Sparse iterative closest point. In *Computer graphics forum* (Vol. 32, No. 5, pp. 113-123). Oxford, UK: Blackwell Publishing Ltd.
-    >
-    > **Citations:**393
-    >
-    > [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1111/cgf.12178)[[pdf]](./papers/Sparse Iterative Closest Point.pdf)
-    >
-    > [[notes]](./notes/Sparse Iterative Closest Point.md)
+### Robust for the objective function
 
-    Sparse ICP: 仍然使用欧式距离寻找ICP中的correspondence，但是在优化阶段，使用了$d_2^p$ 代替 $d_2$， 提高了稀疏性，对Outlier和noise有一定的鲁棒性。
+- **Sparse Iterative Closest Point**
 
-  - **Object modelling by registration of multiple range images**
+  > Bouaziz, S., Tagliasacchi, A., & Pauly, M. (2013, August). Sparse iterative closest point. In *Computer graphics forum* (Vol. 32, No. 5, pp. 113-123). Oxford, UK: Blackwell Publishing Ltd.
+  >
+  > **Citations:**393
+  >
+  > [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1111/cgf.12178)[[pdf]](./papers/Sparse Iterative Closest Point.pdf)
+  >
+  > [[notes]](./notes/Sparse Iterative Closest Point.md)
 
-    > Chen, Y., & Medioni, G. (1992). Object modelling by registration of multiple range images. *Image and vision computing*, *10*(3), 145-155.
-    >
-    > **Citations:**4931
-    >
-    > [[pdf]](./papers/Object modeling by registration of multiple range images.pdf)[[url]](http://graphics.stanford.edu/courses/cs348a-17-winter/Handouts/chen-medioni-align-rob91.pdf)
-    >
-    > [[notes]](./notes/Object modelling by registration of multiple range images.md)
+  Sparse ICP: 仍然使用欧式距离寻找ICP中的correspondence，但是在优化阶段，使用了$d_2^p$ 代替 $d_2$， 提高了稀疏性，对Outlier和noise有一定的鲁棒性。
 
-    Point-to-Plane ICP.
+- **Object modelling by registration of multiple range images**
 
-    <img src="D:\papers\notes\point-to-plane.png" style="zoom:67%;" />
+  > Chen, Y., & Medioni, G. (1992). Object modelling by registration of multiple range images. *Image and vision computing*, *10*(3), 145-155.
+  >
+  > **Citations:**4931
+  >
+  > [[pdf]](./papers/Object modeling by registration of multiple range images.pdf)[[url]](http://graphics.stanford.edu/courses/cs348a-17-winter/Handouts/chen-medioni-align-rob91.pdf)
+  >
+  > [[notes]](./notes/Object modelling by registration of multiple range images.md)
 
-  - **A robust method for registration and segmentation of multiple range images**
+  Point-to-Plane ICP.
 
-    > Masuda, T., & Yokoya, N. (1995). A robust method for registration and segmentation of multiple range images. *Computer vision and image understanding*, *61*(3), 295-307.
-    >
-    > **Citations:**401
-    >
-    > [[url]](https://www.sciencedirect.com/sdfe/reader/pii/S1077314285710247/pdf) [[pdf]](./papers/A Robust Method for Registration and Segmentation of Multiple Range Images.pdf)
+  <img src="D:\papers\notes\point-to-plane.png" style="zoom:67%;" />
 
-  - **Robust motion and correspondence of noisy 3-d point sets with missing data**
+- **A robust method for registration and segmentation of multiple range images**
 
-    > Trucco, E., Fusiello, A., & Roberto, V. (1999). Robust motion and correspondence of noisy 3-D point sets with missing data. *Pattern recognition letters*, *20*(9), 889-898.
-    >
-    > **Citations:**140
-    >
-    > [[url]](https://reader.elsevier.com/reader/sd/pii/S0167865599000550?token=80227EA90623477B34968113CCC67A768D7F900C9CECFDC7F9A7763C172BB9BC1A5C894B86D5D6169A3A26ED39EA8D59&originRegion=eu-west-1&originCreation=20220108114837) [[pdf]](./papers/Robust motion and correspondence of noisy 3-d point sets with missing data.pdf)
+  > Masuda, T., & Yokoya, N. (1995). A robust method for registration and segmentation of multiple range images. *Computer vision and image understanding*, *61*(3), 295-307.
+  >
+  > **Citations:**401
+  >
+  > [[url]](https://www.sciencedirect.com/sdfe/reader/pii/S1077314285710247/pdf) [[pdf]](./papers/A Robust Method for Registration and Segmentation of Multiple Range Images.pdf)
 
-  - **Robust registration of 2D and 3D point sets** :heavy_check_mark:
+- **Robust motion and correspondence of noisy 3-d point sets with missing data**
 
-    > Fitzgibbon, A. W. (2003). Robust registration of 2D and 3D point sets. *Image and vision computing*, *21*(13-14), 1145-1153.
-    >
-    > **Citations:**1089
-    >
-    > [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885603001835?token=76780F4CE6E03D857BA3240F3179D4A3ADDC641974808A73B35251E1D27D83CA1AC4345D6345686D2744544E4C647749&originRegion=eu-west-1&originCreation=20220105133411)[[pdf]](./papers/Robust registration of 2D and 3D point sets.pdf)
-    >
-    > [[notes]](./notes/Robust registration of 2D and 3D point sets.md)
+  > Trucco, E., Fusiello, A., & Roberto, V. (1999). Robust motion and correspondence of noisy 3-D point sets with missing data. *Pattern recognition letters*, *20*(9), 889-898.
+  >
+  > **Citations:**140
+  >
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0167865599000550?token=80227EA90623477B34968113CCC67A768D7F900C9CECFDC7F9A7763C172BB9BC1A5C894B86D5D6169A3A26ED39EA8D59&originRegion=eu-west-1&originCreation=20220108114837) [[pdf]](./papers/Robust motion and correspondence of noisy 3-d point sets with missing data.pdf)
 
-    LM-ICP: generalize the ICP to a non-convex optimization problem. :question:
+- **Robust registration of 2D and 3D point sets** :heavy_check_mark:
 
-  - **Generalized-ICP** :heavy_check_mark:
+  > Fitzgibbon, A. W. (2003). Robust registration of 2D and 3D point sets. *Image and vision computing*, *21*(13-14), 1145-1153.
+  >
+  > **Citations:**1089
+  >
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885603001835?token=76780F4CE6E03D857BA3240F3179D4A3ADDC641974808A73B35251E1D27D83CA1AC4345D6345686D2744544E4C647749&originRegion=eu-west-1&originCreation=20220105133411)[[pdf]](./papers/Robust registration of 2D and 3D point sets.pdf)
+  >
+  > [[notes]](./notes/Robust registration of 2D and 3D point sets.md)
 
-    > Segal, A., Haehnel, D., & Thrun, S. (2009, June). Generalized-icp. In *Robotics: science and systems* (Vol. 2, No. 4, p. 435).
-    >
-    > **Citations:**1365 :flags:
-    >
-    > [[url]](https://www.robots.ox.ac.uk/~avsegal/resources/papers/Generalized_ICP.pdf) [[pdf]](./papers/Generalized_ICP.pdf)
-    >
-    > [[notes]](./notes/Generalized-ICP.md)
+  LM-ICP: generalize the ICP to a non-convex optimization problem. :question:
 
-    GICP: Generalize The ICP approach to probabilistic distribution, extend it to plane-to-plane format.
+- **Generalized-ICP** :heavy_check_mark:
 
-    将ICP的方法从点对点，点对面进行一般化，引入了两个点云的协方差矩阵描述各自的特征，降低了不匹配的特征的影响。
+  > Segal, A., Haehnel, D., & Thrun, S. (2009, June). Generalized-icp. In *Robotics: science and systems* (Vol. 2, No. 4, p. 435).
+  >
+  > **Citations:**1365 :flags:
+  >
+  > [[url]](https://www.robots.ox.ac.uk/~avsegal/resources/papers/Generalized_ICP.pdf) [[pdf]](./papers/Generalized_ICP.pdf)
+  >
+  > [[notes]](./notes/Generalized-ICP.md)
 
-  - **Fast global registration**
+  GICP: Generalize The ICP approach to probabilistic distribution, extend it to plane-to-plane format.
 
-    > Zhou, Q. Y., Park, J., & Koltun, V. (2016, October). Fast global registration. In *European conference on computer vision* (pp. 766-782). Springer, Cham.
-    >
-    > **Citations:**421
-    >
-    > [[url]](http://vladlen.info/papers/fast-global-registration.pdf) [[pdf]](./papers/Fast Global Registration.pdf)
+  将ICP的方法从点对点，点对面进行一般化，引入了两个点云的协方差矩阵描述各自的特征，降低了不匹配的特征的影响。
 
-- **Global Registration**
+- **Fast global registration**
 
-  - **The 3D-3D registration problem revisited**
+  > Zhou, Q. Y., Park, J., & Koltun, V. (2016, October). Fast global registration. In *European conference on computer vision* (pp. 766-782). Springer, Cham.
+  >
+  > **Citations:**421
+  >
+  > [[url]](http://vladlen.info/papers/fast-global-registration.pdf) [[pdf]](./papers/Fast Global Registration.pdf)
 
-    > Li, H., & Hartley, R. (2007, October). The 3D-3D registration problem revisited. In *2007 IEEE 11th international conference on computer vision* (pp. 1-8). IEEE.
-    >
-    > **Citations:**193
-    >
-    > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4409077) [[pdf]](./papers/The 3D-3D registration problem revisited.pdf)
+### Global Registration
 
-  - **Branch-and-bound methods for euclidean registration problems**
+- **The 3D-3D registration problem revisited**
 
-    > Olsson, C., Kahl, F., & Oskarsson, M. (2008). Branch-and-bound methods for euclidean registration problems. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *31*(5), 783-794.
-    >
-    > **Citations:**138
-    >
-    > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4531744) [[pdf]](./papers/Branch-and-Bound Methods for Euclidean Registration Problems.pdf)
+  > Li, H., & Hartley, R. (2007, October). The 3D-3D registration problem revisited. In *2007 IEEE 11th international conference on computer vision* (pp. 1-8). IEEE.
+  >
+  > **Citations:**193
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4409077) [[pdf]](./papers/The 3D-3D registration problem revisited.pdf)
 
-  - **Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration**
+- **Branch-and-bound methods for euclidean registration problems**
 
-    > Yang, J., Li, H., Campbell, D., & Jia, Y. (2015). Go-ICP: A globally optimal solution to 3D ICP point-set registration. *IEEE transactions on pattern analysis and machine intelligence*, *38*(11), 2241-2254.
-    >
-    > **Citations:**522
-    >
-    > [[pdf]](./papers/Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration.pdf) [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7368945) 
+  > Olsson, C., Kahl, F., & Oskarsson, M. (2008). Branch-and-bound methods for euclidean registration problems. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *31*(5), 783-794.
+  >
+  > **Citations:**138
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4531744) [[pdf]](./papers/Branch-and-Bound Methods for Euclidean Registration Problems.pdf)
 
-    Get the global optimal for ICP algorithm.
+- **Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration**
 
-- **Deep learning**
+  > Yang, J., Li, H., Campbell, D., & Jia, Y. (2015). Go-ICP: A globally optimal solution to 3D ICP point-set registration. *IEEE transactions on pattern analysis and machine intelligence*, *38*(11), 2241-2254.
+  >
+  > **Citations:**522
+  >
+  > [[pdf]](./papers/Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration.pdf) [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7368945) 
 
-  - **Deep closest point: Learning representations for point cloud registration**
+  Get the global optimal for ICP algorithm.
 
-    > Wang, Y., & Solomon, J. M. (2019). Deep closest point: Learning representations for point cloud registration. In *Proceedings of the IEEE/CVF International Conference on Computer Vision* (pp. 3523-3532).
-    >
-    > **Citations:**285
-    >
-    > [[url]](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Deep_Closest_Point_Learning_Representations_for_Point_Cloud_Registration_ICCV_2019_paper.pdf) [[pdf]](./papers/Deep Closest Point Learning Representations for Point Cloud Registration.pdf)
+### Deep learning
 
-- **Acceleration**
+- **Deep closest point: Learning representations for point cloud registration**
 
-  - **AA-ICP Iterative Closest Point with Anderson Acceleration** :heavy_check_mark:
+  > Wang, Y., & Solomon, J. M. (2019). Deep closest point: Learning representations for point cloud registration. In *Proceedings of the IEEE/CVF International Conference on Computer Vision* (pp. 3523-3532).
+  >
+  > **Citations:**285
+  >
+  > [[url]](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Deep_Closest_Point_Learning_Representations_for_Point_Cloud_Registration_ICCV_2019_paper.pdf) [[pdf]](./papers/Deep Closest Point Learning Representations for Point Cloud Registration.pdf)
 
-    > Pavlov, A. L., Ovchinnikov, G. W., Derbyshev, D. Y., Tsetserukou, D., & Oseledets, I. V. (2018, May). AA-ICP: Iterative closest point with Anderson acceleration. In *2018 IEEE International Conference on Robotics and Automation (ICRA)* (pp. 3407-3412). IEEE.
-    >
-    > **Citations:**29
-    >
-    > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461063)[[pdf]](./papers/AA-ICP Iterative Closest Point with Anderson Acceleration.pdf)
+### Acceleration
 
-    AA-ICP: (Anderson Acceleration ICP), use Anderson acceleration to accelerate the process of the algorithm(About 30% compared to standard ICP).
+- **AA-ICP Iterative Closest Point with Anderson Acceleration** :heavy_check_mark:
 
-  - **Fast and Robust Iterative Closest Point** :heavy_check_mark:
+  > Pavlov, A. L., Ovchinnikov, G. W., Derbyshev, D. Y., Tsetserukou, D., & Oseledets, I. V. (2018, May). AA-ICP: Iterative closest point with Anderson acceleration. In *2018 IEEE International Conference on Robotics and Automation (ICRA)* (pp. 3407-3412). IEEE.
+  >
+  > **Citations:**29
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461063)[[pdf]](./papers/AA-ICP Iterative Closest Point with Anderson Acceleration.pdf)
 
-    > Zhang, J., Yao, Y., & Deng, B. (2021). Fast and Robust Iterative Closest Point. *IEEE Transactions on Pattern Analysis and Machine Intelligence*.
-    >
-    > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9336308) [[pdf]](./papers/Fast_and_Robust_Iterative_Closest_Point.pdf)
+  AA-ICP: (Anderson Acceleration ICP), use Anderson acceleration to accelerate the process of the algorithm(About 30% compared to standard ICP).
 
-    1. Fast: Use Anderson acceleration to make the iteration process quickly;
+- **Fast and Robust Iterative Closest Point** :heavy_check_mark:
 
-    2. Robust: Use Welsch’s function to formulate an objective function.
+  > Zhang, J., Yao, Y., & Deng, B. (2021). Fast and Robust Iterative Closest Point. *IEEE Transactions on Pattern Analysis and Machine Intelligence*.
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9336308) [[pdf]](./papers/Fast_and_Robust_Iterative_Closest_Point.pdf)
 
-       Extend them to the p2p and p2plane algos, but not globally and need a good initialization.
+  1. Fast: Use Anderson acceleration to make the iteration process quickly;
+
+  2. Robust: Use Welsch’s function to formulate an objective function.
+
+     Extend them to the p2p and p2plane algos, but not globally and need a good initialization.
 
 - **Precision Range Image Registration Using a Robust Surface Interpenetration Measure and Enhanced Genetic Algorithms**
 
@@ -239,14 +251,6 @@
 > **Citations:**281
 >
 > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1407879)[[pdf]](./papers/Precision_range_image_registration_using_a_robust_surface_interpenetration_measure_and_enhanced_genetic_algorithms.pdf)
-
-- **The Trimmed Iterative Closest Point Algorithm**
-
-  > Chetverikov, D., Svirko, D., Stepanov, D., & Krsek, P. (2002, August). The trimmed iterative closest point algorithm. In *Object recognition supported by user interaction for service robots* (Vol. 3, pp. 545-548). IEEE.
-  >
-  > **Citations:**598
-  >
-  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1047997&tag=1) [[pdf]](./papers/The Trimmed Iterative Closest Point Algorithm.pdf)
 
 - **A symmetric objective function for ICP**
 
