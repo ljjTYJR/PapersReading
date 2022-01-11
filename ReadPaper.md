@@ -6,6 +6,8 @@
 
 ### Standard  ICP
 
+- **Method for registration of 3-D shapes** **(Standard ICP)** :heavy_check_mark:
+
 > Besl, P. J., & McKay, N. D. (1992, April). Method for registration of 3-D shapes. In *Sensor fusion IV: control paradigms and data structures* (Vol. 1611, pp. 586-606). International Society for Optics and Photonics.
 >
 > **Citations:**22173
@@ -166,7 +168,7 @@ The original paper of ICP.
   >
   > [[url]](https://reader.elsevier.com/reader/sd/pii/S0167865599000550?token=80227EA90623477B34968113CCC67A768D7F900C9CECFDC7F9A7763C172BB9BC1A5C894B86D5D6169A3A26ED39EA8D59&originRegion=eu-west-1&originCreation=20220108114837) [[pdf]](./papers/Robust motion and correspondence of noisy 3-d point sets with missing data.pdf)
 
-- **Robust registration of 2D and 3D point sets** :heavy_check_mark:
+- **Robust registration of 2D and 3D point sets** **(LM-ICP)**:heavy_check_mark: :question:
 
   > Fitzgibbon, A. W. (2003). Robust registration of 2D and 3D point sets. *Image and vision computing*, *21*(13-14), 1145-1153.
   >
@@ -176,7 +178,7 @@ The original paper of ICP.
   >
   > [[notes]](./notes/Robust registration of 2D and 3D point sets.md)
 
-  LM-ICP: generalize the ICP to a non-convex optimization problem. :question:
+  The article uses the LM algorithm to optimize a non-linear process instead of a closed-form solution, which can get a wider converge basin. 
 
 - **Sparse Iterative Closest Point** **(Sparse ICP)** :heavy_check_mark:
 
@@ -216,7 +218,7 @@ The original paper of ICP.
   >
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4531744) [[pdf]](./papers/Branch-and-Bound Methods for Euclidean Registration Problems.pdf)
 
-- **Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration**
+- **Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration** **(Go-ICP)** :heavy_check_mark:
 
   > Yang, J., Li, H., Campbell, D., & Jia, Y. (2015). Go-ICP: A globally optimal solution to 3D ICP point-set registration. *IEEE transactions on pattern analysis and machine intelligence*, *38*(11), 2241-2254.
   >
@@ -402,6 +404,21 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
   > [[pdf]](./papers/Registration of large-scale terrestrial laser scanner point clouds A reviewand benchmark.pdf)
   > [[detailed notes]](./notes/Registration of large-scale terrestrial laser scanner point clouds A reviewand benchmark.pdf.md)
   
+- **A Review of Point Cloud Registration Algorithms for Mobile Robotics**
+
+  > Pomerleau, F., Colas, F., & Siegwart, R. (2015). A review of point cloud registration algorithms for mobile robotics. *Foundations and Trends in Robotics*, *4*(1), 1-104.
+  >
+  > **Citations**:423
+  >
+  > [[url]](https://hal.archives-ouvertes.fr/hal-01178661/document) [[pdf]](./papers/A Review of Point Cloud Registration Algorithms for Mobile Robotics.pdf)
+
+- **Image Matching from Handcrafted to Deep Features: A Survey**
+
+  > Ma, J., Jiang, X., Fan, A., Jiang, J., & Yan, J. (2021). Image matching from handcrafted to deep features: A survey. *International Journal of Computer Vision*, *129*(1), 23-79.
+  >
+  > **Citations:**155
+  >
+  > [[url]](https://link.springer.com/content/pdf/10.1007/s11263-020-01359-2.pdf) [[pdf]](./papers/Image Matching from Handcrafted to Deep Features A Survey.pdf)
 
 # Mapping & Fusion
 
