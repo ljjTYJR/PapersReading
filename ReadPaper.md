@@ -270,41 +270,50 @@ The original paper of ICP.
 >
 > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1407879)[[pdf]](./papers/Precision_range_image_registration_using_a_robust_surface_interpenetration_measure_and_enhanced_genetic_algorithms.pdf)
 
-## Probabilistic Based
+## Probability Based
 
-- **GMM**
+### GMM
 
-  - **Robust Point Set Registration Using Gaussian Mixture Models**
+- **Robust Point Set Registration Using Gaussian Mixture Models**
 
-    > <TPAMI2011>
+  > <TPAMI2011>
+  >
+  > [[URL]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5674050)
+
+- **Point Set Registration: Coherent Point Drift** (CPD)
+
+  > <TPAMI2010>
+  >
+  > [[URL]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5432191) [[PDF]](./papers/Point_Set_Registration_Coherent_Point_Drift.pdf)
+  >
+  > [[notes]](./notes/Point Set Registration - Coherent Point Drift.md)
+
+### **NDT & Variants**
+
+- **The Normal Distributions Transform: A New Approach to Laser Scan Matching** **(2D-NDT)**
+
+  > Biber, P., & Straßer, W. (2003, October). The normal distributions transform: A new approach to laser scan matching. In *Proceedings 2003 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2003)(Cat. No. 03CH37453)* (Vol. 3, pp. 2743-2748). IEEE.
+  >
+  > **Citations:**1096
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1249285)[[pdf]](./papers/The_normal_distributions_transform_a_new_approach_to_laser_scan_matching.pdf)
+
+
+  - **Scan Registration for Autonomous Mining Vehicles Using 3D-NDT** **(P2D-NDT)**
+
+    > Magnusson, M., Lilienthal, A., & Duckett, T. (2007). Scan registration for autonomous mining vehicles using 3D‐NDT. *Journal of Field Robotics*, *24*(10), 803-827.
     >
-    > [[URL]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5674050)
-
-  - **Point Set Registration: Coherent Point Drift** (CPD)
-
-    > <TPAMI2010>
+    > **Citations:**558
     >
-    > [[URL]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5432191) [[PDF]](./papers/Point_Set_Registration_Coherent_Point_Drift.pdf)
+    > [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1002/rob.20204)[[pdf]](./papers/Scan registration for autonomous mining vehicles using 3D‐NDT.pdf) 
+    
+  - **Fast and accurate scan registration through minimization of the distance between compact 3D NDT representations** **(D2D-NDT)**
+
+    > Stoyanov, T., Magnusson, M., Andreasson, H., & Lilienthal, A. J. (2012). Fast and accurate scan registration through minimization of the distance between compact 3D NDT representations. *The International Journal of Robotics Research*, *31*(12), 1377-1393.
     >
-    > [[notes]](./notes/Point Set Registration - Coherent Point Drift.md)
-
-- **NDT & Variants**
-
-  - **The Normal Distributions Transform: A New Approach to Laser Scan Matching**
-
-    > <RSJ2003>
+    > **Citations:** 180
     >
-    > [[pdf]](./papers/The_normal_distributions_transform_a_new_approach_to_laser_scan_matching.pdf) [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1249285)
-  
-  
-    - **Scan Registration for Autonomous Mining Vehicles Using 3D-NDT**
-  
-      > Magnusson, M., Lilienthal, A., & Duckett, T. (2007). Scan registration for autonomous mining vehicles using 3D‐NDT. *Journal of Field Robotics*, *24*(10), 803-827.
-      >
-      > **Citations:**558
-      >
-      > [[pdf]](./papers/Scan registration for autonomous mining vehicles using 3D‐NDT.pdf) [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1002/rob.20204)
-  
+    > [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.817.5962&rep=rep1&type=pdf) [[pdf]](./papers/Fast and accurate scan registration through minimization of the distance between compact 3D NDT representations.pdf)
 
 
 ## Fuzzy
