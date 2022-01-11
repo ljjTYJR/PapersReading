@@ -20,6 +20,8 @@ The original paper of ICP.
 
 > It alternates between the closest point query in the target set and minimization of the distance between corresponding points and is guaranteed to converge to a locally optimal alignment
 
+### How to solve the objective function
+
 - **Multi-scale EM-ICP: A Fast and Robust Approach for Surface Registration** :question:
 
   > Granger, S., & Pennec, X. (2002, May). Multi-scale EM-ICP: A fast and robust approach for surface registration. In *European Conference on Computer Vision* (pp. 418-432). Springer, Berlin, Heidelberg.
@@ -106,19 +108,7 @@ The original paper of ICP.
 
 ### Robust for the objective function
 
-- **Sparse Iterative Closest Point**
-
-  > Bouaziz, S., Tagliasacchi, A., & Pauly, M. (2013, August). Sparse iterative closest point. In *Computer graphics forum* (Vol. 32, No. 5, pp. 113-123). Oxford, UK: Blackwell Publishing Ltd.
-  >
-  > **Citations:**393
-  >
-  > [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1111/cgf.12178)[[pdf]](./papers/Sparse Iterative Closest Point.pdf)
-  >
-  > [[notes]](./notes/Sparse Iterative Closest Point.md)
-
-  Sparse ICP: 仍然使用欧式距离寻找ICP中的correspondence，但是在优化阶段，使用了$d_2^p$ 代替 $d_2$， 提高了稀疏性，对Outlier和noise有一定的鲁棒性。
-
-- **Object modelling by registration of multiple range images**
+- **Object modelling by registration of multiple range images** **(Point-to-Plane ICP)** :heavy_check_mark:
 
   > Chen, Y., & Medioni, G. (1992). Object modelling by registration of multiple range images. *Image and vision computing*, *10*(3), 145-155.
   >
@@ -128,9 +118,37 @@ The original paper of ICP.
   >
   > [[notes]](./notes/Object modelling by registration of multiple range images.md)
 
-  Point-to-Plane ICP.
+  **Point-to-Plane ICP.**
 
   <img src="D:\papers\notes\point-to-plane.png" style="zoom:67%;" />
+
+- **Generalized-ICP** **(Plane-to-Plane ICP / GICP)** :heavy_check_mark:
+
+  > Segal, A., Haehnel, D., & Thrun, S. (2009, June). Generalized-icp. In *Robotics: science and systems* (Vol. 2, No. 4, p. 435).
+  >
+  > **Citations:**1365 :flags:
+  >
+  > [[url]](https://www.robots.ox.ac.uk/~avsegal/resources/papers/Generalized_ICP.pdf) [[pdf]](./papers/Generalized_ICP.pdf)
+  >
+  > [[notes]](./notes/Generalized-ICP.md)
+
+  GICP: Generalize The ICP approach to probabilistic distribution, extend it to plane-to-plane format.
+
+  将ICP的方法从点对点，点对面进行一般化，引入了两个点云的协方差矩阵描述各自的特征，降低了不匹配的特征的影响。
+
+- **A symmetric objective function for ICP** **(Symmetric-ICP)**  :heavy_check_mark: 
+
+  :question: 1. 对于该实验有问题，为什么选择每一次迭代的过程？ 2. 这个是否是解决feature的稀疏问题？3. 本论文还有一些引用文献没看
+
+  > Rusinkiewicz, S. (2019). A symmetric objective function for ICP. *ACM Transactions on Graphics (TOG)*, *38*(4), 1-7.
+  >
+  > **citations**:41
+  >
+  > [[url]](https://dl.acm.org/doi/pdf/10.1145/3306346.3323037) [[pdf]](./papers/A Symmetric Objective Function for ICP.pdf)
+
+  <img src="./notes/symmetric-icp.png" style="zoom: 50%;" />
+
+  Symmetric-ICP: 在point-to-plane的基础上进行改进，point-to-plane的类型收敛域减小，因为如上图所示，如果p点在q点所在的平面，那么二者的 *loss function* 一定为0，那么p点就只能在q点的平面进行滑动。但是使用symmetric(上图所示)，可以允许p点与q点形成圆进行滑动。
 
 - **A robust method for registration and segmentation of multiple range images**
 
@@ -160,19 +178,17 @@ The original paper of ICP.
 
   LM-ICP: generalize the ICP to a non-convex optimization problem. :question:
 
-- **Generalized-ICP** :heavy_check_mark:
+- **Sparse Iterative Closest Point** **(Sparse ICP)** :heavy_check_mark:
 
-  > Segal, A., Haehnel, D., & Thrun, S. (2009, June). Generalized-icp. In *Robotics: science and systems* (Vol. 2, No. 4, p. 435).
+  > Bouaziz, S., Tagliasacchi, A., & Pauly, M. (2013, August). Sparse iterative closest point. In *Computer graphics forum* (Vol. 32, No. 5, pp. 113-123). Oxford, UK: Blackwell Publishing Ltd.
   >
-  > **Citations:**1365 :flags:
+  > **Citations:**393
   >
-  > [[url]](https://www.robots.ox.ac.uk/~avsegal/resources/papers/Generalized_ICP.pdf) [[pdf]](./papers/Generalized_ICP.pdf)
+  > [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1111/cgf.12178)[[pdf]](./papers/Sparse Iterative Closest Point.pdf)
   >
-  > [[notes]](./notes/Generalized-ICP.md)
+  > [[notes]](./notes/Sparse Iterative Closest Point.md)
 
-  GICP: Generalize The ICP approach to probabilistic distribution, extend it to plane-to-plane format.
-
-  将ICP的方法从点对点，点对面进行一般化，引入了两个点云的协方差矩阵描述各自的特征，降低了不匹配的特征的影响。
+  Sparse ICP: 仍然使用欧式距离寻找ICP中的correspondence，但是在优化阶段，使用了$d_2^p$ 代替 $d_2$， 提高了稀疏性，对Outlier和noise有一定的鲁棒性。
 
 - **Fast global registration**
 
@@ -251,14 +267,6 @@ The original paper of ICP.
 > **Citations:**281
 >
 > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1407879)[[pdf]](./papers/Precision_range_image_registration_using_a_robust_surface_interpenetration_measure_and_enhanced_genetic_algorithms.pdf)
-
-- **A symmetric objective function for ICP**
-
-  > Rusinkiewicz, S. (2019). A symmetric objective function for ICP. *ACM Transactions on Graphics (TOG)*, *38*(4), 1-7.
-  >
-  > **citations**:41
-  >
-  > [[url]](https://dl.acm.org/doi/pdf/10.1145/3306346.3323037) [[pdf]](./papers/A Symmetric Objective Function for ICP.pdf)
 
 ## Probabilistic Based
 
