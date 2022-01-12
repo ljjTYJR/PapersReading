@@ -90,3 +90,21 @@ $$
   $$
 
 - **Semidefinite programming(SDP) 半正定规划**
+
+- **Newton's Algorithm**
+
+  - 用于求函数的零点
+
+  - 通过迭代公式：
+    $$
+    x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
+    $$
+    迭代直到收敛
+
+- **Gradient Descent** **(梯度上升/梯度下降)**
+
+  - 用来求函数的极值
+
+  - 通过找函数在某一点处的梯度，按照一定的步长进行迭代直到收敛:
+
+    

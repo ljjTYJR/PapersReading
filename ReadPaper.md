@@ -290,13 +290,22 @@ The original paper of ICP.
 
 ### **NDT & Variants**
 
-- **The Normal Distributions Transform: A New Approach to Laser Scan Matching** **(2D-NDT)**
+- **The Normal Distributions Transform: A New Approach to Laser Scan Matching** **(2D-NDT)** :heavy_check_mark:
 
   > Biber, P., & Straßer, W. (2003, October). The normal distributions transform: A new approach to laser scan matching. In *Proceedings 2003 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2003)(Cat. No. 03CH37453)* (Vol. 3, pp. 2743-2748). IEEE.
   >
   > **Citations:**1096
   >
-  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1249285)[[pdf]](./papers/The_normal_distributions_transform_a_new_approach_to_laser_scan_matching.pdf)
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1249285)[[pdf]](./papers/The_normal_distributions_transform_a_new_approach_to_laser_scan_matching.pdf) 
+  > [[materials]](https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/ndt-literature-review.html)
+  
+  2D-NDT(Normalized Distribution Transform):
+  
+  - keywords: grid; ndt; newton optimization;
+  
+  <img src="notes\ndt.png" style="zoom: 33%;" />
+  
+  - A kind of low-level description, no feature and structural information.
 
 
   - **Scan Registration for Autonomous Mining Vehicles Using 3D-NDT** **(P2D-NDT)**
@@ -306,6 +315,9 @@ The original paper of ICP.
     > **Citations:**558
     >
     > [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1002/rob.20204)[[pdf]](./papers/Scan registration for autonomous mining vehicles using 3D‐NDT.pdf) 
+    
+    - 3D-NDT(P2D-NDT)
+    - Faster; Less memory; compared to ICP
     
   - **Fast and accurate scan registration through minimization of the distance between compact 3D NDT representations** **(D2D-NDT)**
 
