@@ -81,6 +81,14 @@ The original paper of ICP.
   Tr-ICP: '*Tr*' means the '*Trimmed*', use the '*[Least Trimmed Square](https://en.wikipedia.org/wiki/Least_trimmed_squares)*' method in the process to improve robustness.
   Pros: can converge when the overlapping rate is under 50%;
   cons: still need a good initial pose;
+  
+- **The dual-bootstrap iterative closest point algorithm with application to retinal image registration**
+
+  > Stewart, C. V., Tsai, C. L., & Roysam, B. (2003). The dual-bootstrap iterative closest point algorithm with application to retinal image registration. *IEEE transactions on medical imaging*, *22*(11), 1379-1394.
+  >
+  > **Citations:**520
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1242341) [[pdf]](./papers/The dual-bootstrap iterative closest point algorithm with application to retinal image registration.pdf)
 
 ### A similar framework
 
@@ -270,19 +278,92 @@ The original paper of ICP.
 >
 > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1407879)[[pdf]](./papers/Precision_range_image_registration_using_a_robust_surface_interpenetration_measure_and_enhanced_genetic_algorithms.pdf)
 
-## Probability Based
+## Probability-Based
+
+- **A New Algorithm for Non-Rigid Point Matching**
+
+  > Chui, H., & Rangarajan, A. (2000, June). A new algorithm for non-rigid point matching. In *Proceedings IEEE Conference on Computer Vision and Pattern Recognition. CVPR 2000 (Cat. No. PR00662)* (Vol. 2, pp. 44-51). IEEE.
+  >
+  > **Citations:**646
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=854733) [[pdf]](./papers/)
+
+- **A feature registration framework using mixture models**
+
+  > Chui, H., & Rangarajan, A. (2000, June). A feature registration framework using mixture models. In *Proceedings IEEE Workshop on Mathematical Methods in Biomedical Image Analysis. MMBIA-2000 (Cat. No. PR00737)* (pp. 190-197). IEEE.
+  >
+  > **Citations:** 205
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=852377) [[pdf]](./papers/A feature registration framework using mixture models.pdf)
+
+- **A Correlation-Based Approach to Robust Point Set Registration**
+
+  > Tsin, Y., & Kanade, T. (2004, May). A correlation-based approach to robust point set registration. In *European conference on computer vision* (pp. 558-569). Springer, Berlin, Heidelberg.
+  >
+  > **Citations:**435
+  >
+  > [[url]](http://www.cs.cmu.edu/afs/.cs.cmu.edu/Web/People/ytsin/research/kcreg.pdf) [[pdf]](./papers/A Correlation-Based Approach to Robust Point Set Registration.pdf)
+
+- **A robust algorithm for point set registration using mixture of Gaussians** **:green_book:**
+
+  > Jian, B., & Vemuri, B. C. (2005, October). A robust algorithm for point set registration using mixture of Gaussians. In *Tenth IEEE International Conference on Computer Vision (ICCV'05) Volume 1* (Vol. 2, pp. 1246-1251). IEEE.
+  >
+  > **Citations:**408
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1544863) [[pdf]](./papers/A Robust Algorithm for Point Set Registration Using Mixture of Gaussians.pdf)
+
+- **Non-rigid point set registration: Coherent Point Drift** :green_book:
+
+  > Myronenko, A., Song, X., & Carreira-Perpinán, M. A. (2007). Non-rigid point set registration: Coherent point drift. *Advances in neural information processing systems*, *19*, 1009.
+  >
+  > **Citations:**383
+  >
+  > [[url]](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.85.493&rep=rep1&type=pdf) [[pdf]](./papers/Non-rigid point set registration Coherent Point Drift.pdf)
+
+- **Rigid and Articulated Point Registration with Expectation Conditional Maximization**
+
+  > Horaud, R., Forbes, F., Yguel, M., Dewaele, G., & Zhang, J. (2010). Rigid and articulated point registration with expectation conditional maximization. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *33*(3), 587-602.
+  >
+  > **Citations:**219
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5444893) [[pdf]](./papers/Rigid and Articulated Point Registration with Expectation Conditional Maximization.pdf)
+
+- **Diffeomorphic Matching of Distributions: A New Approach for Unlabelled Point-Sets and Sub-Manifolds Matching**
+
+  > Glaunes, J., Trouvé, A., & Younes, L. (2004, June). Diffeomorphic matching of distributions: A new approach for unlabelled point-sets and sub-manifolds matching. In *Proceedings of the 2004 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, 2004. CVPR 2004.* (Vol. 2, pp. II-II). IEEE.
+  >
+  > **Citations:**234
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1315234) [[pdf]](./papers/Diffeomorphic Matching of Distributions A New Approach for Unlabelled Point-Sets and Sub-Manifolds Matching.pdf)
+
+- **Uncertainty Modeling and Model Selection for Geometric Inference**
+
+  > Kanatani, K. I. (2004). Uncertainty modeling and model selection for geometric inference. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *26*(10), 1307-1319.
+  >
+  > **Citations:**86
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1323799) [[pdf]](./papers/Uncertainty Modeling and Model Selection for Geometric Inference.pdf)
 
 ### GMM
 
-- **Robust Point Set Registration Using Gaussian Mixture Models**
+- **Robust Point Set Registration Using Gaussian Mixture Models** **(GMM)** :heavy_check_mark: :flags: :question:
 
-  > <TPAMI2011>
+  > Jian, B., & Vemuri, B. C. (2010). Robust point set registration using gaussian mixture models. *IEEE transactions on pattern analysis and machine intelligence*, *33*(8), 1633-1645.
   >
-  > [[URL]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5674050)
+  > **Citations:**869
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5674050) [[pdf]](./papers/Robust Point Set Registration Using Gaussian Mixture Models.pdf)
 
-- **Point Set Registration: Coherent Point Drift** (CPD)
+  > 文章的行文逻辑读起来非常顺畅，值得多读几遍。
 
-  > <TPAMI2010>
+  - Use GMM to model the point set; Get a local optimal by iterating closed-form solution of L2 distance between two GMMs(rigid); For rigid: numerical optimization
+  - More robust than CPD, 
+
+- **Point Set Registration: Coherent Point Drift** **(CPD)**
+
+  > Myronenko, A., & Song, X. (2010). Point set registration: Coherent point drift. *IEEE transactions on pattern analysis and machine intelligence*, *32*(12), 2262-2275.
+  >
+  > **Citations:**2323
   >
   > [[URL]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5432191) [[PDF]](./papers/Point_Set_Registration_Coherent_Point_Drift.pdf)
   >
@@ -308,7 +389,7 @@ The original paper of ICP.
   - A kind of low-level description, no feature and structural information.
 
 
-  - **Scan Registration for Autonomous Mining Vehicles Using 3D-NDT** **(P2D-NDT)**
+  - **Scan Registration for Autonomous Mining Vehicles Using 3D-NDT** **(P2D-NDT)** :heavy_check_mark:
 
     > Magnusson, M., Lilienthal, A., & Duckett, T. (2007). Scan registration for autonomous mining vehicles using 3D‐NDT. *Journal of Field Robotics*, *24*(10), 803-827.
     >
@@ -319,14 +400,92 @@ The original paper of ICP.
     - 3D-NDT(P2D-NDT)
     - Faster; Less memory; compared to ICP
     
-  - **Fast and accurate scan registration through minimization of the distance between compact 3D NDT representations** **(D2D-NDT)**
+  - **The three-dimensional normal-distributions transform an efficient representation for registration, surface analysis, and loop detection**
+
+    > Magnusson, M. (2009). *The three-dimensional normal-distributions transform: an efficient representation for registration, surface analysis, and loop detection* (Doctoral dissertation, Örebro universitet).
+    >
+    > **Citations:**324
+    >
+    > [[url]](https://www.diva-portal.org/smash/get/diva2:276162/FULLTEXT02.pdf) [[pdf]](./papers/The three-dimensional normal-distributions transform an efficient representation for registration, surface analysis, and loop detection.pdf)
+    
+  - **Fast and accurate scan registration through minimization of the distance between compact 3D NDT representations** **(D2D-NDT)** :heavy_check_mark:
 
     > Stoyanov, T., Magnusson, M., Andreasson, H., & Lilienthal, A. J. (2012). Fast and accurate scan registration through minimization of the distance between compact 3D NDT representations. *The International Journal of Robotics Research*, *31*(12), 1377-1393.
     >
     > **Citations:** 180
     >
     > [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.817.5962&rep=rep1&type=pdf) [[pdf]](./papers/Fast and accurate scan registration through minimization of the distance between compact 3D NDT representations.pdf)
+    
+    - D2D 3D NDT
+    - Faster than P2D NDT
 
+## Feature-Based
+
+- **Fast Point Feature Histograms (FPFH) for 3D registration** **(FPFH)**
+
+  > Rusu, R. B., Blodow, N., & Beetz, M. (2009, May). Fast point feature histograms (FPFH) for 3D registration. In *2009 IEEE international conference on robotics and automation* (pp. 3212-3217). IEEE.
+  >
+  > **Citations:**2755
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5152473) [[pdf]](./papers/Fast Point Feature Histograms (FPFH) for 3D Registration.pdf)
+
+- **Fast Registration Based on Noisy Planes With Unknown Correspondences for 3-D Mapping**
+
+  > Pathak, K., Birk, A., Vaškevičius, N., & Poppinga, J. (2010). Fast registration based on noisy planes with unknown correspondences for 3-D mapping. *IEEE Transactions on Robotics*, *26*(3), 424-441.
+  >
+  > **Citations:**257
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5431057) [[pdf]](./papers/Fast Registration Based on Noisy Planes With Unknown Correspondences for 3-D Mapping.pdf)
+
+## Graph-Matching
+
+- **Thirty Years of Graph Matching in Pattern Recognition**
+
+  > Conte, D., Foggia, P., Sansone, C., & Vento, M. (2004). Thirty years of graph matching in pattern recognition. *International journal of pattern recognition and artificial intelligence*, *18*(03), 265-298.
+  >
+  > **Citations:**1758
+  >
+  > [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.455.7770&rep=rep1&type=pdf) [[pdf]](./papers/Thirty Years of Graph Matching in Pattern Recognition.pdf)
+
+- **A unified framework for alignment and correspondence**
+
+  > Luo, B., & Hancock, E. R. (2003). A unified framework for alignment and correspondence. *Computer Vision and Image Understanding*, *92*(1), 26-55.
+  >
+  > **Citations:**73
+  >
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S1077314203000973?token=0DBF0A87CDEC4BE21370C4E39E5A1906171CB67EBDAA80A064DB207F16AEF0881DB5CB50C2E751104DF082DBF0E688B6&originRegion=eu-west-1&originCreation=20220113135844) [[pdf]](./papers/A unified framework for alignment and correspondence.pdf)
+
+- **Spectral Correspondence for Point Pattern Matching**
+
+  > Carcassoni, M., & Hancock, E. R. (2003). Spectral correspondence for point pattern matching. *Pattern Recognition*, *36*(1), 193-204.
+  >
+  > **Citations:**271
+  >
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0031320302000547?token=9EC1420AF495A990060CF769F8859EB19D22B507DF305D3779BF0F968814EC067F756D046CD5429AF52B6FDC4807EBE9&originRegion=eu-west-1&originCreation=20220113140059) [[pdf]](./papers/Spectral Correspondence for Point Pattern Matching.pdf)
+
+- **Graphical Models and Point Pattern Matching**
+
+  > Caetano, T. S., Caelli, T., Schuurmans, D., & Barone, D. A. C. (2006). Graphical models and point pattern matching. *IEEE Transactions on pattern analysis and machine intelligence*, *28*(10), 1646-1663.
+  >
+  > **Citations:**171
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1677520) [[pdf]](./papers/Graphical Models and Point Pattern Matching.pdf)
+
+- **Shape Matching and Object Recognition Using Shape Contexts**
+
+  > Belongie, S., Malik, J., & Puzicha, J. (2002). Shape matching and object recognition using shape contexts. *IEEE transactions on pattern analysis and machine intelligence*, *24*(4), 509-522.
+  >
+  > **Citations:**8311
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=993558) [[pdf]](./papers/Shape Matching and Object Recognition Using Shape Contexts.pdf)
+
+- **Robust Point Matching for Nonrigid Shapes by Preserving Local Neighborhood Structures**
+
+  > Zheng, Y., & Doermann, D. (2006). Robust point matching for nonrigid shapes by preserving local neighborhood structures. *IEEE transactions on pattern analysis and machine intelligence*, *28*(4), 643-649.
+  >
+  > **Citations:**366
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1597120) [[pdf]](./papers/Robust Point Matching for Nonrigid Shapes by Preserving Local Neighborhood Structures.pdf)
 
 ## Fuzzy
 
@@ -406,8 +565,6 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
 
   > <CVPR2020>
   > [[url]](https://arxiv.org/pdf/2004.11540.pdf) 
-
-## Feature-Based
 
 ## Survey
 
@@ -520,3 +677,11 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
 - **Global optimization through rotation space search**
 
   > [[URL]](https://link.springer.com/content/pdf/10.1007/s11263-008-0186-9.pdf)
+  
+- **Maximum Likelihood from Incomplete Data via the EM Algorithm**
+
+  > Dempster, A. P., Laird, N. M., & Rubin, D. B. (1977). Maximum likelihood from incomplete data via the EM algorithm. *Journal of the Royal Statistical Society: Series B (Methodological)*, *39*(1), 1-22.
+  >
+  > **Citations:**65630
+  >
+  > [[url]](https://rss.onlinelibrary.wiley.com/doi/epdf/10.1111/j.2517-6161.1977.tb01600.x) [[pdf]](./papers/Maximum Likelihood from Incomplete Data via the EM Algorithm.pdf)
