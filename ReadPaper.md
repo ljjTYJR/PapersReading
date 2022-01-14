@@ -270,6 +270,14 @@ The original paper of ICP.
 
      Extend them to the p2p and p2plane algos, but not globally and need a good initialization.
 
+- **Speeding Up Iterative Closest Point Using Stochastic Gradient Descent**
+
+  > Maken, F. A., Ramos, F., & Ott, L. (2019, May). Speeding up iterative closest point using stochastic gradient descent. In *2019 International Conference on Robotics and Automation (ICRA)* (pp. 6395-6401). IEEE.
+  >
+  > **Citations:**6
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8794011) [[pdf]](./papers/Speeding Up Iterative Closest Point Using Stochastic Gradient Descent.pdf)
+
 - **Precision Range Image Registration Using a Robust Surface Interpenetration Measure and Enhanced Genetic Algorithms**
 
 > Silva, L., Bellon, O. R. P., & Boyer, K. L. (2005). Precision range image registration using a robust surface interpenetration measure and enhanced genetic algorithms. *IEEE transactions on pattern analysis and machine intelligence*, *27*(5), 762-776.
@@ -277,6 +285,14 @@ The original paper of ICP.
 > **Citations:**281
 >
 > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1407879)[[pdf]](./papers/Precision_range_image_registration_using_a_robust_surface_interpenetration_measure_and_enhanced_genetic_algorithms.pdf)
+
+- **Estimating Motion Uncertainty with Bayesian ICP**
+
+  > Maken, F. A., Ramos, F., & Ott, L. (2020, May). Estimating Motion Uncertainty with Bayesian ICP. In *2020 IEEE International Conference on Robotics and Automation (ICRA)* (pp. 8602-8608). IEEE.
+  >
+  > **Citations:**2
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9197085) [[pdf]](./papers/Estimating Motion Uncertainty with Bayesian ICP.pdf)
 
 ## Probability-Based
 
@@ -346,6 +362,22 @@ The original paper of ICP.
 
 ### GMM
 
+- **Point Set Registration: Coherent Point Drift** **(CPD)** :heavy_check_mark:
+
+  > Myronenko, A., & Song, X. (2010). Point set registration: Coherent point drift. *IEEE transactions on pattern analysis and machine intelligence*, *32*(12), 2262-2275.
+  >
+  > **Citations:**2323
+  >
+  > [[URL]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5432191) [[PDF]](./papers/Point_Set_Registration_Coherent_Point_Drift.pdf)
+  >
+  > [[notes]](./notes/Point Set Registration - Coherent Point Drift.md)
+
+  - Point-to-all GMM, one point set used as centroids of GMM and the other as 'data' to match it;
+  - Use E-M to get the optimal parameters;
+  - In M step, change the expression to get a closed-form solution to get a quicker solution.
+  - More robust than LM-ICP
+  - :question: 对于非刚性的(non-rigid)自己还没有研究
+
 - **Robust Point Set Registration Using Gaussian Mixture Models** **(GMM)** :heavy_check_mark: :flags: :question:
 
   > Jian, B., & Vemuri, B. C. (2010). Robust point set registration using gaussian mixture models. *IEEE transactions on pattern analysis and machine intelligence*, *33*(8), 1633-1645.
@@ -356,18 +388,20 @@ The original paper of ICP.
 
   > 文章的行文逻辑读起来非常顺畅，值得多读几遍。
 
-  - Use GMM to model the point set; Get a local optimal by iterating closed-form solution of L2 distance between two GMMs(rigid); For rigid: numerical optimization
-  - More robust than CPD, 
+  - Use GMM to model the point set; Get a local optimal by iterating closed-form solution of L2 distance between two GMMs(rigid); For non-rigid: numerical optimization
+  - Distribution-to-distribution GMM
+  - Every point serves as a centroid of GMM
+  - More robust than CPD
 
-- **Point Set Registration: Coherent Point Drift** **(CPD)**
+- **A Bayesian Formulation of Coherent Point Drift** 
 
-  > Myronenko, A., & Song, X. (2010). Point set registration: Coherent point drift. *IEEE transactions on pattern analysis and machine intelligence*, *32*(12), 2262-2275.
+  > Hirose, O. (2020). A Bayesian formulation of coherent point drift. *IEEE transactions on pattern analysis and machine intelligence*.
   >
-  > **Citations:**2323
+  > **Citations:**26
   >
-  > [[URL]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5432191) [[PDF]](./papers/Point_Set_Registration_Coherent_Point_Drift.pdf)
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8985307) [[pdf]](./papers/A Bayesian Formulation of Coherent Point Drift.pdf)
   >
-  > [[notes]](./notes/Point Set Registration - Coherent Point Drift.md)
+  > ps:这个代码竟然是用C写的,证明也单独拎出来了
 
 ### **NDT & Variants**
 
@@ -384,7 +418,7 @@ The original paper of ICP.
   
   - keywords: grid; ndt; newton optimization;
   
-  <img src="notes\ndt.png" style="zoom: 33%;" />
+  <img src="C:\Users\29183\Desktop\ndt.png" style="zoom: 33%;" />
   
   - A kind of low-level description, no feature and structural information.
 
@@ -437,7 +471,27 @@ The original paper of ICP.
   >
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5431057) [[pdf]](./papers/Fast Registration Based on Noisy Planes With Unknown Correspondences for 3-D Mapping.pdf)
 
-## Graph-Matching
+## Learning-Based
+
+- **PRNet: Self-Supervised Learning for Partial-to-Partial Registration**
+
+  > [[URL]](https://arxiv.org/pdf/1910.12240.pdf) [[pdf]](./papers/PRNet Self-Supervised Learning for Partial-to-Partial Registration.pdf)
+
+- **The Perfect Match: 3D Point Cloud Matching with Smoothed Densities**
+
+  > <CVPR2019>
+  >
+  > [[URL]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Gojcic_The_Perfect_Match_3D_Point_Cloud_Matching_With_Smoothed_Densities_CVPR_2019_paper.pdf)
+
+- **Registration Loss Learning for Deep Probabilistic Point Set Registration**
+
+  > <International Conference on 3D Vision>
+  >
+  > [[pdf]](./papers/Registration Loss Learning for Deep Probabilistic Point Set Registration.pdf)
+  >
+  > [[NOTES]](./notes/Registration Loss Learning for Deep Probabilistic Point Set Registration.md)
+
+## Graph-Based
 
 - **Thirty Years of Graph Matching in Pattern Recognition**
 
@@ -521,25 +575,7 @@ The original paper of ICP.
 
 Teaser: Truncated least-squares Estimation And semidefinite Relaxation
 
-## Learning-based Approach
-
-- **PRNet: Self-Supervised Learning for Partial-to-Partial Registration**
-
-  > [[URL]](https://arxiv.org/pdf/1910.12240.pdf) [[pdf]](./papers/PRNet Self-Supervised Learning for Partial-to-Partial Registration.pdf)
-  
-- **The Perfect Match: 3D Point Cloud Matching with Smoothed Densities**
-
-  > <CVPR2019>
-  >
-  > [[URL]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Gojcic_The_Perfect_Match_3D_Point_Cloud_Matching_With_Smoothed_Densities_CVPR_2019_paper.pdf)
-
-- **Registration Loss Learning for Deep Probabilistic Point Set Registration**
-
-  > <International Conference on 3D Vision>
-  >
-  > [[pdf]](./papers/Registration Loss Learning for Deep Probabilistic Point Set Registration.pdf)
-  >
-  > [[NOTES]](./notes/Registration Loss Learning for Deep Probabilistic Point Set Registration.md)
+- > 
 
 
 ## Different kinds of Improvements
@@ -565,6 +601,20 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
 
   > <CVPR2020>
   > [[url]](https://arxiv.org/pdf/2004.11540.pdf) 
+
+## Extension
+
+### Multiple Point set
+
+- **Joint Alignment of Multiple Point Sets with Batch and Incremental Expectation-Maximization**
+
+  > Evangelidis, G. D., & Horaud, R. (2017). Joint alignment of multiple point sets with batch and incremental expectation-maximization. *IEEE transactions on pattern analysis and machine intelligence*, *40*(6), 1397-1410.
+  >
+  > **Citations:** 87
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7954698) [[pdf]](./papers/Joint Alignment of Multiple Point Sets with Batch and Incremental Expectation-Maximization.pdf)
+
+### Non-rigid Point set
 
 ## Survey
 
@@ -685,3 +735,9 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
   > **Citations:**65630
   >
   > [[url]](https://rss.onlinelibrary.wiley.com/doi/epdf/10.1111/j.2517-6161.1977.tb01600.x) [[pdf]](./papers/Maximum Likelihood from Incomplete Data via the EM Algorithm.pdf)
+
+- **Computational Optimal Transport** :green_book:
+
+  > Peyré, G., & Cuturi, M. (2019). Computational optimal transport: With applications to data science. *Foundations and Trends® in Machine Learning*, *11*(5-6), 355-607.
+  >
+  > [[url]](https://arxiv.org/pdf/1803.00567.pdf) [[pdf]](./papers/Computational Optimal Transport.pdf)
