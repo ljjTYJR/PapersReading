@@ -270,7 +270,7 @@ The original paper of ICP.
 
      Extend them to the p2p and p2plane algos, but not globally and need a good initialization.
 
-- **Speeding Up Iterative Closest Point Using Stochastic Gradient Descent**
+- **Speeding Up Iterative Closest Point Using Stochastic Gradient Descent** **(SGD-ICP)** :heavy_check_mark:
 
   > Maken, F. A., Ramos, F., & Ott, L. (2019, May). Speeding up iterative closest point using stochastic gradient descent. In *2019 International Conference on Robotics and Automation (ICRA)* (pp. 6395-6401). IEEE.
   >
@@ -278,13 +278,8 @@ The original paper of ICP.
   >
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8794011) [[pdf]](./papers/Speeding Up Iterative Closest Point Using Stochastic Gradient Descent.pdf)
 
-- **Precision Range Image Registration Using a Robust Surface Interpenetration Measure and Enhanced Genetic Algorithms**
-
-> Silva, L., Bellon, O. R. P., & Boyer, K. L. (2005). Precision range image registration using a robust surface interpenetration measure and enhanced genetic algorithms. *IEEE transactions on pattern analysis and machine intelligence*, *27*(5), 762-776.
->
-> **Citations:**281
->
-> [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1407879)[[pdf]](./papers/Precision_range_image_registration_using_a_robust_surface_interpenetration_measure_and_enhanced_genetic_algorithms.pdf)
+  - SGD-ICP: Use stochastic gradient descent (SGD) to iterate the parameter.
+  - Faster than standard ICP and GICP, not resulting in loss in accuracy.
 
 - **Estimating Motion Uncertainty with Bayesian ICP**
 
@@ -293,6 +288,16 @@ The original paper of ICP.
   > **Citations:**2
   >
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9197085) [[pdf]](./papers/Estimating Motion Uncertainty with Bayesian ICP.pdf)
+
+  - Based on the SGD-ICP, use SGLD to estimate the transformation.
+
+- **Precision Range Image Registration Using a Robust Surface Interpenetration Measure and Enhanced Genetic Algorithms**
+
+> Silva, L., Bellon, O. R. P., & Boyer, K. L. (2005). Precision range image registration using a robust surface interpenetration measure and enhanced genetic algorithms. *IEEE transactions on pattern analysis and machine intelligence*, *27*(5), 762-776.
+>
+> **Citations:**281
+>
+> [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1407879)[[pdf]](./papers/Precision_range_image_registration_using_a_robust_surface_interpenetration_measure_and_enhanced_genetic_algorithms.pdf)
 
 ## Probability-Based
 
