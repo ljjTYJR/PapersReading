@@ -10,3 +10,20 @@
 - **方法的缺点**
   - 依然需要一个比较好的Initialization
 
+---
+
+## Comments
+
+- Granger and Pennec [33] proposed an algorithm named Multi-scale EM-ICP where an annealing scheme on GMM variance was also used.
+
+  > Go-ICP: A Globally Optimal Solution to 3D ICP Point-Set Registration
+
+- Also, a naive implementation of ICP is know to be prone to outliers which prompted several more robust variations [1, 2]. 
+
+  > A robust algorithm for point set registration using mixture of Gaussians
+
+- To address this problem, we would like to extend our formulation in order to relax the one-to-one correspondence assumption to one-to-many allowing fuzzy correspondences
+
+  > Sparse Iterative Closest Point
+
+- 

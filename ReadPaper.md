@@ -8,19 +8,31 @@
 
 - **Method for registration of 3-D shapes** **(Standard ICP)** :heavy_check_mark:
 
-> Besl, P. J., & McKay, N. D. (1992, April). Method for registration of 3-D shapes. In *Sensor fusion IV: control paradigms and data structures* (Vol. 1611, pp. 586-606). International Society for Optics and Photonics.
->
-> **Citations:**22173
->
-> [[url]](https://www.cvl.iis.u-tokyo.ac.jp/class2004/wedenesday/report/besl.pdf) [[pdf]](./papers/A Method for Registration of 3-D Shapes.pdf)
->
-> [[tutorial]](http://www.sci.utah.edu/~shireen/pdfs/tutorials/Elhabian_ICP09.pdf) [[ICP Related Material]](http://ais.informatik.uni-freiburg.de/teaching/ss12/robotics/slides/17-icp.pdf)
->
-> [[notes]](./notes/A Method for Registration of 3-D Shapes.md)
+  > Besl, P. J., & McKay, N. D. (1992, April). Method for registration of 3-D shapes. In *Sensor fusion IV: control paradigms and data structures* (Vol. 1611, pp. 586-606). International Society for Optics and Photonics.
+  >
+  > **Citations:**22173
+  >
+  > [[url]](https://www.cvl.iis.u-tokyo.ac.jp/class2004/wedenesday/report/besl.pdf) [[pdf]](./papers/A Method for Registration of 3-D Shapes.pdf)
+  >
+  > [[tutorial]](http://www.sci.utah.edu/~shireen/pdfs/tutorials/Elhabian_ICP09.pdf) [[ICP Related Material]](http://ais.informatik.uni-freiburg.de/teaching/ss12/robotics/slides/17-icp.pdf)
+  >
+  > [[notes]](./notes/A Method for Registration of 3-D Shapes.md)
 
-The original paper of ICP.
+  ​	The original paper of ICP.	
 
-> It alternates between the closest point query in the target set and minimization of the distance between corresponding points and is guaranteed to converge to a locally optimal alignment
+  > It alternates between the closest point query in the target set and minimization of the distance between corresponding points and is guaranteed to converge to a locally optimal alignment
+
+- **Iterative Point Matching for Registration of Free-Form Curves and Surfaces** :heavy_check_mark: 
+
+  > Zhang, Z. (1994). Iterative point matching for registration of free-form curves and surfaces. *International journal of computer vision*, *13*(2), 119-152.
+  >
+  > **Citations:**3098
+  >
+  > [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.175.770&rep=rep1&type=pdf) [[pdf]](./papers/Iterative Point Matching for Registration of Free-Form Curves and Surfaces.pdf)
+  >
+  > [[notes]](./notes/Iterative Point Matching for Registration of Free-Form Curves and Surfaces.md)
+
+  - The same work as ICP, but proposed independently.
 
 ### How to solve the objective function
 
@@ -34,7 +46,8 @@ The original paper of ICP.
   >
   > [[notes]](./notes/EM-ICP.md)
 
-  EM-ICP: ML + EM --> robust and speed
+  - Can be viewed as 'Soft Assignment'
+  - View the registration problem as the MLE(Maximum Likelihood Estimation) problem, and use E-M Algorithm to optimize the parameter.
 
 ### Robust Metric
 
@@ -50,26 +63,6 @@ The original paper of ICP.
 
   Compare some variants of ICP-based algorithms, the effect of variants on steps of ICP. The paper proposes a sampling method by sampling points according to the normals to increase robustness.
 
-- **Iterative Point Matching for Registration of Free-Form Curves and Surfaces** :heavy_check_mark:
-
-  > Zhang, Z. (1994). Iterative point matching for registration of free-form curves and surfaces. *International journal of computer vision*, *13*(2), 119-152.
-  >
-  > **Citations:**3098
-  >
-  > [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.175.770&rep=rep1&type=pdf) [[pdf]](./papers/Iterative Point Matching for Registration of Free-Form Curves and Surfaces.pdf)
-  >
-  > [[notes]](./notes/Iterative Point Matching for Registration of Free-Form Curves and Surfaces.md)
-
-  rather robust to relatively big motion and to gross outliers.
-
-- **Robust Euclidean alignment of 3D point sets the trimmed iterative closest point algorithm**
-
-  > Chetverikov, D., Stepanov, D., & Krsek, P. (2005). Robust Euclidean alignment of 3D point sets: the trimmed iterative closest point algorithm. *Image and vision computing*, *23*(3), 299-309.
-  >
-  > **Citations:**461
-  >
-  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885604001179?token=B6A29AD77A8BDB565DE4A2ACBB8EFE4B12056ED98E9FFC14E5AD96E10C8F7E04DB2E587E5F8487939EEAC731DC1B24E1&originRegion=eu-west-1&originCreation=20220107203632) [[pdf]](./papers/Robust Euclidean alignment of 3D point sets the trimmediterative closest point algorithm.pdf)
-  
 - **The Trimmed Iterative Closest Point Algorithm** **(Tr-ICP)** :heavy_check_mark:
 
   > Chetverikov, D., Svirko, D., Stepanov, D., & Krsek, P. (2002, August). The trimmed iterative closest point algorithm. In *Object recognition supported by user interaction for service robots* (Vol. 3, pp. 545-548). IEEE.
@@ -81,7 +74,17 @@ The original paper of ICP.
   Tr-ICP: '*Tr*' means the '*Trimmed*', use the '*[Least Trimmed Square](https://en.wikipedia.org/wiki/Least_trimmed_squares)*' method in the process to improve robustness.
   Pros: can converge when the overlapping rate is under 50%;
   cons: still need a good initial pose;
-  
+
+- **Robust Euclidean alignment of 3D point sets the trimmed iterative closest point algorithm** :heavy_check_mark:
+
+  > Chetverikov, D., Stepanov, D., & Krsek, P. (2005). Robust Euclidean alignment of 3D point sets: the trimmed iterative closest point algorithm. *Image and vision computing*, *23*(3), 299-309.
+  >
+  > **Citations:**461
+  >
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885604001179?token=B6A29AD77A8BDB565DE4A2ACBB8EFE4B12056ED98E9FFC14E5AD96E10C8F7E04DB2E587E5F8487939EEAC731DC1B24E1&originRegion=eu-west-1&originCreation=20220107203632) [[pdf]](./papers/Robust Euclidean alignment of 3D point sets the trimmediterative closest point algorithm.pdf)
+
+  - Similar to Tr-ICP, they are the same authors, but I did not get the difference between them.
+
 - **The dual-bootstrap iterative closest point algorithm with application to retinal image registration**
 
   > Stewart, C. V., Tsai, C. L., & Roysam, B. (2003). The dual-bootstrap iterative closest point algorithm with application to retinal image registration. *IEEE transactions on medical imaging*, *22*(11), 1379-1394.
@@ -234,7 +237,7 @@ The original paper of ICP.
   >
   > [[pdf]](./papers/Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration.pdf) [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7368945) 
 
-  Get the global optimal for ICP algorithm.
+  - Get the global optimal for ICP algorithm.
 
 ### Deep learning
 
@@ -281,7 +284,7 @@ The original paper of ICP.
   - SGD-ICP: Use stochastic gradient descent (SGD) to iterate the parameter.
   - Faster than standard ICP and GICP, not resulting in loss in accuracy.
 
-- **Estimating Motion Uncertainty with Bayesian ICP**
+- **Estimating Motion Uncertainty with Bayesian ICP** :heavy_check_mark:
 
   > Maken, F. A., Ramos, F., & Ott, L. (2020, May). Estimating Motion Uncertainty with Bayesian ICP. In *2020 IEEE International Conference on Robotics and Automation (ICRA)* (pp. 8602-8608). IEEE.
   >
@@ -290,14 +293,6 @@ The original paper of ICP.
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9197085) [[pdf]](./papers/Estimating Motion Uncertainty with Bayesian ICP.pdf)
 
   - Based on the SGD-ICP, use SGLD to estimate the transformation.
-
-- **Precision Range Image Registration Using a Robust Surface Interpenetration Measure and Enhanced Genetic Algorithms**
-
-> Silva, L., Bellon, O. R. P., & Boyer, K. L. (2005). Precision range image registration using a robust surface interpenetration measure and enhanced genetic algorithms. *IEEE transactions on pattern analysis and machine intelligence*, *27*(5), 762-776.
->
-> **Citations:**281
->
-> [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1407879)[[pdf]](./papers/Precision_range_image_registration_using_a_robust_surface_interpenetration_measure_and_enhanced_genetic_algorithms.pdf)
 
 ## Probability-Based
 
@@ -580,7 +575,19 @@ The original paper of ICP.
 
 Teaser: Truncated least-squares Estimation And semidefinite Relaxation
 
-- > 
+## Genetic or Annealing
+
+- **Precision Range Image Registration Using a Robust Surface Interpenetration Measure and Enhanced Genetic Algorithms**
+
+  > Silva, L., Bellon, O. R. P., & Boyer, K. L. (2005). Precision range image registration using a robust surface interpenetration measure and enhanced genetic algorithms. *IEEE transactions on pattern analysis and machine intelligence*, *27*(5), 762-776.
+  >
+  > **Citations:**281
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1407879)[[pdf]](./papers/Precision_range_image_registration_using_a_robust_surface_interpenetration_measure_and_enhanced_genetic_algorithms.pdf)
+
+  - Use robust genetic algorithm to search in the pose space and get a good registration result.
+  - More robust and accurate than ICP
+  - Slower than ICP
 
 
 ## Different kinds of Improvements
@@ -621,6 +628,12 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
 
 ### Non-rigid Point set
 
+- **A new point matching algorithm for non-rigid registration**
+
+  > Chui, H., & Rangarajan, A. (2003). A new point matching algorithm for non-rigid registration. *Computer Vision and Image Understanding*, *89*(2-3), 114-141.
+  >
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S1077314203000092?token=1F6EDF85BEE9DB34579FF7916F9D35C900B8B71010B9E7F166D03A7050D1CD39F574900CBB0DAB444B3168C6A74F6A71&originRegion=eu-west-1&originCreation=20220116113608) [[pdf]](./papers/A new point matching algorithm for non-rigid registration.pdf)
+
 ## Survey
 
 - **A comprehensive survey on point cloud registration**
@@ -652,6 +665,14 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
   > **Citations:**155
   >
   > [[url]](https://link.springer.com/content/pdf/10.1007/s11263-020-01359-2.pdf) [[pdf]](./papers/Image Matching from Handcrafted to Deep Features A Survey.pdf)
+  
+- **Deformable Medical Image Registration: A Survey**
+
+  > Sotiras, A., Davatzikos, C., & Paragios, N. (2013). Deformable medical image registration: A survey. *IEEE transactions on medical imaging*, *32*(7), 1153-1190.
+  >
+  > **Citations:**1413
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6522524) [[pdf]](./papers/Deformable Medical Image Registration A Survey.pdf)
 
 # Mapping & Fusion
 
