@@ -189,7 +189,7 @@
   >
   > [[notes]](./notes/Robust registration of 2D and 3D point sets.md)
 
-  The article uses the LM algorithm to optimize a non-linear process instead of a closed-form solution, which can get a wider converge basin. 
+  The article uses the LM (Levenberg–Marquardt algorithm) algorithm to optimize a non-linear process instead of a closed-form solution, which can get a wider converge basin. 
 
 - **Sparse Iterative Closest Point** **(Sparse ICP)** :heavy_check_mark:
 
@@ -203,13 +203,19 @@
 
   Sparse ICP: 仍然使用欧式距离寻找ICP中的correspondence，但是在优化阶段，使用了$d_2^p$ 代替 $d_2$， 提高了稀疏性，对Outlier和noise有一定的鲁棒性。
 
-- **Fast global registration**
+- **Fast global registration** :heavy_check_mark:
 
   > Zhou, Q. Y., Park, J., & Koltun, V. (2016, October). Fast global registration. In *European conference on computer vision* (pp. 766-782). Springer, Cham.
   >
   > **Citations:**421
   >
   > [[url]](http://vladlen.info/papers/fast-global-registration.pdf) [[pdf]](./papers/Fast Global Registration.pdf)
+  
+  - Not the ICP variant
+  - Need the correspondence, (FPFH or other)
+  - Use an estimator called *scaled Geman-McClure estimator* to reject the outliers and noise
+  - Induce the *Black-Rangarajan duality* to optimize the objective function
+  - Faster and more accurate than ICP, no need to find the correspondence and closet in the inner loop.
 
 ### Global Registration
 
@@ -418,7 +424,7 @@
   
   - keywords: grid; ndt; newton optimization;
   
-  <img src="C:\Users\29183\Desktop\ndt.png" style="zoom: 33%;" />
+  <img src="./notes/ndt.png" style="zoom: 33%;" />
   
   - A kind of low-level description, no feature and structural information.
 
@@ -567,7 +573,9 @@
 
 - **TEASER: Fast and Certifiable Point Cloud Registration**
 
-> <T-RO>
+> Yang, Heng, Jingnan Shi, and Luca Carlone. "Teaser: Fast and certifiable point cloud registration." *IEEE Transactions on Robotics* 37.2 (2020): 314-333.
+>
+> **Citations:**135
 >
 > [[pdf]](./papers/TEASER-Fast and Certifiable Point Cloud.pdf) [[url]](https://sci-hub.ru/https://ieeexplore.ieee.org/abstract/document/9286491/)
 >
@@ -638,7 +646,10 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
 
 - **A comprehensive survey on point cloud registration**
 
-  > <arXiv>
+  > Huang, X., Mei, G., Zhang, J., & Abbas, R. (2021). A comprehensive survey on point cloud registration. *arXiv preprint arXiv:2103.02690*.
+  >
+  > **Citations:**10
+  >
   > [[url]](https://arxiv.org/pdf/2103.02690.pdf) [[pdf]](./papers/A comprehensive survey on point cloud registration.pdf)
   >
   > [[detailed notes]](./notes/A comprehensive survey on point cloud registration.md)
@@ -665,6 +676,8 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
   > **Citations:**155
   >
   > [[url]](https://link.springer.com/content/pdf/10.1007/s11263-020-01359-2.pdf) [[pdf]](./papers/Image Matching from Handcrafted to Deep Features A Survey.pdf)
+  
+  - Mainly focus on feature-matching.
   
 - **Deformable Medical Image Registration: A Survey**
 
@@ -767,3 +780,15 @@ Teaser: Truncated least-squares Estimation And semidefinite Relaxation
   > Peyré, G., & Cuturi, M. (2019). Computational optimal transport: With applications to data science. *Foundations and Trends® in Machine Learning*, *11*(5-6), 355-607.
   >
   > [[url]](https://arxiv.org/pdf/1803.00567.pdf) [[pdf]](./papers/Computational Optimal Transport.pdf)
+
+# Timeline record
+
+## 2022-01-17
+
+- **Point Cloud Registration Based on One-Point RANSAC and Scale-Annealing Biweight Estimation**
+
+  > Li, Jiayuan, Qingwu Hu, and Mingyao Ai. "Point cloud registration based on one-point ransac and scale-annealing biweight estimation." *IEEE Transactions on Geoscience and Remote Sensing* (2021).
+  >
+  > **Citations:**8
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9318535) [[pdf]](./papers/Point Cloud Registration Based on One-Point RANSAC and Scale-Annealing Biweight Estimation.pdf)

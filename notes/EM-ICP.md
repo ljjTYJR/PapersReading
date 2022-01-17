@@ -26,4 +26,12 @@
 
   > Sparse Iterative Closest Point
 
-- 
+- Other works explored the utility of relaxed assignments [14
+
+  > Fast Global Registration
+
+  解释一下什么是松弛问题，松弛对应的名词是”约束“。松弛问题的解就是通过将原问题的比较苛刻的约束条件去掉，然后在一个相对简单的约束条件下进行求解的过程就叫做”松弛“(relaxation)。
+
+  一般来说松弛问题的求解是通过解约束后，对每一个解进行设置一个上确界/下确界，再寻求符合约束条件的最优解。
+
+  
