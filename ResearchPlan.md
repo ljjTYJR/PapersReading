@@ -37,3 +37,16 @@
   关于科研的一些看法：1)首先还是需要做好survey，要对本领域有一个相对丰满的理解，对各种方法有一个基本的认识，并且很重要的是要输出自己的一些观点和看法。2)实力够硬，不仅仅是科研的水平，而且针对问题一定要有自己的看法，要善于归纳总结，保持学习，规律性地回顾；3) 对于PSR来说，目前deep learning大部分都像玩具，一方面代码不开源无法验证，网络训练以及泛化性都有很大的问题，这方面目前不要碰，还是先做好传统的方式。
 
   关于生活等其他方面，不要背上思想包袱，无论生活发生什么事情，都应该去热情接纳它，包袱已经丢下就应该将它抛下。要大步向前走，不要考虑什么后果，也不过畏畏缩缩对自己的小过失斤斤计较，无论发生什么，都是生活本身，大步向前走。
+  
+- **2022/1/17**
+
+  - Meeting:
+
+    可以给大概三个多月的时间去读paper，literature review是有必要并且是应该去做的
+
+  - Da: 怎样做笔记：
+
+    - The good sentences, paragraphs of the reference, which can be used to conclude the whole paper
+    - the pros and cons of the paper(Can be found in the citied paper)
+
+    
