@@ -697,23 +697,8 @@
   - 将分割后的点云按照class进行集合分类，使用NDT算法，对两个点云中同类的点云进行配准；objective function优化各个class的损失的和
   - **future work**: end-to-end, get the transformation directly;
 
-- **PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation** :flags:
+- 
 
-  > Qi, C. R., Su, H., Mo, K., & Guibas, L. J. (2017). Pointnet: Deep learning on point sets for 3d classification and segmentation. In *Proceedings of the IEEE conference on computer vision and pattern recognition* (pp. 652-660).
-  >
-  > **Citations:**6347
-  >
-  > [[pdf]](./papers/PointNet_Deep_Learning_CVPR_2017_paper.pdf) [[url]](https://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf)
-  >
-  > [[notes]](./notes/PointNet Deep Learning on Point Sets for 3D Classification and Segmentation.md)
-  
-  PointNet, DL for 3D segmentation.
-  
-- **PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space**
-
-  > Qi, C. R., Yi, L., Su, H., & Guibas, L. J. (2017). Pointnet++: Deep hierarchical feature learning on point sets in a metric space. *arXiv preprint arXiv:1706.02413*.
-  >
-  > **Citations:**4083
 
 ## Cross-source Combination
 
@@ -870,6 +855,25 @@
     - Pros: Compared to FPH, it reduce the computational cost.
     - Cons: Handcrafted features are generally designed to work with relatively clean range data like laser scans, and may not work very well with the scans collected by commodity depth sensors
 
+- **Demisting the Hough Transform for 3D Shape Recognition and Registration** :heavy_check_mark: :yellow_heart: 
+
+  > Woodford, Oliver J., et al. "Demisting the Hough transform for 3D shape recognition and registration." *International Journal of Computer Vision* 106.3 (2014): 332-341.
+  >
+  > **Citations:**82
+  >
+  > [[url]](https://link.springer.com/content/pdf/10.1007/s11263-013-0623-2.pdf) [[pdf]](./papers/Demisting the Hough transform for 3D shape recognition and registration.pdf)
+
+  - :yellow_heart: Just roughly reading
+  - Add two extensions to standard *Hough Transform*: 1) The *intrinsic Hough transform* which reduces the memory consuming; 2) *minimum-entropy Hough transform* which increases the detection accuracy.
+
+- **Using spin images for efficient object recognition in cluttered 3D scenes**
+
+  > Johnson, Andrew E., and Martial Hebert. "Using spin images for efficient object recognition in cluttered 3D scenes." *IEEE Transactions on pattern analysis and machine intelligence* 21.5 (1999): 433-449.
+  >
+  > **Citations:**3080
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=765655) [[pdf]](./papers/Using Spin Images for Efficient Object Recognition in Cluttered 3D Scenes.pdf)
+
 - **Semantic 3D Object Maps for Everyday Manipulation in Human Living Environments** :book: 
 
   > Rusu, Radu Bogdan. "Semantic 3d object maps for everyday manipulation in human living environments." *KI-Künstliche Intelligenz* 24.4 (2010): 345-348.
@@ -880,13 +884,17 @@
 
   - Rusu's PhD thesis, just for reference.
 
-- **PREDATOR: Registration of 3D Point Clouds with Low Overlap**
+- **PREDATOR: Registration of 3D Point Clouds with Low Overlap** :heavy_check_mark: :red_circle:
 
   > Huang, Shengyu, et al. "PREDATOR: Registration of 3D Point Clouds with Low Overlap." *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition*. 2021.
   >
   > **Citations:**29
   >
   > [[url]](https://openaccess.thecvf.com/content/CVPR2021/papers/Huang_Predator_Registration_of_3D_Point_Clouds_With_Low_Overlap_CVPR_2021_paper.pdf) [[pdf]](./papers/PREDATOR Registration of 3D Point Clouds with Low Overlap.pdf)
+
+  - Our model is specifically designed to handle (also) point-cloud pairs with low overlap.
+  - The core of the model is an overlap attention module that enables early information exchange between the point clouds’ latent encodings, in order to infer which of their points are likely to lie in their overlap region.
+  - :question:所以这个模型的输出是啥？
 
 - **ICP registration using invariant features** **（ICPIF)** :heavy_check_mark: :red_circle:
 
@@ -915,4 +923,93 @@
   >
   > [[url]](https://dl.acm.org/doi/pdf/10.1145/1399504.1360684) [[pdf]](./papers/4-Points Congruent Sets for Robust Pairwise Surface Registration.pdf)
 
-> 能否利用一些不变的特性进行对点云进行处理？
+- **Sampling Network Guided Cross-Entropy Method for Unsupervised Point Cloud Registration** :heavy_check_mark:
+
+  > Jiang, Haobo, et al. "Sampling network guided cross-entropy method for unsupervised point cloud registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2021.
+  >
+  > **Citations:**1
+  >
+  > [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Jiang_Sampling_Network_Guided_Cross-Entropy_Method_for_Unsupervised_Point_Cloud_Registration_ICCV_2021_paper.pdf) [[pdf]](./papers/Sampling Network Guided Cross-Entropy Method for Unsupervised Point Cloud Registration.pdf)
+
+  - Reformulate the registration problem as a reinforcement learning problem.
+
+- **PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation** 
+
+  > Qi, C. R., Su, H., Mo, K., & Guibas, L. J. (2017). Pointnet: Deep learning on point sets for 3d classification and segmentation. In *Proceedings of the IEEE conference on computer vision and pattern recognition* (pp. 652-660).
+  >
+  > **Citations:**6347
+  >
+  > [[url]](https://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf)[[pdf]](./papers/PointNet_Deep_Learning_CVPR_2017_paper.pdf)
+  >
+  > [[notes]](./notes/PointNet Deep Learning on Point Sets for 3D Classification and Segmentation.md)
+
+- **PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space**
+
+  > Qi, C. R., Yi, L., Su, H., & Guibas, L. J. (2017). Pointnet++: Deep hierarchical feature learning on point sets in a metric space. *arXiv preprint arXiv:1706.02413*.
+  >
+  > **Citations:**4083
+
+- **Teach-Repeat-Replan A Complete and Robust System for Aggressive Flight in Complex Environments**
+
+  > Gao, Fei, et al. "Teach-repeat-replan: A complete and robust system for aggressive flight in complex environments." *IEEE Transactions on Robotics* 36.5 (2020): 1526-1545.
+  >
+  > **Citations:**41
+  >
+  > [[url]]() [[pdf]](./papers/Teach-Repeat-Replan A Complete and Robust System for Aggressive Flight in Complex Environments.pdf)
+
+- **The Auto-Complete Graph: Merging and MutualCorrection of Sensor and Prior Maps for SLAM**
+
+  > Mielle, Malcolm, Martin Magnusson, and Achim J. Lilienthal. "The auto-complete graph: Merging and mutual correction of sensor and prior maps for SLAM." Robotics 8.2 (2019): 40.
+  >
+  > [[url]](https://cloud.oru.se/apps/files/?dir=/Shuo%20Sun/initial%20reading%20list/3.2%20heterogeneous%20maps&fileid=29343307#pdfviewer) [[pdf]](./papers/The Auto-Complete Graph Merging and MutualCorrection of Sensor and Prior Maps for SLAM.pdf)
+
+- **Normal distributions transform occupancy maps: Application to large-scale online 3D mapping**
+
+  > Saarinen, Jari, et al. "Normal distributions transform occupancy maps: Application to large-scale online 3D mapping." *2013 ieee international conference on robotics and automation*. IEEE, 2013.
+  >
+  > **Citations:** 89
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6630878) [[pdf]](./papers/Normal distributions transform occupancy maps Application to large-scale online 3D mapping.pdf)
+
+- **GLFP:  Global  Localization  from  a  Floor  Plan**
+
+  > Wang, Xipeng, Ryan J. Marcotte, and Edwin Olson. "GLFP: Global localization from a floor plan." *2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. IEEE, 2019.
+  >
+  > **Citations:** 3
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8968061) [[pdf]](./papers/GLFP Global Localization from a Floor Plan.pdf)
+  
+- **A Robust Loss for Point Cloud Registration** :heavy_check_mark:
+
+  > Deng, Zhi, et al. "A robust loss for point cloud registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2021.
+  >
+  > [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Deng_A_Robust_Loss_for_Point_Cloud_Registration_ICCV_2021_paper.pdf) [[pdf]](./papers/A Robust Loss for Point Cloud Registration.pdf)
+
+  - First, the proposed metric is based on intersections of uniformly random straight lines set in space, which can obtain richer information and more likely to achieve the global minimum.
+
+  - Second, our proposed metric can turn various supervised learning frameworks into unsupervised and has the
+    ability to train on massive real unlabeled suitable data sets.
+
+    :star:优缺点要看和谁进行比较；
+
+  - More accurate and faster than ICP, FGR.
+
+- **LSG-CPD: Coherent Point Drift with Local Surface Geometry for Point Cloud Registration**
+
+  > Liu, Weixiao, Hongtao Wu, and Gregory Chirikjian. "LSG-CPD: Coherent Point Drift with Local Surface Geometry for Point Cloud Registration." *arXiv preprint arXiv:2103.15039* (2021).
+  >
+  > [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Liu_LSG-CPD_Coherent_Point_Drift_With_Local_Surface_Geometry_for_Point_ICCV_2021_paper.pdf) [[pdf]](./papers/LSG-CPD Coherent Point Drift with Local Surface Geometry.pdf)
+
+- **Deep Hough Voting for Robust Global Registration**
+
+  > Lee, Junha, et al. "Deep Hough Voting for Robust Global Registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2021.
+  >
+  > **Citations:**2
+  >
+  > [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Lee_Deep_Hough_Voting_for_Robust_Global_Registration_ICCV_2021_paper.pdf) [[pdf]](./papers/Deep Hough Voting for Robust Global Registration.pdf)
+
+- **Provably Approximated Point Cloud Registration**
+
+  > Jubran, Ibrahim, et al. "Provably Approximated Point Cloud Registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2021.
+  >
+  > [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Jubran_Provably_Approximated_Point_Cloud_Registration_ICCV_2021_paper.pdf) [[pdf]](./papers/Provably Approximated Point Cloud Registration.pdf)

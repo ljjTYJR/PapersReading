@@ -49,4 +49,9 @@
     - The good sentences, paragraphs of the reference, which can be used to conclude the whole paper
     - the pros and cons of the paper(Can be found in the citied paper)
 
-    
+- **2022/1/23**
+
+  - 对于地图融合，是一个比较engineering的东西，并且前景并不明朗，不值得投入很大的精力；
+  - 将PSR的问题作为主干，作为自己的主要任务，然后对其进行修改；
+  - Neural network 的工作目前知道即可，不需要投入很多（需要train并且不可解释，**不稳定**）
+  - 当前的主要工作仍然是PSR的文献综述。
