@@ -382,7 +382,6 @@
   - Use E-M to get the optimal parameters;
   - In M step, change the expression to get a closed-form solution to get a quicker solution.
   - More robust than LM-ICP
-  - :question: 对于非刚性的(non-rigid)自己还没有研究
 
 - **Robust Point Set Registration Using Gaussian Mixture Models** **(GMM)** :heavy_check_mark: :flags: :question:
 
@@ -398,16 +397,6 @@
   - Distribution-to-distribution GMM
   - Every point serves as a centroid of GMM
   - More robust than CPD
-
-- **A Bayesian Formulation of Coherent Point Drift** 
-
-  > Hirose, O. (2020). A Bayesian formulation of coherent point drift. *IEEE transactions on pattern analysis and machine intelligence*.
-  >
-  > **Citations:**26
-  >
-  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8985307) [[pdf]](./papers/A Bayesian Formulation of Coherent Point Drift.pdf)
-  >
-  > ps:这个代码竟然是用C写的,证明也单独拎出来了
 
 ### **NDT & Variants**
 
@@ -957,12 +946,6 @@
   >
   > [[url]]() [[pdf]](./papers/Teach-Repeat-Replan A Complete and Robust System for Aggressive Flight in Complex Environments.pdf)
 
-- **The Auto-Complete Graph: Merging and MutualCorrection of Sensor and Prior Maps for SLAM**
-
-  > Mielle, Malcolm, Martin Magnusson, and Achim J. Lilienthal. "The auto-complete graph: Merging and mutual correction of sensor and prior maps for SLAM." Robotics 8.2 (2019): 40.
-  >
-  > [[url]](https://cloud.oru.se/apps/files/?dir=/Shuo%20Sun/initial%20reading%20list/3.2%20heterogeneous%20maps&fileid=29343307#pdfviewer) [[pdf]](./papers/The Auto-Complete Graph Merging and MutualCorrection of Sensor and Prior Maps for SLAM.pdf)
-
 - **Normal distributions transform occupancy maps: Application to large-scale online 3D mapping**
 
   > Saarinen, Jari, et al. "Normal distributions transform occupancy maps: Application to large-scale online 3D mapping." *2013 ieee international conference on robotics and automation*. IEEE, 2013.
@@ -994,11 +977,7 @@
 
   - More accurate and faster than ICP, FGR.
 
-- **LSG-CPD: Coherent Point Drift with Local Surface Geometry for Point Cloud Registration**
-
-  > Liu, Weixiao, Hongtao Wu, and Gregory Chirikjian. "LSG-CPD: Coherent Point Drift with Local Surface Geometry for Point Cloud Registration." *arXiv preprint arXiv:2103.15039* (2021).
-  >
-  > [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Liu_LSG-CPD_Coherent_Point_Drift_With_Local_Surface_Geometry_for_Point_ICCV_2021_paper.pdf) [[pdf]](./papers/LSG-CPD Coherent Point Drift with Local Surface Geometry.pdf)
+## 2022-01-24
 
 - **Deep Hough Voting for Robust Global Registration**
 
@@ -1013,3 +992,69 @@
   > Jubran, Ibrahim, et al. "Provably Approximated Point Cloud Registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2021.
   >
   > [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Jubran_Provably_Approximated_Point_Cloud_Registration_ICCV_2021_paper.pdf) [[pdf]](./papers/Provably Approximated Point Cloud Registration.pdf)
+
+- **The Auto-Complete Graph: Merging and MutualCorrection of Sensor and Prior Maps for SLAM**
+
+  > Mielle, Malcolm, Martin Magnusson, and Achim J. Lilienthal. "The auto-complete graph: Merging and mutual correction of sensor and prior maps for SLAM." Robotics 8.2 (2019): 40.
+  >
+  > [[url]](https://cloud.oru.se/apps/files/?dir=/Shuo%20Sun/initial%20reading%20list/3.2%20heterogeneous%20maps&fileid=29343307#pdfviewer) [[pdf]](./papers/The Auto-Complete Graph Merging and MutualCorrection of Sensor and Prior Maps for SLAM.pdf)
+
+- **A Bayesian Formulation of Coherent Point Drift** 
+
+  > Hirose, O. (2020). A Bayesian formulation of coherent point drift. *IEEE transactions on pattern analysis and machine intelligence*.
+  >
+  > **Citations:**26
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8985307) [[pdf]](./papers/A Bayesian Formulation of Coherent Point Drift.pdf)
+  >
+  > ps:这个代码竟然是用C写的,证明也单独拎出来了
+
+- **Generalized Coherent Point Drift With Multi-Variate Gaussian Distribution and Watson Distribution**
+
+  > Min, Zhe, et al. "Generalized coherent point drift with multi-variate gaussian distribution and watson distribution." *IEEE Robotics and Automation Letters* 6.4 (2021): 6749-6756.
+  >
+  > **Citations:**1
+  >
+  > [[pdf]](./paper/Generalized Coherent Point Drift With Multi-Variate Gaussian Distribution and Watson Distribution.pdf)
+
+- **Robust and Accurate Point Set Registration with Generalized Bayesian Coherent Point Drift**
+
+  > Zhang, Ang, et al. "Robust and Accurate Point Set Registration with Generalized Bayesian Coherent Point Drift." *2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. IEEE.
+  >
+  > **Citations:**0
+  >
+  > [[pdf]](./papers/Robust and Accurate Point Set Registration with Generalized Bayesian.pdf)
+
+### 2022/01/26
+
+- **FilterReg: Robust and Efficient Probabilistic Point-Set Registration using Gaussian Filter and Twist Parameterization** :heavy_check_mark: :no_entry:
+
+  > Gao, Wei, and Russ Tedrake. "Filterreg: Robust and efficient probabilistic point-set registration using gaussian filter and twist parameterization." *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition*. 2019.
+  >
+  > **Citations:**58
+  >
+  > [[url]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Gao_FilterReg_Robust_and_Efficient_Probabilistic_Point-Set_Registration_Using_Gaussian_Filter_CVPR_2019_paper.pdf) [[pdf]](./papers/FilterReg-Robust and Efficient Probabilistic Point-Set Registration using Gaussian Filter and Twist Parameterization.pdf)
+
+  - Point-to-Plane GMM.
+  - Formulate the E step as a filtering problem and solve it using advances in efficient Gaussian filters.
+
+- **LSG-CPD: Coherent Point Drift with Local Surface Geometry for Point Cloud Registration** :heavy_check_mark:
+
+  > Liu, Weixiao, Hongtao Wu, and Gregory Chirikjian. "LSG-CPD: Coherent Point Drift with Local Surface Geometry for Point Cloud Registration." *arXiv preprint arXiv:2103.15039* (2021).
+  >
+  > [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Liu_LSG-CPD_Coherent_Point_Drift_With_Local_Surface_Geometry_for_Point_ICCV_2021_paper.pdf) [[pdf]](./papers/LSG-CPD Coherent Point Drift with Local Surface Geometry.pdf)
+
+  - Adjust the point-to-point / point-to-plane based on surface normal and surface variation by adjusting covariance:
+
+    <img src="./notes/LSG-CPD.png" alt="./notes/LSG-CPD.png" style="zoom:67%;" />
+
+  - Some tricks to increase robustness:
+    - Adjust the uniform distribution, and the weight of GMM;
+  - Some tricks to get faster:
+    - We propose an efficient optimization method to solve for the optimal transformation on a matrix
+      Lie group in the EM process.
+    - The proposed method is about 20 times faster than modern implementations of CPD.
+
+- **3D Local Features for Direct Pairwise Registration**
+
+  > 
