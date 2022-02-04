@@ -437,12 +437,19 @@
 
   - **Some Notes**：
     - 无论对于rigid还是non-rigid，计算的复杂度，计算时间以及鲁棒性都是必须要进行比较的东西。
-
   - For **rigid** registration, given two point set X and Y. Y is represented as the centroids of 
   - The CPD algorithm is more robust and accurate than LM-ICP, but will perform slower than it.
   - The algorithm will perform very slow then the input's size is big(35947*3), FGT can get faster, but will be less robust.
   - For non-rigid registration, compared to TPS-RPM, CPD algorithm is more accurate, but still slow when the input size is large. The time consumption mainly lies in matrix computation. 
+  
+- **Non-Rigid Point Set Registration by Preserving Global and Local Structures**
 
+  > Ma, Jiayi, Ji Zhao, and Alan L. Yuille. "Non-rigid point set registration by preserving global and local structures." *IEEE Transactions on image Processing* 25.1 (2015): 53-64.
+  >
+  > **Citations:**279
+  >
+  > [[pdf]](./papers/Non-Rigid Point Set Registration by Preserving Global and Local Structures.pdf)
+  
 - **Robust Point Set Registration Using Gaussian Mixture Models** **(GMM)** :heavy_check_mark: :flags: :question:
 
   > Jian, B., & Vemuri, B. C. (2010). Robust point set registration using gaussian mixture models. *IEEE transactions on pattern analysis and machine intelligence*, *33*(8), 1633-1645.
@@ -457,6 +464,15 @@
   - Distribution-to-distribution GMM
   - Every point serves as a centroid of GMM
   - More robust than CPD
+  - :question: How to calculate the L2 distance?
+  
+- **A Bayesian Formulation of Coherent Point Drift**
+
+  > Hirose, Osamu. "A Bayesian formulation of coherent point drift." *IEEE transactions on pattern analysis and machine intelligence* (2020).
+  >
+  > **Citations:**28
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8985307) [[pdf]](./papers/A Bayesian Formulation of Coherent Point Drift.pdf)
 
 ### **NDT & Variants**
 
@@ -508,6 +524,20 @@
     - D2D 3D NDT
     - Faster than P2D NDT
 
+## Partial Overlapping
+
+- **Fully Automatic Registration of 3D Point Clouds**
+
+  > Makadia, Ameesh, Alexander Patterson, and Kostas Daniilidis. "Fully automatic registration of 3D point clouds." *2006 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'06)*. Vol. 1. IEEE, 2006.
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1640899)
+
+- **A fast automatic method for registration of partially-overlapping range images**
+
+  > Chen, Chu-Song, Yi-Ping Hung, and Jen-Bo Cheng. "A fast automatic method for registration of partially-overlapping range images." *Sixth International Conference on Computer Vision (IEEE Cat. No. 98CH36271)*. IEEE, 1998.
+  >
+  > **Citations:**123
+
 ## Fuzzy Registration
 
 - **Point Set Registration for 3D Range Scans Using Fuzzy Cluster-based Metric and Efficient Global Optimization** :heavy_check_mark:
@@ -532,7 +562,6 @@
   > [[notes]](./notes/FuzzyPSReg_Strategies_of_Fuzzy_Cluster-Based_Point_Set_Registration.md)
 
   > - [ ] O2S的部分还没有看完
-  >
   > - First, we propose a new metric based on Gustafson–Kessel (GK) fuzzy clustering to measure the alignment
   >   of two point clouds.
   > - We then develop the registration quality assessment of the GK-based metric, which is more sensitive
@@ -549,6 +578,14 @@
   >     - With the same cluster centers, GK-based is more accurate;
   > - Compare to TEASER++:
   >   - more accurate and faster ( SUN3D dataset )
+  
+- **SFCM: A Fuzzy Clustering Algorithm of Extracting the Shape Information of Data**
+
+  > Bui, Quang-Thinh, et al. "SFCM: A fuzzy clustering algorithm of extracting the shape information of data." *IEEE Transactions on Fuzzy Systems* 29.1 (2020): 75-89.
+  >
+  > **Citations:**9
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9160881)
 
 ## Optimization
 
@@ -561,6 +598,16 @@
   > [[url]](https://sci-hub.ru/https://ieeexplore.ieee.org/abstract/document/9286491/) [[pdf]](./papers/TEASER-Fast and Certifiable Point Cloud.pdf)
   >
   > [[notes]](./notes/TEASER-Fast and Certifiable Point Cloud.md)
+
+## Non-Rigid
+
+- **Acceleration of Non-Rigid Point Set Registration With Downsampling and Gaussian Process Regression**
+
+  > Hirose, Osamu. "Acceleration of non-rigid point set registration with downsampling and Gaussian process regression." *IEEE Transactions on Pattern Analysis and Machine Intelligence* 43.8 (2020): 2858-2865.
+  >
+  > **Citations:**4
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9290402)
 
 ## Feature-Based
 
@@ -1055,3 +1102,9 @@
   > [[pdf]](./papers/Linearly Converging Quasi Branch and Bound Algorithms for Global Rigid Registration.pdf)
 
   - Acceleration based on the BnBs search, the time complexity changes from  $1/\epsilon$ to $ log(1/\epsilon)$ —— where $\epsilon$ is the accuracy.
+
+# The representative Labs
+
+- **Features**
+
+  
