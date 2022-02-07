@@ -802,14 +802,6 @@
   >
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5431057) [[pdf]](./papers/Fast Registration Based on Noisy Planes With Unknown Correspondences for 3-D Mapping.pdf)
   
-- **Spectral Correspondence for Point Pattern Matching**
-
-  > Carcassoni, M., & Hancock, E. R. (2003). Spectral correspondence for point pattern matching. *Pattern Recognition*, *36*(1), 193-204.
-  >
-  > **Citations:**271
-  >
-  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0031320302000547?token=9EC1420AF495A990060CF769F8859EB19D22B507DF305D3779BF0F968814EC067F756D046CD5429AF52B6FDC4807EBE9&originRegion=eu-west-1&originCreation=20220113140059) [[pdf]](./papers/Spectral Correspondence for Point Pattern Matching.pdf)
-
 - **Using spin images for efficient object recognition in cluttered 3D scenes**
 
   > Johnson, Andrew E., and Martial Hebert. "Using spin images for efficient object recognition in cluttered 3D scenes." *IEEE Transactions on pattern analysis and machine intelligence* 21.5 (1999): 433-449.
@@ -825,6 +817,30 @@
   > **Citations:**687
   >
   > [[url]](https://dl.acm.org/doi/pdf/10.1145/1399504.1360684) [[pdf]](./papers/4-Points Congruent Sets for Robust Pairwise Surface Registration.pdf)
+
+- **Super 4PCS Fast Global Pointcloud Registration via Smart Indexing**
+
+  > Mellado, Nicolas, Dror Aiger, and Niloy J. Mitra. "Super 4pcs fast global pointcloud registration via smart indexing." *Computer graphics forum*. Vol. 33. No. 5. 2014.
+  >
+  > **Citations:**393
+
+- **Robust Point Matching for Nonrigid Shapes by Preserving Local Neighborhood Structures** :heavy_check_mark:
+
+  > Zheng, Y., & Doermann, D. (2006). Robust point matching for nonrigid shapes by preserving local neighborhood structures. *IEEE transactions on pattern analysis and machine intelligence*, *28*(4), 643-649.
+  >
+  > **Citations:**366
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1597120) [[pdf]](./papers/Robust Point Matching for Nonrigid Shapes by Preserving Local Neighborhood Structures.pdf)
+
+  - This paper gives an very direct and clear idea to find the correspondence between two transformmed point set: in the problem of rigid registration, the distance of a given point $x_i$ to other point $x_o$ will be the same with the corresponding point $y_i$ with other points $y_o$.
+  - So if we construct the matrix which is of the size $M\times N$ $P$, the correspondence is described by a matrix P and the element of the matrix means the correspondence of the correspondending relationship between two points.
+  - The problem is converted to a seperate combinational optimization problem.
+
+- **Shape Matching and Object Recognition Using Shape Contexts**
+
+  > Belongie, Serge, Jitendra Malik, and Jan Puzicha. "Shape matching and object recognition using shape contexts." *IEEE transactions on pattern analysis and machine intelligence* 24.4 (2002): 509-522.
+  >
+  > **Citations:** **<u>8300</u>**
 
 ## Learning-Based
 
@@ -892,7 +908,15 @@
   >
   > **Citations:**4083
 
-## Graph-Based
+## Graph-Based / Spectral-Based
+
+- **Spectral Correspondence for Point Pattern Matching**
+
+  > Carcassoni, M., & Hancock, E. R. (2003). Spectral correspondence for point pattern matching. *Pattern Recognition*, *36*(1), 193-204.
+  >
+  > **Citations:**271
+  >
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0031320302000547?token=9EC1420AF495A990060CF769F8859EB19D22B507DF305D3779BF0F968814EC067F756D046CD5429AF52B6FDC4807EBE9&originRegion=eu-west-1&originCreation=20220113140059) [[pdf]](./papers/Spectral Correspondence for Point Pattern Matching.pdf)
 
 - **Thirty Years of Graph Matching in Pattern Recognition**
 
@@ -917,14 +941,6 @@
   > **Citations:**171
   >
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1677520) [[pdf]](./papers/Graphical Models and Point Pattern Matching.pdf)
-
-- **Robust Point Matching for Nonrigid Shapes by Preserving Local Neighborhood Structures**
-
-  > Zheng, Y., & Doermann, D. (2006). Robust point matching for nonrigid shapes by preserving local neighborhood structures. *IEEE transactions on pattern analysis and machine intelligence*, *28*(4), 643-649.
-  >
-  > **Citations:**366
-  >
-  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1597120) [[pdf]](./papers/Robust Point Matching for Nonrigid Shapes by Preserving Local Neighborhood Structures.pdf)
 
 
 ## Different kinds of Improvements
@@ -1128,8 +1144,3 @@
   >
   > [[url]](https://www.math.ucdavis.edu/~saito/data/emd/zhu-ijcv2004.pdf)
 
-# The representative Labs
-
-- **Features**
-
-  
