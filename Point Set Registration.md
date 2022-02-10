@@ -841,6 +841,8 @@
   > Belongie, Serge, Jitendra Malik, and Jan Puzicha. "Shape matching and object recognition using shape contexts." *IEEE transactions on pattern analysis and machine intelligence* 24.4 (2002): 509-522.
   >
   > **Citations:** **<u>8300</u>**
+  >
+  > 
 
 ## Learning-Based
 
@@ -1091,6 +1093,16 @@
 
   - 将分割后的点云按照class进行集合分类，使用NDT算法，对两个点云中同类的点云进行配准；objective function优化各个class的损失的和
   - **future work**: end-to-end, get the transformation directly;
+
+# Comparison
+
+- **Beyond points: Evaluating recent 3D scan-matching algorithms**
+
+  > Magnusson, Martin, et al. "Beyond points: Evaluating recent 3D scan-matching algorithms." *2015 IEEE International Conference on Robotics and Automation (ICRA)*. IEEE, 2015.
+  >
+  > **Citations:**68
+  >
+  > [[pdf]](./papers/Beyond_points_Evaluating_recent_3D_scan-matching_algorithms.pdf)
 
 # Math Basis
 
