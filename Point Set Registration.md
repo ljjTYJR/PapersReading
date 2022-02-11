@@ -1090,9 +1090,16 @@
   > [[notes]](./notes/Integrating Deep Semantic Segmentation into 3D point cloud registration.md)
 
   - 使用PointNet作为语义分割的前端，对三维点云进行像素级别的语义分割；
-
   - 将分割后的点云按照class进行集合分类，使用NDT算法，对两个点云中同类的点云进行配准；objective function优化各个class的损失的和
   - **future work**: end-to-end, get the transformation directly;
+  
+- **Semantic-assisted 3D Normal Distributions Transform for scan registration in environments with limited structure**
+
+  > Zaganidis, Anestis, et al. "Semantic-assisted 3D normal distributions transform for scan registration in environments with limited structure." *2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. IEEE, 2017.
+  >
+  > **Citations:**21
+  >
+  > [[pdf]](./papers/Semantic-assisted_3D_normal_distributions_transform_for_scan_registration_in_environments_with_limited_structure.pdf)
 
 # Comparison
 
