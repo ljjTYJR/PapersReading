@@ -189,6 +189,12 @@
 
   Symmetric-ICP: 在point-to-plane的基础上进行改进，point-to-plane的类型收敛域减小，因为如上图所示，如果p点在q点所在的平面，那么二者的 *loss function* 一定为0，那么p点就只能在q点的平面进行滑动。但是使用symmetric(上图所示)，可以允许p点与q点形成圆进行滑动。
 
+- **Robust symmetric iterative closest point**
+
+  > Li, Jiayuan, et al. "Robust symmetric iterative closest point." *ISPRS Journal of Photogrammetry and Remote Sensing* 185 (2022): 219-231.
+  >
+  > [[pdf]](./papers/Robust symmetric iterative closest point.pdf)
+
 - **A robust method for registration and segmentation of multiple range images**
 
   > Masuda, T., & Yokoya, N. (1995). A robust method for registration and segmentation of multiple range images. *Computer vision and image understanding*, *61*(3), 295-307.
@@ -348,6 +354,10 @@
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9197085) [[pdf]](./papers/Estimating Motion Uncertainty with Bayesian ICP.pdf)
 
   - Based on the SGD-ICP, use SGLD to estimate the transformation.
+  
+- **Stein ICP for Uncertainty Estimation in Point Cloud Matching**
+
+  > Maken, Fahira Afzal, Fabio Ramos, and Lionel Ott. "Stein ICP for Uncertainty Estimation in Point Cloud Matching." *IEEE Robotics and Automation Letters* 7.2 (2021): 1063-1070.
 
 ## Probability-Based
 
@@ -1039,6 +1049,22 @@
   > Tam, Gary KL, et al. "Registration of 3D point clouds and meshes: A survey from rigid to nonrigid." *IEEE transactions on visualization and computer graphics* 19.7 (2012): 1199-1217.
   >
   > **Citations:**621
+  
+- **Deep Learning for 3D Point Clouds: A Survey**
+
+  > Guo, Yulan, et al. "Deep learning for 3d point clouds: A survey." *IEEE transactions on pattern analysis and machine intelligence* 43.12 (2020): 4338-4364.
+  >
+  > **Citations:**452
+
+- **LiDAR Odometry Methodologies for Autonomous Driving: A Survey**
+
+  > Jonnavithula, Nikhil, Yecheng Lyu, and Ziming Zhang. "LiDAR Odometry Methodologies for Autonomous Driving: A Survey." *arXiv preprint arXiv:2109.06120* (2021).
+
+- **STORM: Structure-based Overlap Matching for Partial Point Cloud Registration**
+
+  > Wang, Yujie, et al. "STORM: Structure-based Overlap Matching for Partial Point Cloud Registration." *IEEE Transactions on Pattern Analysis and Machine Intelligence* (2022).
+  >
+  > **Citations:**0
 
 # Mapping & Fusion
 
@@ -1046,7 +1072,7 @@
 
 - **SegMap Segment-based mapping and localization using data-driven descriptors**
 
-  > <IJRR>
+  > Dube, Renaud, et al. "SegMap: Segment-based mapping and localization using data-driven descriptors." *The International Journal of Robotics Research* 39.2-3 (2020): 339-355.
   > [[pdf]](./papers/SegMap Segment-based mapping and localization using data-driven descriptors.pdf)[[url]](https://journals.sagepub.com/doi/pdf/10.1177/0278364919863090)
   >
   > [[notes]](./notes/SegMap Segment-based mapping and localization using data-driven descriptors.md)
@@ -1131,35 +1157,33 @@
   >
   > [[url]](https://arxiv.org/pdf/1803.00567.pdf) [[pdf]](./papers/Computational Optimal Transport.pdf)
 
-# Timeline record
+# SLAM
 
-## 2022-01-17
+- **LOAM: Lidar Odometry and Mapping in Real-time**
 
-- **Point Cloud Registration Based on One-Point RANSAC and Scale-Annealing Biweight Estimation** 
-
-  > Li, Jiayuan, Qingwu Hu, and Mingyao Ai. "Point cloud registration based on one-point ransac and scale-annealing biweight estimation." *IEEE Transactions on Geoscience and Remote Sensing* (2021).
+  > Zhang, Ji, and Sanjiv Singh. "LOAM: Lidar Odometry and Mapping in Real-time." *Robotics: Science and Systems*. Vol. 2. No. 9. 2014.
   >
-  > **Citations:**8
+  > [[pdf]](./papers/LOAM Lidar Odometry and Mapping in Real-time.pdf)
   >
-  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9318535) [[pdf]](./papers/Point Cloud Registration Based on One-Point RANSAC and Scale-Annealing Biweight Estimation.pdf)
+  > **Citations:**1333
 
-- **Accurate Point Cloud Registration with Robust Optimal Transport**
+  - A SLAM framework considering the motion distortion in the process.
+  - The registration process is finished by extracting features and use them to register two scans. 
 
-  > Shen, Zhengyang, et al. "Accurate Point Cloud Registration with Robust Optimal Transport." *Advances in Neural Information Processing Systems* 34 (2021).
+  ## Mapping
+
+  - **Occupancy map building through Bayesian exploration**
+
+    > Francis, Gilad, et al. "Occupancy map building through bayesian exploration." *The International Journal of Robotics Research* 38.7 (2019): 769-792.
+    >
+    > **Citations:**9
+
+# Reference
+
+- **A Quantitative Analysis of Current Practices in Optical Flow Estimation and the Principles Behind Them**
+
+  > Sun, Deqing, Stefan Roth, and Michael J. Black. "A quantitative analysis of current practices in optical flow estimation and the principles behind them." *International Journal of Computer Vision* 106.2 (2014): 115-137.
   >
-  > **Citations:**0
-  >
-  > [[url]](https://proceedings.neurips.cc/paper/2021/hash/2b0f658cbffd284984fb11d90254081f-Abstract.html) [[paper]](./papers/Accurate Point Cloud Registration with Robust Optimal Transport.pdf)
+  > **Citations:**578
 
-  需要补充一些额外的数学知识，没看懂。。
-
-  另外，看起来 optimal transport 要想用在点云配准里面，是需要知道correspondence的，可以说是一种优化手段吧。
-
-- **Optimal Mass Transport for Registration and Warping**
-
-  > Haker, Steven, et al. "Optimal mass transport for registration and warping." *International Journal of computer vision* 60.3 (2004): 225-240.
-  >
-  > **Citations:**412
-  >
-  > [[url]](https://www.math.ucdavis.edu/~saito/data/emd/zhu-ijcv2004.pdf)
-
+  - A good example for survey.
