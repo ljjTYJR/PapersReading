@@ -159,7 +159,7 @@
 
   **Point-to-Plane ICP.**
 
-  <img src="D:\papers\notes\point-to-plane.png" style="zoom:67%;" />
+  <img src=".\notes\point-to-plane.png" style="zoom:67%;" />
 
 - **Generalized-ICP** **(Plane-to-Plane ICP / GICP)** :heavy_check_mark:
 
@@ -354,10 +354,20 @@
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9197085) [[pdf]](./papers/Estimating Motion Uncertainty with Bayesian ICP.pdf)
 
   - Based on the SGD-ICP, use SGLD to estimate the transformation.
-  
+
+### Not Read
+
 - **Stein ICP for Uncertainty Estimation in Point Cloud Matching**
 
-  > Maken, Fahira Afzal, Fabio Ramos, and Lionel Ott. "Stein ICP for Uncertainty Estimation in Point Cloud Matching." *IEEE Robotics and Automation Letters* 7.2 (2021): 1063-1070.
+> Maken, Fahira Afzal, Fabio Ramos, and Lionel Ott. "Stein ICP for Uncertainty Estimation in Point Cloud Matching." *IEEE Robotics and Automation Letters* 7.2 (2021): 1063-1070.
+
+- **CELLO-3D: Estimating the Covariance of ICP in the Real World**
+
+  > Landry, David, François Pomerleau, and Philippe Giguere. "CELLO-3D: Estimating the Covariance of ICP in the Real World." *2019 International Conference on Robotics and Automation (ICRA)*. IEEE, 2019.
+  >
+  > **Citations:**24
+
+
 
 ## Probability-Based
 
@@ -852,7 +862,12 @@
   >
   > **Citations:** **<u>8300</u>**
   >
-  > 
+  
+- **3DMatch: Learning Local Geometric Descriptors from RGB-D Reconstructions**
+
+  > Zeng, Andy, et al. "3dmatch: Learning local geometric descriptors from rgb-d reconstructions." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2017.
+  >
+  > **Citations:**477
 
 ## Learning-Based
 
@@ -1136,6 +1151,14 @@
   > **Citations:**68
   >
   > [[pdf]](./papers/Beyond_points_Evaluating_recent_3D_scan-matching_algorithms.pdf)
+  
+- **Comparing ICP variants on real-world data sets**
+
+  > Pomerleau, François, et al. "Comparing ICP variants on real-world data sets." *Autonomous Robots* 34.3 (2013): 133-148.
+  >
+  > **Citations:**657
+  >
+  > [[pdf]](./papers/Comparing ICP variants on real-world data sets.pdf)
 
 # Math Basis
 
@@ -1170,13 +1193,19 @@
   - A SLAM framework considering the motion distortion in the process.
   - The registration process is finished by extracting features and use them to register two scans. 
 
-  ## Mapping
+- **Past, Present, and Future of Simultaneous Localization and Mapping: Toward the Robust-Perception Age**
 
-  - **Occupancy map building through Bayesian exploration**
+  > Cadena, Cesar, et al. "Past, present, and future of simultaneous localization and mapping: Toward the robust-perception age." *IEEE Transactions on robotics* 32.6 (2016): 1309-1332.
+  >
+  > **Citations:**2316
 
-    > Francis, Gilad, et al. "Occupancy map building through bayesian exploration." *The International Journal of Robotics Research* 38.7 (2019): 769-792.
-    >
-    > **Citations:**9
+## Mapping
+
+- **Occupancy map building through Bayesian exploration**
+
+  > Francis, Gilad, et al. "Occupancy map building through bayesian exploration." *The International Journal of Robotics Research* 38.7 (2019): 769-792.
+  >
+  > **Citations:**9
 
 # Reference
 
@@ -1187,3 +1216,14 @@
   > **Citations:**578
 
   - A good example for survey.
+
+- **Rotation Averaging**
+
+  > Hartley, Richard, et al. "Rotation averaging." *International journal of computer vision* 103.3 (2013): 267-305.
+  >
+  > **Citations:**475
+  >
+  > [[pdf]](./papers/Rotation Averaging.pdf)
+
+  - The article intrduces how to calculate the average rotation of multiple rotations.
+  - The summary recommends two good ways(No best and closed-form way)
