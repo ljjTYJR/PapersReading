@@ -367,8 +367,6 @@
   >
   > **Citations:**24
 
-
-
 ## Probability-Based
 
 ### Correlation
@@ -1152,13 +1150,19 @@
   >
   > [[pdf]](./papers/Beyond_points_Evaluating_recent_3D_scan-matching_algorithms.pdf)
   
-- **Comparing ICP variants on real-world data sets**
+- **Comparing ICP variants on real-world data sets** :heavy_check_mark:
 
   > Pomerleau, François, et al. "Comparing ICP variants on real-world data sets." *Autonomous Robots* 34.3 (2013): 133-148.
   >
   > **Citations:**657
   >
   > [[pdf]](./papers/Comparing ICP variants on real-world data sets.pdf)
+
+  - A comparison paper for specially ICP and its variants, the paper formulate the ICP algorithm in a standard process, gives the evaluation metric for the algorithms, and proposes some dataset used to evaluate the performance of the algorithms.
+  - KeyPoints:
+    - Dataset
+    - Standard algorithms modules
+    - Evaluation metrics
 
 # Math Basis
 
@@ -1217,6 +1221,14 @@
 
   - A good example for survey.
 
+- **Secrets of optical flow estimation and their principles**
+
+  > Sun, Deqing, Stefan Roth, and Michael J. Black. "Secrets of optical flow estimation and their principles." *2010 IEEE computer society conference on computer vision and pattern recognition*. IEEE, 2010.
+  >
+  > **Citations:**1691
+  >
+  > [[pdf]](./papers/Secrets of Optical Flow Estimation and Their Principles.pdf)
+
 - **Rotation Averaging**
 
   > Hartley, Richard, et al. "Rotation averaging." *International journal of computer vision* 103.3 (2013): 267-305.
@@ -1227,3 +1239,9 @@
 
   - The article intrduces how to calculate the average rotation of multiple rotations.
   - The summary recommends two good ways(No best and closed-form way)
+
+---
+
+- What's the unstructured environment?
+
+  > Environment that contains many obstacles and where vehicle localization is difficult. Most natural **environment**s are **unstructured**.
