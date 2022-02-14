@@ -1,8 +1,14 @@
 # The literature record
 
-- **The paper reading record**
+Record the papers I have read and want to read.
 
-  [[ReadPaper.md]](./ReadPaper.md)
+- **Point Set Registration**
+
+  [[ReadPaper]](./Point Set Registration.md)
+
+- **Heterogeneous map merging and exploration**
+
+  [[Heterogeneous map merging and exploration]](./Heterogeneous map merging and exploration.md)
 
 - **Temp Summary**
 

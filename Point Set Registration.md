@@ -932,6 +932,12 @@
   > Qi, C. R., Yi, L., Su, H., & Guibas, L. J. (2017). Pointnet++: Deep hierarchical feature learning on point sets in a metric space. *arXiv preprint arXiv:1706.02413*.
   >
   > **Citations:**4083
+  
+- **PointNetLK: Robust & Efficient Point Cloud Registration using PointNet**
+
+  > Aoki, Yasuhiro, et al. "Pointnetlk: Robust & efficient point cloud registration using pointnet." *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition*. 2019.
+  >
+  > **Citations:**282
 
 ## Graph-Based / Spectral-Based
 
@@ -1079,6 +1085,30 @@
   >
   > **Citations:**0
 
+## Comparison
+
+- **Beyond points: Evaluating recent 3D scan-matching algorithms**
+
+  > Magnusson, Martin, et al. "Beyond points: Evaluating recent 3D scan-matching algorithms." *2015 IEEE International Conference on Robotics and Automation (ICRA)*. IEEE, 2015.
+  >
+  > **Citations:**68
+  >
+  > [[pdf]](./papers/Beyond_points_Evaluating_recent_3D_scan-matching_algorithms.pdf)
+
+- **Comparing ICP variants on real-world data sets** :heavy_check_mark:
+
+  > Pomerleau, François, et al. "Comparing ICP variants on real-world data sets." *Autonomous Robots* 34.3 (2013): 133-148.
+  >
+  > **Citations:**657
+  >
+  > [[pdf]](./papers/Comparing ICP variants on real-world data sets.pdf)
+
+  - A comparison paper for specially ICP and its variants, the paper formulate the ICP algorithm in a standard process, gives the evaluation metric for the algorithms, and proposes some dataset used to evaluate the performance of the algorithms.
+  - KeyPoints:
+    - Dataset
+    - Standard algorithms modules
+    - Evaluation metrics
+
 # Mapping & Fusion
 
 ## Semantic
@@ -1140,30 +1170,6 @@
   >
   > [[pdf]](./papers/Semantic-assisted_3D_normal_distributions_transform_for_scan_registration_in_environments_with_limited_structure.pdf)
 
-# Comparison
-
-- **Beyond points: Evaluating recent 3D scan-matching algorithms**
-
-  > Magnusson, Martin, et al. "Beyond points: Evaluating recent 3D scan-matching algorithms." *2015 IEEE International Conference on Robotics and Automation (ICRA)*. IEEE, 2015.
-  >
-  > **Citations:**68
-  >
-  > [[pdf]](./papers/Beyond_points_Evaluating_recent_3D_scan-matching_algorithms.pdf)
-  
-- **Comparing ICP variants on real-world data sets** :heavy_check_mark:
-
-  > Pomerleau, François, et al. "Comparing ICP variants on real-world data sets." *Autonomous Robots* 34.3 (2013): 133-148.
-  >
-  > **Citations:**657
-  >
-  > [[pdf]](./papers/Comparing ICP variants on real-world data sets.pdf)
-
-  - A comparison paper for specially ICP and its variants, the paper formulate the ICP algorithm in a standard process, gives the evaluation metric for the algorithms, and proposes some dataset used to evaluate the performance of the algorithms.
-  - KeyPoints:
-    - Dataset
-    - Standard algorithms modules
-    - Evaluation metrics
-
 # Math Basis
 
 - **Global optimization through rotation space search**
@@ -1210,6 +1216,14 @@
   > Francis, Gilad, et al. "Occupancy map building through bayesian exploration." *The International Journal of Robotics Research* 38.7 (2019): 769-792.
   >
   > **Citations:**9
+
+# Other Applications
+
+- **Grasp pose detection in point clouds**
+
+  > ten Pas, Andreas, et al. "Grasp pose detection in point clouds." *The International Journal of Robotics Research* 36.13-14 (2017): 1455-1473.
+  >
+  > **Citations:** 271
 
 # Reference
 
