@@ -938,6 +938,24 @@
   > Aoki, Yasuhiro, et al. "Pointnetlk: Robust & efficient point cloud registration using pointnet." *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition*. 2019.
   >
   > **Citations:**282
+  
+- **PointDSC: Robust Point Cloud Registration using Deep Spatial Consistency**
+
+  > Bai, Xuyang, et al. "Pointdsc: Robust point cloud registration using deep spatial consistency." *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition*. 2021.
+  >
+  > **Citations:**17
+
+- **Deep Global Registration** :heavy_check_mark:
+
+  > Choy, Christopher, Wei Dong, and Vladlen Koltun. "Deep global registration." *Proceedings of the IEEE/CVF conference on computer vision and pattern recognition*. 2020.
+  >
+  > **Citations:**122
+  >
+  > [[url]](https://arxiv.org/pdf/2004.11540.pdf) [[pdf]](./papers/Deep Global Registration.pdf)
+
+  - This paper propose a registration algorithm based-on deep-learning.
+  - It uses the network to find the inlier features(The used features provided by "FCGF")；Use a kind of function to calculate the coarse alignment; Use the gradient-based methods to get a find registration.
+  - **Some thoughts:** The positions of the points can also be regarded as a kind of "features".
 
 ## Graph-Based / Spectral-Based
 
@@ -992,11 +1010,6 @@
 
   > <CVPR2020>
   > [[url]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Iglesias_Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf) [[pdf]](./papers/Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf)
-
-- **Deep Global Registration**
-
-  > <CVPR2020>
-  > [[url]](https://arxiv.org/pdf/2004.11540.pdf) 
 
 ## Extension
 
