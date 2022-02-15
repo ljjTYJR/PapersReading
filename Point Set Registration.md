@@ -750,6 +750,22 @@
 
 ## Feature-Based
 
+### Outlier Removal
+
+- **A Practical O(N2) Outlier Removal Method for Point Cloud Registration**
+
+  > Li, Jiayuan. "A practical O (N2) outlier removal method for point cloud registration." *IEEE Transactions on Pattern Analysis and Machine Intelligence* (2021).
+  >
+  > **Citations:** 6
+
+- **Guaranteed Outlier Removal for Point Cloud Registration with Correspondences**
+
+  > Bustos, Alvaro Parra, and Tat-Jun Chin. "Guaranteed outlier removal for point cloud registration with correspondences." *IEEE transactions on pattern analysis and machine intelligence* 40.12 (2017): 2868-2882.
+  >
+  > **Citations:** 73
+
+### Finding features
+
 - **Aligning Point Cloud Views using Persistent Feature Histograms** **(PFH)** :heavy_check_mark:
 
   > Rusu, Radu Bogdan, et al. "Aligning point cloud views using persistent feature histograms." *2008 IEEE/RSJ international conference on intelligent robots and systems*. IEEE, 2008.
@@ -866,8 +882,32 @@
   > Zeng, Andy, et al. "3dmatch: Learning local geometric descriptors from rgb-d reconstructions." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2017.
   >
   > **Citations:**477
+  
+- **SpinNet: Learning a General Surface Descriptor for 3D Point Cloud Registration**
+
+  > Ao, Sheng, et al. "Spinnet: Learning a general surface descriptor for 3d point cloud registration." *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition*. 2021.
+  >
+  > **Citations:**23
+  >
+  > [[pdf]](./papers/Ao_SpinNet_Learning_a_General_Surface_Descriptor_for_3D_Point_Cloud_CVPR_2021_paper.pdf)
+
+- **NARF: 3D Range Image Features for Object Recognition**
+
+  > Steder, Bastian, et al. "NARF: 3D range image features for object recognition." *Workshop on Defining and Solving Realistic Perception Problems in Personal Robotics at the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)*. Vol. 44. 2010.
+  >
+  > **Citations:**248
 
 ## Learning-Based
+
+### Feature
+
+- **PointDSC: Robust Point Cloud Registration using Deep Spatial Consistency**
+
+  > Bai, Xuyang, et al. "Pointdsc: Robust point cloud registration using deep spatial consistency." *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition*. 2021.
+  >
+  > **Citations:**17
+  >
+  > [[pdf]](./papers/PointDSC_Robust_Point_Cloud_Registration_Using_Deep_Spatial_Consistency_CVPR_2021_paper.pdf) [[code]](https://github.com/XuyangBai/PointDSC)
 
 - **PRNet: Self-Supervised Learning for Partial-to-Partial Registration**
 
