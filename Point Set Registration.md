@@ -284,13 +284,42 @@
 
 ### Global
 
-- **The 3D-3D registration problem revisited**
+- **The 3D-3D registration problem revisited** :heavy_check_mark:
 
   > Li, H., & Hartley, R. (2007, October). The 3D-3D registration problem revisited. In *2007 IEEE 11th international conference on computer vision* (pp. 1-8). IEEE.
   >
   > **Citations:**193
   >
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4409077) [[pdf]](./papers/The 3D-3D registration problem revisited.pdf)
+
+  - SPC problem: simultaneous pose and correspondence problem. But if given the correspondence, or given the rotation matrix, the problem becomes **convex** which is easy to solve. SPC problem is non-convex.
+
+  - This paper regard many existing algorithms(e.g. ICP) as a kind of **E-M** algorithm, which alternatively estimate the correspondence and the transformation. The original problem is divided into two sub-problems. However, the E-M algorithms are **local optimal**.
+
+  - Some other existing approaches(Exploiting the geomertic features thar are **inariant** to either **correspondence**? or **transformation**): [PCA](Kazhdan, Michael, Thomas Funkhouser, and Szymon Rusinkiewicz. "Shape matching and anisotropy." *ACM SIGGRAPH 2004 Papers*. 2004. 623-629.), [Mondal matching and spectural matching](M. Leordeanu and M. Hebert, "A spectral technique for correspondence problems using pairwise constraints", *ICCV*, vol. 2, pp. 1482-1489, 2005.    &&    S. Sclaroff and A. Pentland, "Model matching for correspondence and recognition", *PAMI*, June 1995.)
+
+  - The core idea of this paper is the theory of **Lipschitz optimization**.
+
+  - The above problems mentioned above:
+
+    - If the correspondence is fixed, the problem can be solved by: RANSAC, [quaternion method](B. Horn, "Closed-form solution of absolute orientation using unit quatemions", *JOSA-A*, vol. 4, pp. 629-642, April 1987.) [colsed-form1](D. W. Eggert, A. Lorusso and R. B. Fisher, "Estimating 3-d rigid body transformations: a comparison of four major algorithms", *Machine Vision and Applications*, vol. 9, pp. 272-290, 1997.) [closed-form2]( N. Ohta and K. Kanatani, "Optimal estimation of three-dimensional rotation and reliability evaluation", *ECCV*, pp. 175-187, June 1998.)
+    - if the Rotation is fixed, the correspondence can also be solved(Here I do not write here, it can be regarded as a pure mathematical problem)
+
+  - To globally optimize the problem, two ways can be considered:
+
+    - Search all the permutations, and then solve the rotation. This idea is simple and effiective, but the cons is that if the input's size is large, the searching space's size is $n!$.
+    - Search the rotation space and slove foe the correspondence, which uses the Lipschitz optimization and Brounch-and-bound algorithm.
+
+  - For the brounch-and-bound algorithm, in my view, it estimate the lower bound of each interval and choose the lower bound, and iteratively search the space until converge.
+
+    :question: The details of the algorithm I have not understood.
+
+  - Pros and cons:
+
+    - pros: Global optimal, insensitive to the initialization.
+    - cons: 1) Time consuming. 2) Senstive to the outlier. 3) The algorithm complexity is unkown.
+
+  - Can be considered as the pre-paper for the Go-ICP
 
 - **Branch-and-bound methods for euclidean registration problems**
 
@@ -891,6 +920,8 @@
   >
   > [[pdf]](./papers/Ao_SpinNet_Learning_a_General_Surface_Descriptor_for_3D_Point_Cloud_CVPR_2021_paper.pdf)
 
+  - This paper proposes a neural network to learn correspondence point-wise, the core idea is transforming the raw point cloud to a cylindrical space, which can be used to maintain rotation invariance. The rotation invariance is beneficial to generalization.
+
 - **NARF: 3D Range Image Features for Object Recognition**
 
   > Steder, Bastian, et al. "NARF: 3D range image features for object recognition." *Workshop on Defining and Solving Realistic Perception Problems in Personal Robotics at the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)*. Vol. 44. 2010.
@@ -1122,7 +1153,7 @@
   >
   > **Citations:**621
   
-- **Deep Learning for 3D Point Clouds: A Survey**
+- **<font color=red>Deep Learning for 3D Point Clouds: A Survey</font>**
 
   > Guo, Yulan, et al. "Deep learning for 3d point clouds: A survey." *IEEE transactions on pattern analysis and machine intelligence* 43.12 (2020): 4338-4364.
   >
@@ -1137,6 +1168,16 @@
   > Wang, Yujie, et al. "STORM: Structure-based Overlap Matching for Partial Point Cloud Registration." *IEEE Transactions on Pattern Analysis and Machine Intelligence* (2022).
   >
   > **Citations:**0
+  
+- **<font color=red>A Comprehensive Performance Evaluation of 3D Local Feature Descriptors</font>** 
+
+  <font color=blue> Worth reading for survey</font>
+
+  > Guo, Yulan, et al. "A comprehensive performance evaluation of 3D local feature descriptors." *International Journal of Computer Vision* 116.1 (2016): 66-89.
+  >
+  > **Citations:**462
+  >
+  > [[pdf]](./papers/A Comprehensive Performance Evaluation of 3D Local Feature Descriptors.pdf)
 
 ## Comparison
 
