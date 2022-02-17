@@ -382,19 +382,32 @@
   >
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9197085) [[pdf]](./papers/Estimating Motion Uncertainty with Bayesian ICP.pdf)
 
-  - Based on the SGD-ICP, use SGLD to estimate the transformation.
-
-### Not Read
-
+  - Based on the SGD-ICP,  the SGLD adds the noise to the SGD-ICP.
+  - Seems not novel, but **Add uncertainty to the algorithm seems very common**, which I mean can be used widely.
+  
 - **Stein ICP for Uncertainty Estimation in Point Cloud Matching**
 
-> Maken, Fahira Afzal, Fabio Ramos, and Lionel Ott. "Stein ICP for Uncertainty Estimation in Point Cloud Matching." *IEEE Robotics and Automation Letters* 7.2 (2021): 1063-1070.
+  > Maken, Fahira Afzal, Fabio Ramos, and Lionel Ott. "Stein ICP for Uncertainty Estimation in Point Cloud Matching." *IEEE Robotics and Automation Letters* 7.2 (2021): 1063-1070.
+  >
+  > **Citations:**0
+  >
+  > [[pdf]](./papers/Stein_ICP_for_Uncertainty_Estimation_in_Point_Cloud_Matching.pdf)
+
+  - How to use ICP to estimate the uncertainty of the point cloud ?
+
+### Not Read
 
 - **CELLO-3D: Estimating the Covariance of ICP in the Real World**
 
   > Landry, David, François Pomerleau, and Philippe Giguere. "CELLO-3D: Estimating the Covariance of ICP in the Real World." *2019 International Conference on Robotics and Automation (ICRA)*. IEEE, 2019.
   >
   > **Citations:**24
+  
+- **An accurate closed-form estimate of ICP's covariance**
+
+  > Censi, Andrea. "An accurate closed-form estimate of ICP's covariance." *Proceedings 2007 IEEE international conference on robotics and automation*. IEEE, 2007.
+  >
+  > **Citations:** 219
 
 ## Probability-Based
 
@@ -645,6 +658,19 @@
   > Chen, Chu-Song, Yi-Ping Hung, and Jen-Bo Cheng. "A fast automatic method for registration of partially-overlapping range images." *Sixth International Conference on Computer Vision (IEEE Cat. No. 98CH36271)*. IEEE, 1998.
   >
   > **Citations:**123
+
+## PCA-based Algorithm
+
+- **Shape Matching and Anisotropy**
+
+  > Kazhdan, Michael, Thomas Funkhouser, and Szymon Rusinkiewicz. "Shape matching and anisotropy." *ACM SIGGRAPH 2004 Papers*. 2004. 623-629.
+  >
+  > **Citations:** 124
+  >
+  > [[pdf]](./papers/Shape Matching and Anisotropy.pdf)
+
+  - keywords: isanisotropy
+  - 不准备读了, 引用这篇文献的文章都没有关于点云配准的；并且，里面提到的东西，我也不太懂。暂时不看，以后有机会再看吧。
 
 ## Fuzzy Registration
 
@@ -928,6 +954,12 @@
   >
   > **Citations:**248
 
+- **STORM: Structure-based Overlap Matching for Partial Point Cloud Registration**
+
+  > Wang, Yujie, et al. "STORM: Structure-based Overlap Matching for Partial Point Cloud Registration." *IEEE Transactions on Pattern Analysis and Machine Intelligence* (2022).
+  >
+  > **Citations:**0
+
 ## Learning-Based
 
 ### Feature
@@ -1153,23 +1185,21 @@
   >
   > **Citations:**621
   
-- **<font color=red>Deep Learning for 3D Point Clouds: A Survey</font>**
+- **<u>Deep Learning for 3D Point Clouds: A Survey</u>**
 
   > Guo, Yulan, et al. "Deep learning for 3d point clouds: A survey." *IEEE transactions on pattern analysis and machine intelligence* 43.12 (2020): 4338-4364.
   >
   > **Citations:**452
+  >
+  > [[pdf]](./papers/Deep_Learning_for_3D_Point_Clouds_A_Survey.pdf)
+
+  - 本文的行文结构大致是：按照CV中点云的任务来进行分析：*shape classification*, *Object Detection and tracking*, *3D point set Segmentation*. 依据每个任务中的 *deep learning* 的应用进行分类，进行文献综述，并且每一个小章节有一个 *summary*， 其内容主要是：在测试集上的表现；缺点；未来的方向等。
 
 - **LiDAR Odometry Methodologies for Autonomous Driving: A Survey**
 
   > Jonnavithula, Nikhil, Yecheng Lyu, and Ziming Zhang. "LiDAR Odometry Methodologies for Autonomous Driving: A Survey." *arXiv preprint arXiv:2109.06120* (2021).
 
-- **STORM: Structure-based Overlap Matching for Partial Point Cloud Registration**
-
-  > Wang, Yujie, et al. "STORM: Structure-based Overlap Matching for Partial Point Cloud Registration." *IEEE Transactions on Pattern Analysis and Machine Intelligence* (2022).
-  >
-  > **Citations:**0
-  
-- **<font color=red>A Comprehensive Performance Evaluation of 3D Local Feature Descriptors</font>** 
+- **<font color=red>A Comprehensive Performance Evaluation of 3D Local Feature Descriptors</font>** :heavy_check_mark: :star:
 
   <font color=blue> Worth reading for survey</font>
 
@@ -1178,6 +1208,24 @@
   > **Citations:**462
   >
   > [[pdf]](./papers/A Comprehensive Performance Evaluation of 3D Local Feature Descriptors.pdf)
+
+  - The **evaluation** paper of the local features descriptors, in the introduction of the paper, the author mention the skeleton of the paper: What's is the local descriptors, and the relevant algorithms; How to evaluate the local features, the meaning of the evaluation. The contribution and why to write the paper.
+
+  - 一些值得借鉴的东西：
+
+    - 为什么要做这篇论文：
+
+      - Although a large number of feature descriptors have been proposed, they were exclusively designed for a specific **application** scenario.
+      - they have only been tested on a limited number of **datasets.**
+      - It is therefore, very challenging for **developers** to choose an **appropriate** descriptor for their particular appli-
+        cation
+      - Most of these evaluation articles tested only a small number of 3D local feature descriptors and for a specific application domain.
+
+      —— 1) 选定的算法数目更多；2) 选定的测试集更多，之前的evaluation要么限定在某一两个测试环境，要么选定的算法比较少，无法做到统一的评估；3) 有一些没有被测试(robustness)；
+
+    - 自己要做什么包括：1) 选取的测试集一定要广泛；2) 选定的测试方法；3) 在实际的应用环境中进行测试（例如本文可以专注于某一个领域, robotics?)
+
+  - **非常值得借鉴和学习本文的组织结构，是写evaluation paper的重要参考。此外，刨除结构，本文的内容也非常的重要，对于点云的描述子来说。**
 
 ## Comparison
 
@@ -1202,6 +1250,12 @@
     - Dataset
     - Standard algorithms modules
     - Evaluation metrics
+  
+- **A Comprehensive Performance Evaluation of 3-D Transformation Estimation Techniques in Point Cloud Registration**
+
+  > Zhao, Bao, et al. "A comprehensive performance evaluation of 3-d transformation estimation techniques in point cloud registration." *IEEE Transactions on Instrumentation and Measurement* 70 (2021): 1-14.
+  >
+  > **Citations:** 2
 
 # Mapping & Fusion
 
@@ -1286,6 +1340,8 @@
 
 # SLAM
 
+> Especially for some registration algorithms used widely in SLAM applications
+
 - **LOAM: Lidar Odometry and Mapping in Real-time**
 
   > Zhang, Ji, and Sanjiv Singh. "LOAM: Lidar Odometry and Mapping in Real-time." *Robotics: Science and Systems*. Vol. 2. No. 9. 2014.
@@ -1302,6 +1358,12 @@
   > Cadena, Cesar, et al. "Past, present, and future of simultaneous localization and mapping: Toward the robust-perception age." *IEEE Transactions on robotics* 32.6 (2016): 1309-1332.
   >
   > **Citations:**2316
+  
+- **PLADE: A Plane-Based Descriptor for Point Cloud Registration With Small Overlap**
+
+  > Chen, Songlin, et al. "PLADE: A plane-based descriptor for point cloud registration with small overlap." *IEEE Transactions on Geoscience and Remote Sensing* 58.4 (2019): 2530-2540.
+  >
+  > **Citations:** 33
 
 ## Mapping
 
@@ -1326,6 +1388,8 @@
   > Sun, Deqing, Stefan Roth, and Michael J. Black. "A quantitative analysis of current practices in optical flow estimation and the principles behind them." *International Journal of Computer Vision* 106.2 (2014): 115-137.
   >
   > **Citations:**578
+  >
+  > [[pdf]](./papers/A Quantitative Analysis of Current Practices in Optical Flow Estimation and the Principles Behind Them.pdf)
 
   - A good example for survey.
 
