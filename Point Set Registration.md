@@ -411,6 +411,14 @@
 
 ## Probability-Based
 
+### To Read
+
+- **Simultaneous Covariance Driven Correspondence (CDC) and Transformation Estimation in the Expectation Maximization Framework**
+
+  > M. Sofka, G. Yang and C. V. Stewart, "Simultaneous Covariance Driven Correspondence (CDC) and Transformation Estimation in the Expectation Maximization Framework," *2007 IEEE Conference on Computer Vision and Pattern Recognition*, 2007, pp. 1-8, doi: 10.1109/CVPR.2007.383166.
+  >
+  > **Citations:** 50
+
 ### Correlation
 
 - **A New Algorithm for Non-Rigid Point Matching**
@@ -1093,6 +1101,12 @@
   > **Citations:**171
   >
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1677520) [[pdf]](./papers/Graphical Models and Point Pattern Matching.pdf)
+  
+- **3D Shape Registration Using Spectral Graph Embedding and Probabilistic Matching**
+
+  > Sharma, Avinash, Radu Horaud, and Diana Mateus. "3D shape registration using spectral graph embedding and probabilistic matching." *arXiv preprint arXiv:2106.11166* (2021).
+  >
+  > **Citations:** 14
 
 
 ## Different kinds of Improvements
@@ -1245,17 +1259,29 @@
   >
   > [[pdf]](./papers/Comparing ICP variants on real-world data sets.pdf)
 
-  - A comparison paper for specially ICP and its variants, the paper formulate the ICP algorithm in a standard process, gives the evaluation metric for the algorithms, and proposes some dataset used to evaluate the performance of the algorithms.
-  - KeyPoints:
-    - Dataset
-    - Standard algorithms modules
-    - Evaluation metrics
+  - This paper mainly propose a stadnard pipeline of ICP algorithms, and provbide a open-source sofrware which can be used for comparing ICP algorithms. The pipeline consists of different modules, which can be tuned by parameters.
+  
+  - However, the paper's foucus is narrow, the main contribution of the paper is the software. It research the variants of ICP little. The content is much but with no focus, the experiments are a little superficial.
+  
+  - If I were the author, I will refer to the paper 《Efficient ICP and its variants》,  this paper classify different metrics of ICP variants and compare the performance of these metrics. However, what I want to do？ I want to verify the real performance of these metrics. So, the baseline and the criteria should be established. What the problems they can solve?
+  
+    The limitations of the paper is that it is more engineering, but not the theoretical.
+  
+  - :question: However, how to express my idea if I wrote the paper?
+  
+    Refer to the paper: <secrets of optical flow> again! Though I can't get the content, but I should learn the main idea of it.
   
 - **A Comprehensive Performance Evaluation of 3-D Transformation Estimation Techniques in Point Cloud Registration**
 
   > Zhao, Bao, et al. "A comprehensive performance evaluation of 3-d transformation estimation techniques in point cloud registration." *IEEE Transactions on Instrumentation and Measurement* 70 (2021): 1-14.
   >
   > **Citations:** 2
+
+- **Benchmarking urban six-degree-of-freedom simultaneous localization and mapping**
+
+  > Wulf, Oliver, et al. "Benchmarking urban six‐degree‐of‐freedom simultaneous localization and mapping." *Journal of Field Robotics* 25.3 (2008): 148-163.
+  >
+  > **Citations:** 75
 
 # Mapping & Fusion
 
