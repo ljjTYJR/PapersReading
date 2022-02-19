@@ -408,8 +408,21 @@
   > Censi, Andrea. "An accurate closed-form estimate of ICP's covariance." *Proceedings 2007 IEEE international conference on robotics and automation*. IEEE, 2007.
   >
   > **Citations:** 219
+  >
+  > [[pdf]](./papers/An_accurate_closed-form_estimate_of_ICPs_covariance.pdf)
+
+  - 和SLAM的应用非常相关，暂时不研究这个，等后续真的需要研究SLAM，再看这篇文章。
+
+- **An ICP variant using a point-to-line metric**
+
+  > Censi, Andrea. "An ICP variant using a point-to-line metric." *2008 IEEE International Conference on Robotics and Automation*. Ieee, 2008.
+  >
+  > **Citations:** 528
 
 ## Probability-Based
+
+- **Model-Based Clustering, Discriminant Analysis, and Density Estimation**
+  - 作为GMM的数学基础，可以进行参考。
 
 ### To Read
 
@@ -444,14 +457,6 @@
   > **Citations:**435
   >
   > [[url]](http://www.cs.cmu.edu/afs/.cs.cmu.edu/Web/People/ytsin/research/kcreg.pdf) [[pdf]](./papers/A Correlation-Based Approach to Robust Point Set Registration.pdf)
-
-- **Rigid and Articulated Point Registration with Expectation Conditional Maximization**
-
-  > Horaud, R., Forbes, F., Yguel, M., Dewaele, G., & Zhang, J. (2010). Rigid and articulated point registration with expectation conditional maximization. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *33*(3), 587-602.
-  >
-  > **Citations:**219
-  >
-  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5444893) [[pdf]](./papers/Rigid and Articulated Point Registration with Expectation Conditional Maximization.pdf)
 
 - **Diffeomorphic Matching of Distributions: A New Approach for Unlabelled Point-Sets and Sub-Manifolds Matching**
 
@@ -511,6 +516,37 @@
   - The CPD algorithm is more robust and accurate than LM-ICP, but will perform slower than it.
   - The algorithm will perform very slow then the input's size is big(35947*3), FGT can get faster, but will be less robust.
   - For non-rigid registration, compared to TPS-RPM, CPD algorithm is more accurate, but still slow when the input size is large. The time consumption mainly lies in matrix computation. 
+  
+- **Rigid and Articulated Point Registration with Expectation Conditional Maximization** :heavy_check_mark:
+
+  > Horaud, R., Forbes, F., Yguel, M., Dewaele, G., & Zhang, J. (2010). Rigid and articulated point registration with expectation conditional maximization. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *33*(3), 587-602.
+  >
+  > **Citations:**219
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5444893) [[pdf]](./papers/Rigid and Articulated Point Registration with Expectation Conditional Maximization.pdf)
+  
+  - This method is similar to CPD, but the difference is that in this algorithm(which is called **ECM**), the **isotropic convariance** is replaced by **anisotropic convariance**. To solve the problem of estimating R under the case of anisotropic convariance, the orthogonal constraint is put on the rotation matrix, and get the estimation of R by SDP.
+
+  - The paper has some assumptions which are interesting:
+  
+    - This paper treat the algorithm as a **Cluster and parameter estimation** problem. The root can be referred to:
+  
+      [Model-Based Clustering, Discriminant Analysis, and Density Estimation]([Model-Based Clustering, Discriminant Analysis, and Density Estimation (tandfonline.com)](https://www.tandfonline.com/doi/pdf/10.1198/016214502760047131?needAccess=true))
+  
+    - Using the isotropic convariance has two advantages:
+  
+      - With isotropic convariance, the Mahalanobis Distance is replaced by Euclidean Distance, the rotation can be computed in a closed-form way.
+  
+      - The isotropic convariance can be combined with annealing. 
+  
+        > **The drawback**: Anisotropic noise in the data is not properly handled, it does not use the full Gaussian model, and it does not fully benefit from the convergence properties ofEMbecause it anneals the variance
+        > rather than considering it as a parameter to be estimated
+  
+  - Some more considerations:
+  
+    - Replacing the EM process by **CEM**, which means *Classification EM*, forcing posterior probability to 0/1.
+    - Finding the connection to ICP.
+    - Some ways to accelerate E-step: *block-like organizations* or *KD-trees*.
   
 - **FilterReg: Robust and Efficient Probabilistic Point-Set Registration using Gaussian Filter and Twist Parameterization** :heavy_check_mark: :no_entry:
 
@@ -602,6 +638,32 @@
   > **Citations:**28
   >
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8985307) [[pdf]](./papers/A Bayesian Formulation of Coherent Point Drift.pdf)
+  
+- **Density Adaptive Point Set Registration**
+
+  > Lawin, Felix Järemo, et al. "Density adaptive point set registration." *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*. 2018.
+  >
+  > **Citations:** 39
+  >
+  > [[pdf]](./papers/Lawin_Density_Adaptive_Point_CVPR_2018_paper.pdf)
+
+  - **句子摘抄**
+
+    - > These methods perform alignment either by employing a **correlation based** approach or using an **EM based** optimization framework
+
+    - 
+
+- **HGMR: Hierarchical Gaussian Mixtures for Adaptive 3D Registration**
+
+  > Eckart, Benjamin, Kihwan Kim, and Jan Kautz. "Hgmr: Hierarchical gaussian mixtures for adaptive 3d registration." *Proceedings of the European Conference on Computer Vision (ECCV)*. 2018.
+  >
+  > **Citations:** 48
+
+- **A Probabilistic Framework for Color-Based Point Set Registration**
+
+  > Lawin, Felix Järemo, et al. "Density adaptive point set registration." *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*. 2018.
+  >
+  > **Citations:** 39
 
 ### **NDT & Variants**
 
@@ -758,6 +820,8 @@
   > Gath, Isak, and Amir B. Geva. "Unsupervised optimal fuzzy clustering." *IEEE Transactions on pattern analysis and machine intelligence* 11.7 (1989): 773-780.
   >
   > **Citations:**2276
+  
+- **Adaptive Hierarchical Probabilistic Model Using Structured Variational Inference for Point Set Registration**
 
 ## Optimization
 
@@ -800,6 +864,10 @@
   > [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Jubran_Provably_Approximated_Point_Cloud_Registration_ICCV_2021_paper.pdf) [[pdf]](./papers/Provably Approximated Point Cloud Registration.pdf)
   >
   > [[supp]](https://openaccess.thecvf.com/content/ICCV2021/supplemental/Jubran_Provably_Approximated_Point_ICCV_2021_supplemental.pdf)
+  
+- **Globally Optimal Linear Model Fitting with Unit-Norm Constraint**
+
+  > Liu, Yinlong, et al. "Globally Optimal Linear Model Fitting with Unit-Norm Constraint." *International Journal of Computer Vision* (2022): 1-14.
 
 ## Non-Rigid
 
@@ -810,6 +878,18 @@
   > **Citations:**4
   >
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9290402)
+  
+- **Point Set Registration with Global-local Correspondence and Transformation Estimation**
+
+  > Zhang, Su, et al. "Point set registration with global-local correspondence and transformation estimation." *Proceedings of the IEEE international conference on computer vision*. 2017.
+  >
+  > **Citations:** 35
+
+- **Probabilistic Model for Robust Affine and Non-Rigid Point Set Matching**
+
+  > Qu, Han-Bing, et al. "Probabilistic model for robust affine and non-rigid point set matching." *IEEE transactions on pattern analysis and machine intelligence* 39.2 (2016): 371-384.
+  >
+  > **Citations:** 31
 
 ## Feature-Based
 
@@ -827,7 +907,11 @@
   >
   > **Citations:** 73
 
-### Finding features
+### Feature Detection
+
+> Feature Detection 的含义是“检测”特征点，例如“line", "coner", "edge"等，而 *Feature Descriptor* 是如何描述这些这些点的特征
+
+### Feature Descriptors
 
 - **Aligning Point Cloud Views using Persistent Feature Histograms** **(PFH)** :heavy_check_mark:
 
@@ -946,7 +1030,7 @@
   >
   > **Citations:**477
   
-- **SpinNet: Learning a General Surface Descriptor for 3D Point Cloud Registration**
+- **SpinNet: Learning a General Surface Descriptor for 3D Point Cloud Registration** :heavy_check_mark:
 
   > Ao, Sheng, et al. "Spinnet: Learning a general surface descriptor for 3d point cloud registration." *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition*. 2021.
   >
@@ -955,6 +1039,10 @@
   > [[pdf]](./papers/Ao_SpinNet_Learning_a_General_Surface_Descriptor_for_3D_Point_Cloud_CVPR_2021_paper.pdf)
 
   - This paper proposes a neural network to learn correspondence point-wise, the core idea is transforming the raw point cloud to a cylindrical space, which can be used to maintain rotation invariance. The rotation invariance is beneficial to generalization.
+
+- **Geometric Transformer for Fast and Robust Point Cloud Registration**
+
+  > Qin, Zheng, et al. "Geometric Transformer for Fast and Robust Point Cloud Registration." *arXiv preprint arXiv:2202.06688* (2022).
 
 - **NARF: 3D Range Image Features for Object Recognition**
 
@@ -1067,6 +1155,12 @@
   - This paper propose a registration algorithm based-on deep-learning.
   - It uses the network to find the inlier features(The used features provided by "FCGF")；Use a kind of function to calculate the coarse alignment; Use the gradient-based methods to get a find registration.
   - **Some thoughts:** The positions of the points can also be regarded as a kind of "features".
+
+- **Large-scale Point Cloud Semantic Segmentation with Superpoint Graphs**
+
+  > Landrieu, Loic, and Martin Simonovsky. "Large-scale point cloud semantic segmentation with superpoint graphs." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2018.
+  >
+  > **Citations:** 660
 
 ## Graph-Based / Spectral-Based
 
@@ -1390,6 +1484,10 @@
   > Chen, Songlin, et al. "PLADE: A plane-based descriptor for point cloud registration with small overlap." *IEEE Transactions on Geoscience and Remote Sensing* 58.4 (2019): 2530-2540.
   >
   > **Citations:** 33
+
+- **Point-plane SLAM for hand-held 3D sensors**
+
+- **Point Set Registration With Semantic Region Association Using Cascaded Expectation Maximization**
 
 ## Mapping
 
