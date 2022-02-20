@@ -639,19 +639,46 @@
   >
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8985307) [[pdf]](./papers/A Bayesian Formulation of Coherent Point Drift.pdf)
   
-- **Density Adaptive Point Set Registration**
+- **A generative model for the joint registration of multiple point sets** :heavy_check_mark: (**JR-MPC**)
+
+  > Evangelidis, Georgios D., et al. "A generative model for the joint registration of multiple point sets." *European Conference on Computer Vision*. Springer, Cham, 2014.
+  >
+  > **Citations:** 83
+  >
+  > [[pdf]](./papers/Evangelidis2014_Chapter_AGenerativeModelForTheJointReg.pdf)
+  
+  - This paper view the problem in a different view. The CPD or GMM view the point set registration as a *point fitting probaility model* problem, to estimate the parameter. But in this paper, the author view the problem as a *cluster* problem. Many point sets together find the cluster model.
+  
+  - The convariance is a by-product which can be used to smooth the result( Rejecting the outliers. )
+  
+  - cons:
+  
+    - The experiments show that the four points with 1200 points need to take 20+s to get the result. (Compared to the GMM, ICP seems always more efficient). Mainly beacuse GMM-based methods involve much computation(Matrix and Exponentiation)
+  
+    - > is orders of **magnitude slower than** common ICP variants or our approach
+  
+- **Density Adaptive Point Set Registration** :heavy_check_mark: :imp:(inportant)
 
   > Lawin, Felix Järemo, et al. "Density adaptive point set registration." *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*. 2018.
   >
   > **Citations:** 39
   >
-  > [[pdf]](./papers/Lawin_Density_Adaptive_Point_CVPR_2018_paper.pdf)
+  > [[pdf]](./papers/Lawin_Density_Adaptive_Point_CVPR_2018_paper.pdf) [[supp]](./papers/2354-supp.pdf)
 
   - **句子摘抄**
 
     - > These methods perform alignment either by employing a **correlation based** approach or using an **EM based** optimization framework
 
-    - 
+  - **解决密度不均匀的一些方法：**
+
+    - re-sample: Divide the point set into many many girds, and compute the *mean* point for each grid.(Looks like the NDT method). The **shortcomings** of the method: It neglect the original geometric structure of the point set; And it is hard to tune the parameter of the gird size of other paprmeters.
+
+  - I mainly know what does it mean: 
+
+    - Very similar to fuzzy cluster-based methods,  it means if we use the cluster to group register many scenes, it will meet the problem that: the cluster centroids will meet a problem that thest centroids will lie in the dense region.
+    - However, in real application, the lidar will get sparse point set in remote area, so we will get dense closer region and sparse remote region. This uneven scene will lead to inaccurate registration. (**Find the problem, then we can solve it**).
+    - To solve this problem, we can choose re-sample to alleviate it. But resample-methods have some problems as mentioned above. 
+    - The author proposes a probability model to resembe the GMM model. In pracice, an extra term f(x) is added into the objective function when optimized. :question:(This part is not very clear for me.)
 
 - **HGMR: Hierarchical Gaussian Mixtures for Adaptive 3D Registration**
 
@@ -664,6 +691,12 @@
   > Lawin, Felix Järemo, et al. "Density adaptive point set registration." *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*. 2018.
   >
   > **Citations:** 39
+
+- **DeepGMR: Learning Latent Gaussian Mixture Models for Registration**
+
+  > Yuan, Wentao, et al. "Deepgmr: Learning latent gaussian mixture models for registration." *European conference on computer vision*. Springer, Cham, 2020.
+  >
+  > **Citations:** 51
 
 ### **NDT & Variants**
 
@@ -1161,6 +1194,12 @@
   > Landrieu, Loic, and Martin Simonovsky. "Large-scale point cloud semantic segmentation with superpoint graphs." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2018.
   >
   > **Citations:** 660
+
+- **3D Local Features for Direct Pairwise Registration**
+
+  > Deng, Haowen, Tolga Birdal, and Slobodan Ilic. "3d local features for direct pairwise registration." *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition*. 2019.
+  >
+  > **Citations:** 64
 
 ## Graph-Based / Spectral-Based
 
