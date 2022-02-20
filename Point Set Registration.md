@@ -30,7 +30,7 @@
   >
   > **Citations:** 22173
   >
-  >  [[url]](https://www.cvl.iis.u-tokyo.ac.jp/class2004/wedenesday/report/besl.pdf)  [[pdf]](./papers/A Method for Registration of 3-D Shapes.pdf)
+  >  [url](https://www.cvl.iis.u-tokyo.ac.jp/class2004/wedenesday/report/besl.pdf)  [pdf](./papers/A Method for Registration of 3-D Shapes.pdf)
   >
   > [[tutorial]](http://www.sci.utah.edu/~shireen/pdfs/tutorials/Elhabian_ICP09.pdf) [[ICP Related Material]](http://ais.informatik.uni-freiburg.de/teaching/ss12/robotics/slides/17-icp.pdf)
   >
@@ -46,7 +46,7 @@
   >
   > **Citations:** 3098
   >
-  >  [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.175.770&rep=rep1&type=pdf)  [[pdf]](./papers/Iterative Point Matching for Registration of Free-Form Curves and Surfaces.pdf)
+  >  [url](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.175.770&rep=rep1&type=pdf)  [pdf](./papers/Iterative Point Matching for Registration of Free-Form Curves and Surfaces.pdf)
   >
   > [[notes]](./notes/Iterative Point Matching for Registration of Free-Form Curves and Surfaces.md)
 
@@ -60,7 +60,7 @@
   >
   > **Citations:** 521
   >
-  >  [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.5106&rep=rep1&type=pdf) [[pdf]](./papers/Multi-scale EM-ICP  A Fast and Robust.pdf)
+  >  [url](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.5106&rep=rep1&type=pdf) [pdf](./papers/Multi-scale EM-ICP  A Fast and Robust.pdf)
   >
   > [[notes]](./notes/EM-ICP.md)
 
@@ -75,7 +75,7 @@
   >
   > **Citations:** 4711
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=924423)  [[pdf]](./papers/Efficient Variants of the ICP Algorithm.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=924423)  [pdf](./papers/Efficient Variants of the ICP Algorithm.pdf)
   >
   > [[notes]](./notes/Efficient variants of the ICP algorithm.md)
 
@@ -87,7 +87,7 @@
   >
   > **Citations:** 598
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1047997&tag=1)  [[pdf]](./papers/The Trimmed Iterative Closest Point Algorithm.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1047997&tag=1)  [pdf](./papers/The Trimmed Iterative Closest Point Algorithm.pdf)
 
   Tr-ICP: '*Tr*' means the '*Trimmed*', use the '*[Least Trimmed Square](https://en.wikipedia.org/wiki/Least_trimmed_squares)*' method in the process to improve robustness.
   Pros: can converge when the overlapping rate is under 50%;
@@ -99,7 +99,7 @@
   >
   > **Citations:** 461
   >
-  >  [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885604001179?token=B6A29AD77A8BDB565DE4A2ACBB8EFE4B12056ED98E9FFC14E5AD96E10C8F7E04DB2E587E5F8487939EEAC731DC1B24E1&originRegion=eu-west-1&originCreation=20220107203632)  [[pdf]](./papers/Robust Euclidean alignment of 3D point sets the trimmediterative closest point algorithm.pdf)
+  >  [url](https://reader.elsevier.com/reader/sd/pii/S0262885604001179?token=B6A29AD77A8BDB565DE4A2ACBB8EFE4B12056ED98E9FFC14E5AD96E10C8F7E04DB2E587E5F8487939EEAC731DC1B24E1&originRegion=eu-west-1&originCreation=20220107203632)  [pdf](./papers/Robust Euclidean alignment of 3D point sets the trimmediterative closest point algorithm.pdf)
 
   - Similar to Tr-ICP, they are the same authors, but I did not get the difference between them.
 
@@ -109,7 +109,7 @@
   >
   > **Citations:** 520
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1242341)  [[pdf]](./papers/The dual-bootstrap iterative closest point algorithm with application to retinal image registration.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1242341)  [pdf](./papers/The dual-bootstrap iterative closest point algorithm with application to retinal image registration.pdf)
 
 ### Outlier
 
@@ -127,7 +127,7 @@
   >
   > **citations**:346
   >
-  >  [[url]](https://graphics.stanford.edu/courses/cs348a-17-winter/Handouts/mgpg-rpcdgop-04.pdf)  [[pdf]](./papers/Registration of Point Cloud Data from a Geometric Optimization Perspective.pdf)
+  >  [url](https://graphics.stanford.edu/courses/cs348a-17-winter/Handouts/mgpg-rpcdgop-04.pdf)  [pdf](./papers/Registration of Point Cloud Data from a Geometric Optimization Perspective.pdf)
 
 - **Registration without ICP**
 
@@ -135,7 +135,7 @@
   >
   > **Citations:**  193
   >
-  >  [[url]](https://reader.elsevier.com/reader/sd/pii/S1077314204000475?token=8DB8C5E4B144F2E8B057D208B85ACA76BB37E85C6014F18D2EF6C6B9F068840DC740ED9D345A8EC880FDA7ADABF1DF16&originRegion=eu-west-1&originCreation=20220108112859)  [[pdf]](./papers/Registration without ICP.pdf)
+  >  [url](https://reader.elsevier.com/reader/sd/pii/S1077314204000475?token=8DB8C5E4B144F2E8B057D208B85ACA76BB37E85C6014F18D2EF6C6B9F068840DC740ED9D345A8EC880FDA7ADABF1DF16&originRegion=eu-west-1&originCreation=20220108112859)  [pdf](./papers/Registration without ICP.pdf)
 
 - **Geometry and convergence analysis of algorithms for registration of 3D shapes**
 
@@ -143,7 +143,7 @@
   >
   > **Citations:**  225
   >
-  >  [[url]](https://link.springer.com/content/pdf/10.1007/s11263-006-5167-2.pdf)  [[pdf]](./papers/Geometry and Convergence Analysis of Algorithms for Registration of 3D Shapes.pdf)
+  >  [url](https://link.springer.com/content/pdf/10.1007/s11263-006-5167-2.pdf)  [pdf](./papers/Geometry and Convergence Analysis of Algorithms for Registration of 3D Shapes.pdf)
 
 ### Objective Function
 
@@ -153,7 +153,7 @@
   >
   > **Citations:** 4931
   >
-  >  [[pdf]](./papers/Object modeling by registration of multiple range images.pdf) [[url]](http://graphics.stanford.edu/courses/cs348a-17-winter/Handouts/chen-medioni-align-rob91.pdf)
+  >  [pdf](./papers/Object modeling by registration of multiple range images.pdf) [url](http://graphics.stanford.edu/courses/cs348a-17-winter/Handouts/chen-medioni-align-rob91.pdf)
   >
   > [[notes]](./notes/Object modelling by registration of multiple range images.md)
 
@@ -167,7 +167,7 @@
   >
   > **Citations:** 1365 :flags:
   >
-  >  [[url]](https://www.robots.ox.ac.uk/~avsegal/resources/papers/Generalized_ICP.pdf)  [[pdf]](./papers/Generalized_ICP.pdf)
+  >  [url](https://www.robots.ox.ac.uk/~avsegal/resources/papers/Generalized_ICP.pdf)  [pdf](./papers/Generalized_ICP.pdf)
   >
   > [[notes]](./notes/Generalized-ICP.md)
 
@@ -183,7 +183,7 @@
   >
   > **citations**:41
   >
-  >  [[url]](https://dl.acm.org/doi/pdf/10.1145/3306346.3323037)  [[pdf]](./papers/A Symmetric Objective Function for ICP.pdf)
+  >  [url](https://dl.acm.org/doi/pdf/10.1145/3306346.3323037)  [pdf](./papers/A Symmetric Objective Function for ICP.pdf)
 
   <img src="./notes/symmetric-icp.png" style="zoom: 50%;" />
 
@@ -193,7 +193,7 @@
 
   > Li, Jiayuan, et al. "Robust symmetric iterative closest point." *ISPRS Journal of Photogrammetry and Remote Sensing* 185 (2022): 219-231.
   >
-  >  [[pdf]](./papers/Robust symmetric iterative closest point.pdf)
+  >  [pdf](./papers/Robust symmetric iterative closest point.pdf)
 
 - **A robust method for registration and segmentation of multiple range images**
 
@@ -201,7 +201,7 @@
   >
   > **Citations:** 401
   >
-  >  [[url]](https://www.sciencedirect.com/sdfe/reader/pii/S1077314285710247/pdf)  [[pdf]](./papers/A Robust Method for Registration and Segmentation of Multiple Range Images.pdf)
+  >  [url](https://www.sciencedirect.com/sdfe/reader/pii/S1077314285710247/pdf)  [pdf](./papers/A Robust Method for Registration and Segmentation of Multiple Range Images.pdf)
 
 - **Robust motion and correspondence of noisy 3-d point sets with missing data**
 
@@ -209,7 +209,7 @@
   >
   > **Citations:** 140
   >
-  >  [[url]](https://reader.elsevier.com/reader/sd/pii/S0167865599000550?token=80227EA90623477B34968113CCC67A768D7F900C9CECFDC7F9A7763C172BB9BC1A5C894B86D5D6169A3A26ED39EA8D59&originRegion=eu-west-1&originCreation=20220108114837)  [[pdf]](./papers/Robust motion and correspondence of noisy 3-d point sets with missing data.pdf)
+  >  [url](https://reader.elsevier.com/reader/sd/pii/S0167865599000550?token=80227EA90623477B34968113CCC67A768D7F900C9CECFDC7F9A7763C172BB9BC1A5C894B86D5D6169A3A26ED39EA8D59&originRegion=eu-west-1&originCreation=20220108114837)  [pdf](./papers/Robust motion and correspondence of noisy 3-d point sets with missing data.pdf)
 
 - **Robust registration of 2D and 3D point sets** **(LM-ICP)**:heavy_check_mark: :question:
 
@@ -217,7 +217,7 @@
   >
   > **Citations:** 1089
   >
-  >  [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885603001835?token=76780F4CE6E03D857BA3240F3179D4A3ADDC641974808A73B35251E1D27D83CA1AC4345D6345686D2744544E4C647749&originRegion=eu-west-1&originCreation=20220105133411) [[pdf]](./papers/Robust registration of 2D and 3D point sets.pdf)
+  >  [url](https://reader.elsevier.com/reader/sd/pii/S0262885603001835?token=76780F4CE6E03D857BA3240F3179D4A3ADDC641974808A73B35251E1D27D83CA1AC4345D6345686D2744544E4C647749&originRegion=eu-west-1&originCreation=20220105133411) [pdf](./papers/Robust registration of 2D and 3D point sets.pdf)
   >
   > [[notes]](./notes/Robust registration of 2D and 3D point sets.md)
 
@@ -229,7 +229,7 @@
   >
   > **Citations:** 393
   >
-  >  [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1111/cgf.12178) [[pdf]](./papers/Sparse Iterative Closest Point.pdf)
+  >  [url](https://onlinelibrary.wiley.com/doi/epdf/10.1111/cgf.12178) [pdf](./papers/Sparse Iterative Closest Point.pdf)
   >
   > [[notes]](./notes/Sparse Iterative Closest Point.md)
 
@@ -241,7 +241,7 @@
   >
   > **Citations:** 421
   >
-  >  [[url]](http://vladlen.info/papers/fast-global-registration.pdf)  [[pdf]](./papers/Fast Global Registration.pdf)
+  >  [url](http://vladlen.info/papers/fast-global-registration.pdf)  [pdf](./papers/Fast Global Registration.pdf)
   
   - Not the ICP variant
   - Need the correspondence, (FPFH or other)
@@ -255,7 +255,7 @@
   >
   > **Citations:** 716
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=982886&tag=1)  [[pdf]](./papers/ICP Registration Using Invariant Features.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=982886&tag=1)  [pdf](./papers/ICP Registration Using Invariant Features.pdf)
 
   - Reading Notes:
     - Invariants:
@@ -271,7 +271,7 @@
 
   > Deng, Zhi, et al. "A robust loss for point cloud registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2021.
   >
-  >  [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Deng_A_Robust_Loss_for_Point_Cloud_Registration_ICCV_2021_paper.pdf)  [[pdf]](./papers/A Robust Loss for Point Cloud Registration.pdf)
+  >  [url](https://openaccess.thecvf.com/content/ICCV2021/papers/Deng_A_Robust_Loss_for_Point_Cloud_Registration_ICCV_2021_paper.pdf)  [pdf](./papers/A Robust Loss for Point Cloud Registration.pdf)
 
   - First, the proposed metric is based on intersections of uniformly random straight lines set in space, which can obtain richer information and more likely to achieve the global minimum.
 
@@ -290,7 +290,7 @@
   >
   > **Citations:** 193
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4409077)  [[pdf]](./papers/The 3D-3D registration problem revisited.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4409077)  [pdf](./papers/The 3D-3D registration problem revisited.pdf)
 
   - SPC problem: simultaneous pose and correspondence problem. But if given the correspondence, or given the rotation matrix, the problem becomes **convex** which is easy to solve. SPC problem is non-convex.
 
@@ -327,7 +327,7 @@
   >
   > **Citations:** 138
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4531744)  [[pdf]](./papers/Branch-and-Bound Methods for Euclidean Registration Problems.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4531744)  [pdf](./papers/Branch-and-Bound Methods for Euclidean Registration Problems.pdf)
 
 - **Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration** **(Go-ICP)** :heavy_check_mark:
 
@@ -335,7 +335,7 @@
   >
   > **Citations:** 522
   >
-  >  [[pdf]](./papers/Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration.pdf)  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7368945) 
+  >  [pdf](./papers/Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration.pdf)  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7368945) 
 
   - Get the global optimal for ICP algorithm.
 
@@ -347,7 +347,7 @@
   >
   > **Citations:** 29
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461063) [[pdf]](./papers/AA-ICP Iterative Closest Point with Anderson Acceleration.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461063) [pdf](./papers/AA-ICP Iterative Closest Point with Anderson Acceleration.pdf)
 
   AA-ICP: (Anderson Acceleration ICP), use Anderson acceleration to accelerate the process of the algorithm(About 30% compared to standard ICP).
 
@@ -355,7 +355,7 @@
 
   > Zhang, J., Yao, Y., & Deng, B. (2021). Fast and Robust Iterative Closest Point. *IEEE Transactions on Pattern Analysis and Machine Intelligence*.
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9336308)  [[pdf]](./papers/Fast_and_Robust_Iterative_Closest_Point.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9336308)  [pdf](./papers/Fast_and_Robust_Iterative_Closest_Point.pdf)
 
   1. Fast: Use Anderson acceleration to make the iteration process quickly;
 
@@ -369,7 +369,7 @@
   >
   > **Citations:** 6
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8794011)  [[pdf]](./papers/Speeding Up Iterative Closest Point Using Stochastic Gradient Descent.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8794011)  [pdf](./papers/Speeding Up Iterative Closest Point Using Stochastic Gradient Descent.pdf)
 
   - SGD-ICP: Use stochastic gradient descent (SGD) to iterate the parameter.
   - Faster than standard ICP and GICP, not resulting in loss in accuracy.
@@ -380,7 +380,7 @@
   >
   > **Citations:** 2
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9197085)  [[pdf]](./papers/Estimating Motion Uncertainty with Bayesian ICP.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9197085)  [pdf](./papers/Estimating Motion Uncertainty with Bayesian ICP.pdf)
 
   - Based on the SGD-ICP,  the SGLD adds the noise to the SGD-ICP.
   - Seems not novel, but **Add uncertainty to the algorithm seems very common**, which I mean can be used widely.
@@ -391,7 +391,7 @@
   >
   > **Citations:** 0
   >
-  >  [[pdf]](./papers/Stein_ICP_for_Uncertainty_Estimation_in_Point_Cloud_Matching.pdf)
+  >  [pdf](./papers/Stein_ICP_for_Uncertainty_Estimation_in_Point_Cloud_Matching.pdf)
 
   - How to use ICP to estimate the uncertainty of the point cloud ?
 
@@ -409,7 +409,7 @@
   >
   > **Citations:**  219
   >
-  >  [[pdf]](./papers/An_accurate_closed-form_estimate_of_ICPs_covariance.pdf)
+  >  [pdf](./papers/An_accurate_closed-form_estimate_of_ICPs_covariance.pdf)
 
   - 和SLAM的应用非常相关，暂时不研究这个，等后续真的需要研究SLAM，再看这篇文章。
 
@@ -440,7 +440,7 @@
   >
   > **Citations:** 646
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=854733)  [[pdf]](./papers/)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=854733)  [pdf](./papers/)
 
 - **A feature registration framework using mixture models**
 
@@ -448,7 +448,7 @@
   >
   > **Citations:**  205
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=852377)  [[pdf]](./papers/A feature registration framework using mixture models.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=852377)  [pdf](./papers/A feature registration framework using mixture models.pdf)
 
 - **A Correlation-Based Approach to Robust Point Set Registration** :heavy_check_mark:
 
@@ -456,7 +456,7 @@
   >
   > **Citations:** 435
   >
-  >  [[url]](http://www.cs.cmu.edu/afs/.cs.cmu.edu/Web/People/ytsin/research/kcreg.pdf)  [[pdf]](./papers/A Correlation-Based Approach to Robust Point Set Registration.pdf)
+  >  [url](http://www.cs.cmu.edu/afs/.cs.cmu.edu/Web/People/ytsin/research/kcreg.pdf)  [pdf](./papers/A Correlation-Based Approach to Robust Point Set Registration.pdf)
 
 - **Diffeomorphic Matching of Distributions: A New Approach for Unlabelled Point-Sets and Sub-Manifolds Matching**
 
@@ -464,7 +464,7 @@
   >
   > **Citations:** 234
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1315234)  [[pdf]](./papers/Diffeomorphic Matching of Distributions A New Approach for Unlabelled Point-Sets and Sub-Manifolds Matching.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1315234)  [pdf](./papers/Diffeomorphic Matching of Distributions A New Approach for Unlabelled Point-Sets and Sub-Manifolds Matching.pdf)
 
 - **Uncertainty Modeling and Model Selection for Geometric Inference**
 
@@ -472,7 +472,7 @@
   >
   > **Citations:** 86
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1323799)  [[pdf]](./papers/Uncertainty Modeling and Model Selection for Geometric Inference.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1323799)  [pdf](./papers/Uncertainty Modeling and Model Selection for Geometric Inference.pdf)
 
 ### GMM
 
@@ -482,7 +482,7 @@
   >
   > **Citations:** 185
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=590011)  [[pdf]](./papers/The Motion Coherence Theory.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=590011)  [pdf](./papers/The Motion Coherence Theory.pdf)
 
 - **Non-rigid point set registration: Coherent Point Drift** :green_book:
 
@@ -490,7 +490,7 @@
   >
   > **Citations:** 383
   >
-  >  [[url]](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.85.493&rep=rep1&type=pdf)  [[pdf]](./papers/Non-rigid point set registration Coherent Point Drift.pdf)
+  >  [url](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.85.493&rep=rep1&type=pdf)  [pdf](./papers/Non-rigid point set registration Coherent Point Drift.pdf)
 
 - **A Robust Point Matching Algorithm for Autoradiograph Alignment**
 
@@ -498,7 +498,7 @@
   >
   > **Citations:** 232
   >
-  >  [[url]](https://reader.elsevier.com/reader/sd/pii/S1361841597850086?token=939D9B6CF93E55670F0907F7557812B247EDCE053FF3112F4DB6EC1213E1EAEBFB46FB87D8B7B47BE7D583E195092E11&originRegion=eu-west-1&originCreation=20220201205118)  [[pdf]](./papers/A robust point-matching algorithm for autoradiograph alignment.pdf)
+  >  [url](https://reader.elsevier.com/reader/sd/pii/S1361841597850086?token=939D9B6CF93E55670F0907F7557812B247EDCE053FF3112F4DB6EC1213E1EAEBFB46FB87D8B7B47BE7D583E195092E11&originRegion=eu-west-1&originCreation=20220201205118)  [pdf](./papers/A robust point-matching algorithm for autoradiograph alignment.pdf)
 
 - **Point Set Registration: Coherent Point Drift** **(CPD)** :heavy_check_mark:
 
@@ -506,7 +506,7 @@
   >
   > **Citations:** 2323
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5432191)  [[pdf]](./papers/Point_Set_Registration_Coherent_Point_Drift.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5432191)  [pdf](./papers/Point_Set_Registration_Coherent_Point_Drift.pdf)
   >
   > [[notes]](./notes/Point Set Registration - Coherent Point Drift.md)
 
@@ -523,7 +523,7 @@
   >
   > **Citations:** 219
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5444893)  [[pdf]](./papers/Rigid and Articulated Point Registration with Expectation Conditional Maximization.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5444893)  [pdf](./papers/Rigid and Articulated Point Registration with Expectation Conditional Maximization.pdf)
   
   - This method is similar to CPD, but the difference is that in this algorithm(which is called **ECM**), the **isotropic convariance** is replaced by **anisotropic convariance**. To solve the problem of estimating R under the case of anisotropic convariance, the orthogonal constraint is put on the rotation matrix, and get the estimation of R by SDP.
 
@@ -554,7 +554,7 @@
   >
   > **Citations:** 58
   >
-  >  [[url]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Gao_FilterReg_Robust_and_Efficient_Probabilistic_Point-Set_Registration_Using_Gaussian_Filter_CVPR_2019_paper.pdf)  [[pdf]](./papers/FilterReg-Robust and Efficient Probabilistic Point-Set Registration using Gaussian Filter and Twist Parameterization.pdf)
+  >  [url](https://openaccess.thecvf.com/content_CVPR_2019/papers/Gao_FilterReg_Robust_and_Efficient_Probabilistic_Point-Set_Registration_Using_Gaussian_Filter_CVPR_2019_paper.pdf)  [pdf](./papers/FilterReg-Robust and Efficient Probabilistic Point-Set Registration using Gaussian Filter and Twist Parameterization.pdf)
   
   - Point-to-Plane GMM.
   - Formulate the E step as a filtering problem and solve it using advances in efficient Gaussian filters.
@@ -563,7 +563,7 @@
 
   > Liu, Weixiao, Hongtao Wu, and Gregory Chirikjian. "LSG-CPD: Coherent Point Drift with Local Surface Geometry for Point Cloud Registration." *arXiv preprint arXiv:2103.15039* (2021).
   >
-  >  [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Liu_LSG-CPD_Coherent_Point_Drift_With_Local_Surface_Geometry_for_Point_ICCV_2021_paper.pdf)  [[pdf]](./papers/LSG-CPD Coherent Point Drift with Local Surface Geometry.pdf)
+  >  [url](https://openaccess.thecvf.com/content/ICCV2021/papers/Liu_LSG-CPD_Coherent_Point_Drift_With_Local_Surface_Geometry_for_Point_ICCV_2021_paper.pdf)  [pdf](./papers/LSG-CPD Coherent Point Drift with Local Surface Geometry.pdf)
   
   - Adjust the point-to-point / point-to-plane based on surface normal and surface variation by adjusting covariance:
   
@@ -585,7 +585,7 @@
   >
   > **Citations:** 279
   >
-  >  [[pdf]](./papers/Non-Rigid Point Set Registration by Preserving Global and Local Structures.pdf)
+  >  [pdf](./papers/Non-Rigid Point Set Registration by Preserving Global and Local Structures.pdf)
   
   - Considering the local features(provided by *FPFH*) as the prior knowledge to give a prio estimation of parameter if $\pi_{mn}$ in the process of *E-M* process of algorithm of CPD;
   
@@ -611,7 +611,7 @@
   >
   > **Citations:** 408
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1544863)  [[pdf]](./papers/A Robust Algorithm for Point Set Registration Using Mixture of Gaussians.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1544863)  [pdf](./papers/A Robust Algorithm for Point Set Registration Using Mixture of Gaussians.pdf)
 
 - **Robust Point Set Registration Using Gaussian Mixture Models** **(GMM)** :heavy_check_mark: :flags: :question:
 
@@ -619,7 +619,7 @@
   >
   > **Citations:** 869
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5674050)  [[pdf]](./papers/Robust Point Set Registration Using Gaussian Mixture Models.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5674050)  [pdf](./papers/Robust Point Set Registration Using Gaussian Mixture Models.pdf)
   >
   > [[notes]]()
 
@@ -637,7 +637,7 @@
   >
   > **Citations:** 28
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8985307)  [[pdf]](./papers/A Bayesian Formulation of Coherent Point Drift.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8985307)  [pdf](./papers/A Bayesian Formulation of Coherent Point Drift.pdf)
   
 - **A generative model for the joint registration of multiple point sets** :heavy_check_mark: (**JR-MPC**)
 
@@ -645,7 +645,7 @@
   >
   > **Citations:**  83
   >
-  >  [[pdf]](./papers/Evangelidis2014_Chapter_AGenerativeModelForTheJointReg.pdf)
+  >  [pdf](./papers/Evangelidis2014_Chapter_AGenerativeModelForTheJointReg.pdf)
   
   - This paper view the problem in a different view. The CPD or GMM view the point set registration as a *point fitting probaility model* problem, to estimate the parameter. But in this paper, the author view the problem as a *cluster* problem. Many point sets together find the cluster model.
   
@@ -663,7 +663,7 @@
   >
   > **Citations:**  39
   >
-  >  [[pdf]](./papers/Lawin_Density_Adaptive_Point_CVPR_2018_paper.pdf) [[supp]](./papers/2354-supp.pdf)
+  >  [pdf](./papers/Lawin_Density_Adaptive_Point_CVPR_2018_paper.pdf) [[supp]](./papers/2354-supp.pdf)
 
   - **句子摘抄**
 
@@ -706,7 +706,7 @@
   >
   > **Citations:** 1096
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1249285) [[pdf]](./papers/The_normal_distributions_transform_a_new_approach_to_laser_scan_matching.pdf) 
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1249285) [pdf](./papers/The_normal_distributions_transform_a_new_approach_to_laser_scan_matching.pdf) 
   > [[materials]](https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/ndt-literature-review.html)
   
   2D-NDT(Normalized Distribution Transform):
@@ -724,7 +724,7 @@
     >
     > **Citations:** 558
     >
-    >  [[url]](https://onlinelibrary.wiley.com/doi/epdf/10.1002/rob.20204) [[pdf]](./papers/Scan registration for autonomous mining vehicles using 3D‐NDT.pdf) 
+    >  [url](https://onlinelibrary.wiley.com/doi/epdf/10.1002/rob.20204) [pdf](./papers/Scan registration for autonomous mining vehicles using 3D‐NDT.pdf) 
     
     - 3D-NDT(P2D-NDT)
     - Faster; Less memory; compared to ICP
@@ -735,7 +735,7 @@
     >
     > **Citations:** 324
     >
-    >  [[url]](https://www.diva-portal.org/smash/get/diva2:276162/FULLTEXT02.pdf)  [[pdf]](./papers/The three-dimensional normal-distributions transform an efficient representation for registration, surface analysis, and loop detection.pdf)
+    >  [url](https://www.diva-portal.org/smash/get/diva2:276162/FULLTEXT02.pdf)  [pdf](./papers/The three-dimensional normal-distributions transform an efficient representation for registration, surface analysis, and loop detection.pdf)
     
   - **Fast and accurate scan registration through minimization of the distance between compact 3D NDT representations** **(D2D-NDT)** :heavy_check_mark:
 
@@ -743,7 +743,7 @@
     >
     > **Citations:**  180
     >
-    >  [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.817.5962&rep=rep1&type=pdf)  [[pdf]](./papers/Fast and accurate scan registration through minimization of the distance between compact 3D NDT representations.pdf)
+    >  [url](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.817.5962&rep=rep1&type=pdf)  [pdf](./papers/Fast and accurate scan registration through minimization of the distance between compact 3D NDT representations.pdf)
     
     - D2D 3D NDT
     - Faster than P2D NDT
@@ -754,7 +754,7 @@
 
   > Makadia, Ameesh, Alexander Patterson, and Kostas Daniilidis. "Fully automatic registration of 3D point clouds." *2006 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'06)*. Vol. 1. IEEE, 2006.
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1640899)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1640899)
 
 - **A fast automatic method for registration of partially-overlapping range images**
 
@@ -770,7 +770,7 @@
   >
   > **Citations:**  124
   >
-  >  [[pdf]](./papers/Shape Matching and Anisotropy.pdf)
+  >  [pdf](./papers/Shape Matching and Anisotropy.pdf)
 
   - keywords: isanisotropy
   - 不准备读了, 引用这篇文献的文章都没有关于点云配准的；并且，里面提到的东西，我也不太懂。暂时不看，以后有机会再看吧。
@@ -783,7 +783,7 @@
   >
   > **Citations:** 7
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9026868)  [[pdf]](./papers/Point_Set_Registration_for_3D_Range_Scans_Using_Fuzzy_Cluster-Based_Metric_and_Efficient_Global_Optimization.pdf) 
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9026868)  [pdf](./papers/Point_Set_Registration_for_3D_Range_Scans_Using_Fuzzy_Cluster-Based_Metric_and_Efficient_Global_Optimization.pdf) 
   >
   > [[notes]](./notes/Point Set Registration for 3D Range Scans Using Fuzzy Cluster-based Metric and Efficient Global Optimization.md)
 
@@ -794,7 +794,7 @@
 
   > Liao, Qianfang, Da Sun, and Henrik Andreasson. "FuzzyPSReg: Strategies of Fuzzy Cluster-Based Point Set Registration." *IEEE Transactions on Robotics* (2021).
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9623345)  [[pdf]](./papers/FuzzyPSReg_Strategies_of_Fuzzy_Cluster-Based_Point_Set_Registration.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9623345)  [pdf](./papers/FuzzyPSReg_Strategies_of_Fuzzy_Cluster-Based_Point_Set_Registration.pdf)
   >
   > [[notes]](./notes/FuzzyPSReg_Strategies_of_Fuzzy_Cluster-Based_Point_Set_Registration.md)
 
@@ -830,7 +830,7 @@
   >
   > **Citations:** 9
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9160881)  [[pdf]](./papers/SFCM A Fuzzy Clustering Algorithm of Extracting the Shape Information of Datahe Shape Information of Data.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9160881)  [pdf](./papers/SFCM A Fuzzy Clustering Algorithm of Extracting the Shape Information of Datahe Shape Information of Data.pdf)
 
 - **Hyperplane Division in Fuzzy C-Means: Clustering Big Data**
 
@@ -864,7 +864,7 @@
   >
   > **Citations:** 135
   >
-  >  [[url]](https://sci-hub.ru/https://ieeexplore.ieee.org/abstract/document/9286491/)  [[pdf]](./papers/TEASER-Fast and Certifiable Point Cloud.pdf)
+  >  [url](https://sci-hub.ru/https://ieeexplore.ieee.org/abstract/document/9286491/)  [pdf](./papers/TEASER-Fast and Certifiable Point Cloud.pdf)
   >
   > [[notes]](./notes/TEASER-Fast and Certifiable Point Cloud.md)
   
@@ -874,7 +874,7 @@
   >
   > **Citations:** 8
   >
-  >  [[pdf]](./papers/Linearly Converging Quasi Branch and Bound Algorithms for Global Rigid Registration.pdf)
+  >  [pdf](./papers/Linearly Converging Quasi Branch and Bound Algorithms for Global Rigid Registration.pdf)
 
   - Acceleration based on the BnBs search, the time complexity changes from  $1/\epsilon$ to $ log(1/\epsilon)$ —— where $\epsilon$ is the accuracy.
 
@@ -884,7 +884,7 @@
   >
   > **Citations:** 281
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1407879) [[pdf]](./papers/Precision_range_image_registration_using_a_robust_surface_interpenetration_measure_and_enhanced_genetic_algorithms.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1407879) [pdf](./papers/Precision_range_image_registration_using_a_robust_surface_interpenetration_measure_and_enhanced_genetic_algorithms.pdf)
 
   - Use robust genetic algorithm to search in the pose space and get a good registration result.
   - More robust and accurate than ICP
@@ -894,7 +894,7 @@
 
   > Jubran, Ibrahim, et al. "Provably Approximated Point Cloud Registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2021.
   >
-  >  [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Jubran_Provably_Approximated_Point_Cloud_Registration_ICCV_2021_paper.pdf)  [[pdf]](./papers/Provably Approximated Point Cloud Registration.pdf)
+  >  [url](https://openaccess.thecvf.com/content/ICCV2021/papers/Jubran_Provably_Approximated_Point_Cloud_Registration_ICCV_2021_paper.pdf)  [pdf](./papers/Provably Approximated Point Cloud Registration.pdf)
   >
   > [[supp]](https://openaccess.thecvf.com/content/ICCV2021/supplemental/Jubran_Provably_Approximated_Point_ICCV_2021_supplemental.pdf)
   
@@ -910,7 +910,7 @@
   >
   > **Citations:** 4
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9290402)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9290402)
   
 - **Point Set Registration with Global-local Correspondence and Transformation Estimation**
 
@@ -952,7 +952,7 @@
   >
   > **Citations:** 768
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4650967)  [[pdf]](./papers/Aligning Point Cloud Views using Persistent Feature Histograms.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4650967)  [pdf](./papers/Aligning Point Cloud Views using Persistent Feature Histograms.pdf)
   
   - Use persistent point feature histograms to describe a feature point in a point set.
   
@@ -986,7 +986,7 @@
   >
   > **Citations:** 2755
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5152473)  [[pdf]](./papers/Fast Point Feature Histograms (FPFH) for 3D Registration.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5152473)  [pdf](./papers/Fast Point Feature Histograms (FPFH) for 3D Registration.pdf)
 
   - Simplified *PFH* algo, which reduces the computational complexity of the algorithm from  $O(n\cdot k^2)$ to $O(n·k)$;
 
@@ -1003,7 +1003,7 @@
   >
   > **Citations:** 82
   >
-  >  [[url]](https://link.springer.com/content/pdf/10.1007/s11263-013-0623-2.pdf)  [[pdf]](./papers/Demisting the Hough transform for 3D shape recognition and registration.pdf)
+  >  [url](https://link.springer.com/content/pdf/10.1007/s11263-013-0623-2.pdf)  [pdf](./papers/Demisting the Hough transform for 3D shape recognition and registration.pdf)
 
   - :yellow_heart: Just roughly reading
   - Add two extensions to standard *Hough Transform*: 1) The *intrinsic Hough transform* which reduces the memory consuming; 2) *minimum-entropy Hough transform* which increases the detection accuracy.
@@ -1014,7 +1014,7 @@
   >
   > **Citations:** 257
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5431057)  [[pdf]](./papers/Fast Registration Based on Noisy Planes With Unknown Correspondences for 3-D Mapping.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5431057)  [pdf](./papers/Fast Registration Based on Noisy Planes With Unknown Correspondences for 3-D Mapping.pdf)
   
 - **Using spin images for efficient object recognition in cluttered 3D scenes**
 
@@ -1022,7 +1022,7 @@
   >
   > **Citations:** 3080
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=765655)  [[pdf]](./papers/Using Spin Images for Efficient Object Recognition in Cluttered 3D Scenes.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=765655)  [pdf](./papers/Using Spin Images for Efficient Object Recognition in Cluttered 3D Scenes.pdf)
 
 - **4-points congruent sets for robust pairwise surface registration**
 
@@ -1030,7 +1030,7 @@
   >
   > **Citations:** 687
   >
-  >  [[url]](https://dl.acm.org/doi/pdf/10.1145/1399504.1360684)  [[pdf]](./papers/4-Points Congruent Sets for Robust Pairwise Surface Registration.pdf)
+  >  [url](https://dl.acm.org/doi/pdf/10.1145/1399504.1360684)  [pdf](./papers/4-Points Congruent Sets for Robust Pairwise Surface Registration.pdf)
 
 - **Super 4PCS Fast Global Pointcloud Registration via Smart Indexing**
 
@@ -1044,7 +1044,7 @@
   >
   > **Citations:** 366
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1597120)  [[pdf]](./papers/Robust Point Matching for Nonrigid Shapes by Preserving Local Neighborhood Structures.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1597120)  [pdf](./papers/Robust Point Matching for Nonrigid Shapes by Preserving Local Neighborhood Structures.pdf)
 
   - This paper gives an very direct and clear idea to find the correspondence between two transformmed point set: in the problem of rigid registration, the distance of a given point $x_i$ to other point $x_o$ will be the same with the corresponding point $y_i$ with other points $y_o$.
   - So if we construct the matrix which is of the size $M\times N$ $P$, the correspondence is described by a matrix P and the element of the matrix means the correspondence of the correspondending relationship between two points.
@@ -1069,7 +1069,7 @@
   >
   > **Citations:** 23
   >
-  >  [[pdf]](./papers/Ao_SpinNet_Learning_a_General_Surface_Descriptor_for_3D_Point_Cloud_CVPR_2021_paper.pdf)
+  >  [pdf](./papers/Ao_SpinNet_Learning_a_General_Surface_Descriptor_for_3D_Point_Cloud_CVPR_2021_paper.pdf)
 
   - This paper proposes a neural network to learn correspondence point-wise, the core idea is transforming the raw point cloud to a cylindrical space, which can be used to maintain rotation invariance. The rotation invariance is beneficial to generalization.
 
@@ -1099,23 +1099,23 @@
   >
   > **Citations:** 17
   >
-  >  [[pdf]](./papers/PointDSC_Robust_Point_Cloud_Registration_Using_Deep_Spatial_Consistency_CVPR_2021_paper.pdf) [[code]](https://github.com/XuyangBai/PointDSC)
+  >  [pdf](./papers/PointDSC_Robust_Point_Cloud_Registration_Using_Deep_Spatial_Consistency_CVPR_2021_paper.pdf) [[code]](https://github.com/XuyangBai/PointDSC)
 
 - **PRNet: Self-Supervised Learning for Partial-to-Partial Registration**
 
-  >  [[url]](https://arxiv.org/pdf/1910.12240.pdf)  [[pdf]](./papers/PRNet Self-Supervised Learning for Partial-to-Partial Registration.pdf)
+  >  [url](https://arxiv.org/pdf/1910.12240.pdf)  [pdf](./papers/PRNet Self-Supervised Learning for Partial-to-Partial Registration.pdf)
 
 - **The Perfect Match: 3D Point Cloud Matching with Smoothed Densities**
 
   > <CVPR2019>
   >
-  >  [[url]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Gojcic_The_Perfect_Match_3D_Point_Cloud_Matching_With_Smoothed_Densities_CVPR_2019_paper.pdf)
+  >  [url](https://openaccess.thecvf.com/content_CVPR_2019/papers/Gojcic_The_Perfect_Match_3D_Point_Cloud_Matching_With_Smoothed_Densities_CVPR_2019_paper.pdf)
 
 - **Registration Loss Learning for Deep Probabilistic Point Set Registration**
 
   > <International Conference on 3D Vision>
   >
-  >  [[pdf]](./papers/Registration Loss Learning for Deep Probabilistic Point Set Registration.pdf)
+  >  [pdf](./papers/Registration Loss Learning for Deep Probabilistic Point Set Registration.pdf)
   >
   > [[NOTES]](./notes/Registration Loss Learning for Deep Probabilistic Point Set Registration.md)
   
@@ -1125,7 +1125,7 @@
   >
   > **Citations:** 29
   >
-  >  [[url]](https://openaccess.thecvf.com/content/CVPR2021/papers/Huang_Predator_Registration_of_3D_Point_Clouds_With_Low_Overlap_CVPR_2021_paper.pdf)  [[pdf]](./papers/PREDATOR Registration of 3D Point Clouds with Low Overlap.pdf)
+  >  [url](https://openaccess.thecvf.com/content/CVPR2021/papers/Huang_Predator_Registration_of_3D_Point_Clouds_With_Low_Overlap_CVPR_2021_paper.pdf)  [pdf](./papers/PREDATOR Registration of 3D Point Clouds with Low Overlap.pdf)
 
   - Our model is specifically designed to handle (also) point-cloud pairs with low overlap.
   - The core of the model is an overlap attention module that enables early information exchange between the point clouds’ latent encodings, in order to infer which of their points are likely to lie in their overlap region.
@@ -1137,7 +1137,7 @@
   >
   > **Citations:** 1
   >
-  >  [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Jiang_Sampling_Network_Guided_Cross-Entropy_Method_for_Unsupervised_Point_Cloud_Registration_ICCV_2021_paper.pdf)  [[pdf]](./papers/Sampling Network Guided Cross-Entropy Method for Unsupervised Point Cloud Registration.pdf)
+  >  [url](https://openaccess.thecvf.com/content/ICCV2021/papers/Jiang_Sampling_Network_Guided_Cross-Entropy_Method_for_Unsupervised_Point_Cloud_Registration_ICCV_2021_paper.pdf)  [pdf](./papers/Sampling Network Guided Cross-Entropy Method for Unsupervised Point Cloud Registration.pdf)
 
   - Reformulate the registration problem as a reinforcement learning problem.
   
@@ -1147,7 +1147,7 @@
   >
   > **Citations:** 2
   >
-  >  [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Lee_Deep_Hough_Voting_for_Robust_Global_Registration_ICCV_2021_paper.pdf)  [[pdf]](./papers/Deep Hough Voting for Robust Global Registration.pdf)
+  >  [url](https://openaccess.thecvf.com/content/ICCV2021/papers/Lee_Deep_Hough_Voting_for_Robust_Global_Registration_ICCV_2021_paper.pdf)  [pdf](./papers/Deep Hough Voting for Robust Global Registration.pdf)
 
 - **PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation** 
 
@@ -1155,7 +1155,7 @@
   >
   > **Citations:** 6347
   >
-  >  [[url]](https://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf) [[pdf]](./papers/PointNet_Deep_Learning_CVPR_2017_paper.pdf)
+  >  [url](https://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf) [pdf](./papers/PointNet_Deep_Learning_CVPR_2017_paper.pdf)
   >
   > [[notes]](./notes/PointNet Deep Learning on Point Sets for 3D Classification and Segmentation.md)
 
@@ -1183,7 +1183,7 @@
   >
   > **Citations:** 122
   >
-  >  [[url]](https://arxiv.org/pdf/2004.11540.pdf)  [[pdf]](./papers/Deep Global Registration.pdf)
+  >  [url](https://arxiv.org/pdf/2004.11540.pdf)  [pdf](./papers/Deep Global Registration.pdf)
 
   - This paper propose a registration algorithm based-on deep-learning.
   - It uses the network to find the inlier features(The used features provided by "FCGF")；Use a kind of function to calculate the coarse alignment; Use the gradient-based methods to get a find registration.
@@ -1209,7 +1209,7 @@
   >
   > **Citations:** 271
   >
-  >  [[url]](https://reader.elsevier.com/reader/sd/pii/S0031320302000547?token=9EC1420AF495A990060CF769F8859EB19D22B507DF305D3779BF0F968814EC067F756D046CD5429AF52B6FDC4807EBE9&originRegion=eu-west-1&originCreation=20220113140059)  [[pdf]](./papers/Spectral Correspondence for Point Pattern Matching.pdf)
+  >  [url](https://reader.elsevier.com/reader/sd/pii/S0031320302000547?token=9EC1420AF495A990060CF769F8859EB19D22B507DF305D3779BF0F968814EC067F756D046CD5429AF52B6FDC4807EBE9&originRegion=eu-west-1&originCreation=20220113140059)  [pdf](./papers/Spectral Correspondence for Point Pattern Matching.pdf)
 
 - **Thirty Years of Graph Matching in Pattern Recognition**
 
@@ -1217,7 +1217,7 @@
   >
   > **Citations:** 1758
   >
-  >  [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.455.7770&rep=rep1&type=pdf)  [[pdf]](./papers/Thirty Years of Graph Matching in Pattern Recognition.pdf)
+  >  [url](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.455.7770&rep=rep1&type=pdf)  [pdf](./papers/Thirty Years of Graph Matching in Pattern Recognition.pdf)
 
 - **A unified framework for alignment and correspondence**
 
@@ -1225,7 +1225,7 @@
   >
   > **Citations:** 73
   >
-  >  [[url]](https://reader.elsevier.com/reader/sd/pii/S1077314203000973?token=0DBF0A87CDEC4BE21370C4E39E5A1906171CB67EBDAA80A064DB207F16AEF0881DB5CB50C2E751104DF082DBF0E688B6&originRegion=eu-west-1&originCreation=20220113135844)  [[pdf]](./papers/A unified framework for alignment and correspondence.pdf)
+  >  [url](https://reader.elsevier.com/reader/sd/pii/S1077314203000973?token=0DBF0A87CDEC4BE21370C4E39E5A1906171CB67EBDAA80A064DB207F16AEF0881DB5CB50C2E751104DF082DBF0E688B6&originRegion=eu-west-1&originCreation=20220113135844)  [pdf](./papers/A unified framework for alignment and correspondence.pdf)
 
 - **Graphical Models and Point Pattern Matching**
 
@@ -1233,7 +1233,7 @@
   >
   > **Citations:** 171
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1677520)  [[pdf]](./papers/Graphical Models and Point Pattern Matching.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1677520)  [pdf](./papers/Graphical Models and Point Pattern Matching.pdf)
   
 - **3D Shape Registration Using Spectral Graph Embedding and Probabilistic Matching**
 
@@ -1246,7 +1246,7 @@
 
 - **Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search**
 
-  >  [[url]](https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Yinlong_Liu_Efficient_Global_Point_ECCV_2018_paper.pdf)  [[pdf]](./papers/Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search)
+  >  [url](https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Yinlong_Liu_Efficient_Global_Point_ECCV_2018_paper.pdf)  [pdf](./papers/Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search)
   >
   > [[notes]](./notes/Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search.md)
   
@@ -1254,12 +1254,12 @@
 
   > <CVPR2019>
   >
-  >  [[url]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Le_SDRSAC_Semidefinite-Based_Randomized_Approach_for_Robust_Point_Cloud_Registration_Without_CVPR_2019_paper.pdf)  [[pdf]](./papers/SDRSAC_Semidefinite-Based_Randomized_Approach_for_Robust_Point_Cloud_Registration_Without_CVPR_2019_paper.pdf)
+  >  [url](https://openaccess.thecvf.com/content_CVPR_2019/papers/Le_SDRSAC_Semidefinite-Based_Randomized_Approach_for_Robust_Point_Cloud_Registration_Without_CVPR_2019_paper.pdf)  [pdf](./papers/SDRSAC_Semidefinite-Based_Randomized_Approach_for_Robust_Point_Cloud_Registration_Without_CVPR_2019_paper.pdf)
 
 - **Global Optimality for Point Set Registration Using Semidefinite Programming**
 
   > <CVPR2020>
-  >  [[url]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Iglesias_Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf)  [[pdf]](./papers/Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf)
+  >  [url](https://openaccess.thecvf.com/content_CVPR_2020/papers/Iglesias_Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf)  [pdf](./papers/Global_Optimality_for_Point_Set_Registration_Using_Semidefinite_Programming_CVPR_2020_paper.pdf)
 
 ## Extension
 
@@ -1271,7 +1271,7 @@
   >
   > **Citations:**  87
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7954698)  [[pdf]](./papers/Joint Alignment of Multiple Point Sets with Batch and Incremental Expectation-Maximization.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7954698)  [pdf](./papers/Joint Alignment of Multiple Point Sets with Batch and Incremental Expectation-Maximization.pdf)
 
 ### Non-rigid Point set
 
@@ -1279,7 +1279,7 @@
 
   > Chui, H., & Rangarajan, A. (2003). A new point matching algorithm for non-rigid registration. *Computer Vision and Image Understanding*, *89*(2-3), 114-141.
   >
-  >  [[url]](https://reader.elsevier.com/reader/sd/pii/S1077314203000092?token=1F6EDF85BEE9DB34579FF7916F9D35C900B8B71010B9E7F166D03A7050D1CD39F574900CBB0DAB444B3168C6A74F6A71&originRegion=eu-west-1&originCreation=20220116113608)  [[pdf]](./papers/A new point matching algorithm for non-rigid registration.pdf)
+  >  [url](https://reader.elsevier.com/reader/sd/pii/S1077314203000092?token=1F6EDF85BEE9DB34579FF7916F9D35C900B8B71010B9E7F166D03A7050D1CD39F574900CBB0DAB444B3168C6A74F6A71&originRegion=eu-west-1&originCreation=20220116113608)  [pdf](./papers/A new point matching algorithm for non-rigid registration.pdf)
 
 ## Survey
 
@@ -1289,15 +1289,15 @@
   >
   > **Citations:** 10
   >
-  >  [[url]](https://arxiv.org/pdf/2103.02690.pdf)  [[pdf]](./papers/A comprehensive survey on point cloud registration.pdf)
+  >  [url](https://arxiv.org/pdf/2103.02690.pdf)  [pdf](./papers/A comprehensive survey on point cloud registration.pdf)
   >
   > [[detailed notes]](./notes/A comprehensive survey on point cloud registration.md)
 
 - **Registration of large-scale terrestrial laser scanner point clouds A review and benchmark**
 
   > <ISPRS Journal of Photogrammetry and Remote Sensing>
-  >  [[url]](https://reader.elsevier.com/reader/sd/pii/S0924271620300836?token=601731D7F5A970C99DA0F576524F984B32A54C306453727528A63B21BE9B8B9B81E18ED8BE62C0ECA2F16B6CDC4CE878&originRegion=eu-west-1&originCreation=20211224092123)
-  >  [[pdf]](./papers/Registration of large-scale terrestrial laser scanner point clouds A reviewand benchmark.pdf)
+  >  [url](https://reader.elsevier.com/reader/sd/pii/S0924271620300836?token=601731D7F5A970C99DA0F576524F984B32A54C306453727528A63B21BE9B8B9B81E18ED8BE62C0ECA2F16B6CDC4CE878&originRegion=eu-west-1&originCreation=20211224092123)
+  >  [pdf](./papers/Registration of large-scale terrestrial laser scanner point clouds A reviewand benchmark.pdf)
   > [[detailed notes]](./notes/Registration of large-scale terrestrial laser scanner point clouds A reviewand benchmark.pdf.md)
   
 - **A Review of Point Cloud Registration Algorithms for Mobile Robotics**
@@ -1306,7 +1306,7 @@
   >
   > **Citations**:423
   >
-  >  [[url]](https://hal.archives-ouvertes.fr/hal-01178661/document)  [[pdf]](./papers/A Review of Point Cloud Registration Algorithms for Mobile Robotics.pdf)
+  >  [url](https://hal.archives-ouvertes.fr/hal-01178661/document)  [pdf](./papers/A Review of Point Cloud Registration Algorithms for Mobile Robotics.pdf)
 
 - **Image Matching from Handcrafted to Deep Features: A Survey**
 
@@ -1314,7 +1314,7 @@
   >
   > **Citations:** 155
   >
-  >  [[url]](https://link.springer.com/content/pdf/10.1007/s11263-020-01359-2.pdf)  [[pdf]](./papers/Image Matching from Handcrafted to Deep Features A Survey.pdf)
+  >  [url](https://link.springer.com/content/pdf/10.1007/s11263-020-01359-2.pdf)  [pdf](./papers/Image Matching from Handcrafted to Deep Features A Survey.pdf)
   
   - Mainly focus on feature-matching.
   
@@ -1324,7 +1324,7 @@
   >
   > **Citations:** 1413
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6522524)  [[pdf]](./papers/Deformable Medical Image Registration A Survey.pdf)
+  >  [url](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6522524)  [pdf](./papers/Deformable Medical Image Registration A Survey.pdf)
   
 - **Registration of 3D Point Clouds and Meshes: A Survey from Rigid to Nonrigid**
 
@@ -1338,7 +1338,7 @@
   >
   > **Citations:** 452
   >
-  >  [[pdf]](./papers/Deep_Learning_for_3D_Point_Clouds_A_Survey.pdf)
+  >  [pdf](./papers/Deep_Learning_for_3D_Point_Clouds_A_Survey.pdf)
 
   - 本文的行文结构大致是：按照CV中点云的任务来进行分析：*shape classification*, *Object Detection and tracking*, *3D point set Segmentation*. 依据每个任务中的 *deep learning* 的应用进行分类，进行文献综述，并且每一个小章节有一个 *summary*， 其内容主要是：在测试集上的表现；缺点；未来的方向等。
 
@@ -1354,7 +1354,7 @@
   >
   > **Citations:** 462
   >
-  >  [[pdf]](./papers/A Comprehensive Performance Evaluation of 3D Local Feature Descriptors.pdf)
+  >  [pdf](./papers/A Comprehensive Performance Evaluation of 3D Local Feature Descriptors.pdf)
 
   - The **evaluation** paper of the local features descriptors, in the introduction of the paper, the author mention the skeleton of the paper: What's is the local descriptors, and the relevant algorithms; How to evaluate the local features, the meaning of the evaluation. The contribution and why to write the paper.
 
@@ -1382,7 +1382,7 @@
   >
   > **Citations:** 68
   >
-  >  [[pdf]](./papers/Beyond_points_Evaluating_recent_3D_scan-matching_algorithms.pdf)
+  >  [pdf](./papers/Beyond_points_Evaluating_recent_3D_scan-matching_algorithms.pdf)
 
 - **Comparing ICP variants on real-world data sets** :heavy_check_mark:
 
@@ -1390,7 +1390,7 @@
   >
   > **Citations:** 657
   >
-  >  [[pdf]](./papers/Comparing ICP variants on real-world data sets.pdf)
+  >  [pdf](./papers/Comparing ICP variants on real-world data sets.pdf)
 
   - This paper mainly propose a stadnard pipeline of ICP algorithms, and provbide a open-source sofrware which can be used for comparing ICP algorithms. The pipeline consists of different modules, which can be tuned by parameters.
   
@@ -1423,7 +1423,7 @@
 - **SegMap Segment-based mapping and localization using data-driven descriptors**
 
   > Dube, Renaud, et al. "SegMap: Segment-based mapping and localization using data-driven descriptors." *The International Journal of Robotics Research* 39.2-3 (2020): 339-355.
-  >  [[pdf]](./papers/SegMap Segment-based mapping and localization using data-driven descriptors.pdf) [[url]](https://journals.sagepub.com/doi/pdf/10.1177/0278364919863090)
+  >  [pdf](./papers/SegMap Segment-based mapping and localization using data-driven descriptors.pdf) [url](https://journals.sagepub.com/doi/pdf/10.1177/0278364919863090)
   >
   > [[notes]](./notes/SegMap Segment-based mapping and localization using data-driven descriptors.md)
 
@@ -1447,7 +1447,7 @@
 
   > <ICRA 2017>
   >
-  >  [[pdf]](./papers/SemanticFusion_Dense_3D_semantic_mapping_with_convolutional_neural_networks.pdf)
+  >  [pdf](./papers/SemanticFusion_Dense_3D_semantic_mapping_with_convolutional_neural_networks.pdf)
   >
   > [[notes]](./notes/SemanticFusion_Dense_3D_semantic_mapping_with_convolutional_neural_networks.md)
 
@@ -1461,7 +1461,7 @@
 
   > <RA-L 2018>
   >
-  >  [[pdf]](./papers/Integrating Deep Semantic Segmentation into 3D point cloud registration.pdf)
+  >  [pdf](./papers/Integrating Deep Semantic Segmentation into 3D point cloud registration.pdf)
   >
   > [[notes]](./notes/Integrating Deep Semantic Segmentation into 3D point cloud registration.md)
 
@@ -1475,13 +1475,13 @@
   >
   > **Citations:** 21
   >
-  >  [[pdf]](./papers/Semantic-assisted_3D_normal_distributions_transform_for_scan_registration_in_environments_with_limited_structure.pdf)
+  >  [pdf](./papers/Semantic-assisted_3D_normal_distributions_transform_for_scan_registration_in_environments_with_limited_structure.pdf)
 
 # Math Basis
 
 - **Global optimization through rotation space search**
 
-  >  [[url]](https://link.springer.com/content/pdf/10.1007/s11263-008-0186-9.pdf)
+  >  [url](https://link.springer.com/content/pdf/10.1007/s11263-008-0186-9.pdf)
   
 - **Maximum Likelihood from Incomplete Data via the EM Algorithm**
 
@@ -1489,13 +1489,13 @@
   >
   > **Citations:** 65630
   >
-  >  [[url]](https://rss.onlinelibrary.wiley.com/doi/epdf/10.1111/j.2517-6161.1977.tb01600.x)  [[pdf]](./papers/Maximum Likelihood from Incomplete Data via the EM Algorithm.pdf)
+  >  [url](https://rss.onlinelibrary.wiley.com/doi/epdf/10.1111/j.2517-6161.1977.tb01600.x)  [pdf](./papers/Maximum Likelihood from Incomplete Data via the EM Algorithm.pdf)
 
 - **Computational Optimal Transport** :green_book:
 
   > Peyré, G., & Cuturi, M. (2019). Computational optimal transport: With applications to data science. *Foundations and Trends® in Machine Learning*, *11*(5-6), 355-607.
   >
-  >  [[url]](https://arxiv.org/pdf/1803.00567.pdf)  [[pdf]](./papers/Computational Optimal Transport.pdf)
+  >  [url](https://arxiv.org/pdf/1803.00567.pdf)  [pdf](./papers/Computational Optimal Transport.pdf)
 
 # SLAM
 
@@ -1505,7 +1505,7 @@
 
   > Zhang, Ji, and Sanjiv Singh. "LOAM: Lidar Odometry and Mapping in Real-time." *Robotics: Science and Systems*. Vol. 2. No. 9. 2014.
   >
-  >  [[pdf]](./papers/LOAM Lidar Odometry and Mapping in Real-time.pdf)
+  >  [pdf](./papers/LOAM Lidar Odometry and Mapping in Real-time.pdf)
   >
   > **Citations:** 1333
 
@@ -1552,7 +1552,7 @@
   >
   > **Citations:** 578
   >
-  >  [[pdf]](./papers/A Quantitative Analysis of Current Practices in Optical Flow Estimation and the Principles Behind Them.pdf)
+  >  [pdf](./papers/A Quantitative Analysis of Current Practices in Optical Flow Estimation and the Principles Behind Them.pdf)
 
   - A good example for survey.
 
@@ -1562,7 +1562,7 @@
   >
   > **Citations:** 1691
   >
-  >  [[pdf]](./papers/Secrets of Optical Flow Estimation and Their Principles.pdf)
+  >  [pdf](./papers/Secrets of Optical Flow Estimation and Their Principles.pdf)
 
 - **Rotation Averaging**
 
@@ -1570,7 +1570,7 @@
   >
   > **Citations:** 475
   >
-  >  [[pdf]](./papers/Rotation Averaging.pdf)
+  >  [pdf](./papers/Rotation Averaging.pdf)
 
   - The article intrduces how to calculate the average rotation of multiple rotations.
   - The summary recommends two good ways(No best and closed-form way)
