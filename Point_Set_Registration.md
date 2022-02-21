@@ -431,6 +431,12 @@
   > M. Sofka, G. Yang and C. V. Stewart, "Simultaneous Covariance Driven Correspondence (CDC) and Transformation Estimation in the Expectation Maximization Framework," *2007 IEEE Conference on Computer Vision and Pattern Recognition*, 2007, pp. 1-8, doi: 10.1109/CVPR.2007.383166.
   >
   > **Citations:**  50
+  
+- **An Adaptive Data Representation for Robust Point-Set Registration and Merging**
+
+  > Campbell, Dylan, and Lars Petersson. "An adaptive data representation for robust point-set registration and merging." *Proceedings of the IEEE international conference on computer vision*. 2015.
+  >
+  > **Citations:** 60
 
 ### Correlation
 
@@ -671,7 +677,7 @@
 
   - **解决密度不均匀的一些方法：**
 
-    - re-sample: Divide the point set into many many girds, and compute the *mean* point for each grid.(Looks like the NDT method). The **shortcomings** of the method: It neglect the original geometric structure of the point set; And it is hard to tune the parameter of the gird size of other paprmeters.
+    - re-sample: Divide the point set into many many **girds**, and compute the *mean* point for each grid.(Looks like the NDT method). The **shortcomings** of the method: It neglect the original geometric structure of the point set; And it is hard to tune the parameter of the gird size of other paprmeters.
 
   - I mainly know what does it mean: 
 
@@ -679,12 +685,68 @@
     - However, in real application, the lidar will get sparse point set in remote area, so we will get dense closer region and sparse remote region. This uneven scene will lead to inaccurate registration. (**Find the problem, then we can solve it**).
     - To solve this problem, we can choose re-sample to alleviate it. But resample-methods have some problems as mentioned above. 
     - The author proposes a probability model to resembe the GMM model. In pracice, an extra term f(x) is added into the objective function when optimized. :question:(This part is not very clear for me.)
+    
+  - :train2: Can be used in other algorithms.
 
-- **HGMR: Hierarchical Gaussian Mixtures for Adaptive 3D Registration**
+- **Accelerated Generative Models for 3D Point Cloud Data** :heavy_check_mark: :imp:
+
+  > Eckart, Benjamin, et al. "Accelerated generative models for 3d point cloud data." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2016.
+  >
+  > **Citations:** 46
+  >
+  > [[pdf]](./papers/Eckart_Accelerated_Generative_Models_CVPR_2016_paper.pdf)
+
+  - Comments
+    - Representing continuous geometry through voxels creates discretization artifacts and offers no clear way of handling
+      noise or data uncertainty.
+    - Furthermore, the discrete nature of voxels and sub-sampled point clouds greatly complicate spatial processing procedures that require continuous derivatives or high quality normal estimates.
+    - Voxelization and occupancy grids [6, 19] have been established as a popular method to discretize raw PCD over a dense grid, but memory problems emerge when needing fine resolution or large grids. Many voxels may be unoccupied, leading to inefficient memory usage.
+    - (KD-trees and Oct-trees): These structures incur additional overhead compared to dense grids, however, requiring superlinear construction time with respect to the size of the PCD.
+    - (NDT): Though the construction of such a data structure is very efficient, the requirement to voxelize at the beginning
+      can cause a loss of fidelity.
+  - Summary:
+    - Using hierarchical GMM to model the whole point set. The cluster process in fact is very very simliar to the fuzzy cluster process. (In fact, the gmm cluster process is a version of probability for K-Means)
+    - The *Accelerate* in the title means that the hierarchical clusterring can be stopped by a threshold $\lambda_{p}$ .
+  - :question: TODO
+    - Occupancy Grid Generation -- To read(The application.)
+
+- **HGMR: Hierarchical Gaussian Mixtures for Adaptive 3D Registration** :heavy_check_mark: :imp:
 
   > Eckart, Benjamin, Kihwan Kim, and Jan Kautz. "Hgmr: Hierarchical gaussian mixtures for adaptive 3d registration." *Proceedings of the European Conference on Computer Vision (ECCV)*. 2018.
   >
   > **Citations:**  48
+  >
+  > [[pdf]](./papers/Benjamin_Eckart_Fast_and_Accurate_ECCV_2018_paper.pdf)
+
+  <img src="./notes/HGMR.png" style="zoom:50%;" />
+
+  - Comments
+    - ICP and its dozens of variants [34] often fail to produce correct results in many common but challenging scenarios, where the presence of noise, uneven point density, occlusions, or when large pose displacements can cause a large proportion of points to be without valid matches.
+    - but these algorithms(statistical methods) tend to be much slower than ICP and often offer only marginal improvement in all but a few specific circumstances. As a result, ICP-based methods are still heavily used
+      in practice for many real-world applications.
+    - Intuitively, we can view EM as a statistical generalization of ICP: The E Step estimates data associations, replacing ICP’s matching step, while the M Step maximizes the expected likelihood conditioned on these data associations, replacing ICP’s distance minimization step over matched pairs.
+    - Under a single scale, the point cloud modeling and matching process might succumb to noise or sampling inadequacies if the given modeling fidelity is not appropriate to the local data distribution.
+  - Tips:
+    - The covariance of the Gaussian model can be used to describe the geometric features of the point cluster.
+  - **Summary**:
+    - The algorithms is based on the hierarchical model to accelerate the posterial estimation. 
+    - The algorithm uses the convariance of the cluster to describe the geomerty property of the cluster which can be used to decide the level of the cluster.
+    - In the optimization process, the convariance can be used to get the eigen value to optimize.
+  - TODO: (:question:)
+    - How to solve the optimization need more read.
+  - :train2: Can be used in other algorithms.
+  - :high_brightness: 1. Speed up by estimating the weight of two GMMs to speed up the process.
+    	  2) Wether can be added the assessment similar to Fuzzy-based.
+    	  2) Globally Registration.
+    	  2) set-to-set? 在Hierarchical条件下？
+    	  2) Estimate the geomertic features by the property of cluster?
+    	  2) Use the property of the GMM(eigen value) to make a robust cluster?
+
+- **MLMD: Maximum Likelihood Mixture Decoupling for Fast and Accurate Point Cloud Registration**
+
+  > Eckart, Ben, et al. "Mlmd: Maximum likelihood mixture decoupling for fast and accurate point cloud registration." *2015 International Conference on 3D Vision*. IEEE, 2015.
+  >
+  > **Citations:** 44
 
 - **A Probabilistic Framework for Color-Based Point Set Registration**
 
@@ -1316,7 +1378,8 @@
   >
   >  [[url]](https://link.springer.com/content/pdf/10.1007/s11263-020-01359-2.pdf)  [[pdf]](./papers/Image Matching from Handcrafted to Deep Features A Survey.pdf)
   
-  - Mainly focus on feature-matching.
+  - Registration is achieved by the minimization of a statistical discrepancy measure between the two **density** functions.
+  - 
   
 - **Deformable Medical Image Registration: A Survey**
 
