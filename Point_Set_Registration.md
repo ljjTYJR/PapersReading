@@ -748,17 +748,57 @@
   >
   > **Citations:** 44
 
-- **A Probabilistic Framework for Color-Based Point Set Registration**
+- **A Probabilistic Framework for Color-Based Point Set Registration** :heavy_check_mark:
 
-  > Lawin, Felix Järemo, et al. "Density adaptive point set registration." *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*. 2018.
+  > Lawin, Felix Järemo, et al. "Density adaptive point set registration." *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*. **2018**.
   >
   > **Citations:**  39
+  >
+  > [[pdf]](./papers/Danelljan_A_Probabilistic_Framework_CVPR_2016_paper.pdf)
+
+  - Incorporating the color information for each spatial GMM component in the E-M framework. The color information serve as a independent conditional probability.
 
 - **DeepGMR: Learning Latent Gaussian Mixture Models for Registration**
 
   > Yuan, Wentao, et al. "Deepgmr: Learning latent gaussian mixture models for registration." *European conference on computer vision*. Springer, Cham, 2020.
   >
   > **Citations:**  51
+  >
+  > [[pdf]](./papers/DeepGMR2008.09088.pdf)
+  
+  <img src="./notes/DEEP-GMR.png" style="zoom:40%;" />
+  
+  - Comments:
+  
+    - The major difficulty of global registration lies in data association.
+  
+    - In addition, real-world point clouds don’t contain exact point-level correspondences due to sensor noise.
+  
+    - FPFH features used in [48] rely on consistent normal estimation, which is difficult to obtain in practice due to varying sparsity or non-rectilinear geometry.
+  
+    - Moreover, these sparse correspondences are still point-level and suffer the same problem when exact point-level correspondences don’t exist.
+  
+    - However, the iterative EM procedure makes it much more computationally expensive.
+  
+    - *<u>This is because Eq. 6 used in the E Step performs point-to-cluster correspondence based on locality, i.e. a point likely belongs to a component if it is close to the component’s center, which leads to spurious data association between Pˆ and Θ∗ when T is large.</u>*
+  
+      > 从直觉的角度分析为什么local optimal, 是一个很好的角度.
+  
+  - Summary:
+  
+    <img src="./notes/deepgmr_net.png" style="zoom:50%;" />
+  
+    - The author propose a network $f_{\psi}$ to work as a *E* step in *E-M* framework to classify a point and the Gaussian cluster it belongs to. The two following compute block $M_{\theta}$ and $M_{T}$ works as the *M* step in *E-M* framework.
+  
+    - The *E-M* framework is different from previous methods which find the correspondence between points-to-clusters or clusters-to-clusters. But find a deterministic correspondence? (:question:) 
+  
+      > How does it work???
+  
+  - Thoughts
+  
+    - What's novelty? 1. Solve the hard problem which is accepted publicly. 2. Improve the understanding of some problems(Include a brief overview of the past methods, add your own understanding —— 要对一类问题进行抽象化/泛化，找出共性/瓶颈，然后解决). 3. Introduce some new ideas to the problems.
+  
+  - Future work :question:
 
 ### **NDT & Variants**
 
@@ -1150,6 +1190,12 @@
   > Wang, Yujie, et al. "STORM: Structure-based Overlap Matching for Partial Point Cloud Registration." *IEEE Transactions on Pattern Analysis and Machine Intelligence* (2022).
   >
   > **Citations:** 0
+  
+- **Colored Point Cloud Registration Revisited**
+
+  > Park, Jaesik, Qian-Yi Zhou, and Vladlen Koltun. "Colored point cloud registration revisited." *Proceedings of the IEEE international conference on computer vision*. 2017.
+  >
+  > **Citations:** 142
 
 ## Learning-Based
 
