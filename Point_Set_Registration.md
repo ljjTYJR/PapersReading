@@ -437,6 +437,8 @@
   > Campbell, Dylan, and Lars Petersson. "An adaptive data representation for robust point-set registration and merging." *Proceedings of the IEEE international conference on computer vision*. 2015.
   >
   > **Citations:** 60
+  >
+  > [[pdf]](./papers/Campbell_An_Adaptive_Data_ICCV_2015_paper.pdf)
 
 ### Correlation
 
@@ -531,19 +533,26 @@
   >
   >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5444893)  [[pdf]](./papers/Rigid and Articulated Point Registration with Expectation Conditional Maximization.pdf)
   
-  - This method is similar to CPD, but the difference is that in this algorithm(which is called **ECM**), the **isotropic convariance** is replaced by **anisotropic convariance**. To solve the problem of estimating R under the case of anisotropic convariance, the orthogonal constraint is put on the rotation matrix, and get the estimation of R by SDP.
+  - Summary:
 
+    - This method is similar to CPD, the difference is that in this algorithm(which is called **ECM**), the **isotropic covariance** is replaced by **anisotropic covariance**. To solve the problem of estimating $R$ under the case of anisotropic covariance, the orthogonal constraint is put on the rotation matrix, and get the estimation of $R$ by *SDP*.
+    - The reason the author mentions using the anisotropic covariance is to treat the covariance as a parameter of the model and to be optimized in the *E-M* process. The former methods use isotropic covariance combined with annealing where covariance works as a parameter of the process of annealing.
+  
+  - Cons:
+  
+    - Other papers mention that using anisotropic covariance improve little in fact.
+  
   - The paper has some assumptions which are interesting:
   
     - This paper treat the algorithm as a **Cluster and parameter estimation** problem. The root can be referred to:
   
       [Model-Based Clustering, Discriminant Analysis, and Density Estimation]([Model-Based Clustering, Discriminant Analysis, and Density Estimation (tandfonline.com)](https://www.tandfonline.com/doi/pdf/10.1198/016214502760047131?needAccess=true))
   
-    - Using the isotropic convariance has two advantages:
+    - Using the isotropic covariance has two advantages:
   
-      - With isotropic convariance, the Mahalanobis Distance is replaced by Euclidean Distance, the rotation can be computed in a closed-form way.
+      - With isotropic covariance, the Mahalanobis Distance is replaced by Euclidean Distance, the rotation can be computed in a closed-form way.
   
-      - The isotropic convariance can be combined with annealing. 
+      - The isotropic covariance can be combined with annealing. 
   
         > **The drawback**: Anisotropic noise in the data is not properly handled, it does not use the full Gaussian model, and it does not fully benefit from the convergence properties ofEMbecause it anneals the variance
         > rather than considering it as a parameter to be estimated
@@ -597,7 +606,7 @@
   
     - In the original paper, $\pi_{mn}$ is given in the uniform form: $\pi_{mn}=\frac{1}{N}$ , but this paper demonstrates that the $\pi_{mn}$ can be calculated by $\pi_{mn}=\frac{\tau}{|D|}$, where $|D|$ is the corresponding features' number of the point.
   
-      > Here, the author changes the prior estimation, there is also related work about changing the convariance about the local structure, where can be found in [[LSG-CPD]](./papers/LSG-CPD Coherent Point Drift with Local Surface Geometry.pdf)
+      > Here, the author changes the prior estimation, there is also related work about changing the covariance about the local structure, where can be found in [[LSG-CPD]](./papers/LSG-CPD Coherent Point Drift with Local Surface Geometry.pdf)
   
     - In the *M* step, the parameter can be obtained by calculate the partial derviation directly. The difficulty lies in the non-rigid term, in the original paper, the author adds a regularization term to form a smotthness. <u>The transformation is calculated by solving a linear system</u>.
   
@@ -655,7 +664,7 @@
   
   - This paper view the problem in a different view. The CPD or GMM view the point set registration as a *point fitting probaility model* problem, to estimate the parameter. But in this paper, the author view the problem as a *cluster* problem. Many point sets together find the cluster model.
   
-  - The convariance is a by-product which can be used to smooth the result( Rejecting the outliers. )
+  - The covariance is a by-product which can be used to smooth the result( Rejecting the outliers. )
   
   - cons:
   
@@ -663,7 +672,7 @@
   
     - > is orders of **magnitude slower than** common ICP variants or our approach
   
-- **Density Adaptive Point Set Registration** :heavy_check_mark: :imp:(inportant)
+- **Density Adaptive Point Set Registration** :heavy_check_mark: :imp:(important)
 
   > Lawin, Felix Järemo, et al. "Density adaptive point set registration." *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*. 2018.
   >
@@ -671,21 +680,16 @@
   >
   >  [[pdf]](./papers/Lawin_Density_Adaptive_Point_CVPR_2018_paper.pdf) [[supp]](./papers/2354-supp.pdf)
 
-  - **句子摘抄**
-
-    - > These methods perform alignment either by employing a **correlation based** approach or using an **EM based** optimization framework
-
-  - **解决密度不均匀的一些方法：**
-
-    - re-sample: Divide the point set into many many **girds**, and compute the *mean* point for each grid.(Looks like the NDT method). The **shortcomings** of the method: It neglect the original geometric structure of the point set; And it is hard to tune the parameter of the gird size of other paprmeters.
-
-  - I mainly know what does it mean: 
-
-    - Very similar to fuzzy cluster-based methods,  it means if we use the cluster to group register many scenes, it will meet the problem that: the cluster centroids will meet a problem that thest centroids will lie in the dense region.
-    - However, in real application, the lidar will get sparse point set in remote area, so we will get dense closer region and sparse remote region. This uneven scene will lead to inaccurate registration. (**Find the problem, then we can solve it**).
-    - To solve this problem, we can choose re-sample to alleviate it. But resample-methods have some problems as mentioned above. 
-    - The author proposes a probability model to resembe the GMM model. In pracice, an extra term f(x) is added into the objective function when optimized. :question:(This part is not very clear for me.)
-    
+  - Summary:
+    - <img src="./notes/adaptive_density.png" style="zoom:50%;" />
+    - The method is based on *JRMPC* (It firstly construct GMM clusters and register point sets by estimating cluster parameters. Also similar to fuzzy-cluster, the difference is to use GMM cluster or fuzzy cluster). 
+    - In real sensors, the points are sparse in remote areas, and points are dense in close areas, which will result in more clusters in dense areas. These uneven samples will result in inaccurate registration.
+    - The paper uses a latent distribution to replace the original sample distribution by minimizing *K-L Divergence* to get a relatively uniform distribution. In practice, an extra term $f(x)$ is added in the GMM as a kind of weight.
+  - Pros:
+    - Compared to baseline methods(JR-MPC), the proposed method performs better in real datasets.
+  - Related work and comments
+    - To solve the uneven samples, there are also many other ways:
+      - Re-sample: Divide the point set into many many **girds**, and compute the *mean* point for each grid. (Looks like the NDT method). The **shortcomings** of the method: It neglects the original geometric structure of the point set, And it is hard to tune the parameter such as grid size.
   - :train2: Can be used in other algorithms.
 
 - **Accelerated Generative Models for 3D Point Cloud Data** :heavy_check_mark: :imp:
@@ -696,17 +700,19 @@
   >
   > [[pdf]](./papers/Eckart_Accelerated_Generative_Models_CVPR_2016_paper.pdf)
 
+  - Summary:
+    - <img src="./notes/her-gmm.png" style="zoom:50%;" />
+    - This paper is about how to represent a 3-D point set. The author proposes to use the *Hierarchy of Gaussian Mixtures*.
+    - The main consideration of *Hierarchy* is a trade-off between *Fidelity* and *memory usage*. 
+    - The authors are from *Nvidia*, the hierarchical representation is beneficial to computing parallelly by GPU, which results in *accelerated* in the title.
   - Comments
     - Representing continuous geometry through voxels creates discretization artifacts and offers no clear way of handling
       noise or data uncertainty.
-    - Furthermore, the discrete nature of voxels and sub-sampled point clouds greatly complicate spatial processing procedures that require continuous derivatives or high quality normal estimates.
+    - Furthermore, the discrete nature of voxels and sub-sampled point clouds greatly complicate spatial processing procedures that require continuous derivatives or high-quality normal estimates.
     - Voxelization and occupancy grids [6, 19] have been established as a popular method to discretize raw PCD over a dense grid, but memory problems emerge when needing fine resolution or large grids. Many voxels may be unoccupied, leading to inefficient memory usage.
     - (KD-trees and Oct-trees): These structures incur additional overhead compared to dense grids, however, requiring superlinear construction time with respect to the size of the PCD.
     - (NDT): Though the construction of such a data structure is very efficient, the requirement to voxelize at the beginning
       can cause a loss of fidelity.
-  - Summary:
-    - Using hierarchical GMM to model the whole point set. The cluster process in fact is very very simliar to the fuzzy cluster process. (In fact, the gmm cluster process is a version of probability for K-Means)
-    - The *Accelerate* in the title means that the hierarchical clusterring can be stopped by a threshold $\lambda_{p}$ .
   - :question: TODO
     - Occupancy Grid Generation -- To read(The application.)
 
@@ -718,8 +724,10 @@
   >
   > [[pdf]](./papers/Benjamin_Eckart_Fast_and_Accurate_ECCV_2018_paper.pdf)
 
-  <img src="./notes/HGMR.png" style="zoom:50%;" />
-
+  - Summary:
+    - <img src="P:\PapersReading\notes/HGMR.png" style="zoom:50%;" />
+    - The consideration of the paper shows above: the deterministic division of point sets can not represent the raw point set well.
+    - The algorithm is based on the hierarchical GMM model to accelerate the posterior estimation. The algorithm uses the covariance of the cluster to describe the geometry property of the cluster which can be used to decide the level of the cluster. The covariance of the Gaussian model has three eigenvalue $\lambda_{1} \lambda_{2} \lambda_{3}$, if $\lambda_{3} << \lambda_{1},\lambda_{2}$, this Gaussian model can be viewed very similar to a planar, and no need to divide in deeper.
   - Comments
     - ICP and its dozens of variants [34] often fail to produce correct results in many common but challenging scenarios, where the presence of noise, uneven point density, occlusions, or when large pose displacements can cause a large proportion of points to be without valid matches.
     - but these algorithms(statistical methods) tend to be much slower than ICP and often offer only marginal improvement in all but a few specific circumstances. As a result, ICP-based methods are still heavily used
@@ -728,19 +736,15 @@
     - Under a single scale, the point cloud modeling and matching process might succumb to noise or sampling inadequacies if the given modeling fidelity is not appropriate to the local data distribution.
   - Tips:
     - The covariance of the Gaussian model can be used to describe the geometric features of the point cluster.
-  - **Summary**:
-    - The algorithms is based on the hierarchical model to accelerate the posterial estimation. 
-    - The algorithm uses the convariance of the cluster to describe the geomerty property of the cluster which can be used to decide the level of the cluster.
-    - In the optimization process, the convariance can be used to get the eigen value to optimize.
   - TODO: (:question:)
     - How to solve the optimization need more read.
   - :train2: Can be used in other algorithms.
   - :high_brightness: 1. Speed up by estimating the weight of two GMMs to speed up the process.
     	  2) Wether can be added the assessment similar to Fuzzy-based.
-    	  2) Globally Registration.
-    	  2) set-to-set? 在Hierarchical条件下？
-    	  2) Estimate the geomertic features by the property of cluster?
-    	  2) Use the property of the GMM(eigen value) to make a robust cluster?
+       3) Globally Registration.
+       4) set-to-set? 在Hierarchical条件下？
+       5) Estimate the geomertic features by the property of cluster?
+       6) Use the property of the GMM(eigen value) to make a robust cluster?
 
 - **MLMD: Maximum Likelihood Mixture Decoupling for Fast and Accurate Point Cloud Registration**
 
@@ -756,7 +760,8 @@
   >
   > [[pdf]](./papers/Danelljan_A_Probabilistic_Framework_CVPR_2016_paper.pdf)
 
-  - Incorporating the color information for each spatial GMM component in the E-M framework. The color information serve as a independent conditional probability.
+  - Summary
+    - Incorporating the colour information for each spatial GMM component in the E-M framework. The colour information serves as an independent conditional probability.
 
 - **DeepGMR: Learning Latent Gaussian Mixture Models for Registration**
 
@@ -767,6 +772,13 @@
   > [[pdf]](./papers/DeepGMR2008.09088.pdf)
   
   <img src="./notes/DEEP-GMR.png" style="zoom:40%;" />
+  
+  - Summary:
+  
+    <img src="./notes/deepgmr_net.png" style="zoom:50%;" />
+  
+    - The author proposes a network $f_{\psi}$ to work as an *E* step in the *E-M* framework to classify a point and the Gaussian cluster it belongs to. The two following computing blocks $M_{\theta}$ and $M_{T}$ work as the *M* step in the *E-M* framework.
+    - The *E-M* framework is different from previous methods which find the correspondence between points-to-clusters or clusters-to-clusters. But find a deterministic correspondence between clusters? (:question: How?)
   
   - Comments:
   
@@ -783,16 +795,6 @@
     - *<u>This is because Eq. 6 used in the E Step performs point-to-cluster correspondence based on locality, i.e. a point likely belongs to a component if it is close to the component’s center, which leads to spurious data association between Pˆ and Θ∗ when T is large.</u>*
   
       > 从直觉的角度分析为什么local optimal, 是一个很好的角度.
-  
-  - Summary:
-  
-    <img src="./notes/deepgmr_net.png" style="zoom:50%;" />
-  
-    - The author propose a network $f_{\psi}$ to work as a *E* step in *E-M* framework to classify a point and the Gaussian cluster it belongs to. The two following compute block $M_{\theta}$ and $M_{T}$ works as the *M* step in *E-M* framework.
-  
-    - The *E-M* framework is different from previous methods which find the correspondence between points-to-clusters or clusters-to-clusters. But find a deterministic correspondence? (:question:) 
-  
-      > How does it work???
   
   - Thoughts
   
@@ -1173,7 +1175,9 @@
   >
   >  [[pdf]](./papers/Ao_SpinNet_Learning_a_General_Surface_Descriptor_for_3D_Point_Cloud_CVPR_2021_paper.pdf)
 
-  - This paper proposes a neural network to learn correspondence point-wise, the core idea is transforming the raw point cloud to a cylindrical space, which can be used to maintain rotation invariance. The rotation invariance is beneficial to generalization.
+  - Summary:
+    - ![](./notes/spinnet.PNG)
+    - This paper proposes a neural network to learn correspondence point-wise, the core idea is transforming the raw point cloud to a cylindrical space, which can be used to maintain rotation invariance. The rotation invariance is beneficial to generalization.
 
 - **Geometric Transformer for Fast and Robust Point Cloud Registration**
 
@@ -1294,7 +1298,7 @@
   >  [[url]](https://arxiv.org/pdf/2004.11540.pdf)  [[pdf]](./papers/Deep Global Registration.pdf)
 
   - This paper propose a registration algorithm based-on deep-learning.
-  - It uses the network to find the inlier features(The used features provided by "FCGF")；Use a kind of function to calculate the coarse alignment; Use the gradient-based methods to get a find registration.
+  - It uses the network to find the inlier features(The used features provided by "FCGF"); Use a kind of function to calculate the coarse alignment; Use the gradient-based methods to get a find registration.
   - **Some thoughts:** The positions of the points can also be regarded as a kind of "features".
 
 - **Large-scale Point Cloud Semantic Segmentation with Superpoint Graphs**
