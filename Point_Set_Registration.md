@@ -762,6 +762,7 @@
 
   - Summary
     - Incorporating the colour information for each spatial GMM component in the E-M framework. The colour information serves as an independent conditional probability.
+    - The color serves as a feature, the point distribution is a joint distribution in with both spatial space and feature space. $f(x,y)$ conditioned by latent variabled $z$.
 
 - **DeepGMR: Learning Latent Gaussian Mixture Models for Registration**
 
@@ -801,6 +802,22 @@
     - What's novelty? 1. Solve the hard problem which is accepted publicly. 2. Improve the understanding of some problems(Include a brief overview of the past methods, add your own understanding —— 要对一类问题进行抽象化/泛化，找出共性/瓶颈，然后解决). 3. Introduce some new ideas to the problems.
   
   - Future work :question:
+  
+- **GOGMA: Globally-Optimal Gaussian Mixture Alignment**
+
+  > Campbell, Dylan, and Lars Petersson. "Gogma: Globally-optimal gaussian mixture alignment." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2016.
+  >
+  > **Citations:** 73
+  >
+  > [[pdf]](./papers/Campbell_GOGMA_Globally-Optimal_Gaussian_CVPR_2016_paper.pdf)
+
+- **Efficient Global Point Cloud Alignment Using Bayesian Nonparametric Mixtures**
+
+  > Straub, Julian, et al. "Efficient global point cloud alignment using Bayesian nonparametric mixtures." *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*. 2017.
+  >
+  > **Citations:** 31
+  >
+  > [[pdf]](./papers/Straub_Efficient_Global_Point_CVPR_2017_paper.pdf)
 
 ### **NDT & Variants**
 
@@ -1223,13 +1240,17 @@
   >
   >  [[url]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Gojcic_The_Perfect_Match_3D_Point_Cloud_Matching_With_Smoothed_Densities_CVPR_2019_paper.pdf)
 
-- **Registration Loss Learning for Deep Probabilistic Point Set Registration**
+- **Registration Loss Learning for Deep Probabilistic Point Set Registration** :heavy_check_mark: 
 
-  > <International Conference on 3D Vision>
+  > Lawin, Felix Järemo, and Per-Erik Forssén. "Registration loss learning for deep probabilistic point set registration." *2020 International Conference on 3D Vision (3DV)*. IEEE, 2020.
   >
-  >  [[pdf]](./papers/Registration Loss Learning for Deep Probabilistic Point Set Registration.pdf)
+  > [[pdf]](./papers/Registration Loss Learning for Deep Probabilistic Point Set Registration.pdf)
   >
   > [[NOTES]](./notes/Registration Loss Learning for Deep Probabilistic Point Set Registration.md)
+  
+  - Summary:
+    - <img src="./notes/GMM-Feature.png" style="zoom:70%;"/>
+    - Similar to GMMs with color, but the colour is replaced by feature. In general, there are two distributions to form a joint distribution: $p(x,y)$ —— $x$ is the sptial information, $y$ is the feature distribution. The nueral network set a point-wise feature and a weight.
   
 - **PREDATOR: Registration of 3D Point Clouds with Low Overlap** :heavy_check_mark: :red_circle:
 
