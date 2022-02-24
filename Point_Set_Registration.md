@@ -764,7 +764,7 @@
     - Incorporating the colour information for each spatial GMM component in the E-M framework. The colour information serves as an independent conditional probability.
     - The color serves as a feature, the point distribution is a joint distribution in with both spatial space and feature space. $f(x,y)$ conditioned by latent variabled $z$.
 
-- **DeepGMR: Learning Latent Gaussian Mixture Models for Registration**
+- **DeepGMR: Learning Latent Gaussian Mixture Models for Registration** :heavy_check_mark:
 
   > Yuan, Wentao, et al. "Deepgmr: Learning latent gaussian mixture models for registration." *European conference on computer vision*. Springer, Cham, 2020.
   >
@@ -772,11 +772,11 @@
   >
   > [[pdf]](./papers/DeepGMR2008.09088.pdf)
   
-  <img src="./notes/DEEP-GMR.png" style="zoom:40%;" />
+  <img src="./notes/DEEP-GMR.png" style="zoom:40%;"/>
   
   - Summary:
   
-    <img src="./notes/deepgmr_net.png" style="zoom:50%;" />
+    <img src="./notes/deepgmr_net.png" style="zoom:50%;"/>
   
     - The author proposes a network $f_{\psi}$ to work as an *E* step in the *E-M* framework to classify a point and the Gaussian cluster it belongs to. The two following computing blocks $M_{\theta}$ and $M_{T}$ work as the *M* step in the *E-M* framework.
     - The *E-M* framework is different from previous methods which find the correspondence between points-to-clusters or clusters-to-clusters. But find a deterministic correspondence between clusters? (:question: How?)
@@ -803,7 +803,7 @@
   
   - Future work :question:
   
-- **GOGMA: Globally-Optimal Gaussian Mixture Alignment**
+- **GOGMA: Globally-Optimal Gaussian Mixture Alignment** :heavy_check_mark: 
 
   > Campbell, Dylan, and Lars Petersson. "Gogma: Globally-optimal gaussian mixture alignment." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2016.
   >
@@ -811,13 +811,52 @@
   >
   > [[pdf]](./papers/Campbell_GOGMA_Globally-Optimal_Gaussian_CVPR_2016_paper.pdf)
 
-- **Efficient Global Point Cloud Alignment Using Bayesian Nonparametric Mixtures**
+  - Summary:
+    - Find the global optimal transformation based-on GMMs(L2-distance).  Global optimization is realized by *BnB*. 
+    - Isotropic covariance is set and closed-form solution can be derived, the representation of the rotation and translation is the same as *GO-ICP*, where rotation is represented by a $\pi-ball$.
+    - The termination condition is the difference of cost function $|f - f^{*}| < \epsilon$ .
+
+- **Efficient Global Point Cloud Alignment Using Bayesian Nonparametric Mixtures** :heavy_check_mark: :imp:
 
   > Straub, Julian, et al. "Efficient global point cloud alignment using Bayesian nonparametric mixtures." *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*. 2017.
   >
   > **Citations:** 31
   >
   > [[pdf]](./papers/Straub_Efficient_Global_Point_CVPR_2017_paper.pdf)
+
+  - Summary
+
+    <img src="./notes/Rotation-invariant2.png" style="zoom:50%;" />
+
+    <img src="./notes/rotation-variant-translation.png" style="zoom:50%;" />
+
+    - The method aims to find the global optimal transformation by decomposition to translation $t^*$, rotation $R^*$. Specifically, computing $R^*$ firstly by search the translation-invariants features space(point-wise normals). After getting $R^*$, using it to compute $t^*$ to search translation space by BnB.
+
+      ```mermaid
+      graph LR
+      	T((R,t)) --Rot-invariant --> A[R*] --> B[t*]
+      ```
+
+    - $R^*$ :
+      - pointwise **normals**: vonMises-Fisher mixture models (vMF-MM) **Used to model angle distribution**. 
+      - **Rotation space representation** 
+      - Distribution-to-distribution; **Numbers of Model: nonparametric method automatically.**
+    - $t^*$ : DP(Dirichlet process)Gaussian mixure model(GMM).
+
+  - Why
+
+    - DP(Dirichlet process)
+      - Automatically compute the numbers of mixtures.
+      - This allows adaptive compression of the data, enabling the processing of large **noisy** point clouds
+    - Decomposition: Efficiency (Two low-dimension searching space *VS* one high-dimension searching space)
+      - Based on a invariant features.
+    - Rotation Searching Space: Less overlap, more accurate subdivision, faster.
+
+  - Comments:
+
+    - BB requires three major components: (1) a tessellation method for covering the optimization domain with subsets; (2) a branch/refinement procedure for subdividing any subset into smaller subsets; and (3) upper and lower bounds of the maximum objective on each subset to be used for pruning.
+    - About the representation of rotation space: 
+      - axis-angle (AA) space:  First, it covers 46% of rotation space twice. Second, it does not lead to uniform tessellation in rotation space.
 
 ### **NDT & Variants**
 
@@ -834,7 +873,7 @@
   
   - keywords: grid; ndt; newton optimization;
   
-  <img src="./notes/ndt.png" style="zoom: 33%;" />
+  <img src="./notes/ndt.png" style="zoom: 33%;"/>
   
   - A kind of low-level description, no feature and structural information.
 
@@ -910,6 +949,10 @@
 
   - In our method, fuzzy clusters are utilized to represent a scan, and the registration of two given scans is realized by minimizing a fuzzy weighted sum of the distances between their fuzzy cluster centers.
   - Use a coarse-to-fine framework, BnBs to get a global registration and provide a good initialization for refinement.(coarse: center-to-center; fine: point-to-center)
+  - TODO：
+    - [ ] 神经网络识别overlap的区域，然后进行registration.
+    - [ ] 混合聚类；
+    - [ ] 分层聚类
 
 - **FuzzyPSReg: Strategies of Fuzzy Cluster-Based Point Set Registration** :heavy_check_mark: :red_circle:
 
@@ -1194,7 +1237,7 @@
 
   - Summary:
     - ![](./notes/spinnet.PNG)
-    - This paper proposes a neural network to learn correspondence point-wise, the core idea is transforming the raw point cloud to a cylindrical space, which can be used to maintain rotation invariance. The rotation invariance is beneficial to generalization.
+    - This paper proposes a neural network to learn correspondence point-wise, the core idea is transforming the raw point cloud to a cylindrical space, which can be used to maintain **rotation invariance**. The rotation invariance is beneficial to generalization.
 
 - **Geometric Transformer for Fast and Robust Point Cloud Registration**
 
@@ -1217,6 +1260,42 @@
   > Park, Jaesik, Qian-Yi Zhou, and Vladlen Koltun. "Colored point cloud registration revisited." *Proceedings of the IEEE international conference on computer vision*. 2017.
   >
   > **Citations:** 142
+
+### Feature-based Registration
+
+- **Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search** :heavy_check_mark:
+
+  >  Liu, Yinlong, et al. "Efficient global point cloud registration by matching rotation invariant features through translation search." *Proceedings of the European Conference on Computer Vision (ECCV)*. 2018.
+  >
+  >  **Citations:** 40
+  >
+  >  [[url]](https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Yinlong_Liu_Efficient_Global_Point_ECCV_2018_paper.pdf)  [[pdf]](./papers/Yinlong_Liu_Efficient_Global_Point_ECCV_2018_paper.pdf)
+  >
+  >  [[notes]](./notes/Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search.md)
+
+  - Summary
+
+    <img src="./notes/Rotation-Invariant.png" style="zoom:50%;" />
+
+    - The method aims to find the global optimization for rigid pairwise optimization. The transformation is decomposed computing optimal translation and optimal rotation separately. Specifically,  optimal translation $t^*$ is computed first, and then rotation $r^*$ is computed then.
+
+    - For computing $t^*$, the rotation-invariant features is constructed by two points $x_1$ and $x_2$:
+      $$
+      p_{i} = \{ |x_1|, |x_2|, |x_1 - x_2| \}^{T}
+      $$
+      is rotation invariant. Based on the consensus set constructed by two point sets. Constructed the cost function and optimized it by BnB-search to get optimal $t^*$ .
+
+    - After finding the $t^*$, using local-method to compute $R$ or use *RANSAC* to get $R$ directly.
+
+  - cons:
+
+    - No code, the compared baseline methods are few.
+
+- **Super4PCS: Fast Global Pointcloud Registration via Smart Indexing**
+
+  > Mellado, Nicolas, Dror Aiger, and Niloy J. Mitra. "Super 4pcs fast global pointcloud registration via smart indexing." *Computer graphics forum*. Vol. 33. No. 5. 2014.
+  >
+  > **Citations:** 399
 
 ## Learning-Based
 
@@ -1251,6 +1330,7 @@
   - Summary:
     - <img src="./notes/GMM-Feature.png" style="zoom:70%;"/>
     - Similar to GMMs with color, but the colour is replaced by feature. In general, there are two distributions to form a joint distribution: $p(x,y)$ —— $x$ is the sptial information, $y$ is the feature distribution. The nueral network set a point-wise feature and a weight.
+    - For the network: Input: coordinate of points; Output: Featurs & weights. The feature distribution: von Mises-Fisher distribution.
   
 - **PREDATOR: Registration of 3D Point Clouds with Low Overlap** :heavy_check_mark: :red_circle:
 
@@ -1322,6 +1402,14 @@
   - It uses the network to find the inlier features(The used features provided by "FCGF"); Use a kind of function to calculate the coarse alignment; Use the gradient-based methods to get a find registration.
   - **Some thoughts:** The positions of the points can also be regarded as a kind of "features".
 
+- **Deep Closest Point: Learning Representations for Point Cloud Registration**
+
+  > Wang, Yue, and Justin M. Solomon. "Deep closest point: Learning representations for point cloud registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2019.
+  >
+  > **Citations:** 319
+  >
+  > [[pdf]](./papers/Wang_Deep_Closest_Point_Learning_Representations_for_Point_Cloud_Registration_ICCV_2019_paper.pdf)
+
 - **Large-scale Point Cloud Semantic Segmentation with Superpoint Graphs**
 
   > Landrieu, Loic, and Martin Simonovsky. "Large-scale point cloud semantic segmentation with superpoint graphs." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2018.
@@ -1377,12 +1465,6 @@
 
 ## Different kinds of Improvements
 
-- **Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search**
-
-  >  [[url]](https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Yinlong_Liu_Efficient_Global_Point_ECCV_2018_paper.pdf)  [[pdf]](./papers/Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search)
-  >
-  > [[notes]](./notes/Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search.md)
-  
 - **SDRSAC: Semidefinite-Based Randomized Approach for Robust Point Cloud Registration without Correspondences**
 
   > <CVPR2019>
