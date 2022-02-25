@@ -90,7 +90,7 @@
   >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1047997&tag=1)  [[pdf]](./papers/The Trimmed Iterative Closest Point Algorithm.pdf)
 
   Tr-ICP: '*Tr*' means the '*Trimmed*', use the '*[Least Trimmed Square](https://en.wikipedia.org/wiki/Least_trimmed_squares)*' method in the process to improve robustness.
-  Pros: can converge when the overlapping rate is under 50%;
+  Pros: can converge when the **overlapping** rate is under 50%;
   cons: still need a good initial pose;
 
 - **Robust Euclidean alignment of 3D point sets the trimmed iterative closest point algorithm** :heavy_check_mark:
@@ -235,20 +235,6 @@
 
   Sparse ICP: 仍然使用欧式距离寻找ICP中的correspondence，但是在优化阶段，使用了$d_2^p$ 代替 $d_2$， 提高了稀疏性，对Outlier和noise有一定的鲁棒性。
 
-- **Fast global registration** :heavy_check_mark:
-
-  > Zhou, Q. Y., Park, J., & Koltun, V. (2016, October). Fast global registration. In *European conference on computer vision* (pp. 766-782). Springer, Cham.
-  >
-  > **Citations:** 421
-  >
-  >  [[url]](http://vladlen.info/papers/fast-global-registration.pdf)  [[pdf]](./papers/Fast Global Registration.pdf)
-  
-  - Not the ICP variant
-  - Need the correspondence, (FPFH or other)
-  - Use an estimator called *scaled Geman-McClure estimator* to reject the outliers and noise
-  - Induce the *Black-Rangarajan duality* to optimize the objective function
-  - Faster and more accurate than ICP, no need to find the correspondence and closet in the inner loop.
-  
 - **ICP registration using invariant features** **（ICPIF)** :heavy_check_mark: :red_circle:
 
   > Sharp, Gregory C., Sang W. Lee, and David K. Wehe. "ICP registration using invariant features." *IEEE Transactions on Pattern Analysis and Machine Intelligence* 24.1 (2002): 90-102.
@@ -371,7 +357,10 @@
   >
   >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8794011)  [[pdf]](./papers/Speeding Up Iterative Closest Point Using Stochastic Gradient Descent.pdf)
 
-  - SGD-ICP: Use stochastic gradient descent (SGD) to iterate the parameter.
+  - Summary
+    - Use stochastic gradient descent (SGD) to iterate the parameter.
+  - Why
+    - The gradient: In a short process, the correspondence points are fixed, the function can be viewed as differentiable.
   - Faster than standard ICP and GICP, not resulting in loss in accuracy.
 
 - **Estimating Motion Uncertainty with Bayesian ICP** :heavy_check_mark:
@@ -847,7 +836,7 @@
 
     - DP(Dirichlet process)
       - Automatically compute the numbers of mixtures.
-      - This allows adaptive compression of the data, enabling the processing of large **noisy** point clouds
+      - This allows adaptive compression of the data, enabling the processing of large **noisy** point clouds, (is a kind of way to compressing data)
     - Decomposition: Efficiency (Two low-dimension searching space *VS* one high-dimension searching space)
       - Based on a invariant features.
     - Rotation Searching Space: Less overlap, more accurate subdivision, faster.
@@ -857,6 +846,10 @@
     - BB requires three major components: (1) a tessellation method for covering the optimization domain with subsets; (2) a branch/refinement procedure for subdividing any subset into smaller subsets; and (3) upper and lower bounds of the maximum objective on each subset to be used for pruning.
     - About the representation of rotation space: 
       - axis-angle (AA) space:  First, it covers 46% of rotation space twice. Second, it does not lead to uniform tessellation in rotation space.
+
+  - Usuage
+
+    - The proposed distribution of estimating the distribution of normals can be used in SLAM.
 
 ### **NDT & Variants**
 
@@ -910,11 +903,18 @@
 
 ## Partial Overlapping
 
-- **Fully Automatic Registration of 3D Point Clouds**
+- **Fully Automatic Registration of 3D Point Clouds** :heavy_check_mark: **(Not really understand)**
 
   > Makadia, Ameesh, Alexander Patterson, and Kostas Daniilidis. "Fully automatic registration of 3D point clouds." *2006 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'06)*. Vol. 1. IEEE, 2006.
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1640899)
+  > **Citations:** 410
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1640899) [[pdf]](./papers/Fully_Automatic_Registration_of_3D_Point_Clouds.pdf)
+
+  - Summary
+    - This paper propose a registration method using global features to register point sets. The paper claims that it can handle the registration problem in the case of overlap is about 40%(Low overlap.)
+    - The features extraction are realized by *EGI(Extended Gaussian Image)*, it is a kind of *distribution* to represent the directional variable(Though this paper describe it by histogram). The rotation estimation is then computed by optimizing correletion of two histograms. (By the way, this kind of features is translation-invariant).
+    - Translation is computed based on the rotation got from step 2.
 
 - **A fast automatic method for registration of partially-overlapping range images**
 
@@ -1202,6 +1202,8 @@
   >
   > **Citations:** 393
 
+  - Summary
+
 - **Robust Point Matching for Nonrigid Shapes by Preserving Local Neighborhood Structures** :heavy_check_mark:
 
   > Zheng, Y., & Doermann, D. (2006). Robust point matching for nonrigid shapes by preserving local neighborhood structures. *IEEE transactions on pattern analysis and machine intelligence*, *28*(4), 643-649.
@@ -1290,6 +1292,20 @@
   - cons:
 
     - No code, the compared baseline methods are few.
+
+- **Fast global registration** :heavy_check_mark:
+
+  > Zhou, Q. Y., Park, J., & Koltun, V. (2016, October). Fast global registration. In *European conference on computer vision* (pp. 766-782). Springer, Cham.
+  >
+  > **Citations:** 421
+  >
+  > [[url]](http://vladlen.info/papers/fast-global-registration.pdf)  [[pdf]](./papers/Fast Global Registration.pdf)
+
+  - Not the ICP variant
+  - Need the correspondence, (FPFH or other)
+  - Use an estimator called *scaled Geman-McClure estimator* to reject the outliers and noise
+  - Induce the *Black-Rangarajan duality* to optimize the objective function
+  - Faster and more accurate than ICP, no need to find the correspondence and closet in the inner loop.
 
 - **Super4PCS: Fast Global Pointcloud Registration via Smart Indexing**
 
@@ -1402,13 +1418,41 @@
   - It uses the network to find the inlier features(The used features provided by "FCGF"); Use a kind of function to calculate the coarse alignment; Use the gradient-based methods to get a find registration.
   - **Some thoughts:** The positions of the points can also be regarded as a kind of "features".
 
-- **Deep Closest Point: Learning Representations for Point Cloud Registration**
+- **Deep Closest Point: Learning Representations for Point Cloud Registration** :heavy_check_mark:
 
   > Wang, Yue, and Justin M. Solomon. "Deep closest point: Learning representations for point cloud registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2019.
   >
   > **Citations:** 319
   >
   > [[pdf]](./papers/Wang_Deep_Closest_Point_Learning_Representations_for_Point_Cloud_Registration_ICCV_2019_paper.pdf)
+
+  - Summary
+
+    <img src="./notes/DCP.png" style="zoom:50%;" />
+
+    - Three steps: 1) Features extraction; 2) Soft correspondence; 3) SVD compute transformation.
+
+  - Why
+
+    - Soft correspondence: differentiable.
+
+  - cons
+
+    - Object-level input.(Which means the size of input point set is about 500-5k points).
+
+- **3DRegNet: A Deep Neural Network for 3D Point Registration** :heavy_check_mark:
+
+  > Pais, G. Dias, et al. "3dregnet: A deep neural network for 3d point registration." *Proceedings of the IEEE/CVF conference on computer vision and pattern recognition*. 2020.
+  >
+  > **Citations:** 62
+  >
+  > [[pdf]](./papers/Pais_3DRegNet_A_Deep_Neural_Network_for_3D_Point_Registration_CVPR_2020_paper.pdf)
+
+  - Summary
+    - Two neural work. One is for classifcation, and the other one is for regression. The classification network classify the input correspondence as inliers and outliers.(Compared to *RANSAC*). The *regression* network use the input inlier correspondence to compute the transformation(Compared to FGR).
+  - Why
+  - Comments
+    - The paper investigates the performance of different representations of the rotation.
 
 - **Large-scale Point Cloud Semantic Segmentation with Superpoint Graphs**
 
