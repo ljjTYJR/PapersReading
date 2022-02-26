@@ -384,6 +384,44 @@
 
   - How to use ICP to estimate the uncertainty of the point cloud ?
 
+### Features-combination
+
+- **Color supported generalized-icp**
+
+  > Korn, Michael, Martin Holzkothen, and Josef Pauli. "Color supported generalized-ICP." *2014 International Conference on Computer Vision Theory and Applications (VISAPP)*. Vol. 3. IEEE, 2014.
+  >
+  > **Citations:** 62
+  >
+  > [[pdf]](./papers/Color_supported_generalized-ICP.pdf)
+
+  - Summary
+
+    - Integrating color information into GICP. The pointwise color is represented by *L\*a\*b\* color space*. The point is represented as:
+      $$
+      p_{\alpha,i} = (x_i, y_i, z_i, \alpha L_i, \alpha a_i, \alpha b_i)^{T}
+      $$
+      The distance of two point is represented as :
+      $$
+      d_i = || p_{\alpha,i} - q_{\alpha,i}||_{2}
+      $$
+
+  - Pros and cons
+
+    - Compared to GICP, the proposed method is more accurate.
+    - The running time arises.
+
+  - Comments
+
+    - GICP reduces the distances of corresponding points in the direction of the surface normals. 
+
+- **Color point cloud registration with 4d ICP algorithm**
+
+  > Men, Hao, Biruk Gebre, and Kishore Pochiraju. "Color point cloud registration with 4D ICP algorithm." *2011 IEEE International Conference on Robotics and Automation*. IEEE, 2011.
+  >
+  > **Citations:** 117
+  >
+  > [[pdf]](./papers/Color_point_cloud_registration_with_4D_ICP_algorithm.pdf)
+
 ### Not Read
 
 - **CELLO-3D: Estimating the Covariance of ICP in the Real World**
@@ -407,6 +445,37 @@
   > Censi, Andrea. "An ICP variant using a point-to-line metric." *2008 IEEE International Conference on Robotics and Automation*. Ieee, 2008.
   >
   > **Citations:**  528
+  
+- **Voxelized GICP for Fast and Accurate 3D Point Cloud Registration** :heavy_check_mark:
+
+  > Koide, Kenji, et al. "Voxelized gicp for fast and accurate 3d point cloud registration." *2021 IEEE International Conference on Robotics and Automation (ICRA)*. IEEE, 2021.
+  >
+  > **Citations:** 29
+  >
+  > [[pdf]](./papers/Voxelized_GICP_for_Fast_and_Accurate_3D_Point_Cloud_Registration.pdf)
+
+  - Summary
+
+    <img src="./notes/VGICP.png" style="zoom:67%;" />
+
+    - The proposed is based on G-ICP(Which first computes the covariance of each point in the two point sets.) Then the GICP finds nearest point and optimizes the cost function combined with the covariance. NDT firstly divides the raw point set into fixed grids, and computes covariance of each grid(a distribution), then finds the nearest gird to optimize the cost function.
+
+    - VGICP
+
+      - Compute the covariance of each point in point sets.
+
+      - For the fixed set, the mean value and covariance is computed together. (Maybe it can be viewed as a "distribution of distribution?").
+
+      - Acceleration: Instead of searching the nearest point/grid. The method uses a trick of voxelization:
+        $$
+        voxel\_index\_a = cast\_to\_int(a_i / voxle\_resolution) \\
+        voxel\_index\_b = cast\_to\_int(b_i / voxle\_resolution) \\
+        $$
+        In each iteration, the point in moving set will find the equal index in b to optimize.
+
+    - Pros:
+
+      - Run in parallel because it does not need to search the nearest point every iteration.
 
 ## Probability-Based
 
@@ -723,13 +792,15 @@
       in practice for many real-world applications.
     - Intuitively, we can view EM as a statistical generalization of ICP: The E Step estimates data associations, replacing ICP’s matching step, while the M Step maximizes the expected likelihood conditioned on these data associations, replacing ICP’s distance minimization step over matched pairs.
     - Under a single scale, the point cloud modeling and matching process might succumb to noise or sampling inadequacies if the given modeling fidelity is not appropriate to the local data distribution.
+  - Cons:
+    - But it does not account for outliers in its probabilistic modeling, making it not robust to outliers and missing points.
   - Tips:
     - The covariance of the Gaussian model can be used to describe the geometric features of the point cluster.
   - TODO: (:question:)
     - How to solve the optimization need more read.
   - :train2: Can be used in other algorithms.
   - :high_brightness: 1. Speed up by estimating the weight of two GMMs to speed up the process.
-    	  2) Wether can be added the assessment similar to Fuzzy-based.
+       2) Wether can be added the assessment similar to Fuzzy-based.
        3) Globally Registration.
        4) set-to-set? 在Hierarchical条件下？
        5) Estimate the geomertic features by the property of cluster?
@@ -846,6 +917,10 @@
     - BB requires three major components: (1) a tessellation method for covering the optimization domain with subsets; (2) a branch/refinement procedure for subdividing any subset into smaller subsets; and (3) upper and lower bounds of the maximum objective on each subset to be used for pruning.
     - About the representation of rotation space: 
       - axis-angle (AA) space:  First, it covers 46% of rotation space twice. Second, it does not lead to uniform tessellation in rotation space.
+
+  - Coms
+
+    - The complicated mixture models introduce heavy computation.
 
   - Usuage
 
@@ -1264,6 +1339,21 @@
   > **Citations:** 142
 
 ### Feature-based Registration
+
+- **PHASER: A Robust and Correspondence-Free Global Pointcloud Registration** :heavy_check_mark: **(Not really)**
+
+  > Bernreiter, Lukas, et al. "PHASER: a Robust and Correspondence-free Global Pointcloud Registration." *IEEE Robotics and Automation Letters* 6.2 (2021): 855-862.
+  >
+  > **Citations:** 3
+  >
+  > [[pdf]](./papers/PHASER_A_Robust_and_Correspondence-Free_Global_Pointcloud_Registration.pdf)
+
+  - Summary
+
+    <img src="./notes/PHASER.png" style="zoom:50%;" />
+
+    - The proposed method is similar to [Fully Automatic Registration of 3D Point Clouds](). First, the raw point cloud is projected on the sphere. The *spherical Fourier transform* is conducted and estimating rotation.
+    - After getting rotation, the translation is estimated on spatial frequency domain.
 
 - **Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search** :heavy_check_mark:
 

@@ -7,11 +7,11 @@
   在空间中，一个向量 $k$ 绕旋转轴 v 旋转一定的角度 $\theta$，得到的新向量为：
 
   - 向量形式：
-    
+
     ![](Rodrigues' rotation formula-vector.svg)
-  
+
   - 矩阵形式：
-  
+
     ![](D:\papers\basis\Rodrigues' rotation formula-matrix.svg)
 
 ​			—— 其中，$I$ 为单位矩阵;
@@ -81,7 +81,7 @@ $$
 - **Heuristic**(启发式算法)
 
   > A **heuristic function**, also simply called a **heuristic**, is a [function](https://en.wikipedia.org/wiki/Function_(mathematics)) that ranks alternatives in [search algorithms](https://en.wikipedia.org/wiki/Search_algorithm) at each branching step based on available information to decide which branch to follow. For example, it may approximate the exact solution
-  
+
 - **两点表示一个线段**
 
   给定两个点$p_1$ 和 $p_2$ ，对于线段$p_1 p_2$ 的表示为：$p = p_1 + t(p_2 - p_1)$， 其中 $t \sub [0,1]$, 更为一般的形式为：
@@ -118,4 +118,9 @@ $$
 
 - **Mutual Information(互信息)**
 
-  
+
+- **HyperSephere(超球体)**
+  $$
+  S^2=\\
+  x \in R^3, ||x||_{2} = 1
+  $$
