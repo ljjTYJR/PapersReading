@@ -189,6 +189,8 @@
 
   Symmetric-ICP: 在point-to-plane的基础上进行改进，point-to-plane的类型收敛域减小，因为如上图所示，如果p点在q点所在的平面，那么二者的 *loss function* 一定为0，那么p点就只能在q点的平面进行滑动。但是使用symmetric(上图所示)，可以允许p点与q点形成圆进行滑动。
 
+  :question: 如何进行求解？
+
 - **Robust symmetric iterative closest point**
 
   > Li, Jiayuan, et al. "Robust symmetric iterative closest point." *ISPRS Journal of Photogrammetry and Remote Sensing* 185 (2022): 219-231.
@@ -477,6 +479,14 @@
 
       - Run in parallel because it does not need to search the nearest point every iteration.
 
+- **Visually bootstrapped generalized ICP**
+
+  > Pandey, Gaurav, et al. "Visually bootstrapped generalized ICP." *2011 IEEE International Conference on Robotics and Automation*. IEEE, 2011.
+
+- **Multi-Channel Generalized-ICP: A robust framework for multi-channel scan registration**
+
+  > Servos, James, and Steven L. Waslander. "Multi-Channel Generalized-ICP: A robust framework for multi-channel scan registration." *Robotics and Autonomous systems* 87 (2017): 247-257.
+
 ## Probability-Based
 
 - **Model-Based Clustering, Discriminant Analysis, and Density Estimation**
@@ -489,14 +499,6 @@
   > M. Sofka, G. Yang and C. V. Stewart, "Simultaneous Covariance Driven Correspondence (CDC) and Transformation Estimation in the Expectation Maximization Framework," *2007 IEEE Conference on Computer Vision and Pattern Recognition*, 2007, pp. 1-8, doi: 10.1109/CVPR.2007.383166.
   >
   > **Citations:**  50
-  
-- **An Adaptive Data Representation for Robust Point-Set Registration and Merging**
-
-  > Campbell, Dylan, and Lars Petersson. "An adaptive data representation for robust point-set registration and merging." *Proceedings of the IEEE international conference on computer vision*. 2015.
-  >
-  > **Citations:** 60
-  >
-  > [[pdf]](./papers/Campbell_An_Adaptive_Data_ICCV_2015_paper.pdf)
 
 ### Correlation
 
@@ -621,6 +623,21 @@
     - Finding the connection to ICP.
     - Some ways to accelerate E-step: *block-like organizations* or *KD-trees*.
   
+- **An Adaptive Data Representation for Robust Point-Set Registration and Merging** :heavy_check_mark:
+
+  > Campbell, Dylan, and Lars Petersson. "An adaptive data representation for robust point-set registration and merging." *Proceedings of the IEEE international conference on computer vision*. 2015.
+  >
+  > **Citations:** 60
+  >
+  > [[pdf]](./papers/Campbell_An_Adaptive_Data_ICCV_2015_paper.pdf)
+  
+  - **SVR**
+  - Summary
+    - The method uses a *SVM* to generate two GMMs for the two point sets.(Compared to GMMReg, the GMMs components do not equal to the number of the points). The two GMMs have the same covariance, (Every component has the same covariance).
+    - Similar to GMMReg, registration is conducted by minimizing the L2 distance between two GMMs. The transformation parameter is updated by gradient-based method(*interior-reflective Newton* method). The covariance $\sigma$ works as the annealingp arameter.
+  - Pros
+    - The GMM constructed by the SVM is more robust especially for occlusion.
+  
 - **FilterReg: Robust and Efficient Probabilistic Point-Set Registration using Gaussian Filter and Twist Parameterization** :heavy_check_mark: :no_entry:
 
   > Gao, Wei, and Russ Tedrake. "Filterreg: Robust and efficient probabilistic point-set registration using gaussian filter and twist parameterization." *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition*. 2019.
@@ -712,7 +729,7 @@
   >
   >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8985307)  [[pdf]](./papers/A Bayesian Formulation of Coherent Point Drift.pdf)
   
-- **A generative model for the joint registration of multiple point sets** :heavy_check_mark: (**JR-MPC**)
+- **A generative model for the joint registration of multiple point sets** :heavy_check_mark: (**JR-MPS**)
 
   > Evangelidis, Georgios D., et al. "A generative model for the joint registration of multiple point sets." *European Conference on Computer Vision*. Springer, Cham, 2014.
   >
@@ -975,6 +992,22 @@
     
     - D2D 3D NDT
     - Faster than P2D NDT
+    
+  - **IRON: A fast interest point descriptor for robust NDT-map matching and its application to robot localization**
+
+    > Schmiedel, Thomas, Erik Einhorn, and Horst-Michael Gross. "IRON: A fast interest point descriptor for robust NDT-map matching and its application to robot localization." *2015 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. IEEE, 2015.
+    >
+    > **Citations:** 31
+    >
+    > [[pdf]](./papers/IRON_A_fast_interest_point_descriptor_for_robust_NDT-map_matching_and_its_application_to_robot_localization.pdf)
+
+  - **Semantic-assisted 3D Normal Distributions Transform for scan registration in environments with limited structure**
+
+    > Zaganidis, Anestis, et al. "Semantic-assisted 3D normal distributions transform for scan registration in environments with limited structure." *2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. IEEE, 2017.
+    >
+    > **Citations:** 21
+    >
+    > [[pdf]](./papers/Semantic-assisted_3D_normal_distributions_transform_for_scan_registration_in_environments_with_limited_structure.pdf)
 
 ## Partial Overlapping
 
@@ -1117,7 +1150,7 @@
 
   - Acceleration based on the BnBs search, the time complexity changes from  $1/\epsilon$ to $ log(1/\epsilon)$ —— where $\epsilon$ is the accuracy.
 
-- **Precision Range Image Registration Using a Robust Surface Interpenetration Measure and Enhanced Genetic Algorithms**
+- **Precision Range Image Registration Using a Robust Surface Interpenetration Measure and Enhanced Genetic Algorithms** :heavy_check_mark:
 
   > Silva, L., Bellon, O. R. P., & Boyer, K. L. (2005). Precision range image registration using a robust surface interpenetration measure and enhanced genetic algorithms. *IEEE transactions on pattern analysis and machine intelligence*, *27*(5), 762-776.
   >
@@ -1140,6 +1173,12 @@
 - **Globally Optimal Linear Model Fitting with Unit-Norm Constraint**
 
   > Liu, Yinlong, et al. "Globally Optimal Linear Model Fitting with Unit-Norm Constraint." *International Journal of Computer Vision* (2022): 1-14.
+  
+- **Point Set Registration via Particle Filtering and Stochastic Dynamics**
+
+  > Sandhu, Romeil, Samuel Dambreville, and Allen Tannenbaum. "Point set registration via particle filtering and stochastic dynamics." *IEEE transactions on pattern analysis and machine intelligence* 32.8 (2009): 1459-1473.
+  >
+  > **Citations:** 127
 
 ## Non-Rigid
 
@@ -1402,6 +1441,16 @@
   > Mellado, Nicolas, Dror Aiger, and Niloy J. Mitra. "Super 4pcs fast global pointcloud registration via smart indexing." *Computer graphics forum*. Vol. 33. No. 5. 2014.
   >
   > **Citations:** 399
+
+### Features-Combined
+
+- **Integrating Deep Semantic Segmentation Into 3-D Point Cloud Registration**
+
+  > Zaganidis, Anestis, et al. "Integrating deep semantic segmentation into 3-d point cloud registration." *IEEE Robotics and Automation Letters* 3.4 (2018): 2942-2949.
+  >
+  > [[pdf]](./papers/Integrating_Deep_Semantic_Segmentation_Into_3-D_Point_Cloud_Registration.pdf)
+  >
+  > **Citations:** 48
 
 ## Learning-Based
 
@@ -1666,7 +1715,6 @@
   >  [[url]](https://link.springer.com/content/pdf/10.1007/s11263-020-01359-2.pdf)  [[pdf]](./papers/Image Matching from Handcrafted to Deep Features A Survey.pdf)
   
   - Registration is achieved by the minimization of a statistical discrepancy measure between the two **density** functions.
-  - 
   
 - **Deformable Medical Image Registration: A Survey**
 
@@ -1818,14 +1866,6 @@
   - 使用PointNet作为语义分割的前端，对三维点云进行像素级别的语义分割；
   - 将分割后的点云按照class进行集合分类，使用NDT算法，对两个点云中同类的点云进行配准；objective function优化各个class的损失的和
   - **future work**: end-to-end, get the transformation directly;
-  
-- **Semantic-assisted 3D Normal Distributions Transform for scan registration in environments with limited structure**
-
-  > Zaganidis, Anestis, et al. "Semantic-assisted 3D normal distributions transform for scan registration in environments with limited structure." *2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. IEEE, 2017.
-  >
-  > **Citations:** 21
-  >
-  >  [[pdf]](./papers/Semantic-assisted_3D_normal_distributions_transform_for_scan_registration_in_environments_with_limited_structure.pdf)
 
 # Math Basis
 
