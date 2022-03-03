@@ -1,4 +1,4 @@
-> Record for the papers I have read and want to read
+>  Record for the papers I have read and want to read
 >
 > survey的基本内容：
 >
@@ -388,7 +388,7 @@
 
 ### Features-combination
 
-- **Color supported generalized-icp**
+- **Color supported generalized-icp** :heavy_check_mark:
 
   > Korn, Michael, Martin Holzkothen, and Josef Pauli. "Color supported generalized-ICP." *2014 International Conference on Computer Vision Theory and Applications (VISAPP)*. Vol. 3. IEEE, 2014.
   >
@@ -479,6 +479,23 @@
 
       - Run in parallel because it does not need to search the nearest point every iteration.
 
+- **Iterative Global Similarity Points: A Robust Coarse-to-Fine Integration Solution for Pairwise 3D Point Cloud Registration** :heavy_check_mark:
+
+  > Pan, Yue, et al. "Iterative global similarity points: A robust coarse-to-fine integration solution for pairwise 3d point cloud registration." *2018 International Conference on 3D Vision (3DV)*. IEEE, 2018.
+  >
+  > **Citations:** 21
+  >
+  > [[pdf]](./papers/Iterative_Global_Similarity_Points_A_Robust_Coarse-to-Fine_Integration_Solution_for_Pairwise_3D_Point_Cloud_Registration.pdf)
+
+  - Summary
+    - The proposed method follows the iteration process of ICP method.
+      - The difference: In ICP, the correspondence is provided by finding the nearest points correspondence. But in this paper, the correspondence is estimated by finding the *feature correspondence*.  The features are provided by *Binary Shape Context (BSC)*. 
+      - The process of features correspondence can be summarized by: 1) Keypoints detecting; 2) computing the descriptors. 3) Computing the correspondence by miniminzing a energy function.
+      - After getting the correspondence, SVD is used to compute the transformation.
+  - Pros and cons
+    - From the experiments, the features seem to hadle **partial overlap** well.
+    - The method need involve feature correspondence computation, it is really **time consuming**.
+
 - **Visually bootstrapped generalized ICP**
 
   > Pandey, Gaurav, et al. "Visually bootstrapped generalized ICP." *2011 IEEE International Conference on Robotics and Automation*. IEEE, 2011.
@@ -486,6 +503,22 @@
 - **Multi-Channel Generalized-ICP: A robust framework for multi-channel scan registration**
 
   > Servos, James, and Steven L. Waslander. "Multi-Channel Generalized-ICP: A robust framework for multi-channel scan registration." *Robotics and Autonomous systems* 87 (2017): 247-257.
+  
+- **LiTAMIN: LiDAR-based Tracking And Mapping by Stabilized ICP for Geometry Approximation with Normal Distributions**
+
+  > Yokozuka, Masashi, et al. "Litamin: Lidar-based tracking and mapping by stabilized icp for geometry approximation with normal distributions." *2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. IEEE, 2020.
+  >
+  > **Citations**: 9
+  >
+  > [[pdf]](./papers/LiTAMIN_LiDAR-based_Tracking_And_Mapping_by_Stabilized_ICP_for_Geometry_Approximation_with_Normal_Distributions.pdf)
+
+- **LiTAMIN2: Ultra Light LiDAR-based SLAM using Geometric Approximation applied with KL-Divergence**
+
+  > Yokozuka, Masashi, et al. "LiTAMIN2: Ultra light lidar-based slam using geometric approximation applied with KL-divergence." *2021 IEEE International Conference on Robotics and Automation (ICRA)*. IEEE, 2021.
+  >
+  > **Citations:** 11
+  >
+  > [[pdf]](./papers/LiTAMIN2_Ultra_Light_LiDAR-based_SLAM_using_Geometric_Approximation_applied_with_KL-Divergence.pdf)
 
 ## Probability-Based
 
@@ -1009,6 +1042,27 @@
     >
     > [[pdf]](./papers/Semantic-assisted_3D_normal_distributions_transform_for_scan_registration_in_environments_with_limited_structure.pdf)
 
+    - Summary
+
+      - This papar proposes a partition depending on the points' semantic lables. (1DNT or many NDTs?)
+        - The semantic labels are *edge* and *plane*.
+        - The point will be put a value reveals confidence.
+        - :question: How many NDTs will be constructed?
+      - The registration process does not find the closet NDT, but find the NDTs with the same label. 
+
+    - Pros
+
+      - Fitst, the points with no labels will be filtered out, resulting less points and faster registration. 
+      - Second, only registering the NDTs with the same label will result int more accurate result.
+
+    - Experiments
+
+      - The experiments are conducted on KITTI(SLAM) and ETH. 
+
+        - KITTI provides the ground truth and provide the evaluation metric. **Features:** SLAM, outdoor, large overlap.
+
+          **Do we need to modify the dataset?**
+
 ## Partial Overlapping
 
 - **Fully Automatic Registration of 3D Point Clouds** :heavy_check_mark: **(Not really understand)**
@@ -1201,6 +1255,10 @@
   > Qu, Han-Bing, et al. "Probabilistic model for robust affine and non-rigid point set matching." *IEEE transactions on pattern analysis and machine intelligence* 39.2 (2016): 371-384.
   >
   > **Citations:**  31
+
+## To Read
+
+- **Fine-To-Coarse Global Registration of RGB-D Scans**
 
 ## Feature-Based
 
@@ -1925,6 +1983,22 @@
   > Francis, Gilad, et al. "Occupancy map building through bayesian exploration." *The International Journal of Robotics Research* 38.7 (2019): 769-792.
   >
   > **Citations:** 9
+
+# Data Set
+
+- **Are we ready for autonomous driving? The KITTI vision benchmark suite** **(KITTI)**
+
+  > Geiger, Andreas, Philip Lenz, and Raquel Urtasun. "Are we ready for autonomous driving? the kitti vision benchmark suite." *2012 IEEE conference on computer vision and pattern recognition*. IEEE, 2012.
+  >
+  > **Citations**: 8397
+  >
+  > [[pdf]](./papers/Are_we_ready_for_autonomous_driving_The_KITTI_vision_benchmark_suite.pdf)
+
+- **Challenging data sets for point cloud registration algorithms**
+
+  > Pomerleau, François, et al. "Challenging data sets for point cloud registration algorithms." *The International Journal of Robotics Research* 31.14 (2012): 1705-1711.
+  >
+  > [[pdf]](./papers/0278364912458814.pdf) [[data set]](http://projects.asl.ethz.ch/datasets)
 
 # Other Applications
 
