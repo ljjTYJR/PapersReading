@@ -20,7 +20,7 @@
 
 # PSR(Point Set Registration)
 
-## ICP & Variants
+## Linear-Assign
 
 ### Standard  ICP
 
@@ -504,7 +504,7 @@
 
   > Servos, James, and Steven L. Waslander. "Multi-Channel Generalized-ICP: A robust framework for multi-channel scan registration." *Robotics and Autonomous systems* 87 (2017): 247-257.
   
-- **LiTAMIN: LiDAR-based Tracking And Mapping by Stabilized ICP for Geometry Approximation with Normal Distributions**
+- **LiTAMIN: LiDAR-based Tracking And Mapping by Stabilized ICP for Geometry Approximation with Normal Distributions** :heavy_check_mark:
 
   > Yokozuka, Masashi, et al. "Litamin: Lidar-based tracking and mapping by stabilized icp for geometry approximation with normal distributions." *2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. IEEE, 2020.
   >
@@ -512,7 +512,13 @@
   >
   > [[pdf]](./papers/LiTAMIN_LiDAR-based_Tracking_And_Mapping_by_Stabilized_ICP_for_Geometry_Approximation_with_Normal_Distributions.pdf)
 
-- **LiTAMIN2: Ultra Light LiDAR-based SLAM using Geometric Approximation applied with KL-Divergence**
+  - Summary
+    - The paper is good that it provides a perspective of cost function to describe the point set registration. 
+    - **Motivation**: The achieve balance between robustness and accuracy for ICP-based methods. The *G-ICP* and *NDT* methods provide robustness but they are time consuming due to PCA.
+    - The proposed method use a effiective way to compute the inverse of covariance matrix to improve computation effiency.(Based on P2D NDT)
+    - **Representation**: The data are represented by voxel grids. **Data Association**: K-D tree.
+
+- **LiTAMIN2: Ultra Light LiDAR-based SLAM using Geometric Approximation applied with KL-Divergence** :heavy_check_mark:
 
   > Yokozuka, Masashi, et al. "LiTAMIN2: Ultra light lidar-based slam using geometric approximation applied with KL-divergence." *2021 IEEE International Conference on Robotics and Automation (ICRA)*. IEEE, 2021.
   >
@@ -520,7 +526,12 @@
   >
   > [[pdf]](./papers/LiTAMIN2_Ultra_Light_LiDAR-based_SLAM_using_Geometric_Approximation_applied_with_KL-Divergence.pdf)
 
-## Probability-Based
+  - ![](./notes/LiTAMIN2.png)
+  - Summary
+    - The proposed method is based on or *D2D NDT*. 
+    - The **Representation** of the point cloud is voxel grid. The *symmetric K-L Divergence* is used to measure similarity of two  sub-point-set(distribution). The difference is adding a extra *penalty function* which is used to estimate the covariance of  two distribution.
+
+## Soft-Assign
 
 - **Model-Based Clustering, Discriminant Analysis, and Density Estimation**
   - 作为GMM的数学基础，可以进行参考。
@@ -551,7 +562,7 @@
   >
   >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=852377)  [[pdf]](./papers/A feature registration framework using mixture models.pdf)
 
-- **A Correlation-Based Approach to Robust Point Set Registration** :heavy_check_mark:
+- **A Correlation-Based Approach to Robust Point Set Registration** :heavy_check_mark: 
 
   > Tsin, Y., & Kanade, T. (2004, May). A correlation-based approach to robust point set registration. In *European conference on computer vision* (pp. 558-569). Springer, Berlin, Heidelberg.
   >
@@ -575,6 +586,45 @@
   >
   >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1323799)  [[pdf]](./papers/Uncertainty Modeling and Model Selection for Geometric Inference.pdf)
 
+- **New algorithms for 2D and 3D point matching: pose estimation and correspondence** :heavy_check_mark:
+
+  > Gold, Steven, et al. "New algorithms for 2D and 3D point matching: pose estimation and correspondence." *Pattern recognition* 31.8 (1998): 1019-1031.
+  >
+  > **Citations:** 647
+  >
+  > [[pdf]](./papers/New_algorithms_for_2D_and_3D_point_matching_pose_estimation_and_correspondence.pdf)
+
+  - Summary
+
+    - The *new* of the proposed method is because it is different ICP methods which defines linear association. The method introduces the *soft-assignment* to the point set registration.
+    - To relax the discrete optimization by introducing the *softmax* function to describe the the assignment matrix. Then using the *deterministic annealing* to estimating the parameter matrix. (Nested iteration).
+    - To estimate the transformation parameter, coordinate descent is used.
+
+  - **Formulation**:
+
+    The registration is presented as a engery function(cost function):
+    $$
+    E = \sum_{j=1}^{J}\sum_{k=1}^{K} m_{jk} (|| X_j -t -AY_k||_{2}^{2} - \alpha)
+    $$
+
+​			In the formulation, the term $m_{jk}$ represents the assignment of the point $i$ and $j$. The parameter $\alpha$ can be regarded as the 	*threshold* for outlier rejecting.
+
+​			**Optimization**: Colsed-form solution is got directly(Analytical solution by equating partial derivatives = 0)
+
+- **A Robust Point Matching Algorithm for Autoradiograph Alignment** :heavy_check_mark: (**RPM**)
+
+  > Rangarajan, Anand, et al. "A robust point-matching algorithm for autoradiograph alignment." *Medical image analysis* 1.4 (1997): 379-398.
+  >
+  > **Citations:** 232
+  >
+  > [[url\]](https://reader.elsevier.com/reader/sd/pii/S1361841597850086?token=939D9B6CF93E55670F0907F7557812B247EDCE053FF3112F4DB6EC1213E1EAEBFB46FB87D8B7B47BE7D583E195092E11&originRegion=eu-west-1&originCreation=20220201205118)  [[pdf\]](./papers/A robust point-matching algorithm for autoradiograph alignment.pdf)
+
+  - Summary
+
+    - The proposed method is similar to *New algorithms for 2D and 3D point matching: pose estimation and correspondence*.
+
+      The difference is the input points are based on *Canny edge detection*. (Can be viewed as a variant of **RMP**).
+
 ### GMM
 
 - **The Motion Coherence Theory**
@@ -593,14 +643,6 @@
   >
   >  [[url]](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.85.493&rep=rep1&type=pdf)  [[pdf]](./papers/Non-rigid point set registration Coherent Point Drift.pdf)
 
-- **A Robust Point Matching Algorithm for Autoradiograph Alignment**
-
-  > Rangarajan, Anand, et al. "A robust point-matching algorithm for autoradiograph alignment." *Medical image analysis* 1.4 (1997): 379-398.
-  >
-  > **Citations:** 232
-  >
-  >  [[url]](https://reader.elsevier.com/reader/sd/pii/S1361841597850086?token=939D9B6CF93E55670F0907F7557812B247EDCE053FF3112F4DB6EC1213E1EAEBFB46FB87D8B7B47BE7D583E195092E11&originRegion=eu-west-1&originCreation=20220201205118)  [[pdf]](./papers/A robust point-matching algorithm for autoradiograph alignment.pdf)
-
 - **Point Set Registration: Coherent Point Drift** **(CPD)** :heavy_check_mark:
 
   > Myronenko, A., & Song, X. (2010). Point set registration: Coherent point drift. *IEEE transactions on pattern analysis and machine intelligence*, *32*(12), 2262-2275.
@@ -617,6 +659,7 @@
   - The CPD algorithm is more robust and accurate than LM-ICP, but will perform slower than it.
   - The algorithm will perform very slow then the input's size is big(35947*3), FGT can get faster, but will be less robust.
   - For non-rigid registration, compared to TPS-RPM, CPD algorithm is more accurate, but still slow when the input size is large. The time consumption mainly lies in matrix computation. 
+  - **Representation**: The moving point set is represented by a GMMs, the components of which have the same isotropic covariance.
   
 - **Rigid and Articulated Point Registration with Expectation Conditional Maximization** :heavy_check_mark:
 
@@ -742,7 +785,7 @@
   >
   > **Citations:** 869
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5674050)  [[pdf]](./papers/Robust Point Set Registration Using Gaussian Mixture Models.pdf)
+  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5674050)  [[pdf]](./papers/Robust_Point_Set_Registration_Using_Gaussian_Mixture_Models.pdf)
   >
   > [[notes]]()
 
@@ -1662,6 +1705,21 @@
   > Deng, Haowen, Tolga Birdal, and Slobodan Ilic. "3d local features for direct pairwise registration." *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition*. 2019.
   >
   > **Citations:**  64
+  
+- **PPFNet: Global Context Aware Local Features for Robust 3D Point Matching** **(PPFNet)** :heavy_check_mark:
+
+  > Deng, Haowen, Tolga Birdal, and Slobodan Ilic. "Ppfnet: Global context aware local features for robust 3d point matching." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2018.
+  >
+  > **Citations**: 264
+  >
+  > [[pdf]](./papers/Deng_PPFNet_Global_Context_CVPR_2018_paper.pdf)
+
+  - Summary
+    - The **correspondence**: The input is pair-points, the motivation is similar *PPF(hand crafter features)*, to find the local features. The output is the correspondence. These Networks aim to find invariant features.
+    - How to compute the **transformation**: RANSAC
+  - Comments
+    - The **shortcomings** of the hand-crafted features: The hand-crafted features(such as *FPFH*) only consider the local features of the points, which may spread widely in the two point set, thus resulting in incorrect correspondence.
+    - The author mentions that using set-input (pair or small patch) as the input of the network is beneficial to develop the invariance properties.
 
 ## Graph-Based / Spectral-Based
 
@@ -1681,6 +1739,12 @@
   >
   >  [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.455.7770&rep=rep1&type=pdf)  [[pdf]](./papers/Thirty Years of Graph Matching in Pattern Recognition.pdf)
 
+- **Structural Graph Matching Using the EM Algorithm and Singular Value Decomposition**
+
+  > Luo, Bin, and Edwin R. Hancock. "Structural graph matching using the EM algorithm and singular value decomposition." *IEEE Transactions on Pattern Analysis and Machine Intelligence* 23.10 (2001): 1120-1136.
+  >
+  > **Citations:** 459
+
 - **A unified framework for alignment and correspondence**
 
   > Luo, B., & Hancock, E. R. (2003). A unified framework for alignment and correspondence. *Computer Vision and Image Understanding*, *92*(1), 26-55.
@@ -1688,6 +1752,9 @@
   > **Citations:** 73
   >
   >  [[url]](https://reader.elsevier.com/reader/sd/pii/S1077314203000973?token=0DBF0A87CDEC4BE21370C4E39E5A1906171CB67EBDAA80A064DB207F16AEF0881DB5CB50C2E751104DF082DBF0E688B6&originRegion=eu-west-1&originCreation=20220113135844)  [[pdf]](./papers/A unified framework for alignment and correspondence.pdf)
+
+  - Summary
+    - About the method: [Some paper](./papers/Robust_Point_Set_Registration_Using_Gaussian_Mixture_Models.pdf) refers to it as *Graph Matching*. Some paper(*CPD*) refers it as probalistic method similar to *CPD*, but the difference lies in the solution of *M-step*. (The later one is widely accepted.)
 
 - **Graphical Models and Point Pattern Matching**
 
