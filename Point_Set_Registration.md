@@ -531,6 +531,36 @@
     - The proposed method is based on or *D2D NDT*. 
     - The **Representation** of the point cloud is voxel grid. The *symmetric K-L Divergence* is used to measure similarity of two  sub-point-set(distribution). The difference is adding a extra *penalty function* which is used to estimate the covariance of  two distribution.
 
+- **Convergent iterative closest-point algorithm to accomodate anisotropic and inhomogenous localization error**
+
+  > Maier-Hein, Lena, et al. "Convergent iterative closest-point algorithm to accomodate anisotropic and inhomogenous localization error." *IEEE transactions on pattern analysis and machine intelligence* 34.8 (2011): 1520-1532.
+  >
+  > **Citations:** 127
+  >
+  > [[pdf]](./papers/)
+
+- **Iterative Most-Likely Point Registration (IMLP): A Robust Algorithm for Computing Optimal Shape Alignment**
+
+  > Billings, Seth D., Emad M. Boctor, and Russell H. Taylor. "Iterative most-likely point registration (IMLP): A robust algorithm for computing optimal shape alignment." *PloS one* 10.3 (2015): e0117688.
+
+- **Efficient and Accurate Registration of Point Clouds With Plane to Plane Correspondences**
+
+  > Forstner, Wolfgang, and Kourosh Khoshelham. "Efficient and accurate registration of point clouds with plane to plane correspondences." *Proceedings of the IEEE International Conference on Computer Vision Workshops*. 2017.
+  >
+  > **Citations:** 33
+
+- **Joint Rigid Registration of Multiple Generalized Point Sets With Hybrid Mixture Models**
+
+  > Min, Zhe, Jiaole Wang, and Max Q-H. Meng. "Joint rigid registration of multiple generalized point sets with hybrid mixture models." *IEEE Transactions on Automation Science and Engineering* 17.1 (2019): 334-347.
+  >
+  > **Citations:** 30
+
+- **Learning anisotropic ICP (LA-ICP) for robust and efficient 3D registration**
+
+  > Lee, Bhoram, and Daniel D. Lee. "Learning anisotropic ICP (LA-ICP) for robust and efficient 3D registration." *2016 IEEE international conference on robotics and automation (ICRA)*. IEEE, 2016.
+  >
+  > **Citations:** 11
+
 ## Soft-Assign
 
 - **Model-Based Clustering, Discriminant Analysis, and Density Estimation**
@@ -1317,7 +1347,7 @@
 
   > Bustos, Alvaro Parra, and Tat-Jun Chin. "Guaranteed outlier removal for point cloud registration with correspondences." *IEEE transactions on pattern analysis and machine intelligence* 40.12 (2017): 2868-2882.
   >
-  > **Citations:**  73
+  > **Citations:**  76
 
 ### Feature Detection
 
@@ -1542,6 +1572,24 @@
   > Mellado, Nicolas, Dror Aiger, and Niloy J. Mitra. "Super 4pcs fast global pointcloud registration via smart indexing." *Computer graphics forum*. Vol. 33. No. 5. 2014.
   >
   > **Citations:** 399
+  
+- **Random sample consensus: a paradigm for model fitting with applications to image analysis and automated cartography** **(RANSAC)** :heavy_check_mark: :x:
+
+  > Fischler, Martin A., and Robert C. Bolles. "Random sample consensus: a paradigm for model fitting with applications to image analysis and automated cartography." *Communications of the ACM* 24.6 (1981): 381-395.
+  >
+  > **Citations:** 28407
+
+  - Summary
+    - A basic method, for registration, given the data correspondence, the *RANSAC* searches the transformation space and finds the optimal transformation which can make the consensus set largest.
+  - Cons
+    - Slow in converge and low accuracy with large outlier.[Ref](Guaranteed Outlier Removal for Point Cloud Registration with Correspondences)
+  - **It has many variants, need to read.**
+
+- **Least-Squares Fitting of Two 3-D Point Sets**
+
+  > Arun, K. Somani, Thomas S. Huang, and Steven D. Blostein. "Least-squares fitting of two 3-D point sets." *IEEE Transactions on pattern analysis and machine intelligence* 5 (1987): 698-700.
+  >
+  > **Citations:** 4768
 
 ### Features-Combined
 
@@ -1745,7 +1793,7 @@
   >
   > **Citations:** 459
 
-- **A unified framework for alignment and correspondence**
+- **A unified framework for alignment and correspondence** :heavy_check_mark: :x:
 
   > Luo, B., & Hancock, E. R. (2003). A unified framework for alignment and correspondence. *Computer Vision and Image Understanding*, *92*(1), 26-55.
   >
@@ -1754,7 +1802,16 @@
   >  [[url]](https://reader.elsevier.com/reader/sd/pii/S1077314203000973?token=0DBF0A87CDEC4BE21370C4E39E5A1906171CB67EBDAA80A064DB207F16AEF0881DB5CB50C2E751104DF082DBF0E688B6&originRegion=eu-west-1&originCreation=20220113135844)  [[pdf]](./papers/A unified framework for alignment and correspondence.pdf)
 
   - Summary
+
     - About the method: [Some paper](./papers/Robust_Point_Set_Registration_Using_Gaussian_Mixture_Models.pdf) refers to it as *Graph Matching*. Some paper(*CPD*) refers it as probalistic method similar to *CPD*, but the difference lies in the solution of *M-step*. (The later one is widely accepted.)
+
+  - Understanding(May not be correct)
+
+    - **I think** the main idea is that the proposed method model the correspondence and the alignment as two probability. The algorithm follows a 2-step *E-M* process to compute the correspondence and alignment separately.
+
+      The difference from the previous methods is the framework to update the correspondence and transformation parameters.
+
+    - **Need to read the previous papers first**
 
 - **Graphical Models and Point Pattern Matching**
 
@@ -1896,6 +1953,16 @@
     - 自己要做什么包括：1) 选取的测试集一定要广泛；2) 选定的测试方法；3) 在实际的应用环境中进行测试（例如本文可以专注于某一个领域, robotics?)
 
   - **非常值得借鉴和学习本文的组织结构，是写evaluation paper的重要参考。此外，刨除结构，本文的内容也非常的重要，对于点云的描述子来说。**
+  
+- **Recent developments and trends in point set registration methods**
+
+  > Maiseli, Baraka, Yanfeng Gu, and Huijun Gao. "Recent developments and trends in point set registration methods." *Journal of Visual Communication and Image Representation* 46 (2017): 95-106.
+  >
+  > **Citations:** 90
+
+- **Registration of Laser Scanning Point Clouds: A Review**
+
+  > Cheng, Liang, et al. "Registration of laser scanning point clouds: A review." *Sensors* 18.5 (2018): 1641.
 
 ## Comparison
 
@@ -1938,6 +2005,16 @@
   > Wulf, Oliver, et al. "Benchmarking urban six‐degree‐of‐freedom simultaneous localization and mapping." *Journal of Field Robotics* 25.3 (2008): 148-163.
   >
   > **Citations:**  75
+
+## To Read
+
+- **Gravitational Approach for Point Set Registration**
+
+  > Golyanik, Vladislav, Sk Aziz Ali, and Didier Stricker. "Gravitational approach for point set registration." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2016.
+  >
+  > **Citations:** 36
+  >
+  > [[pdf]](./papers/Golyanik_Gravitational_Approach_for_CVPR_2016_paper.pdf)
 
 # Mapping & Fusion
 
