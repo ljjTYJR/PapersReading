@@ -442,11 +442,35 @@
 
   - 和SLAM的应用非常相关，暂时不研究这个，等后续真的需要研究SLAM，再看这篇文章。
 
-- **An ICP variant using a point-to-line metric**
+- **An ICP variant using a point-to-line metric** :heavy_check_mark:
 
   > Censi, Andrea. "An ICP variant using a point-to-line metric." *2008 IEEE International Conference on Robotics and Automation*. Ieee, 2008.
   >
   > **Citations:**  528
+  >
+  > [[pdf]](./papers/An_ICP_variant_using_a_point-to-line_metric.pdf)
+  
+  - Summary
+  
+    - The proposed method call them *point-to-line* metric, but the formulation is similar to *poin-to-plane*. In the paper, the author explicitly says that the proposed method is based on the *point-to-plane* formulation.
+  
+    - The difference between the proposed method and *point-to-plane* method is the optimization. Different from *least square solution*, the proposed method uses a closed-form solution to optimize which makes the converge quicker.
+  
+    - For **optimization**, 
+  
+      > A classical approach involves the computation of all the stationary points (among which there is the global minimum). This approach is used by Censi [13] for the global resolution of the 2D registration problem, reducing the problem to solving a 4-th order polynomial equation. 
+      >
+      > ***Convex Global 3D Registration With Lagrangian Duality***
+      >
+      > The cons: it is hard to extend to 3-D space because of explosion of complexity.
+  
+      The proposed method utilizes the ***Lagrange’s multipliers* to optimize the formulation.** And the rotation parameter is expressed in a different way.
+  
+      The proposed method also proposes a search algorithm to find the correspondence.
+  
+  - Commetns
+  
+    - This method is used widely in SLAM application.
   
 - **Voxelized GICP for Fast and Accurate 3D Point Cloud Registration** :heavy_check_mark:
 
@@ -499,6 +523,10 @@
 - **Visually bootstrapped generalized ICP**
 
   > Pandey, Gaurav, et al. "Visually bootstrapped generalized ICP." *2011 IEEE International Conference on Robotics and Automation*. IEEE, 2011.
+  >
+  > **Citations:** 50
+  >
+  > [[pdf]](./papers/)
 
 - **Multi-Channel Generalized-ICP: A robust framework for multi-channel scan registration**
 
@@ -531,13 +559,30 @@
     - The proposed method is based on or *D2D NDT*. 
     - The **Representation** of the point cloud is voxel grid. The *symmetric K-L Divergence* is used to measure similarity of two  sub-point-set(distribution). The difference is adding a extra *penalty function* which is used to estimate the covariance of  two distribution.
 
-- **Convergent iterative closest-point algorithm to accomodate anisotropic and inhomogenous localization error**
+- **Convergent iterative closest-point algorithm to accomodate anisotropic and inhomogenous localization error** :heavy_check_mark:
 
   > Maier-Hein, Lena, et al. "Convergent iterative closest-point algorithm to accomodate anisotropic and inhomogenous localization error." *IEEE transactions on pattern analysis and machine intelligence* 34.8 (2011): 1520-1532.
   >
   > **Citations:** 127
   >
-  > [[pdf]](./papers/)
+  > [[pdf]](./papers/Convergent_Iterative_Closest-Point_Algorithm_to_Accomodate_Anisotropic_and_Inhomogenous_Localization_Error.pdf)
+
+  - Summary
+
+    - Maybe due to the density or other things, the location error of corresponding points may be anisotropic. The previous method mainly consider the location error as the isotropic error.
+
+    - To formulate the metric error, the anisotropic consideration is combined into the steps of the iteration:
+      $$
+      distance:d_{new} = || W_{\vec{x}\vec{y}}(\vec{x}-\vec{y})||_{2}^2\\
+      cost function = \sum_{i=1}^{M}||W_{i}(R\vec{x_i}+\vec{t}-\vec{y}_{corresponding})||_2^2
+      $$
+      The coefficient is related to the covariance of both inputs' covariance
+
+    - How to compute the covariance? —— **PCA**
+
+  - Cons:
+
+    - PCA computes covariance consume too much time.
 
 - **Iterative Most-Likely Point Registration (IMLP): A Robust Algorithm for Computing Optimal Shape Alignment**
 
@@ -548,6 +593,8 @@
   > Forstner, Wolfgang, and Kourosh Khoshelham. "Efficient and accurate registration of point clouds with plane to plane correspondences." *Proceedings of the IEEE International Conference on Computer Vision Workshops*. 2017.
   >
   > **Citations:** 33
+  >
+  > [[pdf]](./papers/Forstner_Efficient_and_Accurate_ICCV_2017_paper.pdf)
 
 - **Joint Rigid Registration of Multiple Generalized Point Sets With Hybrid Mixture Models**
 
@@ -555,11 +602,28 @@
   >
   > **Citations:** 30
 
-- **Learning anisotropic ICP (LA-ICP) for robust and efficient 3D registration**
+- **Learning anisotropic ICP (LA-ICP) for robust and efficient 3D registration** :heavy_check_mark: :x:
 
   > Lee, Bhoram, and Daniel D. Lee. "Learning anisotropic ICP (LA-ICP) for robust and efficient 3D registration." *2016 IEEE international conference on robotics and automation (ICRA)*. IEEE, 2016.
   >
   > **Citations:** 11
+  >
+  > [[pdf]](./papers/Learning_anisotropic_ICP_LA-ICP_for_robust_and_efficient_3D_registration.pdf)
+
+  - Summary
+
+    - I do not understand this paper. The proposed method is based on *G-ICP*. It aims to estimate the covariance in the equation;
+    - The ideas of the author show as follows:
+      - The generalized ICP equation with covariance; And include the point2plane, GICP into this feamework;
+      - **The problem to solve** is how to get the covariance?  
+
+    - The method proposes a *online learning* method to estimate covariance. In my view, the proposed method first iteratively estimate the covariance and transformation.
+
+- **An Efficient EM-ICP Algorithm for Symmetric Consistent Non-linear Registration of Point Sets**
+
+  > Combès, Benoît, and Sylvain Prima. "An efficient EM-ICP algorithm for symmetric consistent non-linear registration of point sets." *International Conference on Medical Image Computing and Computer-Assisted Intervention*. Springer, Berlin, Heidelberg, 2010.
+  >
+  > **Citations:** 26
 
 ## Soft-Assign
 
@@ -1266,7 +1330,7 @@
   >  [[url]](https://sci-hub.ru/https://ieeexplore.ieee.org/abstract/document/9286491/)  [[pdf]](./papers/TEASER-Fast and Certifiable Point Cloud.pdf)
   >
   > [[notes]](./notes/TEASER-Fast and Certifiable Point Cloud.md)
-  
+
 - **Linearly Converging Quasi Branch and Bound Algorithms for Global Rigid Registration** :heavy_check_mark: :no_entry:
 
   > Dym, Nadav, and Shahar Ziv Kovalsky. "Linearly converging quasi branch and bound algorithms for global rigid registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2019.
@@ -1296,16 +1360,22 @@
   >  [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Jubran_Provably_Approximated_Point_Cloud_Registration_ICCV_2021_paper.pdf)  [[pdf]](./papers/Provably Approximated Point Cloud Registration.pdf)
   >
   > [[supp]](https://openaccess.thecvf.com/content/ICCV2021/supplemental/Jubran_Provably_Approximated_Point_ICCV_2021_supplemental.pdf)
-  
+
 - **Globally Optimal Linear Model Fitting with Unit-Norm Constraint**
 
   > Liu, Yinlong, et al. "Globally Optimal Linear Model Fitting with Unit-Norm Constraint." *International Journal of Computer Vision* (2022): 1-14.
-  
+
 - **Point Set Registration via Particle Filtering and Stochastic Dynamics**
 
   > Sandhu, Romeil, Samuel Dambreville, and Allen Tannenbaum. "Point set registration via particle filtering and stochastic dynamics." *IEEE transactions on pattern analysis and machine intelligence* 32.8 (2009): 1459-1473.
   >
   > **Citations:** 127
+
+- **Convex Global 3D Registration With Lagrangian Duality**
+
+  > Briales, Jesus, and Javier Gonzalez-Jimenez. "Convex global 3d registration with lagrangian duality." *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*. 2017.
+  >
+  > **Citations**: 50
 
 ## Non-Rigid
 
