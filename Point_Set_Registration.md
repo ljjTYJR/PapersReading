@@ -211,7 +211,42 @@
   >
   > **Citations:** 140
   >
-  >  [[url]](https://reader.elsevier.com/reader/sd/pii/S0167865599000550?token=80227EA90623477B34968113CCC67A768D7F900C9CECFDC7F9A7763C172BB9BC1A5C894B86D5D6169A3A26ED39EA8D59&originRegion=eu-west-1&originCreation=20220108114837)  [[pdf]](./papers/Robust motion and correspondence of noisy 3-d point sets with missing data.pdf)
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0167865599000550?token=80227EA90623477B34968113CCC67A768D7F900C9CECFDC7F9A7763C172BB9BC1A5C894B86D5D6169A3A26ED39EA8D59&originRegion=eu-west-1&originCreation=20220108114837)  [[pdf]](./papers/Robust motion and correspondence of noisy 3-d point sets with missing data.pdf)
+
+- **Metric-based iterative closest point scan matching for sensor displacement estimation** :heavy_check_mark:
+
+  > Minguez, Javier, Luis Montesano, and Florent Lamiraux. "Metric-based iterative closest point scan matching for sensor displacement estimation." *IEEE Transactions on Robotics* 22.5 (2006): 1047-1054.
+  >
+  > **Citations:** 195
+  >
+  > [[pdf]](./papers/Metric-based_iterative_closest_point_scan_matching_for_sensor_displacement_estimation.pdf)
+
+  - Summary
+
+    - Modify the error metric, similar to the Generlization ICP.
+
+    - > MbICP is designed to improve convergence with large initial orientation errors by explicitly putting a measure of
+      > rotational error as part of the distance metric to be minimized.
+      >
+      > —— **G-ICP**
+
+  - Comments
+
+    - When descriping the proposed method, many literature states that the proposed method considers the rotation error and combines it into the distance computation. 
+
+- **A generalization of the metric-based Iterative Closest Point technique for 3D scan matching** :heavy_check_mark:
+
+  > Armesto, Leopoldo, Javier Minguez, and Luis Montesano. "A generalization of the metric-based iterative closest point technique for 3D scan matching." *2010 IEEE International Conference on Robotics and Automation*. IEEE, 2010.
+  >
+  > **Citations:** 51
+  >
+  > [[pdf]](./papers/A_generalization_of_the_metric-based_Iterative_Closest_Point_technique_for_3D_scan_matching.pdf)
+
+  - Summary
+    - The method is the extension of MB-ICP to 3D space. The method define the distance of two points as the norm of the transformation parameter $||q||$, and depending on this to find the closest corresponding point.
+  - Pros and cons
+    - More robust and precise.
+    - Much computation cost in each iteration.
 
 - **Robust registration of 2D and 3D point sets** **(LM-ICP)**:heavy_check_mark: :question:
 
@@ -1921,7 +1956,9 @@
   >
   > **Citations:**  87
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7954698)  [[pdf]](./papers/Joint Alignment of Multiple Point Sets with Batch and Incremental Expectation-Maximization.pdf)
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7954698)  [[pdf]](./papers/Joint Alignment of Multiple Point Sets with Batch and Incremental Expectation-Maximization.pdf)
+  
+- **Multiview registration for large data sets**
 
 ### Non-rigid Point set
 
