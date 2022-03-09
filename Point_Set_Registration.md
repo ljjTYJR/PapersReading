@@ -66,6 +66,16 @@
 
   - Can be viewed as 'Soft Assignment'
   - View the registration problem as the MLE(Maximum Likelihood Estimation) problem, and use E-M Algorithm to optimize the parameter.
+  
+- **Registering multiview range data to create 3D computer objects** :heavy_check_mark:
+
+  > Blais, Gérard, and Martin D. Levine. "Registering multiview range data to create 3D computer objects." *IEEE Transactions on Pattern Analysis and Machine Intelligence* 17.8 (1995): 820-824.
+  >
+  > **Citations:** 666
+  >
+  > [[pdf]](./papers/Registering_multiview_range_data_to_create_3D_computer_objects.pdf)
+
+  
 
 ### Robustness
 
@@ -304,6 +314,24 @@
     :star:优缺点要看和谁进行比较；
 
   - More accurate and faster than ICP, FGR.
+  
+- **Registration and integration of textured 3D data** :heavy_check_mark:
+
+  > Johnson, Andrew Edie, and Sing Bing Kang. "Registration and integration of textured 3D data." *Image and vision computing* 17.2 (1999): 135-147.
+  >
+  > **Citations:** 519
+  >
+  > [[pdf]](./papers/Registration_and_integration_of_textured_3D_data.pdf)
+
+  - Summary
+
+    - The proposed mthod combines the color information into the distance metric based on ICP algorithm. The color parameters are represented by *YIQ* color model. Because it can separate the intensity(which may be affected by the light.) and the intrinsic color.
+
+    - The distance can be computed by
+      $$
+      p = (x_1,x_2,x_3,\alpha_1c_1, \alpha_2c_2, \alpha_3c_3)
+      $$
+      Where $\alpha$ is the coefficient, and the $c$ is the measure of color.
 
 ### Global
 
