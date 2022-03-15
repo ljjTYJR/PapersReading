@@ -139,6 +139,8 @@
   > **Citations:** 520
   >
   >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1242341)  [[pdf]](./papers/The dual-bootstrap iterative closest point algorithm with application to retinal image registration.pdf)
+  
+- 
 
 ### Outlier
 
@@ -147,8 +149,8 @@
   > Hermans, Jeroen, et al. "Robust point set registration using EM-ICP with information-theoretically optimal outlier handling." *CVPR 2011*. IEEE, 2011.
   >
   > **Citations:** 45
-  
-- **Robust matching of 3D contours using iterative closest point algorithm improved by M-estimation**
+
+- **Robust matching of 3D contours using iterative closest point algorithm improved by M-estimation** :heavy_check_mark:
 
   > Kaneko, Shun'ichi, Tomonori Kondo, and Atsushi Miyamoto. "Robust matching of 3D contours using iterative closest point algorithm improved by M-estimation." *Pattern Recognition* 36.9 (2003): 2041-2047.
   >
@@ -237,11 +239,16 @@
 
   :question: 如何进行求解？
 
-- **Robust symmetric iterative closest point**
+- **Robust symmetric iterative closest point** :heavy_check_mark:
 
   > Li, Jiayuan, et al. "Robust symmetric iterative closest point." *ISPRS Journal of Photogrammetry and Remote Sensing* 185 (2022): 219-231.
   >
-  >  [[pdf]](./papers/Robust symmetric iterative closest point.pdf)
+  > [[pdf]](./papers/Robust symmetric iterative closest point.pdf)
+
+  - Summary
+    - Symmetric ICP has a wider converge basin than point-to-plane ICP, because the zero-set of the error metric is larger than point-to-plane ICP. Compared to original symmetric ICP, the proposed method consider the rotation of the normal, making the result more accurate. 
+    - The objective function is divided into *error metric* and *loss function*. One is to measure the error between two points, and the other is used to construct the objective function.
+    - The loss is described by a loss function, called a robust model.
 
 - **A robust method for registration and segmentation of multiple range images**
 
@@ -316,7 +323,15 @@
   >
   > [[notes]](./notes/Sparse Iterative Closest Point.md)
 
-  Sparse ICP: 仍然使用欧式距离寻找ICP中的correspondence，但是在优化阶段，使用了$d_2^p$ 代替 $d_2$， 提高了稀疏性，对Outlier和noise有一定的鲁棒性。
+  - Summary:Sparse ICP: 仍然使用欧式距离寻找ICP中的correspondence，但是在优化阶段，使用了$d_2^p$ 代替 $d_2$， 提高了稀疏性，对Outlier和noise有一定的鲁棒性。
+
+    - Optimization: Due to non-convex and non-smooth, the optimization method uses ADMM.
+
+  - Comments
+
+    -  high computational cost and memory footprint. (If you state some comments, you should give some experiments to verify them. Or refer to other literature?
+
+      > <Robust symmetric iterative closest point>
 
 - **ICP registration using invariant features** **（ICPIF)** :heavy_check_mark: :red_circle:
 
@@ -368,6 +383,25 @@
       p = (x_1,x_2,x_3,\alpha_1c_1, \alpha_2c_2, \alpha_3c_3)
       $$
       Where $\alpha$ is the coefficient, and the $c$ is the measure of color.
+  
+- **Correntropy based scale ICP algorithm for robust point set registration** :heavy_check_mark:
+
+  > Wu, Zongze, et al. "Correntropy based scale ICP algorithm for robust point set registration." *Pattern Recognition* 93 (2019): 14-24.
+  >
+  > **Citations:** 44
+  >
+  > [[pdf]](./papers/Correntropy_based_scale_ICP_algorithm_for_robust_point_set_registration.pdf)
+
+  - Summary
+
+    - The proposed method modifies the error metric. The standard ICP uses MSE to measure the error between two point sets(The paper refer to it as *similarity*). To handle outlier and noise, the author proposes *Correntropy* with the following format:
+      $$
+      f = \exp{- \frac{(a_i - b_j)^2}{2\sigma^2}}
+      $$
+
+  - :question: What about the analysis about *MSE* and *correntropy function*?
+
+    *Kernel function?*
 
 ### Global
 
@@ -545,14 +579,6 @@
 
     - GICP reduces the distances of corresponding points in the direction of the surface normals. 
 
-- **Color point cloud registration with 4d ICP algorithm**
-
-  > Men, Hao, Biruk Gebre, and Kishore Pochiraju. "Color point cloud registration with 4D ICP algorithm." *2011 IEEE International Conference on Robotics and Automation*. IEEE, 2011.
-  >
-  > **Citations:** 117
-  >
-  > [[pdf]](./papers/Color_point_cloud_registration_with_4D_ICP_algorithm.pdf)
-
 ### Not Read
 
 - **CELLO-3D: Estimating the Covariance of ICP in the Real World**
@@ -560,6 +586,8 @@
   > Landry, David, François Pomerleau, and Philippe Giguere. "CELLO-3D: Estimating the Covariance of ICP in the Real World." *2019 International Conference on Robotics and Automation (ICRA)*. IEEE, 2019.
   >
   > **Citations:** 24
+  >
+  > [[pdf]](./papers/CELLO-3D_Estimating_the_Covariance_of_ICP_in_the_Real_World.pdf)
   
 - **An accurate closed-form estimate of ICP's covariance**
 
@@ -753,6 +781,27 @@
   > Combès, Benoît, and Sylvain Prima. "An efficient EM-ICP algorithm for symmetric consistent non-linear registration of point sets." *International Conference on Medical Image Computing and Computer-Assisted Intervention*. Springer, Berlin, Heidelberg, 2010.
   >
   > **Citations:** 26
+
+### Matching
+
+- **Improved Data Association for ICP-based Scan Matching in Noisy and Dynamic Environments**
+
+- **Color point cloud registration with 4d ICP algorithm** :heavy_check_mark:
+
+  > Men, Hao, Biruk Gebre, and Kishore Pochiraju. "Color point cloud registration with 4D ICP algorithm." *2011 IEEE International Conference on Robotics and Automation*. IEEE, 2011.
+  >
+  > **Citations:** 117
+  >
+  > [[pdf]](./papers/Color_point_cloud_registration_with_4D_ICP_algorithm.pdf)
+
+  - Summary
+    - Similar to Color-GICP, it uses color information to as the matching method. The color is represented as *Hue* value. The point is represented as $p = (x, y, z, h)$. The core idea is that the *h*  value represents the color but not sensitive to brightness and viewpoint.
+
+### Comments
+
+- ICP's drawback:
+  - Too sensitve to noise and initialization;
+  - Time consuming on finding the correspondence(Need to find correspondence each iteration).
 
 ## Soft-Assign
 
