@@ -685,9 +685,18 @@
   >
   > [[pdf]](./papers/)
 
-- **Multi-Channel Generalized-ICP: A robust framework for multi-channel scan registration**
+- **Multi-Channel Generalized-ICP: A robust framework for multi-channel scan registration** :heavy_check_mark:
 
   > Servos, James, and Steven L. Waslander. "Multi-Channel Generalized-ICP: A robust framework for multi-channel scan registration." *Robotics and Autonomous systems* 87 (2017): 247-257.
+  >
+  > **Citation:** 
+  
+  - Summary
+    - The method inherit the framework of GICP, the difference is the covariance estimation. The proposed method estimate the covariance by incorporating the features.
+    - By point matching, the proposed method also using multi-channels information to find nearest points.
+  - Comments
+    - 但需要指出的 是，在室外及非结构化场景中 ＧＩＣＰ并不比标准 ＩＣＰ表现出色。——GICP的文献内部？（**要开始有意识地记录缺点！**)
+    - The paper has a good explanation of GICP.
   
 - **LiTAMIN: LiDAR-based Tracking And Mapping by Stabilized ICP for Geometry Approximation with Normal Distributions** :heavy_check_mark:
 
