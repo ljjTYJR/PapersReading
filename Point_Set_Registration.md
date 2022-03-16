@@ -138,9 +138,19 @@
   >
   > **Citations:** 520
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1242341)  [[pdf]](./papers/The dual-bootstrap iterative closest point algorithm with application to retinal image registration.pdf)
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1242341)  [[pdf]](./papers/The dual-bootstrap iterative closest point algorithm with application to retinal image registration.pdf)
   
-- 
+- **Probability iterative closest point algorithm for m-D point set registration with noise** :heavy_check_mark:
+
+  > Du, Shaoyi, et al. "Probability iterative closest point algorithm for mD point set registration with noise." *Neurocomputing* 157 (2015): 187-198.
+  >
+  > **Citations:** 86
+  >
+  > [[pdf]](./papers/Probability_iterative_closest_point_algorithm_for_m-D_point_set_registration_with_noise.pdf)
+
+  - Summary
+    - In *CPD* method, the correspondence is *one-to-all*, this method modifies the data-association to *one-to-one* and solve it by SVD.
+    - In other words, the proposed method delete some corresponding points and probiblities. Reserving the nearest point association makes the method more accurate(?)
 
 ### Outlier
 
@@ -689,7 +699,7 @@
 
   > Servos, James, and Steven L. Waslander. "Multi-Channel Generalized-ICP: A robust framework for multi-channel scan registration." *Robotics and Autonomous systems* 87 (2017): 247-257.
   >
-  > **Citation:** 
+  > **Citation:** 29
   
   - Summary
     - The method inherit the framework of GICP, the difference is the covariance estimation. The proposed method estimate the covariance by incorporating the features.
