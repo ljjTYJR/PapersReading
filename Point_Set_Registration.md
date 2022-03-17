@@ -52,31 +52,7 @@
 
   - The same work as ICP, but proposed independently.
 
-### Optimization
-
-- **Multi-scale EM-ICP: A Fast and Robust Approach for Surface Registration** :question:
-
-  > Granger, S., & Pennec, X. (2002, May). Multi-scale EM-ICP: A fast and robust approach for surface registration. In *European Conference on Computer Vision* (pp. 418-432). Springer, Berlin, Heidelberg.
-  >
-  > **Citations:** 521
-  >
-  >  [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.5106&rep=rep1&type=pdf) [[pdf]](./papers/Multi-scale EM-ICP  A Fast and Robust.pdf)
-  >
-  > [[notes]](./notes/EM-ICP.md)
-
-  - Can be viewed as 'Soft Assignment'
-  - View the registration problem as the MLE(Maximum Likelihood Estimation) problem, and use E-M Algorithm to optimize the parameter.
-  
-- **Registering multiview range data to create 3D computer objects** :heavy_check_mark:
-
-  > Blais, Gérard, and Martin D. Levine. "Registering multiview range data to create 3D computer objects." *IEEE Transactions on Pattern Analysis and Machine Intelligence* 17.8 (1995): 820-824.
-  >
-  > **Citations:** 666
-  >
-  > [[pdf]](./papers/Registering_multiview_range_data_to_create_3D_computer_objects.pdf)
-
-  - Summary
-    - The algorithm is similar to ICP, the difference is the optimization method: *VFSR*(Very Fast simulated annealing), but it is a a stochastic optimization method.
+### Sampling
 
 - **A Stochastic Iterative Closest Point Algorithm (stochastICP)** :heavy_check_mark:
 
@@ -96,19 +72,7 @@
 
     - The stop criteria is the transformation parameter error between two iteration is small.
 
-### Robustness
-
-- **Efficient variants of the ICP algorithm** :heavy_check_mark:
-
-  > Rusinkiewicz, S., & Levoy, M. (2001, May). Efficient Variants of the ICP algorithm. In *Proceedings third international conference on 3-D digital imaging and modelling (pp. 145-152). IEEE.
-  >
-  > **Citations:** 4711
-  >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=924423)  [[pdf]](./papers/Efficient Variants of the ICP Algorithm.pdf)
-  >
-  > [[notes]](./notes/Efficient variants of the ICP algorithm.md)
-
-  Compare some variants of ICP-based algorithms, the effect of variants on steps of ICP. The paper proposes a sampling method by sampling points according to the normals to increase robustness.
+### Matching
 
 - **The Trimmed Iterative Closest Point Algorithm** **(Tr-ICP)** :heavy_check_mark:
 
@@ -116,7 +80,7 @@
   >
   > **Citations:** 598
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1047997&tag=1)  [[pdf]](./papers/The Trimmed Iterative Closest Point Algorithm.pdf)
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1047997&tag=1)  [[pdf]](./papers/The Trimmed Iterative Closest Point Algorithm.pdf)
 
   Tr-ICP: '*Tr*' means the '*Trimmed*', use the '*[Least Trimmed Square](https://en.wikipedia.org/wiki/Least_trimmed_squares)*' method in the process to improve robustness.
   Pros: can converge when the **overlapping** rate is under 50%;
@@ -128,80 +92,122 @@
   >
   > **Citations:** 461
   >
-  >  [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885604001179?token=B6A29AD77A8BDB565DE4A2ACBB8EFE4B12056ED98E9FFC14E5AD96E10C8F7E04DB2E587E5F8487939EEAC731DC1B24E1&originRegion=eu-west-1&originCreation=20220107203632)  [[pdf]](./papers/Robust Euclidean alignment of 3D point sets the trimmediterative closest point algorithm.pdf)
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885604001179?token=B6A29AD77A8BDB565DE4A2ACBB8EFE4B12056ED98E9FFC14E5AD96E10C8F7E04DB2E587E5F8487939EEAC731DC1B24E1&originRegion=eu-west-1&originCreation=20220107203632)  [[pdf]](./papers/Robust Euclidean alignment of 3D point sets the trimmediterative closest point algorithm.pdf)
 
   - Similar to Tr-ICP, they are the same authors, but I did not get the difference between them.
 
-- **The dual-bootstrap iterative closest point algorithm with application to retinal image registration**
+- **Improved Data Association for ICP-based Scan Matching in Noisy and Dynamic Environments**
 
-  > Stewart, C. V., Tsai, C. L., & Roysam, B. (2003). The dual-bootstrap iterative closest point algorithm with application to retinal image registration. *IEEE transactions on medical imaging*, *22*(11), 1379-1394.
-  >
-  > **Citations:** 520
-  >
-  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1242341)  [[pdf]](./papers/The dual-bootstrap iterative closest point algorithm with application to retinal image registration.pdf)
-  
-- **Probability iterative closest point algorithm for m-D point set registration with noise** :heavy_check_mark:
+- **Color point cloud registration with 4d ICP algorithm** :heavy_check_mark:
 
-  > Du, Shaoyi, et al. "Probability iterative closest point algorithm for mD point set registration with noise." *Neurocomputing* 157 (2015): 187-198.
+  > Men, Hao, Biruk Gebre, and Kishore Pochiraju. "Color point cloud registration with 4D ICP algorithm." *2011 IEEE International Conference on Robotics and Automation*. IEEE, 2011.
   >
-  > **Citations:** 86
+  > **Citations:** 117
   >
-  > [[pdf]](./papers/Probability_iterative_closest_point_algorithm_for_m-D_point_set_registration_with_noise.pdf)
+  > [[pdf]](./papers/Color_point_cloud_registration_with_4D_ICP_algorithm.pdf)
 
   - Summary
-    - In *CPD* method, the correspondence is *one-to-all*, this method modifies the data-association to *one-to-one* and solve it by SVD.
-    - In other words, the proposed method delete some corresponding points and probiblities. Reserving the nearest point association makes the method more accurate(?)
+    - Similar to Color-GICP, it uses color information to as the matching method. The color is represented as *Hue* value. The point is represented as $p = (x, y, z, h)$. The core idea is that the *h*  value represents the color but not sensitive to brightness and viewpoint.
 
-### Outlier
+  - Comments
+    - ICP's drawback:
+      - Too sensitve to noise and initialization;
+      - Time consuming on finding the correspondence(Need to find correspondence each iteration).
 
-- **Robust point set registration using EM-ICP with information-theoretically optimal outlier handling**
+- **Voxelized GICP for Fast and Accurate 3D Point Cloud Registration** :heavy_check_mark:
 
-  > Hermans, Jeroen, et al. "Robust point set registration using EM-ICP with information-theoretically optimal outlier handling." *CVPR 2011*. IEEE, 2011.
+  > Koide, Kenji, et al. "Voxelized gicp for fast and accurate 3d point cloud registration." *2021 IEEE International Conference on Robotics and Automation (ICRA)*. IEEE, 2021.
   >
-  > **Citations:** 45
-
-- **Robust matching of 3D contours using iterative closest point algorithm improved by M-estimation** :heavy_check_mark:
-
-  > Kaneko, Shun'ichi, Tomonori Kondo, and Atsushi Miyamoto. "Robust matching of 3D contours using iterative closest point algorithm improved by M-estimation." *Pattern Recognition* 36.9 (2003): 2041-2047.
+  > **Citations:** 29
   >
-  > **Citations:** 90
-  >
-  > [[pdf]](./papers/M_ICP.pdf)
+  > [[pdf]](./papers/Voxelized_GICP_for_Fast_and_Accurate_3D_Point_Cloud_Registration.pdf)
 
   - Summary
 
-    - Traditional ICP method uses the *Least Square* to compute the objective function. If we define the residuals as $e_1 = p_1 - q_1$ , the traditional ICP is $e_1^2 + e_2^2 + e_3^2$
+    <img src="./notes/VGICP.png" style="zoom:67%;" />
 
-      The M-ICP constructs a new objective function as:
-      $$
-      Obj = \sum{\rho_1(e_1)+\rho_2(e_2)+\rho_3(e_3)}
-      $$
+    - The proposed is based on G-ICP(Which first computes the covariance of each point in the two point sets.) Then the GICP finds nearest point and optimizes the cost function combined with the covariance. NDT firstly divides the raw point set into fixed grids, and computes covariance of each grid(a distribution), then finds the nearest gird to optimize the cost function.
 
-### A similar framework
+    - VGICP
 
-- **Registration of Point Cloud Data from a Geometric Optimization Perspective**
+      - Compute the covariance of each point in point sets.
 
-  > Mitra, N. J., Gelfand, N., Pottmann, H., & Guibas, L. (2004, July). Registration of point cloud data from a geometric optimization perspective. In *Proceedings of the 2004 Eurographics/ACM SIGGRAPH Symposium on Geometry processing* (pp. 22-31).
+      - For the fixed set, the mean value and covariance is computed together. (Maybe it can be viewed as a "distribution of distribution?").
+
+      - Acceleration: Instead of searching the nearest point/grid. The method uses a trick of voxelization:
+        $$
+        voxel\_index\_a = cast\_to\_int(a_i / voxle\_resolution) \\
+        voxel\_index\_b = cast\_to\_int(b_i / voxle\_resolution) \\
+        $$
+        In each iteration, the point in moving set will find the equal index in b to optimize.
+
+    - Pros:
+
+      - Run in parallel because it does not need to search the nearest point every iteration.
+
+- **Iterative Global Similarity Points: A Robust Coarse-to-Fine Integration Solution for Pairwise 3D Point Cloud Registration** :heavy_check_mark:
+
+  > Pan, Yue, et al. "Iterative global similarity points: A robust coarse-to-fine integration solution for pairwise 3d point cloud registration." *2018 International Conference on 3D Vision (3DV)*. IEEE, 2018.
   >
-  > **citations**:346
+  > **Citations:** 21
   >
-  >  [[url]](https://graphics.stanford.edu/courses/cs348a-17-winter/Handouts/mgpg-rpcdgop-04.pdf)  [[pdf]](./papers/Registration of Point Cloud Data from a Geometric Optimization Perspective.pdf)
+  > [[pdf]](./papers/Iterative_Global_Similarity_Points_A_Robust_Coarse-to-Fine_Integration_Solution_for_Pairwise_3D_Point_Cloud_Registration.pdf)
 
-- **Registration without ICP**
+  - Summary
+    - The proposed method follows the iteration process of ICP method.
+      - The difference: In ICP, the correspondence is provided by finding the nearest points correspondence. But in this paper, the correspondence is estimated by finding the *feature correspondence*.  The features are provided by *Binary Shape Context (BSC)*. 
+      - The process of features correspondence can be summarized by: 1) Keypoints detecting; 2) computing the descriptors. 3) Computing the correspondence by miniminzing a energy function.
+      - After getting the correspondence, SVD is used to compute the transformation.
+  - Pros and cons
+    - From the experiments, the features seem to hadle **partial overlap** well.
+    - The method need involve feature correspondence computation, it is really **time consuming**.
 
-  > Pottmann, H., Leopoldseder, S., & Hofer, M. (2004). Registration without ICP. *Computer Vision and Image Understanding*, *95*(1), 54-71.
-  >
-  > **Citations:**  193
-  >
-  >  [[url]](https://reader.elsevier.com/reader/sd/pii/S1077314204000475?token=8DB8C5E4B144F2E8B057D208B85ACA76BB37E85C6014F18D2EF6C6B9F068840DC740ED9D345A8EC880FDA7ADABF1DF16&originRegion=eu-west-1&originCreation=20220108112859)  [[pdf]](./papers/Registration without ICP.pdf)
+- **A Robust Loss for Point Cloud Registration** :heavy_check_mark:
 
-- **Geometry and convergence analysis of algorithms for registration of 3D shapes**
+  > Deng, Zhi, et al. "A robust loss for point cloud registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2021.
+  >
+  > [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Deng_A_Robust_Loss_for_Point_Cloud_Registration_ICCV_2021_paper.pdf)  [[pdf]](./papers/A Robust Loss for Point Cloud Registration.pdf)
 
-  > Pottmann, H., Huang, Q. X., Yang, Y. L., & Hu, S. M. (2006). Geometry and convergence analysis of algorithms for registration of 3D shapes. *International Journal of Computer Vision*, *67*(3), 277-296.
+  - First, the proposed metric is based on intersections of uniformly random straight lines set in space, which can obtain richer information and more likely to achieve the global minimum.
+
+  - Second, our proposed metric can turn various supervised learning frameworks into unsupervised and has the
+    ability to train on massive real unlabeled suitable data sets.
+
+    :star:优缺点要看和谁进行比较；
+
+  - More accurate and faster than ICP, FGR.
+
+### Weitghting
+
+- **Multi-Channel Generalized-ICP: A robust framework for multi-channel scan registration** :heavy_check_mark:
+
+  > Servos, James, and Steven L. Waslander. "Multi-Channel Generalized-ICP: A robust framework for multi-channel scan registration." *Robotics and Autonomous systems* 87 (2017): 247-257.
   >
-  > **Citations:**  225
+  > **Citation:** 29
+
+  - Summary
+    - The method inherit the framework of GICP, the difference is the covariance estimation. The proposed method estimate the covariance by incorporating the features.
+    - By point matching, the proposed method also using multi-channels information to find nearest points.
+  - Comments
+    - 但需要指出的 是，在室外及非结构化场景中 ＧＩＣＰ并不比标准 ＩＣＰ表现出色。——GICP的文献内部？（**要开始有意识地记录缺点！**)
+    - The paper has a good explanation of GICP.
+
+- **Learning anisotropic ICP (LA-ICP) for robust and efficient 3D registration** :heavy_check_mark: :x:
+
+  > Lee, Bhoram, and Daniel D. Lee. "Learning anisotropic ICP (LA-ICP) for robust and efficient 3D registration." *2016 IEEE international conference on robotics and automation (ICRA)*. IEEE, 2016.
   >
-  >  [[url]](https://link.springer.com/content/pdf/10.1007/s11263-006-5167-2.pdf)  [[pdf]](./papers/Geometry and Convergence Analysis of Algorithms for Registration of 3D Shapes.pdf)
+  > **Citations:** 11
+  >
+  > [[pdf]](./papers/Learning_anisotropic_ICP_LA-ICP_for_robust_and_efficient_3D_registration.pdf)
+
+  - Summary
+
+    - I do not understand this paper. The proposed method is based on *G-ICP*. It aims to estimate the covariance in the equation;
+    - The ideas of the author show as follows:
+      - The generalized ICP equation with covariance; And include the point2plane, GICP into this feamework;
+      - **The problem to solve** is how to get the covariance?  
+
+    - The method proposes a *online learning* method to estimate covariance. In my view, the proposed method first iteratively estimate the covariance and transformation.
 
 ### Objective Function
 
@@ -235,14 +241,12 @@
 
 - **A symmetric objective function for ICP** **(Symmetric-ICP)**  :heavy_check_mark: 
 
-  :question: 1. 对于该实验有问题，为什么选择每一次迭代的过程？ 2. 这个是否是解决feature的稀疏问题？3. 本论文还有一些引用文献没看
-
   > Rusinkiewicz, S. (2019). A symmetric objective function for ICP. *ACM Transactions on Graphics (TOG)*, *38*(4), 1-7.
-  >
+>
   > **citations**:41
   >
   >  [[url]](https://dl.acm.org/doi/pdf/10.1145/3306346.3323037)  [[pdf]](./papers/A Symmetric Objective Function for ICP.pdf)
-
+  
   <img src="./notes/symmetric-icp.png" style="zoom: 50%;" />
 
   Symmetric-ICP: 在point-to-plane的基础上进行改进，point-to-plane的类型收敛域减小，因为如上图所示，如果p点在q点所在的平面，那么二者的 *loss function* 一定为0，那么p点就只能在q点的平面进行滑动。但是使用symmetric(上图所示)，可以允许p点与q点形成圆进行滑动。
@@ -311,18 +315,6 @@
     - More robust and precise.
     - Much computation cost in each iteration.
 
-- **Robust registration of 2D and 3D point sets** **(LM-ICP)**:heavy_check_mark: :question:
-
-  > Fitzgibbon, A. W. (2003). Robust registration of 2D and 3D point sets. *Image and vision computing*, *21*(13-14), 1145-1153.
-  >
-  > **Citations:** 1089
-  >
-  >  [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885603001835?token=76780F4CE6E03D857BA3240F3179D4A3ADDC641974808A73B35251E1D27D83CA1AC4345D6345686D2744544E4C647749&originRegion=eu-west-1&originCreation=20220105133411) [[pdf]](./papers/Robust registration of 2D and 3D point sets.pdf)
-  >
-  > [[notes]](./notes/Robust registration of 2D and 3D point sets.md)
-
-  The article uses the LM (Levenberg–Marquardt algorithm) algorithm to optimize a non-linear process instead of a closed-form solution, which can get a wider converge basin. 
-
 - **Sparse Iterative Closest Point** **(Sparse ICP)** :heavy_check_mark:
 
   > Bouaziz, S., Tagliasacchi, A., & Pauly, M. (2013, August). Sparse iterative closest point. In *Computer graphics forum* (Vol. 32, No. 5, pp. 113-123). Oxford, UK: Blackwell Publishing Ltd.
@@ -361,21 +353,6 @@
   - [ ] 这些特征是否有几何意义？
   - [ ] 第四章和第五章还没看
 
-- **A Robust Loss for Point Cloud Registration** :heavy_check_mark:
-
-  > Deng, Zhi, et al. "A robust loss for point cloud registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2021.
-  >
-  >  [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Deng_A_Robust_Loss_for_Point_Cloud_Registration_ICCV_2021_paper.pdf)  [[pdf]](./papers/A Robust Loss for Point Cloud Registration.pdf)
-
-  - First, the proposed metric is based on intersections of uniformly random straight lines set in space, which can obtain richer information and more likely to achieve the global minimum.
-
-  - Second, our proposed metric can turn various supervised learning frameworks into unsupervised and has the
-    ability to train on massive real unlabeled suitable data sets.
-
-    :star:优缺点要看和谁进行比较；
-
-  - More accurate and faster than ICP, FGR.
-  
 - **Registration and integration of textured 3D data** :heavy_check_mark:
 
   > Johnson, Andrew Edie, and Sing Bing Kang. "Registration and integration of textured 3D data." *Image and vision computing* 17.2 (1999): 135-147.
@@ -413,62 +390,86 @@
 
     *Kernel function?*
 
-### Global
+- **Probability iterative closest point algorithm for m-D point set registration with noise** :heavy_check_mark:
 
-- **The 3D-3D registration problem revisited** :heavy_check_mark:
-
-  > Li, H., & Hartley, R. (2007, October). The 3D-3D registration problem revisited. In *2007 IEEE 11th international conference on computer vision* (pp. 1-8). IEEE.
+  > Du, Shaoyi, et al. "Probability iterative closest point algorithm for mD point set registration with noise." *Neurocomputing* 157 (2015): 187-198.
   >
-  > **Citations:** 193
+  > **Citations:** 86
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4409077)  [[pdf]](./papers/The 3D-3D registration problem revisited.pdf)
+  > [[pdf]](./papers/Probability_iterative_closest_point_algorithm_for_m-D_point_set_registration_with_noise.pdf)
 
-  - SPC problem: simultaneous pose and correspondence problem. But if given the correspondence, or given the rotation matrix, the problem becomes **convex** which is easy to solve. SPC problem is non-convex.
+  - Summary
+    - In *CPD* method, the correspondence is *one-to-all*, this method modifies the data-association to *one-to-one* and solve it by SVD.
+    - In other words, the proposed method delete some corresponding points and probiblities. Reserving the nearest point association makes the method more accurate(?)
 
-  - This paper regard many existing algorithms(e.g. ICP) as a kind of **E-M** algorithm, which alternatively estimate the correspondence and the transformation. The original problem is divided into two sub-problems. However, the E-M algorithms are **local optimal**.
+- **Robust matching of 3D contours using iterative closest point algorithm improved by M-estimation** :heavy_check_mark:
 
-  - Some other existing approaches(Exploiting the geomertic features thar are **inariant** to either **correspondence**? or **transformation**): [PCA](Kazhdan, Michael, Thomas Funkhouser, and Szymon Rusinkiewicz. "Shape matching and anisotropy." *ACM SIGGRAPH 2004 Papers*. 2004. 623-629.), [Mondal matching and spectural matching](M. Leordeanu and M. Hebert, "A spectral technique for correspondence problems using pairwise constraints", *ICCV*, vol. 2, pp. 1482-1489, 2005.    &&    S. Sclaroff and A. Pentland, "Model matching for correspondence and recognition", *PAMI*, June 1995.)
-
-  - The core idea of this paper is the theory of **Lipschitz optimization**.
-
-  - The above problems mentioned above:
-
-    - If the correspondence is fixed, the problem can be solved by: RANSAC, [quaternion method](B. Horn, "Closed-form solution of absolute orientation using unit quatemions", *JOSA-A*, vol. 4, pp. 629-642, April 1987.) [colsed-form1](D. W. Eggert, A. Lorusso and R. B. Fisher, "Estimating 3-d rigid body transformations: a comparison of four major algorithms", *Machine Vision and Applications*, vol. 9, pp. 272-290, 1997.) [closed-form2]( N. Ohta and K. Kanatani, "Optimal estimation of three-dimensional rotation and reliability evaluation", *ECCV*, pp. 175-187, June 1998.)
-    - if the Rotation is fixed, the correspondence can also be solved(Here I do not write here, it can be regarded as a pure mathematical problem)
-
-  - To globally optimize the problem, two ways can be considered:
-
-    - Search all the permutations, and then solve the rotation. This idea is simple and effiective, but the cons is that if the input's size is large, the searching space's size is $n!$.
-    - Search the rotation space and slove foe the correspondence, which uses the Lipschitz optimization and Brounch-and-bound algorithm.
-
-  - For the brounch-and-bound algorithm, in my view, it estimate the lower bound of each interval and choose the lower bound, and iteratively search the space until converge.
-
-    :question: The details of the algorithm I have not understood.
-
-  - Pros and cons:
-
-    - pros: Global optimal, insensitive to the initialization.
-    - cons: 1) Time consuming. 2) Senstive to the outlier. 3) The algorithm complexity is unkown.
-
-  - Can be considered as the pre-paper for the Go-ICP
-
-- **Branch-and-bound methods for euclidean registration problems**
-
-  > Olsson, C., Kahl, F., & Oskarsson, M. (2008). Branch-and-bound methods for euclidean registration problems. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *31*(5), 783-794.
+  > Kaneko, Shun'ichi, Tomonori Kondo, and Atsushi Miyamoto. "Robust matching of 3D contours using iterative closest point algorithm improved by M-estimation." *Pattern Recognition* 36.9 (2003): 2041-2047.
   >
-  > **Citations:** 138
+  > **Citations:** 90
   >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4531744)  [[pdf]](./papers/Branch-and-Bound Methods for Euclidean Registration Problems.pdf)
+  > [[pdf]](./papers/M_ICP.pdf)
 
-- **Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration** **(Go-ICP)** :heavy_check_mark:
+  - Summary
 
-  > Yang, J., Li, H., Campbell, D., & Jia, Y. (2015). Go-ICP: A globally optimal solution to 3D ICP point-set registration. *IEEE transactions on pattern analysis and machine intelligence*, *38*(11), 2241-2254.
+    - Traditional ICP method uses the *Least Square* to compute the objective function. If we define the residuals as $e_1 = p_1 - q_1$ , the traditional ICP is $e_1^2 + e_2^2 + e_3^2$
+
+      The M-ICP constructs a new objective function as:
+      $$
+      Obj = \sum{\rho_1(e_1)+\rho_2(e_2)+\rho_3(e_3)}
+      $$
+
+- **LiTAMIN: LiDAR-based Tracking And Mapping by Stabilized ICP for Geometry Approximation with Normal Distributions** :heavy_check_mark:
+
+  > Yokozuka, Masashi, et al. "Litamin: Lidar-based tracking and mapping by stabilized icp for geometry approximation with normal distributions." *2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. IEEE, 2020.
   >
-  > **Citations:** 522
+  > **Citations**: 9
   >
-  >  [[pdf]](./papers/Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration.pdf)  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7368945) 
+  > [[pdf]](./papers/LiTAMIN_LiDAR-based_Tracking_And_Mapping_by_Stabilized_ICP_for_Geometry_Approximation_with_Normal_Distributions.pdf)
 
-  - Get the global optimal for ICP algorithm.
+  - Summary
+    - The paper is good that it provides a perspective of cost function to describe the point set registration. 
+    - **Motivation**: The achieve balance between robustness and accuracy for ICP-based methods. The *G-ICP* and *NDT* methods provide robustness but they are time consuming due to PCA.
+    - The proposed method use a effiective way to compute the inverse of covariance matrix to improve computation effiency.(Based on P2D NDT)
+    - **Representation**: The data are represented by voxel grids. **Data Association**: K-D tree.
+
+- **LiTAMIN2: Ultra Light LiDAR-based SLAM using Geometric Approximation applied with KL-Divergence** :heavy_check_mark:
+
+  > Yokozuka, Masashi, et al. "LiTAMIN2: Ultra light lidar-based slam using geometric approximation applied with KL-divergence." *2021 IEEE International Conference on Robotics and Automation (ICRA)*. IEEE, 2021.
+  >
+  > **Citations:** 11
+  >
+  > [[pdf]](./papers/LiTAMIN2_Ultra_Light_LiDAR-based_SLAM_using_Geometric_Approximation_applied_with_KL-Divergence.pdf)
+
+  - ![](./notes/LiTAMIN2.png)
+  - Summary
+    - The proposed method is based on or *D2D NDT*. 
+    - The **Representation** of the point cloud is voxel grid. The *symmetric K-L Divergence* is used to measure similarity of two  sub-point-set(distribution). The difference is adding a extra *penalty function* which is used to estimate the covariance of  two distribution.
+
+- **Convergent iterative closest-point algorithm to accomodate anisotropic and inhomogenous localization error** :heavy_check_mark:
+
+  > Maier-Hein, Lena, et al. "Convergent iterative closest-point algorithm to accomodate anisotropic and inhomogenous localization error." *IEEE transactions on pattern analysis and machine intelligence* 34.8 (2011): 1520-1532.
+  >
+  > **Citations:** 127
+  >
+  > [[pdf]](./papers/Convergent_Iterative_Closest-Point_Algorithm_to_Accomodate_Anisotropic_and_Inhomogenous_Localization_Error.pdf)
+
+  - Summary
+
+    - Maybe due to the density or other things, the location error of corresponding points may be anisotropic. The previous method mainly consider the location error as the isotropic error.
+
+    - To formulate the metric error, the anisotropic consideration is combined into the steps of the iteration:
+      $$
+      distance:d_{new} = || W_{\vec{x}\vec{y}}(\vec{x}-\vec{y})||_{2}^2\\
+      cost function = \sum_{i=1}^{M}||W_{i}(R\vec{x_i}+\vec{t}-\vec{y}_{corresponding})||_2^2
+      $$
+      The coefficient is related to the covariance of both inputs' covariance
+
+    - How to compute the covariance? —— **PCA**
+
+  - Cons:
+
+    - PCA computes covariance consume too much time.
 
 ### Acceleration
 
@@ -589,6 +590,129 @@
 
     - GICP reduces the distances of corresponding points in the direction of the surface normals. 
 
+### Optimization
+
+- **Robust registration of 2D and 3D point sets** **(LM-ICP)**:heavy_check_mark: :question:
+
+  > Fitzgibbon, A. W. (2003). Robust registration of 2D and 3D point sets. *Image and vision computing*, *21*(13-14), 1145-1153.
+  >
+  > **Citations:** 1089
+  >
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0262885603001835?token=76780F4CE6E03D857BA3240F3179D4A3ADDC641974808A73B35251E1D27D83CA1AC4345D6345686D2744544E4C647749&originRegion=eu-west-1&originCreation=20220105133411) [[pdf]](./papers/Robust registration of 2D and 3D point sets.pdf)
+  >
+  > [[notes]](./notes/Robust registration of 2D and 3D point sets.md)
+
+  The article uses the LM (Levenberg–Marquardt algorithm) algorithm to optimize a non-linear process instead of a closed-form solution, which can get a wider converge basin. 
+
+- **Multi-scale EM-ICP: A Fast and Robust Approach for Surface Registration** :question:
+
+  > Granger, S., & Pennec, X. (2002, May). Multi-scale EM-ICP: A fast and robust approach for surface registration. In *European Conference on Computer Vision* (pp. 418-432). Springer, Berlin, Heidelberg.
+  >
+  > **Citations:** 521
+  >
+  > [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.5106&rep=rep1&type=pdf) [[pdf]](./papers/Multi-scale EM-ICP  A Fast and Robust.pdf)
+  >
+  > [[notes]](./notes/EM-ICP.md)
+
+  - Can be viewed as 'Soft Assignment'
+  - View the registration problem as the MLE(Maximum Likelihood Estimation) problem, and use E-M Algorithm to optimize the parameter.
+
+- **Registering multiview range data to create 3D computer objects** :heavy_check_mark:
+
+  > Blais, Gérard, and Martin D. Levine. "Registering multiview range data to create 3D computer objects." *IEEE Transactions on Pattern Analysis and Machine Intelligence* 17.8 (1995): 820-824.
+  >
+  > **Citations:** 666
+  >
+  > [[pdf]](./papers/Registering_multiview_range_data_to_create_3D_computer_objects.pdf)
+
+  - Summary
+    - The algorithm is similar to ICP, the difference is the optimization method: *VFSR*(Very Fast simulated annealing), but it is a a stochastic optimization method.
+
+- **The 3D-3D registration problem revisited** :heavy_check_mark:
+
+  > Li, H., & Hartley, R. (2007, October). The 3D-3D registration problem revisited. In *2007 IEEE 11th international conference on computer vision* (pp. 1-8). IEEE.
+  >
+  > **Citations:** 193
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4409077)  [[pdf]](./papers/The 3D-3D registration problem revisited.pdf)
+
+  - SPC problem: simultaneous pose and correspondence problem. But if given the correspondence, or given the rotation matrix, the problem becomes **convex** which is easy to solve. SPC problem is non-convex.
+
+  - This paper regard many existing algorithms(e.g. ICP) as a kind of **E-M** algorithm, which alternatively estimate the correspondence and the transformation. The original problem is divided into two sub-problems. However, the E-M algorithms are **local optimal**.
+
+  - Some other existing approaches(Exploiting the geomertic features thar are **inariant** to either **correspondence**? or **transformation**): [PCA](Kazhdan, Michael, Thomas Funkhouser, and Szymon Rusinkiewicz. "Shape matching and anisotropy." *ACM SIGGRAPH 2004 Papers*. 2004. 623-629.), [Mondal matching and spectural matching](M. Leordeanu and M. Hebert, "A spectral technique for correspondence problems using pairwise constraints", *ICCV*, vol. 2, pp. 1482-1489, 2005.    &&    S. Sclaroff and A. Pentland, "Model matching for correspondence and recognition", *PAMI*, June 1995.)
+
+  - The core idea of this paper is the theory of **Lipschitz optimization**.
+
+  - The above problems mentioned above:
+
+    - If the correspondence is fixed, the problem can be solved by: RANSAC, [quaternion method](B. Horn, "Closed-form solution of absolute orientation using unit quatemions", *JOSA-A*, vol. 4, pp. 629-642, April 1987.) [colsed-form1](D. W. Eggert, A. Lorusso and R. B. Fisher, "Estimating 3-d rigid body transformations: a comparison of four major algorithms", *Machine Vision and Applications*, vol. 9, pp. 272-290, 1997.) [closed-form2]( N. Ohta and K. Kanatani, "Optimal estimation of three-dimensional rotation and reliability evaluation", *ECCV*, pp. 175-187, June 1998.)
+    - if the Rotation is fixed, the correspondence can also be solved(Here I do not write here, it can be regarded as a pure mathematical problem)
+
+  - To globally optimize the problem, two ways can be considered:
+
+    - Search all the permutations, and then solve the rotation. This idea is simple and effiective, but the cons is that if the input's size is large, the searching space's size is $n!$.
+    - Search the rotation space and slove foe the correspondence, which uses the Lipschitz optimization and Brounch-and-bound algorithm.
+
+  - For the brounch-and-bound algorithm, in my view, it estimate the lower bound of each interval and choose the lower bound, and iteratively search the space until converge.
+
+    :question: The details of the algorithm I have not understood.
+
+  - Pros and cons:
+
+    - pros: Global optimal, insensitive to the initialization.
+    - cons: 1) Time consuming. 2) Senstive to the outlier. 3) The algorithm complexity is unkown.
+
+  - Can be considered as the pre-paper for the Go-ICP
+
+- **Branch-and-bound methods for euclidean registration problems**
+
+  > Olsson, C., Kahl, F., & Oskarsson, M. (2008). Branch-and-bound methods for euclidean registration problems. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *31*(5), 783-794.
+  >
+  > **Citations:** 138
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4531744)  [[pdf]](./papers/Branch-and-Bound Methods for Euclidean Registration Problems.pdf)
+
+- **Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration** **(Go-ICP)** :heavy_check_mark:
+
+  > Yang, J., Li, H., Campbell, D., & Jia, Y. (2015). Go-ICP: A globally optimal solution to 3D ICP point-set registration. *IEEE transactions on pattern analysis and machine intelligence*, *38*(11), 2241-2254.
+  >
+  > **Citations:** 522
+  >
+  > [[pdf]](./papers/Go-ICP_A_Globally_Optimal_Solution_to_3D_ICP_Point-Set_Registration.pdf)  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7368945) 
+
+  - Get the global optimal for ICP algorithm.
+
+- **An ICP variant using a point-to-line metric** :heavy_check_mark:
+
+  > Censi, Andrea. "An ICP variant using a point-to-line metric." *2008 IEEE International Conference on Robotics and Automation*. Ieee, 2008.
+  >
+  > **Citations:**  528
+  >
+  > [[pdf]](./papers/An_ICP_variant_using_a_point-to-line_metric.pdf)
+
+  - Summary
+
+    - The proposed method call them *point-to-line* metric, but the formulation is similar to *poin-to-plane*. In the paper, the author explicitly says that the proposed method is based on the *point-to-plane* formulation.
+
+    - The difference between the proposed method and *point-to-plane* method is the optimization. Different from *least square solution*, the proposed method uses a closed-form solution to optimize which makes the converge quicker.
+
+    - For **optimization**, 
+
+      > A classical approach involves the computation of all the stationary points (among which there is the global minimum). This approach is used by Censi [13] for the global resolution of the 2D registration problem, reducing the problem to solving a 4-th order polynomial equation. 
+      >
+      > ***Convex Global 3D Registration With Lagrangian Duality***
+      >
+      > The cons: it is hard to extend to 3-D space because of explosion of complexity.
+
+      The proposed method utilizes the ***Lagrange’s multipliers* to optimize the formulation.** And the rotation parameter is expressed in a different way.
+
+      The proposed method also proposes a search algorithm to find the correspondence.
+
+  - Commetns
+
+    - This method is used widely in SLAM application.
+
 ### Not Read
 
 - **CELLO-3D: Estimating the Covariance of ICP in the Real World**
@@ -609,84 +733,6 @@
 
   - 和SLAM的应用非常相关，暂时不研究这个，等后续真的需要研究SLAM，再看这篇文章。
 
-- **An ICP variant using a point-to-line metric** :heavy_check_mark:
-
-  > Censi, Andrea. "An ICP variant using a point-to-line metric." *2008 IEEE International Conference on Robotics and Automation*. Ieee, 2008.
-  >
-  > **Citations:**  528
-  >
-  > [[pdf]](./papers/An_ICP_variant_using_a_point-to-line_metric.pdf)
-  
-  - Summary
-  
-    - The proposed method call them *point-to-line* metric, but the formulation is similar to *poin-to-plane*. In the paper, the author explicitly says that the proposed method is based on the *point-to-plane* formulation.
-  
-    - The difference between the proposed method and *point-to-plane* method is the optimization. Different from *least square solution*, the proposed method uses a closed-form solution to optimize which makes the converge quicker.
-  
-    - For **optimization**, 
-  
-      > A classical approach involves the computation of all the stationary points (among which there is the global minimum). This approach is used by Censi [13] for the global resolution of the 2D registration problem, reducing the problem to solving a 4-th order polynomial equation. 
-      >
-      > ***Convex Global 3D Registration With Lagrangian Duality***
-      >
-      > The cons: it is hard to extend to 3-D space because of explosion of complexity.
-  
-      The proposed method utilizes the ***Lagrange’s multipliers* to optimize the formulation.** And the rotation parameter is expressed in a different way.
-  
-      The proposed method also proposes a search algorithm to find the correspondence.
-  
-  - Commetns
-  
-    - This method is used widely in SLAM application.
-  
-- **Voxelized GICP for Fast and Accurate 3D Point Cloud Registration** :heavy_check_mark:
-
-  > Koide, Kenji, et al. "Voxelized gicp for fast and accurate 3d point cloud registration." *2021 IEEE International Conference on Robotics and Automation (ICRA)*. IEEE, 2021.
-  >
-  > **Citations:** 29
-  >
-  > [[pdf]](./papers/Voxelized_GICP_for_Fast_and_Accurate_3D_Point_Cloud_Registration.pdf)
-
-  - Summary
-
-    <img src="./notes/VGICP.png" style="zoom:67%;" />
-
-    - The proposed is based on G-ICP(Which first computes the covariance of each point in the two point sets.) Then the GICP finds nearest point and optimizes the cost function combined with the covariance. NDT firstly divides the raw point set into fixed grids, and computes covariance of each grid(a distribution), then finds the nearest gird to optimize the cost function.
-
-    - VGICP
-
-      - Compute the covariance of each point in point sets.
-
-      - For the fixed set, the mean value and covariance is computed together. (Maybe it can be viewed as a "distribution of distribution?").
-
-      - Acceleration: Instead of searching the nearest point/grid. The method uses a trick of voxelization:
-        $$
-        voxel\_index\_a = cast\_to\_int(a_i / voxle\_resolution) \\
-        voxel\_index\_b = cast\_to\_int(b_i / voxle\_resolution) \\
-        $$
-        In each iteration, the point in moving set will find the equal index in b to optimize.
-
-    - Pros:
-
-      - Run in parallel because it does not need to search the nearest point every iteration.
-
-- **Iterative Global Similarity Points: A Robust Coarse-to-Fine Integration Solution for Pairwise 3D Point Cloud Registration** :heavy_check_mark:
-
-  > Pan, Yue, et al. "Iterative global similarity points: A robust coarse-to-fine integration solution for pairwise 3d point cloud registration." *2018 International Conference on 3D Vision (3DV)*. IEEE, 2018.
-  >
-  > **Citations:** 21
-  >
-  > [[pdf]](./papers/Iterative_Global_Similarity_Points_A_Robust_Coarse-to-Fine_Integration_Solution_for_Pairwise_3D_Point_Cloud_Registration.pdf)
-
-  - Summary
-    - The proposed method follows the iteration process of ICP method.
-      - The difference: In ICP, the correspondence is provided by finding the nearest points correspondence. But in this paper, the correspondence is estimated by finding the *feature correspondence*.  The features are provided by *Binary Shape Context (BSC)*. 
-      - The process of features correspondence can be summarized by: 1) Keypoints detecting; 2) computing the descriptors. 3) Computing the correspondence by miniminzing a energy function.
-      - After getting the correspondence, SVD is used to compute the transformation.
-  - Pros and cons
-    - From the experiments, the features seem to hadle **partial overlap** well.
-    - The method need involve feature correspondence computation, it is really **time consuming**.
-
 - **Visually bootstrapped generalized ICP**
 
   > Pandey, Gaurav, et al. "Visually bootstrapped generalized ICP." *2011 IEEE International Conference on Robotics and Automation*. IEEE, 2011.
@@ -694,71 +740,6 @@
   > **Citations:** 50
   >
   > [[pdf]](./papers/)
-
-- **Multi-Channel Generalized-ICP: A robust framework for multi-channel scan registration** :heavy_check_mark:
-
-  > Servos, James, and Steven L. Waslander. "Multi-Channel Generalized-ICP: A robust framework for multi-channel scan registration." *Robotics and Autonomous systems* 87 (2017): 247-257.
-  >
-  > **Citation:** 29
-  
-  - Summary
-    - The method inherit the framework of GICP, the difference is the covariance estimation. The proposed method estimate the covariance by incorporating the features.
-    - By point matching, the proposed method also using multi-channels information to find nearest points.
-  - Comments
-    - 但需要指出的 是，在室外及非结构化场景中 ＧＩＣＰ并不比标准 ＩＣＰ表现出色。——GICP的文献内部？（**要开始有意识地记录缺点！**)
-    - The paper has a good explanation of GICP.
-  
-- **LiTAMIN: LiDAR-based Tracking And Mapping by Stabilized ICP for Geometry Approximation with Normal Distributions** :heavy_check_mark:
-
-  > Yokozuka, Masashi, et al. "Litamin: Lidar-based tracking and mapping by stabilized icp for geometry approximation with normal distributions." *2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. IEEE, 2020.
-  >
-  > **Citations**: 9
-  >
-  > [[pdf]](./papers/LiTAMIN_LiDAR-based_Tracking_And_Mapping_by_Stabilized_ICP_for_Geometry_Approximation_with_Normal_Distributions.pdf)
-
-  - Summary
-    - The paper is good that it provides a perspective of cost function to describe the point set registration. 
-    - **Motivation**: The achieve balance between robustness and accuracy for ICP-based methods. The *G-ICP* and *NDT* methods provide robustness but they are time consuming due to PCA.
-    - The proposed method use a effiective way to compute the inverse of covariance matrix to improve computation effiency.(Based on P2D NDT)
-    - **Representation**: The data are represented by voxel grids. **Data Association**: K-D tree.
-
-- **LiTAMIN2: Ultra Light LiDAR-based SLAM using Geometric Approximation applied with KL-Divergence** :heavy_check_mark:
-
-  > Yokozuka, Masashi, et al. "LiTAMIN2: Ultra light lidar-based slam using geometric approximation applied with KL-divergence." *2021 IEEE International Conference on Robotics and Automation (ICRA)*. IEEE, 2021.
-  >
-  > **Citations:** 11
-  >
-  > [[pdf]](./papers/LiTAMIN2_Ultra_Light_LiDAR-based_SLAM_using_Geometric_Approximation_applied_with_KL-Divergence.pdf)
-
-  - ![](./notes/LiTAMIN2.png)
-  - Summary
-    - The proposed method is based on or *D2D NDT*. 
-    - The **Representation** of the point cloud is voxel grid. The *symmetric K-L Divergence* is used to measure similarity of two  sub-point-set(distribution). The difference is adding a extra *penalty function* which is used to estimate the covariance of  two distribution.
-
-- **Convergent iterative closest-point algorithm to accomodate anisotropic and inhomogenous localization error** :heavy_check_mark:
-
-  > Maier-Hein, Lena, et al. "Convergent iterative closest-point algorithm to accomodate anisotropic and inhomogenous localization error." *IEEE transactions on pattern analysis and machine intelligence* 34.8 (2011): 1520-1532.
-  >
-  > **Citations:** 127
-  >
-  > [[pdf]](./papers/Convergent_Iterative_Closest-Point_Algorithm_to_Accomodate_Anisotropic_and_Inhomogenous_Localization_Error.pdf)
-
-  - Summary
-
-    - Maybe due to the density or other things, the location error of corresponding points may be anisotropic. The previous method mainly consider the location error as the isotropic error.
-
-    - To formulate the metric error, the anisotropic consideration is combined into the steps of the iteration:
-      $$
-      distance:d_{new} = || W_{\vec{x}\vec{y}}(\vec{x}-\vec{y})||_{2}^2\\
-      cost function = \sum_{i=1}^{M}||W_{i}(R\vec{x_i}+\vec{t}-\vec{y}_{corresponding})||_2^2
-      $$
-      The coefficient is related to the covariance of both inputs' covariance
-
-    - How to compute the covariance? —— **PCA**
-
-  - Cons:
-
-    - PCA computes covariance consume too much time.
 
 - **Iterative Most-Likely Point Registration (IMLP): A Robust Algorithm for Computing Optimal Shape Alignment**
 
@@ -778,49 +759,67 @@
   >
   > **Citations:** 30
 
-- **Learning anisotropic ICP (LA-ICP) for robust and efficient 3D registration** :heavy_check_mark: :x:
-
-  > Lee, Bhoram, and Daniel D. Lee. "Learning anisotropic ICP (LA-ICP) for robust and efficient 3D registration." *2016 IEEE international conference on robotics and automation (ICRA)*. IEEE, 2016.
-  >
-  > **Citations:** 11
-  >
-  > [[pdf]](./papers/Learning_anisotropic_ICP_LA-ICP_for_robust_and_efficient_3D_registration.pdf)
-
-  - Summary
-
-    - I do not understand this paper. The proposed method is based on *G-ICP*. It aims to estimate the covariance in the equation;
-    - The ideas of the author show as follows:
-      - The generalized ICP equation with covariance; And include the point2plane, GICP into this feamework;
-      - **The problem to solve** is how to get the covariance?  
-
-    - The method proposes a *online learning* method to estimate covariance. In my view, the proposed method first iteratively estimate the covariance and transformation.
-
 - **An Efficient EM-ICP Algorithm for Symmetric Consistent Non-linear Registration of Point Sets**
 
   > Combès, Benoît, and Sylvain Prima. "An efficient EM-ICP algorithm for symmetric consistent non-linear registration of point sets." *International Conference on Medical Image Computing and Computer-Assisted Intervention*. Springer, Berlin, Heidelberg, 2010.
   >
   > **Citations:** 26
 
-### Matching
+### Robustness
 
-- **Improved Data Association for ICP-based Scan Matching in Noisy and Dynamic Environments**
+- **Efficient variants of the ICP algorithm** :heavy_check_mark:
 
-- **Color point cloud registration with 4d ICP algorithm** :heavy_check_mark:
-
-  > Men, Hao, Biruk Gebre, and Kishore Pochiraju. "Color point cloud registration with 4D ICP algorithm." *2011 IEEE International Conference on Robotics and Automation*. IEEE, 2011.
+  > Rusinkiewicz, S., & Levoy, M. (2001, May). Efficient Variants of the ICP algorithm. In *Proceedings third international conference on 3-D digital imaging and modelling (pp. 145-152). IEEE.
   >
-  > **Citations:** 117
+  > **Citations:** 4711
   >
-  > [[pdf]](./papers/Color_point_cloud_registration_with_4D_ICP_algorithm.pdf)
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=924423)  [[pdf]](./papers/Efficient Variants of the ICP Algorithm.pdf)
+  >
+  > [[notes]](./notes/Efficient variants of the ICP algorithm.md)
 
-  - Summary
-    - Similar to Color-GICP, it uses color information to as the matching method. The color is represented as *Hue* value. The point is represented as $p = (x, y, z, h)$. The core idea is that the *h*  value represents the color but not sensitive to brightness and viewpoint.
+  Compare some variants of ICP-based algorithms, the effect of variants on steps of ICP. The paper proposes a sampling method by sampling points according to the normals to increase robustness.
 
-### Comments
+- **The dual-bootstrap iterative closest point algorithm with application to retinal image registration**
 
-- ICP's drawback:
-  - Too sensitve to noise and initialization;
-  - Time consuming on finding the correspondence(Need to find correspondence each iteration).
+  > Stewart, C. V., Tsai, C. L., & Roysam, B. (2003). The dual-bootstrap iterative closest point algorithm with application to retinal image registration. *IEEE transactions on medical imaging*, *22*(11), 1379-1394.
+  >
+  > **Citations:** 520
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1242341)  [[pdf]](./papers/The dual-bootstrap iterative closest point algorithm with application to retinal image registration.pdf)
+
+### Outlier
+
+- **Robust point set registration using EM-ICP with information-theoretically optimal outlier handling**
+
+  > Hermans, Jeroen, et al. "Robust point set registration using EM-ICP with information-theoretically optimal outlier handling." *CVPR 2011*. IEEE, 2011.
+  >
+  > **Citations:** 45
+
+### A similar framework
+
+- **Registration of Point Cloud Data from a Geometric Optimization Perspective**
+
+  > Mitra, N. J., Gelfand, N., Pottmann, H., & Guibas, L. (2004, July). Registration of point cloud data from a geometric optimization perspective. In *Proceedings of the 2004 Eurographics/ACM SIGGRAPH Symposium on Geometry processing* (pp. 22-31).
+  >
+  > **citations**:346
+  >
+  > [[url]](https://graphics.stanford.edu/courses/cs348a-17-winter/Handouts/mgpg-rpcdgop-04.pdf)  [[pdf]](./papers/Registration of Point Cloud Data from a Geometric Optimization Perspective.pdf)
+
+- **Registration without ICP**
+
+  > Pottmann, H., Leopoldseder, S., & Hofer, M. (2004). Registration without ICP. *Computer Vision and Image Understanding*, *95*(1), 54-71.
+  >
+  > **Citations:**  193
+  >
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S1077314204000475?token=8DB8C5E4B144F2E8B057D208B85ACA76BB37E85C6014F18D2EF6C6B9F068840DC740ED9D345A8EC880FDA7ADABF1DF16&originRegion=eu-west-1&originCreation=20220108112859)  [[pdf]](./papers/Registration without ICP.pdf)
+
+- **Geometry and convergence analysis of algorithms for registration of 3D shapes**
+
+  > Pottmann, H., Huang, Q. X., Yang, Y. L., & Hu, S. M. (2006). Geometry and convergence analysis of algorithms for registration of 3D shapes. *International Journal of Computer Vision*, *67*(3), 277-296.
+  >
+  > **Citations:**  225
+  >
+  > [[url]](https://link.springer.com/content/pdf/10.1007/s11263-006-5167-2.pdf)  [[pdf]](./papers/Geometry and Convergence Analysis of Algorithms for Registration of 3D Shapes.pdf)
 
 ## Soft-Assign
 
@@ -2232,6 +2231,10 @@
 - **Registration of Laser Scanning Point Clouds: A Review**
 
   > Cheng, Liang, et al. "Registration of laser scanning point clouds: A review." *Sensors* 18.5 (2018): 1641.
+  
+- **Registration of large-scale terrestrial laser scanner point clouds: A review and benchmark**
+
+  > Dong, Zhen, et al. "Registration of large-scale terrestrial laser scanner point clouds: A review and benchmark." *ISPRS Journal of Photogrammetry and Remote Sensing* 163 (2020): 327-342.
 
 ## Comparison
 
