@@ -74,6 +74,89 @@
 
 ### Matching
 
+- **Registration and integration of textured 3D data** :heavy_check_mark:
+
+  > Johnson, Andrew Edie, and Sing Bing Kang. "Registration and integration of textured 3D data." *Image and vision computing* 17.2 (1999): 135-147.
+  >
+  > **Citations:** 519
+  >
+  > [[pdf]](./papers/Registration_and_integration_of_textured_3D_data.pdf)
+
+  - Summary
+
+    - The proposed mthod combines the color information into the distance metric based on ICP algorithm. The color parameters are represented by *YIQ* color model. Because it can separate the intensity(which may be affected by the light.) and the intrinsic color.
+
+    - The distance can be computed by
+      $$
+      p = (x_1,x_2,x_3,\alpha_1c_1, \alpha_2c_2, \alpha_3c_3)
+      $$
+      Where $\alpha$ is the coefficient, and the $c$ is the measure of color.
+
+- **Color point cloud registration with 4d ICP algorithm** :heavy_check_mark:
+
+  > Men, Hao, Biruk Gebre, and Kishore Pochiraju. "Color point cloud registration with 4D ICP algorithm." *2011 IEEE International Conference on Robotics and Automation*. IEEE, 2011.
+  >
+  > **Citations:** 117
+  >
+  > [[pdf]](./papers/Color_point_cloud_registration_with_4D_ICP_algorithm.pdf)
+
+  - Summary
+    - Similar to Color-GICP, it uses color information to as the matching method. The color is represented as *Hue* value. The point is represented as $p = (x, y, z, h)$. The core idea is that the *h*  value represents the color but not sensitive to brightness and viewpoint.
+  - Comments
+    - ICP's drawback:
+      - Too sensitve to noise and initialization;
+      - Time consuming on finding the correspondence(Need to find correspondence each iteration).
+  
+- **Color supported generalized-icp** :heavy_check_mark:
+
+  > Korn, Michael, Martin Holzkothen, and Josef Pauli. "Color supported generalized-ICP." *2014 International Conference on Computer Vision Theory and Applications (VISAPP)*. Vol. 3. IEEE, 2014.
+  >
+  > **Citations:** 62
+  >
+  > [[pdf]](./papers/Color_supported_generalized-ICP.pdf)
+
+  - Summary
+
+    - Integrating color information into GICP. The pointwise color is represented by *L\*a\*b\* color space*. The point is represented as:
+      $$
+      p_{\alpha,i} = (x_i, y_i, z_i, \alpha L_i, \alpha a_i, \alpha b_i)^{T}
+      $$
+      The distance of two point is represented as :
+      $$
+      d_i = || p_{\alpha,i} - q_{\alpha,i}||_{2}
+      $$
+
+    The method is used in finding correspondences.
+
+  - Pros and cons
+
+    - Compared to GICP, the proposed method is more accurate.
+    - The running time arises.
+
+  - Comments
+
+    - GICP reduces the distances of corresponding points in the direction of the surface normals. 
+
+- **Three-dimensional registration using range and intensity information**
+
+  > Godin, Guy, Marc Rioux, and Rejean Baribeau. "Three-dimensional registration using range and intensity information." *Videometrics III*. Vol. 2350. International Society for Optics and Photonics, 1994.
+  >
+  > **Citations:** 
+
+- **Registration of 3-D Partial Surface Models Using Luminance and Depth Information**
+
+  > Weik, Sebastian. "Registration of 3-D partial surface models using luminance and depth information." *Proceedings. International Conference on Recent Advances in 3-D Digital Imaging and Modeling (Cat. No. 97TB100134)*. IEEE, 1997.
+  >
+  > **Citations:** 182
+  
+- **Extension of the ICP Algorithm to Nonrigid Intensity-Based Registration of 3D Volumes**
+
+  > Feldmar, Jacques, et al. "Extension of the ICP algorithm to nonrigid intensity-based registration of 3D volumes." *Computer Vision and Image Understanding* 66.2 (1997): 193-206.
+  >
+  > **Citations:** 159
+  >
+  > [[pdf]](./papers/1-s2.0-S1077314297906068-main.pdf)
+
 - **The Trimmed Iterative Closest Point Algorithm** **(Tr-ICP)** :heavy_check_mark:
 
   > Chetverikov, D., Svirko, D., Stepanov, D., & Krsek, P. (2002, August). The trimmed iterative closest point algorithm. In *Object recognition supported by user interaction for service robots* (Vol. 3, pp. 545-548). IEEE.
@@ -97,22 +180,6 @@
   - Similar to Tr-ICP, they are the same authors, but I did not get the difference between them.
 
 - **Improved Data Association for ICP-based Scan Matching in Noisy and Dynamic Environments**
-
-- **Color point cloud registration with 4d ICP algorithm** :heavy_check_mark:
-
-  > Men, Hao, Biruk Gebre, and Kishore Pochiraju. "Color point cloud registration with 4D ICP algorithm." *2011 IEEE International Conference on Robotics and Automation*. IEEE, 2011.
-  >
-  > **Citations:** 117
-  >
-  > [[pdf]](./papers/Color_point_cloud_registration_with_4D_ICP_algorithm.pdf)
-
-  - Summary
-    - Similar to Color-GICP, it uses color information to as the matching method. The color is represented as *Hue* value. The point is represented as $p = (x, y, z, h)$. The core idea is that the *h*  value represents the color but not sensitive to brightness and viewpoint.
-
-  - Comments
-    - ICP's drawback:
-      - Too sensitve to noise and initialization;
-      - Time consuming on finding the correspondence(Need to find correspondence each iteration).
 
 - **Voxelized GICP for Fast and Accurate 3D Point Cloud Registration** :heavy_check_mark:
 
@@ -242,16 +309,16 @@
 - **A symmetric objective function for ICP** **(Symmetric-ICP)**  :heavy_check_mark: 
 
   > Rusinkiewicz, S. (2019). A symmetric objective function for ICP. *ACM Transactions on Graphics (TOG)*, *38*(4), 1-7.
->
+  >
   > **citations**:41
   >
-  >  [[url]](https://dl.acm.org/doi/pdf/10.1145/3306346.3323037)  [[pdf]](./papers/A Symmetric Objective Function for ICP.pdf)
-  
+  > [[url]](https://dl.acm.org/doi/pdf/10.1145/3306346.3323037)  [[pdf]](./papers/A Symmetric Objective Function for ICP.pdf)
+
   <img src="./notes/symmetric-icp.png" style="zoom: 50%;" />
 
-  Symmetric-ICP: 在point-to-plane的基础上进行改进，point-to-plane的类型收敛域减小，因为如上图所示，如果p点在q点所在的平面，那么二者的 *loss function* 一定为0，那么p点就只能在q点的平面进行滑动。但是使用symmetric(上图所示)，可以允许p点与q点形成圆进行滑动。
+- Symmetric-ICP: 在point-to-plane的基础上进行改进，point-to-plane的类型收敛域减小，因为如上图所示，如果p点在q点所在的平面，那么二者的 *loss function* 一定为0，那么p点就只能在q点的平面进行滑动。但是使用symmetric(上图所示)，可以允许p点与q点形成圆进行滑动。
 
-  :question: 如何进行求解？
+​		  :question: 如何进行求解？	
 
 - **Robust symmetric iterative closest point** :heavy_check_mark:
 
@@ -311,9 +378,16 @@
 
   - Summary
     - The method is the extension of MB-ICP to 3D space. The method define the distance of two points as the norm of the transformation parameter $||q||$, and depending on this to find the closest corresponding point.
+    
   - Pros and cons
     - More robust and precise.
     - Much computation cost in each iteration.
+    
+  - Comments:
+
+    > Occupancy Voxel Metric Based Iterative Closest Point for Position Tracking in 3D Environments
+    >
+    > describes it in detail.
 
 - **Sparse Iterative Closest Point** **(Sparse ICP)** :heavy_check_mark:
 
@@ -353,24 +427,6 @@
   - [ ] 这些特征是否有几何意义？
   - [ ] 第四章和第五章还没看
 
-- **Registration and integration of textured 3D data** :heavy_check_mark:
-
-  > Johnson, Andrew Edie, and Sing Bing Kang. "Registration and integration of textured 3D data." *Image and vision computing* 17.2 (1999): 135-147.
-  >
-  > **Citations:** 519
-  >
-  > [[pdf]](./papers/Registration_and_integration_of_textured_3D_data.pdf)
-
-  - Summary
-
-    - The proposed mthod combines the color information into the distance metric based on ICP algorithm. The color parameters are represented by *YIQ* color model. Because it can separate the intensity(which may be affected by the light.) and the intrinsic color.
-
-    - The distance can be computed by
-      $$
-      p = (x_1,x_2,x_3,\alpha_1c_1, \alpha_2c_2, \alpha_3c_3)
-      $$
-      Where $\alpha$ is the coefficient, and the $c$ is the measure of color.
-  
 - **Correntropy based scale ICP algorithm for robust point set registration** :heavy_check_mark:
 
   > Wu, Zongze, et al. "Correntropy based scale ICP algorithm for robust point set registration." *Pattern Recognition* 93 (2019): 14-24.
@@ -432,8 +488,9 @@
     - **Motivation**: The achieve balance between robustness and accuracy for ICP-based methods. The *G-ICP* and *NDT* methods provide robustness but they are time consuming due to PCA.
     - The proposed method use a effiective way to compute the inverse of covariance matrix to improve computation effiency.(Based on P2D NDT)
     - **Representation**: The data are represented by voxel grids. **Data Association**: K-D tree.
+    - **For GICP**
 
-- **LiTAMIN2: Ultra Light LiDAR-based SLAM using Geometric Approximation applied with KL-Divergence** :heavy_check_mark:
+- **LiTAMIN2: Ultra Light LiDAR-based SLAM using Geometric Approximation applied with KL-Divergence** :heavy_check_mark: :imp:
 
   > Yokozuka, Masashi, et al. "LiTAMIN2: Ultra light lidar-based slam using geometric approximation applied with KL-divergence." *2021 IEEE International Conference on Robotics and Automation (ICRA)*. IEEE, 2021.
   >
@@ -445,6 +502,7 @@
   - Summary
     - The proposed method is based on or *D2D NDT*. 
     - The **Representation** of the point cloud is voxel grid. The *symmetric K-L Divergence* is used to measure similarity of two  sub-point-set(distribution). The difference is adding a extra *penalty function* which is used to estimate the covariance of  two distribution.
+    - Using **KL-Divergence** to descripe the cost function.
 
 - **Convergent iterative closest-point algorithm to accomodate anisotropic and inhomogenous localization error** :heavy_check_mark:
 
@@ -557,38 +615,6 @@
   > Tamaki, Toru, et al. "Softassign and em-icp on gpu." *2010 First International Conference on Networking and Computing*. IEEE, 2010.
   >
   > **Citations:**66
-
-### Features-combination
-
-- **Color supported generalized-icp** :heavy_check_mark:
-
-  > Korn, Michael, Martin Holzkothen, and Josef Pauli. "Color supported generalized-ICP." *2014 International Conference on Computer Vision Theory and Applications (VISAPP)*. Vol. 3. IEEE, 2014.
-  >
-  > **Citations:** 62
-  >
-  > [[pdf]](./papers/Color_supported_generalized-ICP.pdf)
-
-  - Summary
-
-    - Integrating color information into GICP. The pointwise color is represented by *L\*a\*b\* color space*. The point is represented as:
-      $$
-      p_{\alpha,i} = (x_i, y_i, z_i, \alpha L_i, \alpha a_i, \alpha b_i)^{T}
-      $$
-      The distance of two point is represented as :
-      $$
-      d_i = || p_{\alpha,i} - q_{\alpha,i}||_{2}
-      $$
-
-    The method is used in finding correspondences.
-
-  - Pros and cons
-
-    - Compared to GICP, the proposed method is more accurate.
-    - The running time arises.
-
-  - Comments
-
-    - GICP reduces the distances of corresponding points in the direction of the surface normals. 
 
 ### Optimization
 
@@ -715,6 +741,14 @@
 
 ### Not Read
 
+- **Robot Pose Estimation in Unknown Environments by Matching 2D Range Scans**
+
+- **Feature-Metric Registration: A Fast Semi-Supervised Approach for Robust Point Cloud Registration Without Correspondences**
+
+- **Occupancy voxel metric based iterative closest point for position tracking in 3D environments**
+
+  > Milstein, Adam, et al. "Occupancy voxel metric based iterative closest point for position tracking in 3d environments." *2011 IEEE International Conference on Robotics and Automation*. IEEE, 2011.
+  
 - **CELLO-3D: Estimating the Covariance of ICP in the Real World**
 
   > Landry, David, François Pomerleau, and Philippe Giguere. "CELLO-3D: Estimating the Covariance of ICP in the Real World." *2019 International Conference on Robotics and Automation (ICRA)*. IEEE, 2019.
