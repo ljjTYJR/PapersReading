@@ -147,37 +147,6 @@
   >
   > **Citations:** 443
 
-- **Voxelized GICP for Fast and Accurate 3D Point Cloud Registration** :heavy_check_mark:
-
-  > Koide, Kenji, et al. "Voxelized gicp for fast and accurate 3d point cloud registration." *2021 IEEE International Conference on Robotics and Automation (ICRA)*. IEEE, 2021.
-  >
-  > **Citations:** 29
-  >
-  > [[pdf]](./papers/Voxelized_GICP_for_Fast_and_Accurate_3D_Point_Cloud_Registration.pdf)
-
-  - Summary
-
-    <img src="notes/VGICP.png" style="zoom:67%;" />
-
-    - The proposed is based on G-ICP(Which first computes the covariance of each point in the two point sets.) Then the GICP finds nearest point and optimizes the cost function combined with the covariance. NDT firstly divides the raw point set into fixed grids, and computes covariance of each grid(a distribution), then finds the nearest gird to optimize the cost function.
-
-    - VGICP
-
-      - Compute the covariance of each point in point sets.
-
-      - For the fixed set, the mean value and covariance is computed together. (Maybe it can be viewed as a "distribution of distribution?").
-
-      - Acceleration: Instead of searching the nearest point/grid. The method uses a trick of voxelization:
-        $$
-        voxel\_index\_a = cast\_to\_int(a_i / voxle\_resolution) \\
-        voxel\_index\_b = cast\_to\_int(b_i / voxle\_resolution) \\
-        $$
-        In each iteration, the point in moving set will find the equal index in b to optimize.
-
-    - Pros:
-
-      - Run in parallel because it does not need to search the nearest point every iteration.
-
 - **Iterative Global Similarity Points: A Robust Coarse-to-Fine Integration Solution for Pairwise 3D Point Cloud Registration** :heavy_check_mark:
 
   > Pan, Yue, et al. "Iterative global similarity points: A robust coarse-to-fine integration solution for pairwise 3d point cloud registration." *2018 International Conference on 3D Vision (3DV)*. IEEE, 2018.
@@ -276,6 +245,26 @@
   2. Robust: Use Welsch’s function to formulate an objective function.
 
      Extend them to the p2p and p2plane algos, but not globally and need a good initialization.
+  
+- **Sparse point cloud registration and aggregation with mesh‐based generalized iterative closest point** :heavy_check_mark:
+
+  > Young, Matthew, et al. "Sparse point cloud registration and aggregation with mesh‐based generalized iterative closest point." *Journal of Field Robotics* 38.8 (2021): 1078-1091.
+  >
+  > **Citations:** 0
+  >
+  > [[pdf]](./papers/Sparse_point_cloud_registration_and_aggregation_with_mesh_based_generalized.pdf)
+
+  - Summary
+
+    - Mainly about the experiments. The proposed variant of G-ICP aims to compute covariance under **sparse** point cloud. It first completes the point cloud with meshes and then computes the normal of the point using neighbour meshes.
+
+  - Comments:
+
+    - In many cases, the density is not high enough to compute the normal and covariance. So it is difficult for some methods to use. 
+
+      > In addition, color information has similar properties because color is relatively sensitive to the light and viewpoint.
+
+    - Since the raw point cloud is sparse, solely points can not represent topography, so methods like LOAM tries to extract plane and line features for registering.  But theses methods also have a drawback: the lines and planes can be easily extracted from structured environments, but are hard to find in unstructured environments.
 
 ### Acceleration
 
@@ -314,6 +303,37 @@
       > At a coarse resolution (i.e., with a limited number of points) ICP converges faster but with less accuracy than at a fine resolution. However, by initializing a finer-resolution ICP with the result of the coarser one, the convergence of the fine-resolution ICP is much faster than with a single-shot ICP, as the initial alignment is mostly correct. These authors also used a pre-computed list of NN to approximate the matching step. With both of these techniques, they showed a significant increase of the speed of ICP while maintaining adequate robustness
       >
       > —— *《A Review of Point Cloud Registration Algorithms for Mobile Robotics 》*
+
+- **Voxelized GICP for Fast and Accurate 3D Point Cloud Registration** :heavy_check_mark:
+
+  > Koide, Kenji, et al. "Voxelized gicp for fast and accurate 3d point cloud registration." *2021 IEEE International Conference on Robotics and Automation (ICRA)*. IEEE, 2021.
+  >
+  > **Citations:** 29
+  >
+  > [[pdf]](./papers/Voxelized_GICP_for_Fast_and_Accurate_3D_Point_Cloud_Registration.pdf)
+
+  - Summary
+
+    <img src="notes/VGICP.png" style="zoom:67%;" />
+
+    - The proposed is based on G-ICP(Which first computes the covariance of each point in the two point sets.) Then the GICP finds the nearest point and optimizes the cost function combined with the covariance. NDT firstly divides the raw point set into fixed grids, and computes the covariance of each grid(a distribution), then finds the nearest grid to optimize the cost function.
+
+    - VGICP
+
+      - Compute the covariance of each point in point sets.
+
+      - For the fixed set, the mean value and covariance are computed together. (Maybe it can be viewed as a "distribution of distribution?").
+
+      - Acceleration: Instead of searching the nearest point/grid. The method uses a trick of voxelization:
+        $$
+        voxel\_index\_a = cast\_to\_int(a_i / voxle\_resolution) \\
+        voxel\_index\_b = cast\_to\_int(b_i / voxle\_resolution) \\
+        $$
+        In each iteration, the point in moving set will find the equal index in b to optimize.
+
+    - Pros:
+
+      - Run in parallel because it does not need to search the nearest point every iteration.
 
 - **The Parallel Iterative Closest Point Algorithm** :heavy_check_mark:
 
@@ -356,6 +376,14 @@
   GICP: Generalize The ICP approach to probabilistic distribution, extend it to plane-to-plane format.
 
   将ICP的方法从点对点，点对面进行一般化，引入了两个点云的协方差矩阵描述各自的特征，降低了不匹配的特征的影响。
+
+- **NICP: Dense normal based point cloud registration** :heavy_check_mark:
+
+  > Serafin, Jacopo, and Giorgio Grisetti. "NICP: Dense normal based point cloud registration." *2015 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. IEEE, 2015.
+  >
+  > **Citations:** 162
+  >
+  > [[pdf]](./papers/NICP_Dense_normal_based_point_cloud_registration.pdf)
 
 - **A symmetric objective function for ICP** **(Symmetric-ICP)**  :heavy_check_mark: 
 
@@ -745,6 +773,8 @@
 
   - Based on the SGD-ICP,  the SGLD adds the noise to the SGD-ICP.
   - Seems not novel, but **Add uncertainty to the algorithm seems very common**, which I mean can be used widely.
+  - Summary:
+    - The proposed method is tightly connected with *SGD-ICP*, Like *Combining some extra features to the SGD-ICP*, but can not be borrowed to use in other methods. **Not Meaningful** 
 
 ### **NDT & Variants**
 
@@ -836,7 +866,20 @@
 ### Not Read
 
 - **Robot Pose Estimation in Unknown Environments by Matching 2D Range Scans**
+
 - **Feature-Metric Registration: A Fast Semi-Supervised Approach for Robust Point Cloud Registration Without Correspondences**
+
+- **FasterGICP: Acceptance-Rejection Sampling Based 3D Lidar Odometry**
+
+  > Wang, Jikai, et al. "FasterGICP: Acceptance-Rejection Sampling Based 3D Lidar Odometry." *IEEE Robotics and Automation Letters* 7.1 (2021): 255-262.
+  >
+  > **Citations:** 0
+
+- **Globally Consistent 3D LiDAR Mapping With GPU-Accelerated GICP Matching Cost Factors**
+
+  > Koide, Kenji, et al. "Globally Consistent 3D LiDAR Mapping With GPU-Accelerated GICP Matching Cost Factors." *IEEE Robotics and Automation Letters* 6.4 (2021): 8591-8598.
+  >
+  > **Citations:** 2
 
 - **Robust Global Registration**
 

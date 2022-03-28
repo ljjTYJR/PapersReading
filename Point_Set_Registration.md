@@ -21,6 +21,7 @@
 # PSR(Point Set Registration)
 
 - [Hard-Assignment](./Hard-Assignment.md)
+- [Soft-Assignment](./Soft-Assignment.md)
 
 ## Soft-Assign
 
