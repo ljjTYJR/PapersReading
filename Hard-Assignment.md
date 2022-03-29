@@ -628,19 +628,6 @@
 
   The article uses the LM (Levenberg–Marquardt algorithm) algorithm to optimize a non-linear process instead of a closed-form solution, which can get a wider converge basin. 
 
-- **Multi-scale EM-ICP: A Fast and Robust Approach for Surface Registration** :question:
-
-  > Granger, S., & Pennec, X. (2002, May). Multi-scale EM-ICP: A fast and robust approach for surface registration. In *European Conference on Computer Vision* (pp. 418-432). Springer, Berlin, Heidelberg.
-  >
-  > **Citations:** 521
-  >
-  > [[url]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.5106&rep=rep1&type=pdf) [[pdf]](./papers/Multi-scale EM-ICP  A Fast and Robust.pdf)
-  >
-  > [[notes]](./notes/EM-ICP.md)
-
-  - Can be viewed as 'Soft Assignment'
-  - View the registration problem as the MLE(Maximum Likelihood Estimation) problem, and use E-M Algorithm to optimize the parameter.
-
 - **Registering multiview range data to create 3D computer objects** :heavy_check_mark:
 
   > Blais, Gérard, and Martin D. Levine. "Registering multiview range data to create 3D computer objects." *IEEE Transactions on Pattern Analysis and Machine Intelligence* 17.8 (1995): 820-824.
