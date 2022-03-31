@@ -22,6 +22,7 @@
 
 - [Hard-Assignment](./Hard-Assignment.md)
 - [Soft-Assignment](./Soft-Assignment.md)
+- [Certification](Certification.md)
 
 ## Soft-Assign
 
@@ -785,9 +786,11 @@
 
 - **Registration of large-scale terrestrial laser scanner point clouds A review and benchmark**
 
-  > <ISPRS Journal of Photogrammetry and Remote Sensing>
-  >  [[url]](https://reader.elsevier.com/reader/sd/pii/S0924271620300836?token=601731D7F5A970C99DA0F576524F984B32A54C306453727528A63B21BE9B8B9B81E18ED8BE62C0ECA2F16B6CDC4CE878&originRegion=eu-west-1&originCreation=20211224092123)
-  >  [[pdf]](./papers/Registration of large-scale terrestrial laser scanner point clouds A reviewand benchmark.pdf)
+  > Dong, Zhen, et al. "Registration of large-scale terrestrial laser scanner point clouds: A review and benchmark." *ISPRS Journal of Photogrammetry and Remote Sensing* 163 (2020): 327-342.
+  >
+  > **Citations:** 90
+  >
+  > [[url]](https://reader.elsevier.com/reader/sd/pii/S0924271620300836?token=601731D7F5A970C99DA0F576524F984B32A54C306453727528A63B21BE9B8B9B81E18ED8BE62C0ECA2F16B6CDC4CE878&originRegion=eu-west-1&originCreation=20211224092123) [[pdf]](./papers/Registration of large-scale terrestrial laser scanner point clouds A reviewand benchmark.pdf)
   > [[detailed notes]](./notes/Registration of large-scale terrestrial laser scanner point clouds A reviewand benchmark.pdf.md)
   
 - **A Review of Point Cloud Registration Algorithms for Mobile Robotics**
@@ -873,10 +876,6 @@
 - **Registration of Laser Scanning Point Clouds: A Review**
 
   > Cheng, Liang, et al. "Registration of laser scanning point clouds: A review." *Sensors* 18.5 (2018): 1641.
-  
-- **Registration of large-scale terrestrial laser scanner point clouds: A review and benchmark**
-
-  > Dong, Zhen, et al. "Registration of large-scale terrestrial laser scanner point clouds: A review and benchmark." *ISPRS Journal of Photogrammetry and Remote Sensing* 163 (2020): 327-342.
 
 ## Comparison
 

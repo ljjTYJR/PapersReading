@@ -13,14 +13,16 @@
   - Summary
 
     - The *new* of the proposed method is because it is different ICP methods which defines linear association. The method introduces the *soft-assignment* to the point set registration.
-    - To relax the discrete optimization by introducing the *softmax* function to describe the the assignment matrix. Then using the *deterministic annealing* to estimating the parameter matrix. (Nested iteration).
-    - To estimate the transformation parameter, coordinate descent is used.
+    - To relax the discrete optimization by introducing the *softmax* function to describe the the assignment matrix. Then using the *deterministic annealing* to estimating the parameter matrix. (Nested iteration). Annealing is a kind of optimization which can give different functions at different annealing rate.
+    - Overview of the algorithm:
+      - This algorithm expands the binary correspondence to a fuzzy correspondence. The objective function can be viewed as below. The variable $m_{jk}$​ means the mathing relationship between the jth point in the fixed set and the kth point in the mov set. For standard ICP, the variable has the valude of $\{0,1\}$​.  The constraints are relaxed and the variables have the value of $[0,1]$. Then one point in the fixed set can correspond to all points in the other set. Then the transformation parameter and the mathcing parameter are estimated iteratively when the other is fixed.
+      - Besides, the determinstic annealling is adopted to imorve robustness.
 
   - **Formulation**:
 
     The registration is presented as a engery function(cost function):
     $$
-    E = \sum_{j=1}^{J}\sum_{k=1}^{K} m_{jk} (|| X_j -t -AY_k||_{2}^{2} - \alpha)
+    E = \sum_{j=1}^{J}\sum_{k=1}^{K} m_{jk} (|| X_j -t -AY_k||_{2}^{2} - f(m_{jk}))
     $$
 
 - **A Robust Point Matching Algorithm for Autoradiograph Alignment** :heavy_check_mark: (**RPM**)
