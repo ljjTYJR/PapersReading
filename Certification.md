@@ -11,3 +11,15 @@
   - Summary
     - Differential entropy for separate point cloud and joint cloud(Which in fact the sum of covariance of the points). 
     - Only overlapping points are used in the computation(The definition of overlapping points).
+  
+- **Efficient Continuous-Time SLAM for 3D Lidar-Based Online Mapping**
+
+  > Droeschel, David, and Sven Behnke. "Efficient continuous-time SLAM for 3D lidar-based online mapping." *2018 IEEE International Conference on Robotics and Automation (ICRA)*. IEEE, 2018.
+  >
+  > **Citations:** 108
+  >
+  > [[pdf]](./papers/Efficient_Continuous-Time_SLAM_for_3D_Lidar-Based_Online_Mapping.pdf)
+
+  - Summary
+
+    

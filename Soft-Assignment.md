@@ -25,6 +25,14 @@
     E = \sum_{j=1}^{J}\sum_{k=1}^{K} m_{jk} (|| X_j -t -AY_k||_{2}^{2} - f(m_{jk}))
     $$
 
+- **A New Algorithm for Non-Rigid Point Matching**
+
+  > Chui, H., & Rangarajan, A. (2000, June). A new algorithm for non-rigid point matching. In *Proceedings IEEE Conference on Computer Vision and Pattern Recognition. CVPR 2000 (Cat. No. PR00662)* (Vol. 2, pp. 44-51). IEEE.
+  >
+  > **Citations:** 646
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=854733)  [[pdf]](./papers/)
+  
 - **A Robust Point Matching Algorithm for Autoradiograph Alignment** :heavy_check_mark: (**RPM**)
 
   > Rangarajan, Anand, et al. "A robust point-matching algorithm for autoradiograph alignment." *Medical image analysis* 1.4 (1997): 379-398.
@@ -39,7 +47,18 @@
   
       The difference is the input points are based on *Canny edge detection*. (Can be viewed as a variant of **RMP**).
   
-- **Multi-scale EM-ICP: A Fast and Robust Approach for Surface Registration** :question:
+- **A New Point Matching Algorithm for Non-Rigid Registration** :heavy_check_mark: (**TPS-RPM**)
+
+  > Chui, Haili, and Anand Rangarajan. "A new point matching algorithm for non-rigid registration." *Computer Vision and Image Understanding* 89.2-3 (2003): 114-141.
+  >
+  > **Citations:** 1889
+  >
+  > [[pdf]](./papers/1-s2.0-S1077314203000092-main.pdf)
+  
+  - Summary
+    - TPS-RPM: A non-rigid version of RPM method, which combines the constraint function into the objective function of RPM.
+  
+- **Multi-scale EM-ICP: A Fast and Robust Approach for Surface Registration** :heavy_check_mark:
 
   > Granger, S., & Pennec, X. (2002, May). Multi-scale EM-ICP: A fast and robust approach for surface registration. In *European Conference on Computer Vision* (pp. 418-432). Springer, Berlin, Heidelberg.
   >
@@ -53,6 +72,10 @@
   - View the registration problem as the MLE(Maximum Likelihood Estimation) problem, and use E-M Algorithm to optimize the parameter.
   - Summary:
     - For a soft-assignment method, two variables are estimated: 1) matches; 2) transformation;
+  - Comments:
+    - How to find matches? —— still closest?
+    - As long as the percentage of outliers in the local neighborhood is small, their influence can be averaged out by contributions from other inlier points. Consequently, KC is capable of registering despite of these local distractions.
+    - KC based registration can be considered as a robust, multiply-linked ICP.
 
 - **A Correlation-Based Approach to Robust Point Set Registration** :heavy_check_mark: 
 
@@ -61,6 +84,19 @@
   > **Citations:** 435
   >
   > [[url]](http://www.cs.cmu.edu/afs/.cs.cmu.edu/Web/People/ytsin/research/kcreg.pdf)  [[pdf]](./papers/A Correlation-Based Approach to Robust Point Set Registration.pdf)
+  
+  - Summary
+    - In conclusion, two characteristics: 1) Multi-linked; 2) robust error metric.
+  
+- **A feature registration framework using mixture models**
+
+  > Chui, H., & Rangarajan, A. (2000, June). A feature registration framework using mixture models. In *Proceedings IEEE Workshop on Mathematical Methods in Biomedical Image Analysis. MMBIA-2000 (Cat. No. PR00737)* (pp. 190-197). IEEE.
+  >
+  > **Citations:**  205
+  >
+  > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=852377)  [[pdf]](./papers/A feature registration framework using mixture models.pdf)
+  
+  - :question: 和CPD，和GMM的区别在哪里？？
   
 - **Point Set Registration: Coherent Point Drift** **(CPD)** :heavy_check_mark:
 
@@ -430,9 +466,9 @@
 
   - Summary
 
-    <img src="/home/shuo/phd_record/PapersReading/notes/Rotation-invariant2.png" style="zoom:50%;" />
+    <img src="notes/Rotation-invariant2.png" style="zoom:50%;" />
 
-    <img src="/home/shuo/phd_record/PapersReading/notes/rotation-variant-translation.png" style="zoom:50%;" />
+    <img src="./notes/rotation-variant-translation.png" style="zoom:50%;" />
 
     - The method aims to find the global optimal transformation by decomposition to translation $t^*$, rotation $R^*$. Specifically, computing $R^*$ firstly by search the translation-invariants features space(point-wise normals). After getting $R^*$, using it to compute $t^*$ to search translation space by BnB.
 
@@ -508,7 +544,7 @@
 
   - Adjust the point-to-point / point-to-plane based on surface normal and surface variation by adjusting covariance:
 
-    <img src="/home/shuo/phd_record/PapersReading/notes/LSG-CPD.png" alt="./notes/LSG-CPD.png" style="zoom:67%;" />
+    <img src="notes/LSG-CPD.png" alt="./notes/LSG-CPD.png" style="zoom:67%;" />
 
   - Some tricks to increase robustness:
 
@@ -527,3 +563,9 @@
   > Wang, Yujie, et al. "STORM: Structure-based Overlap Matching for Partial Point Cloud Registration." *IEEE Transactions on Pattern Analysis and Machine Intelligence* (2022).
   >
   > **Citations:** 0
+  
+- **Fast LIDAR Localization using Multiresolution Gaussian Mixture Maps**
+
+  > Wolcott, Ryan W., and Ryan M. Eustice. "Fast LIDAR localization using multiresolution Gaussian mixture maps." *2015 IEEE international conference on robotics and automation (ICRA)*. IEEE, 2015.
+  >
+  > **Citations:** 166

@@ -22,6 +22,7 @@
 
 - [Hard-Assignment](./Hard-Assignment.md)
 - [Soft-Assignment](./Soft-Assignment.md)
+- [Correspondence-based](./Correspondence-based.md)
 - [Certification](Certification.md)
 
 ## Soft-Assign
@@ -46,22 +47,6 @@
   > **Citations:**  50
 
 ### Correlation
-
-- **A New Algorithm for Non-Rigid Point Matching**
-
-  > Chui, H., & Rangarajan, A. (2000, June). A new algorithm for non-rigid point matching. In *Proceedings IEEE Conference on Computer Vision and Pattern Recognition. CVPR 2000 (Cat. No. PR00662)* (Vol. 2, pp. 44-51). IEEE.
-  >
-  > **Citations:** 646
-  >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=854733)  [[pdf]](./papers/)
-
-- **A feature registration framework using mixture models**
-
-  > Chui, H., & Rangarajan, A. (2000, June). A feature registration framework using mixture models. In *Proceedings IEEE Workshop on Mathematical Methods in Biomedical Image Analysis. MMBIA-2000 (Cat. No. PR00737)* (pp. 190-197). IEEE.
-  >
-  > **Citations:**  205
-  >
-  >  [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=852377)  [[pdf]](./papers/A feature registration framework using mixture models.pdf)
 
 - **Diffeomorphic Matching of Distributions: A New Approach for Unlabelled Point-Sets and Sub-Manifolds Matching**
 
@@ -117,12 +102,6 @@
     - This paper propose a registration method using global features to register point sets. The paper claims that it can handle the registration problem in the case of overlap is about 40%(Low overlap.)
     - The features extraction are realized by *EGI(Extended Gaussian Image)*, it is a kind of *distribution* to represent the directional variable(Though this paper describe it by histogram). The rotation estimation is then computed by optimizing correletion of two histograms. (By the way, this kind of features is translation-invariant).
     - Translation is computed based on the rotation got from step 2.
-
-- **A fast automatic method for registration of partially-overlapping range images**
-
-  > Chen, Chu-Song, Yi-Ping Hung, and Jen-Bo Cheng. "A fast automatic method for registration of partially-overlapping range images." *Sixth International Conference on Computer Vision (IEEE Cat. No. 98CH36271)*. IEEE, 1998.
-  >
-  > **Citations:** 123
 
 ## PCA-based Algorithm
 
@@ -873,6 +852,14 @@
   >
   > **Citations:** 90
 
+- **Deformable Medical Image Registration: A Survey**
+
+  > Sotiras, Aristeidis, Christos Davatzikos, and Nikos Paragios. "Deformable medical image registration: A survey." *IEEE transactions on medical imaging* 32.7 (2013): 1153-1190.
+  >
+  > **Citations:** 1443
+  >
+  > [[pdf]](./papers/Deformable_Medical_Image_Registration_A_Survey.pdf)
+  
 - **Registration of Laser Scanning Point Clouds: A Review**
 
   > Cheng, Liang, et al. "Registration of laser scanning point clouds: A review." *Sensors* 18.5 (2018): 1641.
@@ -928,6 +915,10 @@
   > **Citations:** 36
   >
   > [[pdf]](./papers/Golyanik_Gravitational_Approach_for_CVPR_2016_paper.pdf)
+  
+- **Robust LIDAR localization using multiresolution Gaussian mixture maps for autonomous driving**
+
+  > map using GMMs
 
 # Mapping & Fusion
 
@@ -1064,6 +1055,12 @@
   > ten Pas, Andreas, et al. "Grasp pose detection in point clouds." *The International Journal of Robotics Research* 36.13-14 (2017): 1455-1473.
   >
   > **Citations:**  271
+  
+- **Self-calibration for a 3D laser**
+
+  > Sheehan, Mark, Alastair Harrison, and Paul Newman. "Self-calibration for a 3D laser." *The International Journal of Robotics Research* 31.5 (2012): 675-687.
+  >
+  > **Citations:** 95
 
 # Reference
 

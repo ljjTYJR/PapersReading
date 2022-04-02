@@ -732,7 +732,7 @@
 
       The proposed method also proposes a search algorithm to find the correspondence.
 
-  - Commetns
+  - Comments
 
     - This method is used widely in SLAM application.
   
@@ -927,6 +927,36 @@
   > Combès, Benoît, and Sylvain Prima. "An efficient EM-ICP algorithm for symmetric consistent non-linear registration of point sets." *International Conference on Medical Image Computing and Computer-Assisted Intervention*. Springer, Berlin, Heidelberg, 2010.
   >
   > **Citations:** 26
+  
+- **Affine iterative closest point algorithm for point set registration**
+
+  > Du, Shaoyi, et al. "Affine iterative closest point algorithm for point set registration." *Pattern Recognition Letters* 31.9 (2010): 791-799.
+  >
+  > **Citations:** 170
+
+- **Comparing Images Using the Hausdorff Distance **
+
+  > Huttenlocher, Daniel P., Gregory A. Klanderman, and William J. Rucklidge. "Comparing images using the Hausdorff distance." *IEEE Transactions on pattern analysis and machine intelligence* 15.9 (1993): 850-863.
+  >
+  > **Citations:** 5356
+  >
+  > [[pdf]](./papers/Comparing_images_using_the_Hausdorff_distance.pdf)
+
+- **Hierarchical chamfer matching: a parametric edge matching algorithm**
+
+  > Borgefors, Gunilla. "Hierarchical chamfer matching: A parametric edge matching algorithm." *IEEE Transactions on pattern analysis and machine intelligence* 10.6 (1988): 849-865.
+  >
+  > **Citations:** 1669
+  >
+  > [[pdf]](./papers/Hierarchical_chamfer_matching_a_parametric_edge_matching_algorithm.pdf)
+  
+- **Towards 3D lidar point cloud registration improvement using optimal neighborhood knowledge**
+
+  > Gressin, Adrien, et al. "Towards 3D lidar point cloud registration improvement using optimal neighborhood knowledge." *ISPRS journal of photogrammetry and remote sensing* 79 (2013): 240-251.
+  >
+  > **Citations:** 161
+
+  - From the *abs*, it seems very interesting.
 
 ### Robustness
 
