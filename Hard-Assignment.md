@@ -763,6 +763,14 @@
   - Summary:
     - The proposed method is tightly connected with *SGD-ICP*, Like *Combining some extra features to the SGD-ICP*, but can not be borrowed to use in other methods. **Not Meaningful** 
 
+- **Quasi-Newton Solver for Robust Non-Rigid Registration**
+
+  > Yao, Yuxin, et al. "Quasi-newton solver for robust non-rigid registration." *Proceedings of the IEEE/CVF conference on computer vision and pattern recognition*. 2020.
+  >
+  > **Citations:** 14
+  >
+  > [[pdf]](./papers/Yao_Quasi-Newton_Solver_for_Robust_Non-Rigid_Registration_CVPR_2020_paper.pdf)
+
 ### **NDT & Variants**
 
 - **The Normal Distributions Transform: A New Approach to Laser Scan Matching** **(2D-NDT)** :heavy_check_mark:
