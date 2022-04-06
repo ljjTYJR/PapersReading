@@ -22,4 +22,10 @@
 
   - Summary
 
-    
+- **Entropy Minimization SLAM Using Stereo Vision**
+
+  > Sáez, Juan Manuel, and Francisco Escolano. "Entropy minimization SLAM using stereo vision." *Proceedings of the 2005 IEEE International Conference on Robotics and Automation*. IEEE, 2005.
+  >
+  > **Citations:**44
+
+  - It also provides a kind of way based on information theory to measure the quality of point set alignment. It only gives a value, not a certification.

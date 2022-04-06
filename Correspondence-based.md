@@ -31,4 +31,21 @@
   >
   > **Citations:** 123
   >
-  > [[pdf]](./papers/A_fast_automatic_method_for_registration_of_partially-overlapping_range_images.pdf)
+  > [[pdf]](./papers/A_fast_automatic_method_for_registration_of_partially-overlapping_range_images.pdf) 
+
+
+
+
+
+# Other Methods
+
+- **Sampling Network Guided Cross-Entropy Method for Unsupervised Point Cloud Registration** :heavy_check_mark:
+
+  > Jiang, Haobo, et al. "Sampling network guided cross-entropy method for unsupervised point cloud registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2021.
+  >
+  > **Citations:** 3
+  >
+  > [[pdf]](./papers/Jiang_Sampling_Network_Guided_Cross-Entropy_Method_for_Unsupervised_Point_Cloud_Registration_ICCV_2021_paper.pdf)
+
+  - Summary
+    - Reinforcement Learning method: The method consists of two modules: 1) Sampling module and 2) Cross-entropy module. The sampling module generates a parameter distribution, and CEM module is used to assess the output from the first module.

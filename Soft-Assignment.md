@@ -88,7 +88,7 @@
   - Summary
     - In conclusion, two characteristics: 1) Multi-linked; 2) robust error metric.
   
-- **A feature registration framework using mixture models**
+- **A feature registration framework using mixture models** :heavy_check_mark:
 
   > Chui, H., & Rangarajan, A. (2000, June). A feature registration framework using mixture models. In *Proceedings IEEE Workshop on Mathematical Methods in Biomedical Image Analysis. MMBIA-2000 (Cat. No. PR00737)* (pp. 190-197). IEEE.
   >
@@ -556,6 +556,14 @@
       Lie group in the EM process.
     - The proposed method is about 20 times faster than modern implementations of CPD.
 
+- **Group-Wise Point-Set Registration based on R´enyi’s Second Order Entropy**
+
+  > Giraldo, Luis G. Sanchez, et al. "Group-wise point-set registration based on Renyi's second order entropy." *2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*. IEEE, 2017.
+  >
+  > **Citations:** 8
+  >
+  > [[pdf]](./papers/Group-Wise_Point-Set_Registration_Based_on_Rnyis_Second_Order_Entropy.pdf)
+
 ## Not Read
 
 - **STORM: Structure-based Overlap Matching for Partial Point Cloud Registration**
@@ -569,3 +577,11 @@
   > Wolcott, Ryan W., and Ryan M. Eustice. "Fast LIDAR localization using multiresolution Gaussian mixture maps." *2015 IEEE international conference on robotics and automation (ICRA)*. IEEE, 2015.
   >
   > **Citations:** 166
+
+- **Sampling Network Guided Cross-Entropy Method for Unsupervised Point Cloud Registration**
+
+  > Jiang, Haobo, et al. "Sampling network guided cross-entropy method for unsupervised point cloud registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2021.
+  >
+  > **Citations:** 3
+  >
+  > [[pdf]](./papers/Jiang_Sampling_Network_Guided_Cross-Entropy_Method_for_Unsupervised_Point_Cloud_Registration_ICCV_2021_paper.pdf)
