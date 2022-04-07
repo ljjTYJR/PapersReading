@@ -29,3 +29,14 @@
   > **Citations:**44
 
   - It also provides a kind of way based on information theory to measure the quality of point set alignment. It only gives a value, not a certification.
+  
+- **Learning-based Localizability Estimation for Robust LiDAR** :heavy_check_mark:
+
+  > Nubert, Julian, et al. "Learning-based Localizability Estimation for Robust LiDAR Localization." *arXiv preprint arXiv:2203.05698* (2022).
+  >
+  > [[pdf]](./papers/2203.05698.pdf)
+
+  - Summary
+    - The work is based on deep learning. The proposed method is used to estimate whether a point cloud can be registered well.
+      - The training data is generated manually, specifically, the input data first sampled and use ICP to register to get a result. So the inputs are point cloud and an estimated registration error.
+      - Then after training, the network can predict whether a point cloud can be registered well or not.
