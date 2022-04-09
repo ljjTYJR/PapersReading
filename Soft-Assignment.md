@@ -585,3 +585,19 @@
   > **Citations:** 3
   >
   > [[pdf]](./papers/Jiang_Sampling_Network_Guided_Cross-Entropy_Method_for_Unsupervised_Point_Cloud_Registration_ICCV_2021_paper.pdf)
+  
+- **Generalized Point Set Registration with Fuzzy Correspondences Based on Variational Bayesian Inference**
+
+  > Zhang, Ang, et al. "Generalized Point Set Registration with Fuzzy Correspondences Based on Variational Bayesian Inference." *IEEE Transactions on Fuzzy Systems* (2022).
+  >
+  > **Citations:**0
+  >
+  > [[pdf]](./papers/Generalized_Point_Set_Registration_with_Fuzzy_Correspondences_Based_on_Variational_Bayesian_Inference.pdf)
+
+- **Rigid Point Feature Registration Using Mutual Information**
+
+  > Rangarajan, Anand, Haili Chui, and James S. Duncan. "Rigid point feature registration using mutual information." *Medical Image Analysis* 3.4 (1999): 425-440.
+  >
+  > **Citations:**173
+
+  
