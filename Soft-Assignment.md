@@ -96,7 +96,11 @@
   >
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=852377)  [[pdf]](./papers/A feature registration framework using mixture models.pdf)
   
-  - :question: 和CPD，和GMM的区别在哪里？？
+  ![](./notes/GMMClusters.png)
+  
+  - The parameters of $\sigmar$ 
+  - The result of the GMM clusters, which is shown that the: 1. The clusters' number are often various; 2. The GMMs can not describe the whole data correctly.
+  - :question: The method treats the two point sets in an asymmetrical way, as one point set is GMM, and the other set is data. The main di
   
 - **Point Set Registration: Coherent Point Drift** **(CPD)** :heavy_check_mark:
 
@@ -131,16 +135,24 @@
   > **Citations:** 869
   >
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5674050)  [[pdf]](./papers/Robust_Point_Set_Registration_Using_Gaussian_Mixture_Models.pdf)
-  >
-  > [[notes]]()
-
-  > 文章的行文逻辑读起来非常顺畅，值得多读几遍。
 
   - Use GMM to model the point set; Get a local optimal by iterating closed-form solution of L2 distance between two GMMs(rigid); For non-rigid: numerical optimization
+
   - Distribution-to-distribution GMM
+
   - Every point serves as a centroid of GMM
+
   - More robust than CPD
+
   - :question: How to calculate the L2 distance?
+
+  - **Comments:**
+
+    - > These weights are taken from an affinity matrix whose entries are proportional to a Gaussian function of the pairwise distances between the moving model and the fixed scene.
+      >
+      > —— From another way to describe the relationship between points.
+
+    - 基于密度的方法需要配准的两个点云的density近似，否则其performance会下降。
 
 - **A generative model for the joint registration of multiple point sets** :heavy_check_mark: (**JR-MPS**)
 
