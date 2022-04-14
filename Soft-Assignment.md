@@ -227,11 +227,25 @@
 
 ### Matching
 
-- **Robust Semantic Map Matching Algorithm Based on Probabilistic Registration Model**
+- **Robust Semantic Map Matching Algorithm Based on Probabilistic Registration Model** :heavy_check_mark:
 
   > Zhang, Qingxiang, Meiling Wang, and Yufeng Yue. "Robust semantic map matching algorithm based on probabilistic registration model." *2021 IEEE International Conference on Robotics and Automation (ICRA)*. IEEE, 2021.
   >
   > **Citations:** 2
+  >
+  > [[pdf]](./papers/Robust_Semantic_Map_Matching_Algorithm_Based_on_Probabilistic_Registration_Model.pdf)
+
+  - The paper wants to solve such a question: Provide a relatively good initialization for the registration method to widen the converge region. Second, semantic and geometric information are combined with the probabilistic model to improve the data association.
+
+- **LCR-SMM: Large Convergence Region Semantic Map Matching Through Expectation Maximization** :heavy_check_mark:
+
+  > Zhang, Qingxiang, et al. "LCR-SMM: Large Convergence Region Semantic Map Matching Through Expectation Maximization." *IEEE/ASME Transactions on Mechatronics* (2021).
+  >
+  > **Citations:** 0
+  >
+  > [[pdf]](./papers/LCR-SMM_Large_Convergence_Region_Semantic_Map_Matching_Through_Expectation_Maximization.pdf)
+
+  - Similar to the above mentioned paper, just an extension.
 
 - **LCR-SMM: Large Convergence Region Semantic Map Matching Through Expectation Maximization**
 
@@ -349,7 +363,7 @@
   
     - Cons: It needs feature, but may not be found easily.
 
-### Accleration
+### Acceleration
 
 - **Accelerated Generative Models for 3D Point Cloud Data** :heavy_check_mark: :imp:
 
@@ -360,7 +374,7 @@
   > [[pdf]](./papers/Eckart_Accelerated_Generative_Models_CVPR_2016_paper.pdf)
 
   - Summary:
-    - <img src="/home/shuo/phd_record/PapersReading/notes/her-gmm.png" style="zoom:50%;" />
+    - <img src="notes/her-gmm.png" style="zoom:50%;" />
     - This paper is about how to represent a 3-D point set. The author proposes to use the *Hierarchy of Gaussian Mixtures*.
     - The main consideration of *Hierarchy* is a trade-off between *Fidelity* and *memory usage*. 
     - The authors are from *Nvidia*, the hierarchical representation is beneficial to computing parallelly by GPU, which results in *accelerated* in the title.

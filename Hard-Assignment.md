@@ -178,6 +178,14 @@
     :star:优缺点要看和谁进行比较；
 
   - More accurate and faster than ICP, FGR.
+  
+- **Integrating Deep Semantic Segmentation Into 3-D Point Cloud Registration** :heavy_check_mark:
+
+  > Zaganidis, Anestis, et al. "Integrating deep semantic segmentation into 3-d point cloud registration." *IEEE Robotics and Automation Letters* 3.4 (2018): 2942-2949.
+  >
+  > **Citations:**48
+  >
+  > [[pdf]](./papers/Integrating_Deep_Semantic_Segmentation_Into_3-D_Point_Cloud_Registration.pdf)
 
 ### Outlier Rejection
 
