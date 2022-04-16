@@ -154,7 +154,7 @@
 
     - 基于密度的方法需要配准的两个点云的density近似，否则其performance会下降。
 
-- **A generative model for the joint registration of multiple point sets** :heavy_check_mark: (**JR-MPS**)
+- **A generative model for the joint registration of multiple point sets** :heavy_check_mark: (**JR-MPC**)
 
   > Evangelidis, Georgios D., et al. "A generative model for the joint registration of multiple point sets." *European Conference on Computer Vision*. Springer, Cham, 2014.
   >
@@ -162,15 +162,22 @@
   >
   > [[pdf]](./papers/Evangelidis2014_Chapter_AGenerativeModelForTheJointReg.pdf)
 
-  - This paper view the problem in a different view. The CPD or GMM view the point set registration as a *point fitting probaility model* problem, to estimate the parameter. But in this paper, the author view the problem as a *cluster* problem. Many point sets together find the cluster model.
-
-  - The covariance is a by-product which can be used to smooth the result( Rejecting the outliers. )
+  - Summary
+    - 
 
   - cons:
 
     - The experiments show that the four points with 1200 points need to take 20+s to get the result. (Compared to the GMM, ICP seems always more efficient). Mainly beacuse GMM-based methods involve much computation(Matrix and Exponentiation)
 
     - > is orders of **magnitude slower than** common ICP variants or our approach
+
+- **Joint Alignment of Multiple Point Sets with Batch and Incremental Expectation-Maximization** :heavy_check_mark:
+
+  > Evangelidis, Georgios Dimitrios, and Radu Horaud. "Joint alignment of multiple point sets with batch and incremental expectation-maximization." *IEEE transactions on pattern analysis and machine intelligence* 40.6 (2017): 1397-1410.
+  >
+  > **Citations:** 94
+  >
+  > [[pdf]](./papers/Joint_Alignment_of_Multiple_Point_Sets_with_Batch_and_Incremental_Expectation-Maximization.pdf)
 
 - **Point Set Registration for 3D Range Scans Using Fuzzy Cluster-based Metric and Efficient Global Optimization** :heavy_check_mark:
 
@@ -247,12 +254,6 @@
 
   - Similar to the above mentioned paper, just an extension.
 
-- **LCR-SMM: Large Convergence Region Semantic Map Matching Through Expectation Maximization**
-
-  > Zhang, Qingxiang, et al. "LCR-SMM: Large Convergence Region Semantic Map Matching Through Expectation Maximization." *IEEE/ASME Transactions on Mechatronics* (2021).
-  >
-  > **Citations:** 0
-  
 - **Density Adaptive Point Set Registration** :heavy_check_mark: :imp:(important)
 
   > Lawin, Felix Järemo, et al. "Density adaptive point set registration." *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*. 2018.
@@ -282,8 +283,19 @@
   > [[pdf]](./papers/Danelljan_A_Probabilistic_Framework_CVPR_2016_paper.pdf)
   
   - Summary
-    - Incorporating the colour information for each spatial GMM component in the E-M framework. The colour information serves as an independent conditional probability.
-    - The color serves as a feature, the point distribution is a joint distribution in with both spatial space and feature space. $f(x,y)$ conditioned by latent variabled $z$.
+    - The paper proposes to incorporate color information into the registration. The MLE is now converted to joint probability: $p(V,Y)$, where $V$ is the spatial variables, and $Y$ is the feature space. To do so, **the first way** is to assume the feature probability is totally independent of spatial probability. Namely, $p(u,v) = p(u)p(v)$.
+    
+      **The second way** is to use conditional probability, namely, feature probability relies on spatial information. The joint probability can be written as : $p(u,v) = p(u)p(v|u)$
+    
+      **The third way** is to create a high-dimensional space, for example, a space of $R^3 \times \Omega$, (early fusion?), however, it will introduce a large computational cost.
+    
+      **However,  the author did not provide experiments to verify the mentioned methods above.**
+    
+    - Here, I want to summarize my understanding of E-M process: Given a model $M$, data $D$, we want to maximize the *MLE* of data with respect to model $M$ : $p(D|M)$. However, we do not know which component does the data belong to, so we introduce a latent variable : $Z$ to reveal which component does the data belong to. So, in fact, we estimate the *MLE* with the joint probability $p(D,Z) = p(z)p(d|z)$, where $p(z)$ is the prior probability.
+    
+      If we want to use the E-M process, in E-step, we need to maximize the posterior probability; And in M-step, we use the posterior probability to maximize the cost function.
+    
+    - The color serves as a feature, the point distribution is a joint distribution with both spatial space and feature space. $f(x,y)$ conditioned by latent variables $z$.
   
 - **DeepGMR: Learning Latent Gaussian Mixture Models for Registration** :heavy_check_mark:
 
