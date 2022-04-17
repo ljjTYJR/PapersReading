@@ -186,6 +186,14 @@
   > **Citations:**48
   >
   > [[pdf]](./papers/Integrating_Deep_Semantic_Segmentation_Into_3-D_Point_Cloud_Registration.pdf)
+  
+- **Semantic Iterative Closest Point through Expectation-Maximization**
+
+  > Parkison, Steven A., et al. "Semantic Iterative Closest Point through Expectation-Maximization." *BMVC*. 2018.
+  >
+  > **Citations:** 18
+  >
+  > [[pdf]](./papers/sparkison-2018a.pdf)
 
 ### Outlier Rejection
 

@@ -230,6 +230,20 @@
     - 感觉搞一个soft的其他聚类方法可能也是一个好的尝试；
   - Compared to FCM, the GK-based(In fanct the *M-Distance*) fuzzy clustering's advantage is :
 
+**The Explaination from information theory**
+
+- **Information Theoretic Shape Matching** :heavy_check_mark:
+
+  > Hasanbelliu, Erion, Luis Sanchez Giraldo, and Jose C. Principe. "Information theoretic shape matching." *IEEE transactions on pattern analysis and machine intelligence* 36.12 (2014): 2436-2451.
+  >
+  > **Citations:** 60
+  >
+  > [[pdf]](./papers/Information_Theoretic_Shape_Matching.pdf)
+
+  - Summary
+    - The paper proposes to use information theory to register two point sets. The paper proposes two main methods, one is based on point and correspondence; The other one is based on density estimation. The density estimation is derived by divergence, and meanwhile, divergence measurement is derived by corresponding inequality.
+    - For CS divergence. **First**, it explains the background and relevant information of the **cs-divergence**. Converting the density function to sampling data, the integral is converted to a discrete sum of sampling data. **Second**, an important definition called kernel function is introduced to measure the distance between two point sets( Or similarity of two density estimates).
+
 ## Facilitation
 
 ### Matching
@@ -609,6 +623,10 @@
   > Wang, Yujie, et al. "STORM: Structure-based Overlap Matching for Partial Point Cloud Registration." *IEEE Transactions on Pattern Analysis and Machine Intelligence* (2022).
   >
   > **Citations:** 0
+  >
+  > [[pdf]](./papers/STORM_Structure-based_Overlap_Matching_for_Partial_Point_Cloud_Registration.pdf)
+  
+  - Note read finished, to summarize, three steps are used: 1. extract the overlap region; 2. calculate the point-wise features. 3. Use SVD to calculate the parameters;
   
 - **Fast LIDAR Localization using Multiresolution Gaussian Mixture Maps**
 
@@ -638,4 +656,18 @@
   >
   > **Citations:**173
 
-  
+
+- **Groupwise point pattern registration using a novel CDF-based Jensen-Shannon Divergence**
+
+  > Wang, Fei, Baba C. Vemuri, and Anand Rangarajan. "Groupwise point pattern registration using a novel CDF-based Jensen-Shannon divergence." *2006 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'06)*. Vol. 1. IEEE, 2006.
+  >
+  > **Citations:** 58
+
+
+
+# Some Notes
+
+- To measure the similarity of two density distribution: Divergence and some measures of information Theory;
+  - The divergence includes:
+    - KL-divergence;
+    - CS-divergence;
