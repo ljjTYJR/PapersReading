@@ -663,7 +663,13 @@
   >
   > **Citations:** 58
 
+- **Self-supervised Geometric Perception**
 
+  > Yang, Heng, et al. "Self-supervised geometric perception." *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition*. 2021.
+  >
+  > **Citations:** 6
+  >
+  > [[pdf]](./papers/Yang_Self-Supervised_Geometric_Perception_CVPR_2021_paper)
 
 # Some Notes
 
