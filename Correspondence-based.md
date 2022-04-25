@@ -32,10 +32,24 @@
   > **Citations:** 123
   >
   > [[pdf]](./papers/A_fast_automatic_method_for_registration_of_partially-overlapping_range_images.pdf) 
+  
+- **CLIPPER: A Graph-Theoretic Framework for Robust Data Association**
 
+  > [[pdf]](./papers/CLIPPER_A_Graph-Theoretic_Framework_for_Robust_Data_Association.pdf)
+  
+- **Fast global registration** :heavy_check_mark:
 
-
-
+  > Zhou, Q. Y., Park, J., & Koltun, V. (2016, October). Fast global registration. In *European conference on computer vision* (pp. 766-782). Springer, Cham.
+  >
+  > **Citations:** 421
+  >
+  > [[url]](http://vladlen.info/papers/fast-global-registration.pdf)  [[pdf]](./papers/Fast Global Registration.pdf)
+  
+  - Not the ICP variant
+  - Need the correspondence, (FPFH or other)
+  - Use an estimator called *scaled Geman-McClure estimator* to reject the outliers and noise
+  - Induce the *Black-Rangarajan duality* to optimize the objective function
+  - Faster and more accurate than ICP, no need to find the correspondence and closet in the inner loop.
 
 # Other Methods
 

@@ -43,3 +43,11 @@
 - 配准过程不使用source 和 target的方式，而是假定是一个模型，其他两个都是由这个模型生成的。即JRMPS的方式，效果是否会更好？
 
 - 似乎还没有找到将color/semantic等信息用到fuzzy的好方法，但是也许可以借助于概率的方式？
+
+---
+
+04-24
+
+- 借鉴于 *Fast Global Registration* 中的 *robust function*， 如何将其放到ICP中，然后进行一个全局优化；或者说如何能够先进行prune?
+
+  prune的方式可以改进么？outlier的prune的方式可以改进么？如何从一个图理论上进行更新呢？

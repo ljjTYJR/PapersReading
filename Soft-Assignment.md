@@ -344,11 +344,11 @@
   
       > 从直觉的角度分析为什么local optimal, 是一个很好的角度.
   
-  - Thoughts
+  - **缺陷**
   
-    - What's novelty? 1. Solve the hard problem which is accepted publicly. 2. Improve the understanding of some problems(Include a brief overview of the past methods, add your own understanding —— 要对一类问题进行抽象化/泛化，找出共性/瓶颈，然后解决). 3. Introduce some new ideas to the problems.
-  
-  - Future work :question:
+    - 我认为这个方法有两个缺陷：两个点云都是相同的GMMs, 首先GMM划分每次本身是一个local optimal的方式，如何保证每次划分的GMM都是一样的？
+    - 这个方法基于两个输入点云的GMMs,如果两个点云是partial overlap的，生成的GMMs差别很大，还适用么？
+    - GMM得到的模型是否准确，是否能够很好地描述点云?
   
 - **Registration Loss Learning for Deep Probabilistic Point Set Registration** :heavy_check_mark: 
 
@@ -670,6 +670,28 @@
   > **Citations:** 6
   >
   > [[pdf]](./papers/Yang_Self-Supervised_Geometric_Perception_CVPR_2021_paper)
+  
+- **A Smooth Representation of Belief over SO(3) for Deep Rotation Learning with Uncertainty**
+
+  > Peretroukhin, Valentin, et al. "A smooth representation of belief over so (3) for deep rotation learning with uncertainty." *arXiv preprint arXiv:2006.01031* (2020).
+  >
+  > <RSS2020 Best Student Paper Nominees>
+  >
+  > **Citations:** 18
+  
+  - How to discribe the rotation? What is the difference between them?
+  
+- **Global Optimization through Rotation Space Search**
+
+  > Hartley, Richard I., and Fredrik Kahl. "Global optimization through rotation space search." *International Journal of Computer Vision* 82.1 (2009): 64-79.
+  >
+  > **Citations:** 238
+  
+- **Colored Point Cloud Registration Revisited**
+
+  > Park, Jaesik, Qian-Yi Zhou, and Vladlen Koltun. "Colored point cloud registration revisited." *Proceedings of the IEEE international conference on computer vision*. 2017.
+  >
+  > **Citations:** 155
 
 # Some Notes
 
