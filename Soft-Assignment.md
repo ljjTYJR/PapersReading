@@ -268,7 +268,7 @@
 
   - Similar to the above mentioned paper, just an extension.
 
-- **Density Adaptive Point Set Registration** :heavy_check_mark: :imp:(important)
+- **Density Adaptive Point Set Registration** :heavy_check_mark
 
   > Lawin, Felix Järemo, et al. "Density adaptive point set registration." *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*. 2018.
   >
