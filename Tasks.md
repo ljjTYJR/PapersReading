@@ -21,3 +21,12 @@
 - 任务时间
   - 截止时间：6月底
 - 任务链接：[SLAM](./record/SLAMRecord.md)
+
+
+
+## 日报/notebook
+
+> 仔细想了想，notebook还是有必要的
+
+- 时间要求：Daily;
+- 任务链接：[daily](./record/daily.md)
