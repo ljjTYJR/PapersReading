@@ -37,3 +37,7 @@
 
 - 一个小想法：光看，没有一个prior knowledge的话，似乎印象不深刻，因为读的不是很了解，必须自己掌握了，达到能够解释给别人的程度才可以。否则是比较低效的。
 - 具体的这些challange，其实需要和具体有SLAM经验的人进行沟通交流；（Danile & Martin?)
+
+# 2022-05-05
+
+1. GNC: graduated non-convex ; it can be s
