@@ -102,6 +102,27 @@
   - The result of the GMM clusters, which is shown that the: 1. The clusters' number are often various; 2. The GMMs can not describe the whole data correctly.
   - :question: The method treats the two point sets in an asymmetrical way, as one point set is GMM, and the other set is data. The main di
   
+- **Simultaneous Covariance Driven Correspondence (CDC) and Transformation Estimation in the Expectation Maximization Framework** :heavy_check_mark:
+
+  > M. Sofka, G. Yang and C. V. Stewart, "Simultaneous Covariance Driven Correspondence (CDC) and Transformation Estimation in the Expectation Maximization Framework," *2007 IEEE Conference on Computer Vision and Pattern Recognition*, 2007, pp. 1-8, doi: 10.1109/CVPR.2007.383166.
+  >
+  > [[pdf]](./papers/Simultaneous_Covariance_Driven_Correspondence_CDC_and_Transformation_Estimation_in_the_Expectation_Maximization_Framework.pdf)
+  >
+  > **Citations:**  50
+  
+  - All-to-all correspondence, considering the covariance of the error between correspondence. Compared to *RPM*, the error is a kind of *anisotropic* distance.
+  - Compared to RPM, the proposed method can deal with clutter scenes.
+  
+- **Point Set Registration With Similarity and Affine Transformations Based on Bidirectional KMPE Loss** :heavy_check_mark:
+
+  > Yang, Yang, et al. "Point set registration with similarity and affine transformations based on bidirectional KMPE loss." *IEEE transactions on cybernetics* 51.3 (2019): 1678-1689.
+  >
+  > **Citations:** 16
+  >
+  > [[pdf]](./papers/Point_Set_Registration_With_Similarity_and_Affine_Transformations_Based_on_Bidirectional_KMPE_Loss.pdf)
+
+  - The main contributions: 1) Bi-directional objective function based on ICP correspondence; 2) Use robust function to replace least square error.
+
 - **Point Set Registration: Coherent Point Drift** **(CPD)** :heavy_check_mark:
 
   > Myronenko, A., & Song, X. (2010). Point set registration: Coherent point drift. *IEEE transactions on pattern analysis and machine intelligence*, *32*(12), 2262-2275.
@@ -195,7 +216,7 @@
     - [ ] 神经网络识别overlap的区域，然后进行registration.
     - [ ] 混合聚类；
     - [ ] 分层聚类
-  
+
 - **FuzzyPSReg: Strategies of Fuzzy Cluster-Based Point Set Registration** :heavy_check_mark: :red_circle:
 
   > Liao, Qianfang, Da Sun, and Henrik Andreasson. "FuzzyPSReg: Strategies of Fuzzy Cluster-Based Point Set Registration." *IEEE Transactions on Robotics* (2021).
@@ -203,7 +224,7 @@
   > [[url]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9623345)  [[pdf]](./papers/FuzzyPSReg_Strategies_of_Fuzzy_Cluster-Based_Point_Set_Registration.pdf)
   >
   > [[notes]](./notes/FuzzyPSReg_Strategies_of_Fuzzy_Cluster-Based_Point_Set_Registration.md)
-  
+
   > - First, we propose a new metric based on Gustafson–Kessel (GK) fuzzy clustering to measure the alignment
   >   of two point clouds.
   > - We then develop the registration quality assessment of the GK-based metric, which is more sensitive
@@ -220,7 +241,7 @@
   >     - With the same cluster centers, GK-based is more accurate;
   > - Compare to TEASER++:
   >   - more accurate and faster ( SUN3D dataset )
-  
+
   - To
     - What kind of other distance that can be used to do fuzzy clustering, what's this advantage?
     - Can local feature be added into the distance calculating while doing clustering?

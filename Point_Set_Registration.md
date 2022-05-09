@@ -40,12 +40,6 @@
 
 ### To Read
 
-- **Simultaneous Covariance Driven Correspondence (CDC) and Transformation Estimation in the Expectation Maximization Framework**
-
-  > M. Sofka, G. Yang and C. V. Stewart, "Simultaneous Covariance Driven Correspondence (CDC) and Transformation Estimation in the Expectation Maximization Framework," *2007 IEEE Conference on Computer Vision and Pattern Recognition*, 2007, pp. 1-8, doi: 10.1109/CVPR.2007.383166.
-  >
-  > **Citations:**  50
-
 ### Correlation
 
 - **Diffeomorphic Matching of Distributions: A New Approach for Unlabelled Point-Sets and Sub-Manifolds Matching**
@@ -233,6 +227,16 @@
 ## To Read
 
 - **Fine-To-Coarse Global Registration of RGB-D Scans**
+
+- **An Efficient Globally Optimal Algorithm for Asymmetric Point Matching**
+
+  > Lian, Wei, Lei Zhang, and Ming-Hsuan Yang. "An efficient globally optimal algorithm for asymmetric point matching." *IEEE transactions on pattern analysis and machine intelligence* 39.7 (2016): 1281-1293.
+  >
+  > **Citations:** 32
+  >
+  > [[pdf]](./papers/An_Efficient_Globally_Optimal_Algorithm_for_Asymmetric_Point_Matching.pdf)
+
+- **Locality Preserving Matching**
 
 ## Feature-Based
 

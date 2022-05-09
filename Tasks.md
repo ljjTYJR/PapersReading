@@ -22,11 +22,16 @@
   - 截止时间：6月底
 - 任务链接：[SLAM](./record/SLAMRecord.md)
 
-
-
 ## 日报/notebook
 
 > 仔细想了想，notebook还是有必要的
 
 - 时间要求：Daily;
 - 任务链接：[daily](./record/daily.md)
+- Notebook 主要记录平时研究的一些想法，并且用于经常性的回顾；
+
+## Plan
+
+- 时间要求：daily
+- 任务链接：[plan](./record/plan.md)
+- plan主要记录自己的一些研究计划，时间安排；便于更好地安排自己的时间。
