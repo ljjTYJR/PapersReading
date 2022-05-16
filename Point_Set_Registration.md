@@ -178,14 +178,6 @@
   - More robust and accurate than ICP
   - Slower than ICP
 
-- **Provably Approximated Point Cloud Registration**
-
-  > Jubran, Ibrahim, et al. "Provably Approximated Point Cloud Registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2021.
-  >
-  >  [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Jubran_Provably_Approximated_Point_Cloud_Registration_ICCV_2021_paper.pdf)  [[pdf]](./papers/Provably Approximated Point Cloud Registration.pdf)
-  >
-  > [[supp]](https://openaccess.thecvf.com/content/ICCV2021/supplemental/Jubran_Provably_Approximated_Point_ICCV_2021_supplemental.pdf)
-
 - **Globally Optimal Linear Model Fitting with Unit-Norm Constraint**
 
   > Liu, Yinlong, et al. "Globally Optimal Linear Model Fitting with Unit-Norm Constraint." *International Journal of Computer Vision* (2022): 1-14.
@@ -227,16 +219,87 @@
 ## To Read
 
 - **Fine-To-Coarse Global Registration of RGB-D Scans**
-
-- **An Efficient Globally Optimal Algorithm for Asymmetric Point Matching**
-
-  > Lian, Wei, Lei Zhang, and Ming-Hsuan Yang. "An efficient globally optimal algorithm for asymmetric point matching." *IEEE transactions on pattern analysis and machine intelligence* 39.7 (2016): 1281-1293.
-  >
-  > **Citations:** 32
-  >
-  > [[pdf]](./papers/An_Efficient_Globally_Optimal_Algorithm_for_Asymmetric_Point_Matching.pdf)
-
 - **Locality Preserving Matching**
+
+## Not classified
+
+- **Provably Approximated Point Cloud Registration** :heavy_check_mark:
+
+  > Jubran, Ibrahim, et al. "Provably Approximated Point Cloud Registration." *Proceedings of the IEEE/CVF International Conference on Computer Vision*. 2021.
+  >
+  > [[url]](https://openaccess.thecvf.com/content/ICCV2021/papers/Jubran_Provably_Approximated_Point_Cloud_Registration_ICCV_2021_paper.pdf)  [[pdf]](./papers/Provably Approximated Point Cloud Registration.pdf)
+  >
+  > [[supp]](https://openaccess.thecvf.com/content/ICCV2021/supplemental/Jubran_Provably_Approximated_Point_ICCV_2021_supplemental.pdf)
+
+- **Convex Hull Aided Registration Method (CHARM)** :heavy_check_mark:
+
+  > Fan, Jingfan, et al. "Convex hull aided registration method (CHARM)." *IEEE transactions on visualization and computer graphics* 23.9 (2016): 2042-2055.
+  >
+  > [[pdf]](./papers/Convex_Hull_Aided_Registration_Method_CHARM.pdf)
+
+- **Robust low-overlap 3-D point cloud registration for outlier rejection** :heavy_check_mark:
+
+  > Stechschulte, John, Nisar Ahmed, and Christoffer Heckman. "Robust low-overlap 3-D point cloud registration for outlier rejection." *2019 International Conference on Robotics and Automation (ICRA)*. IEEE, 2019.
+  >
+  > **Citations:** 4
+  >
+  > [[pdf]](./papers/Robust_low-overlap_3-D_point_cloud_registration_for_outlier_rejection.pdf)
+
+- **The Richer Representation the Better Registration** :heavy_check_mark:
+
+  > Rouhani, Mohammad, and Angel Domingo Sappa. "The richer representation the better registration." *IEEE Transactions on Image Processing* 22.12 (2013): 5036-5049.
+  >
+  > **Citations:** 25
+  >
+  > [[pdf]](./papers/The_Richer_Representation_the_Better_Registration.pdf)
+
+- **Gravitational Approach for Point Set Registration** :heavy_check_mark:
+
+  > Golyanik, Vladislav, Sk Aziz Ali, and Didier Stricker. "Gravitational approach for point set registration." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2016.
+  >
+  > **Citations:** 36
+  >
+  > [[pdf]](./papers/Golyanik_Gravitational_Approach_for_CVPR_2016_paper.pdf)
+
+- **Efficient Registration of High-Resolution Feature Enhanced Point Clouds** :heavy_check_mark:
+
+  > Jauer, Philipp, et al. "Efficient registration of high-resolution feature enhanced point clouds." *IEEE Transactions on Pattern Analysis and Machine Intelligence* 41.5 (2018): 1102-1115.
+  >
+  > **Citations:** 21
+  >
+  > [[pdf]](./papers/Efficient_Registration_of_High-Resolution_Feature_Enhanced_Point_Clouds.pdf)
+
+- **Fast Rotation Search with Stereographic Projections for 3D Registration** :heavy_check_mark:
+
+  > Parra Bustos, Alvaro, Tat-Jun Chin, and David Suter. "Fast rotation search with stereographic projections for 3d registration." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2014.
+  >
+  > **Citations:** 87
+  >
+  > [[pdf]](./papers/Bustos_Fast_Rotation_Search_2014_CVPR_paper.pdf)
+
+- **Context-Aware Gaussian Fields for Non-rigid Point Set Registration** :heavy_check_mark:
+
+  > Wang, Gang, et al. "Context-aware Gaussian fields for non-rigid point set registration." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2016.
+  >
+  > **Citations:** 30
+  >
+  > [[pdf]](./papers/Wang_Context-Aware_Gaussian_Fields_CVPR_2016_paper.pdf)
+
+- **Fine-To-Coarse Global Registration of RGB-D Scans** :heavy_check_mark:
+
+  > Halber, Maciej, and Thomas Funkhouser. "Fine-to-coarse global registration of rgb-d scans." *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*. 2017.
+  >
+  > **Citations:** 66
+  >
+  > [[pdf]](./papers/Halber_Fine-To-Coarse_Global_Registration_CVPR_2017_paper.pdf)
+
+- **Discriminative Optimization: Theory and Applications to Point Cloud Registration** :heavy_check_mark:
+
+  > Vongkulbhisal, Jayakorn, Fernando De la Torre, and Joao P. Costeira. "Discriminative optimization: Theory and applications to point cloud registration." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2017.
+  >
+  > **Citations:** 27
+  >
+  > [[pdf]](./papers/Vongkulbhisal_Discriminative_Optimization_Theory_CVPR_2017_paper.pdf)
 
 ## Feature-Based
 
@@ -898,14 +961,6 @@
 
 ## To Read
 
-- **Gravitational Approach for Point Set Registration**
-
-  > Golyanik, Vladislav, Sk Aziz Ali, and Didier Stricker. "Gravitational approach for point set registration." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2016.
-  >
-  > **Citations:** 36
-  >
-  > [[pdf]](./papers/Golyanik_Gravitational_Approach_for_CVPR_2016_paper.pdf)
-  
 - **Robust LIDAR localization using multiresolution Gaussian mixture maps for autonomous driving**
 
   > map using GMMs

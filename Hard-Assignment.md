@@ -631,6 +631,14 @@
   - Cons:
 
     - PCA computes covariance consume too much time.
+  
+- **DICP: Doppler Iterative Closest Point Algorithm**
+
+  > Hexsel, Bruno, Heethesh Vhavle, and Yi Chen. "DICP: Doppler Iterative Closest Point Algorithm." *arXiv preprint arXiv:2201.11944* (2022).
+  >
+  > **Citations:** 1
+  >
+  > [[pdf]](./papers/2201.11944.pdf)
 
 ## Optimization
 

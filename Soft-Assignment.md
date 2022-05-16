@@ -47,6 +47,14 @@
   
       The difference is the input points are based on *Canny edge detection*. (Can be viewed as a variant of **RMP**).
   
+- **An Efficient Globally Optimal Algorithm for Asymmetric Point Matching** (APM):heavy_check_mark:
+
+  > Lian, Wei, Lei Zhang, and Ming-Hsuan Yang. "An efficient globally optimal algorithm for asymmetric point matching." *IEEE transactions on pattern analysis and machine intelligence* 39.7 (2016): 1281-1293.
+  >
+  > **Citations:** 32
+  >
+  > [[pdf]](./papers/An_Efficient_Globally_Optimal_Algorithm_for_Asymmetric_Point_Matching.pdf)
+  
 - **A New Point Matching Algorithm for Non-Rigid Registration** :heavy_check_mark: (**TPS-RPM**)
 
   > Chui, Haili, and Anand Rangarajan. "A new point matching algorithm for non-rigid registration." *Computer Vision and Image Understanding* 89.2-3 (2003): 114-141.
@@ -76,6 +84,14 @@
     - How to find matches? —— still closest?
     - As long as the percentage of outliers in the local neighborhood is small, their influence can be averaged out by contributions from other inlier points. Consequently, KC is capable of registering despite of these local distractions.
     - KC based registration can be considered as a robust, multiply-linked ICP.
+
+- **Robust Point Set Registration Using EM-ICP with Information-Theoretically Optimal Outlier Handling**
+
+  > Hermans, Jeroen, et al. "Robust point set registration using EM-ICP with information-theoretically optimal outlier handling." *CVPR 2011*. IEEE, 2011.
+  >
+  > **Citations:** 46
+  >
+  > [[pdf]](./papers/Robust_point_set_registration_using_EM-ICP_with_information-theoretically_optimal_outlier_handling.pdf)
 
 - **A Correlation-Based Approach to Robust Point Set Registration** :heavy_check_mark: 
 
